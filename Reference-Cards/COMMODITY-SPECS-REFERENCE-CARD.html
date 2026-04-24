@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ECONARES - Commodity Specs Reference Card</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Inter, Helvetica Neue, Arial, sans-serif; background: #0a0a0f; color: #f0f0f5; font-size: 11px; line-height: 1.35; padding: 10mm; }
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+.span3 { grid-column: span 3; }
+.card { background: #13131f; border: 1px solid #1e1e2e; border-radius: 10px; padding: 10px 12px; position: relative; overflow: hidden; }
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 10px 10px 0 0; }
+.ni::before  { background: linear-gradient(90deg, #4ade80, #22c55e); }
+.coal::before { background: linear-gradient(90deg, #fb923c, #ea580c); }
+.die::before  { background: linear-gradient(90deg, #60a5fa, #2563eb); }
+.pks::before { background: linear-gradient(90deg, #a78bfa, #7c3aed); }
+.cu::before  { background: linear-gradient(90deg, #fbbf24, #d97706); }
+.hdr::before { display: none; }
+.header { text-align: center; padding: 6px 0 4px; border-bottom: 1px solid #1e1e2e; margin-bottom: 8px; }
+.header h1 { font-size: 15px; font-weight: 900; letter-spacing: 4px; color: #e2e2f0; }
+.header p { font-size: 8px; color: #6b6b8a; letter-spacing: 2px; margin-top: 2px; }
+.card-title { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; margin-bottom: 6px; }
+.ni .card-title { color: #4ade80; }
+.coal .card-title { color: #fb923c; }
+.die .card-title { color: #60a5fa; }
+.pks .card-title { color: #a78bfa; }
+.cu .card-title { color: #fbbf24; }
+.hdr .card-title { color: #8b8baa; font-size: 10px; }
+.section { font-size: 8px; font-weight: 700; letter-spacing: 1.5px; color: #5a5a7a; text-transform: uppercase; border-bottom: 1px solid #1e1e2e; padding-bottom: 2px; margin: 6px 0 3px; }
+table { width: 100%; border-collapse: collapse; font-size: 8.5px; margin-bottom: 4px; }
+th { font-weight: 700; font-size: 7.5px; color: #6b6b8a; text-align: left; padding: 2px 4px 2px 0; border-bottom: 1px solid #2a2a3e; }
+td { padding: 2px 4px 2px 0; color: #c0c0d5; vertical-align: top; }
+.gtag { display: inline-block; font-size: 7px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin-right: 2px; }
+.glow  { background: #1a2e1a; color: #86efac; }
+.gmid  { background: #1a2a1a; color: #fde68a; }
+.ghigh { background: #1a2a1a; color: #4ade80; }
+.sg { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 4px; }
+.si { background: #0d0d18; border-radius: 5px; padding: 4px 6px; }
+.sl { font-size: 7px; font-weight: 600; color: #4a4a6a; }
+.sv { font-size: 9px; font-weight: 700; color: #d0d0e8; margin-top: 1px; }
+.bl { list-style: none; padding: 0; margin: 0; }
+.bl li { font-size: 8.5px; color: #b0b0c8; padding: 2px 0; padding-left: 10px; position: relative; border-bottom: 1px solid #16162a; }
+.bl li:last-child { border-bottom: none; }
+.bl li::before { content: 'X'; position: absolute; left: 0; font-size: 7px; top: 2px; color: #4a4a6a; }
+.rb { background: #0d0d18; border-left: 2px solid; border-radius: 0 4px 4px 0; padding: 4px 6px; margin-bottom: 3px; }
+.rl { font-weight: 700; font-size: 7.5px; margin-bottom: 1px; }
+.rd { color: #8080a0; font-size: 7.5px; }
+.mh { background: #16162a; border: 1px dashed #2a2a4a; border-radius: 6px; padding: 5px 8px; margin-top: 5px; font-size: 8px; color: #7a7a9a; font-style: italic; }
+.mh strong { font-style: normal; font-weight: 700; color: #9a9aba; }
+.mtag { display: inline-block; font-size: 7px; font-weight: 700; padding: 1px 5px; border-radius: 3px; margin: 1px 2px 1px 0; }
+.buy    { background: #1a2a3a; color: #60a5fa; }
+.sup    { background: #1a2a1a; color: #86efac; }
+.ph     { background: #2a1a1a; color: #fca5a5; }
+.id     { background: #1a1a2a; color: #a5b4fc; }
+.cn     { background: #1a2a2a; color: #f9a8d4; }
+.jp     { background: #2a1a2a; color: #fde68a; }
+.cp { background: #1a1500; border: 1px solid #3a2a00; border-radius: 4px; padding: 4px 6px; font-size: 7.5px; color: #f0c040; margin-top: 4px; }
+.cp strong { color: #fcd34d; }
+.footer { grid-column: span 3; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 2px; }
+.fc { background: #13131f; border: 1px solid #1e1e2e; border-radius: 8px; padding: 8px 10px; }
+.fc h3 { font-size: 9px; font-weight: 800; letter-spacing: 1px; color: #8b8baa; margin-bottom: 4px; }
+.fc p, .fc li { font-size: 8px; color: #6b6b8a; line-height: 1.5; }
+.fc ul { list-style: none; padding: 0; }
+.fc li { padding-left: 10px; position: relative; color: #6b6b8a; }
+.fc li::before { content: '- '; position: absolute; left: 0; color: #4a4a6a; }
+.fc li strong { color: #8b8baa; }
+@media print { body { background: white; color: black; padding: 5mm; } .card { background: #f5f5fa; border-color: #ccc; } @page { size: A4 landscape; margin: 5mm; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ECONARES</h1>
+  <p>COMMODITY SPECIFICATIONS - MASTER REFERENCE CARD | APRIL 2026</p>
+</div>
+
+<div class="grid">
+
+  <!-- NICKEL ORE -->
+  <div class="card ni">
+    <div class="card-title">NICKEL ORE</div>
+    <div class="section">GRADE CLASSIFICATION</div>
+    <table>
+      <tr><th>TIER</th><th>Ni %</th><th>Fe %</th><th>USE CASE</th></tr>
+      <tr><td><span class="gtag glow">LOW</span></td><td>0.80 - 1.29%</td><td>&gt;48% or &lt;=20%</td><td>HPAL / Battery feed</td></tr>
+      <tr><td><span class="gtag gmid">MEDIUM</span></td><td>1.30 - 1.49%</td><td>&lt;=25-30%</td><td>NPI / Ferronickel</td></tr>
+      <tr><td><span class="gtag ghigh">HIGH</span></td><td>1.50%+</td><td>&lt;=20%</td><td>Ferronickel / Premium</td></tr>
+    </table>
+    <div class="section">ORE TYPES</div>
+    <div class="rb" style="border-color:#fb923c">
+      <div class="rl" style="color:#fb923c">LIMONITE (Fe-rich, laterite)</div>
+      <div class="rd">Ni 0.8-1.5% | Fe 8-48% | Moisture 30-40% | Co ~0.07%</div>
+      <div class="rd">HPAL - MHP - Nickel Sulfate (EV batteries)</div>
+    </div>
+    <div class="rb" style="border-color:#4ade80">
+      <div class="rl" style="color:#4ade80">SAPROLITE (Mg-rich, weathered)</div>
+      <div class="rd">Ni &gt;1.3% | Lower Fe | Mg 3-5%</div>
+      <div class="rd">Pyromet - NPI - Ferronickel (stainless steel)</div>
+    </div>
+    <div class="section">KEY METRICS</div>
+    <div class="sg">
+      <div class="si"><div class="sl">MOISTURE</div><div class="sv">30-40%</div></div>
+      <div class="si"><div class="sl">COBALT</div><div class="sv">~0.07%</div></div>
+      <div class="si"><div class="sl">SILICA (Mg)</div><div class="sv">3-5%</div></div>
+      <div class="si"><div class="sl">CHROMIUM</div><div class="sv">~2-5%</div></div>
+    </div>
+    <div class="section">SOURCES AND MARKETS</div>
+    <div style="margin-bottom:3px">
+      <span class="mtag sup">PH</span> Palawan, Surigao, Mindanao
+      <span class="mtag sup">ID</span> Sulawesi, Halmahera, Kalimantan
+    </div>
+    <div>
+      <span class="mtag buy">CN</span> NPI/HPAL smelters
+      <span class="mtag buy">JP</span> Mitsubishi, Sumitomo Metal
+    </div>
+    <div class="mh"><strong>MEMORY HOOK:</strong> "LOW Fe = battery chain. HIGH Ni = stainless chain." Fe-rich limonite feeds the EV battery revolution.</div>
+    <div class="cp"><strong>MGB/DENR:</strong> MPSA or EPA required. Export Clearance from MGB. DENR AO 2023-05 (Mine Rehabilitation).</div>
+  </div>
+
+  <!-- COAL -->
+  <div class="card coal">
+    <div class="card-title">COAL</div>
+    <div class="section">TYPES</div>
+    <div style="margin-bottom:3px"><span class="gtag gmid">THERMAL</span> Power generation - steam/thermal coal</div>
+    <div style="margin-bottom:3px"><span class="gtag ghigh">COKING</span> Steel manufacturing - metallurgical coal</div>
+    <div class="section">GRADE SPECS (INDONESIA THERMAL)</div>
+    <table>
+      <tr><th>GRADE</th><th>GCV (GAR)</th><th>MOIST</th><th>ASH</th><th>SULFUR</th></tr>
+      <tr><td>Standard</td><td>5,500 kcal/kg</td><td>8-12%</td><td>&lt;15%</td><td>&lt;0.8%</td></tr>
+      <tr><td>Mid-tier</td><td>6,000 kcal/kg</td><td>8-10%</td><td>&lt;10%</td><td>&lt;0.6%</td></tr>
+      <tr><td>Premium</td><td>6,500 kcal/kg</td><td>7-8%</td><td>&lt;8%</td><td>&lt;0.4%</td></tr>
+    </table>
+    <div class="section">KEY TERMS</div>
+    <ul class="bl">
+      <li><strong>GAR</strong> - Gross As Received (moisture-inclusive)</li>
+      <li><strong>NAR/NCV</strong> - Net As Received (dry basis energy)</li>
+      <li><strong>HBA</strong> - Indonesia Coal Price Reference (monthly)</li>
+      <li><strong>ADB</strong> - Air Dried Basis (lab standard)</li>
+    </ul>
+    <div class="section">KEY METRICS</div>
+    <div class="sg">
+      <div class="si"><div class="sl">TYP GCV</div><div class="sv">5,000-7,000 kcal/kg</div></div>
+      <div class="si"><div class="sl">VOLATILE</div><div class="sv">30-42% ADB</div></div>
+      <div class="si"><div class="sl">FIXED CARBON</div><div class="sv">40-55% ADB</div></div>
+      <div class="si"><div class="sl">HBA APR 26</div><div class="sv">~$81-95/t</div></div>
+    </div>
+    <div class="section">SOURCES AND MARKETS</div>
+    <div style="margin-bottom:3px">
+      <span class="mtag sup">ID</span> Kalimantan (KCM, KPC, Berau)
+      <span class="mtag ph">PH</span> Semirara (Semirara Mining)
+    </div>
+    <div>
+      <span class="mtag buy">PH</span> Meralco, Team Philippines
+      <span class="mtag buy">CN</span> China Power, Huadian
+    </div>
+    <div class="mh"><strong>MEMORY HOOK:</strong> Coal specs = "HOT + CLEAN + DRY" - High kcal/kg + Low Sulfur + Low Moisture = Premium price.</div>
+  </div>
+
+  <!-- DIESEL -->
+  <div class="card die">
+    <div class="card-title">DIESEL / FUEL OIL</div>
+    <div class="section">PRODUCT TYPES</div>
+    <ul class="bl">
+      <li><strong>BSO / IDO</strong> - Industrial Diesel (local spec)</li>
+      <li><strong>MDO</strong> - Marine Diesel Oil (0.5% S)</li>
+      <li><strong>MGO</strong> - Marine Gas Oil (premium, 0.1% S)</li>
+      <li><strong>IFO 380</strong> - Intermediate Fuel Oil (bunker)</li>
+    </ul>
+    <div class="section">KEY SPECIFICATIONS</div>
+    <table>
+      <tr><th>PARAM</th><th>LIMIT</th><th>WHY IT MATTERS</th></tr>
+      <tr><td>Sulfur (IMO 2020)</td><td>&lt;= 0.50%</td><td>Global cap</td></tr>
+      <tr><td>Sulfur (Euro IV/PH)</td><td>&lt;= 0.10%</td><td>PH Euro IV = 50 ppm</td></tr>
+      <tr><td>Flash Point</td><td>&gt; 60C</td><td>Safety / customs</td></tr>
+      <tr><td>Density (15C)</td><td>0.82-0.87 kg/L</td><td>Vol-to-weight</td></tr>
+      <tr><td>Viscosity (40C)</td><td>2-6 cSt</td><td>Atomization</td></tr>
+      <tr><td>Cetane Number</td><td>&gt; 45</td><td>Ignition quality</td></tr>
+      <tr><td>Water / Sediment</td><td>&lt; 0.3%</td><td>Contamination</td></tr>
+    </table>
+    <div class="section">PRICING BENCHMARKS</div>
+    <div class="sg">
+      <div class="si"><div class="sl">MGO CIF SG</div><div class="sv">~$550-650/t</div></div>
+      <div class="si"><div class="sl">MDO CIF SG</div><div class="sv">~$620-720/t</div></div>
+      <div class="si"><div class="sl">IFO 380 CIF SG</div><div class="sv">~$400-500/t</div></div>
+      <div class="si"><div class="sl">BUNKER DELTA</div><div class="sv">~$15-30/t</div></div>
+    </div>
+    <div class="section">SOURCES AND MARKETS</div>
+    <div style="margin-bottom:3px">
+      <span class="mtag sup">SG</span> Singapore Hub (Glencore, Vitol, Trafigura)
+      <span class="mtag sup">KR</span> South Korea (SK Energy)
+    </div>
+    <div>
+      <span class="mtag buy">PH</span> Shipping lines, Mining, Logistics
+      <span class="mtag buy">PH</span> DOE depots (Cebu, Manila)
+    </div>
+    <div class="mh"><strong>MEMORY HOOK:</strong> "Sulfur kills engines and earns penalties." Lower S = cleaner burn = premium. 0.50% is the global ceiling.</div>
+    <div class="cp"><strong>DOE:</strong> Import permit + Fuel Marking Program. BDN (Bunkering Delivery Note) required for every delivery.</div>
+  </div>
+
+  <!-- PKS -->
+  <div class="card pks">
+    <div class="card-title">PALM KERNEL SHELLS (PKS)</div>
+    <div class="section">WHAT IS PKS?</div>
+    <div style="font-size:8.5px;color:#b0b0c8;margin-bottom:4px">Hard angular biomass from palm oil milling. High density, low moisture, carbon-neutral. Used in biomass boilers and coal-PKS cofiring.</div>
+    <div class="section">TYPICAL SPECIFICATIONS</div>
+    <table>
+      <tr><th>PARAMETER</th><th>VALUE</th><th>REMARK</th></tr>
+      <tr><td>Net Calorific Value</td><td>3,200-4,300 kcal/kg</td><td>13-18 MJ/kg</td></tr>
+      <tr><td>Moisture Content</td><td>7-12%</td><td>Max spec usually &lt;10%</td></tr>
+      <tr><td>Ash Content</td><td>1.5-5%</td><td>Low ash = clean</td></tr>
+      <tr><td>Sulfur</td><td>0.03-0.10%</td><td>Extremely low - ESG</td></tr>
+      <tr><td>Fixed Carbon</td><td>18-25%</td><td>High carbon</td></tr>
+      <tr><td>Bulk Density</td><td>500-650 kg/m3</td><td>Stacks well</td></tr>
+      <tr><td>Particle Size</td><td>10-30 mm</td><td>Buyer-specified</td></tr>
+      <tr><td>Chloride (Cl)</td><td>&lt; 100 ppm</td><td>Boiler corrosion</td></tr>
+    </table>
+    <div class="section">SOURCES AND MARKETS</div>
+    <div style="margin-bottom:3px">
+      <span class="mtag sup">ID</span> Indonesia: ~6.5M MT/yr surplus
+      <span class="mtag sup">MY</span> Malaysia: Major producer
+    </div>
+    <div>
+      <span class="mtag buy">JP</span> JERA (cofiring)
+      <span class="mtag buy">PH</span> GNPower, SMC BioEnergy
+      <span class="mtag buy">CN</span> Chinese biomass plants
+    </div>
+    <div style="margin-top:4px">
+      <span class="mtag sup">CIF JAPAN</span> ~$110-150/t
+      <span class="mtag sup">CIF CHINA</span> ~$90-130/t
+    </div>
+    <div class="mh"><strong>MEMORY HOOK:</strong> "PKS = GREEN + DENSE + HOT" - Carbon-neutral (ESG premium). High density = more energy per m3 shipped.</div>
+  </div>
+
+  <!-- COPPER -->
+  <div class="card cu">
+    <div class="card-title">COPPER ORE / CONCENTRATE</div>
+    <div class="section">TWO MARKETED FORMS</div>
+    <ul class="bl">
+      <li><strong>Raw Ore (DSO)</strong> - Direct shipping ore, 0.3-2% Cu</li>
+      <li><strong>Concentrate</strong> - Processed ore, 25-30% Cu (traded via TC/RC)</li>
+    </ul>
+    <div class="section">CONCENTRATE SPECIFICATIONS</div>
+    <table>
+      <tr><th>PARAMETER</th><th>TYPICAL</th><th>NOTE</th></tr>
+      <tr><td>Copper (Cu)</td><td>25-30%</td><td>Main product</td></tr>
+      <tr><td>Gold (Au)</td><td>1-5 g/t</td><td>BY-PRODUCT CREDIT</td></tr>
+      <tr><td>Silver (Ag)</td><td>30-100 g/t</td><td>BY-PRODUCT CREDIT</td></tr>
+      <tr><td>Iron (Fe)</td><td>20-30%</td><td>-</td></tr>
+      <tr><td>Sulfur (S)</td><td>25-35%</td><td>-</td></tr>
+      <tr><td>Arsenic (As)</td><td>&lt; 0.5%</td><td>MAJOR PENALTY</td></tr>
+      <tr><td>Antimony (Sb)</td><td>&lt; 0.2%</td><td>Penalty</td></tr>
+      <tr><td>Mercury (Hg)</td><td>&lt; 1 ppm</td><td>Strict penalty</td></tr>
+      <tr><td>Fluorine (F)</td><td>&lt; 0.1%</td><td>Penalty</td></tr>
+    </table>
+    <div class="section">TC/RC - SMELTER CHARGES</div>
+    <div class="sg">
+      <div class="si"><div class="sl">TC (Treatment Charge)</div><div class="sv">~$70-90/t conc.</div></div>
+      <div class="si"><div class="sl">RC (Refining Charge)</div><div class="sv">~$0.07-0.09/lb</div></div>
+    </div>
+    <div class="section">SOURCES AND MARKETS</div>
+    <div style="margin-bottom:3px">
+      <span class="mtag ph">PH</span> Tampakan (Sultan Kudarat) - world-class unmined
+      <span class="mtag ph">PH</span> Didipio (FTAA)
+      <span class="mtag sup">ID</span> Grasberg (PTFI), Batu Hijau
+    </div>
+    <div>
+      <span class="mtag buy">CN</span> Codelco Chile, First Quantum
+      <span class="mtag buy">JP</span> Mitsubishi Materials, Dowa
+    </div>
+    <div class="mh"><strong>MEMORY HOOK:</strong> "As, Sb, Hg = SMELTER KILLERS" - If As exceeds 0.5%, buyer discounts heavily. Always check penalty schedule.</div>
+    <div class="cp"><strong>EXPORT NOTE:</strong> Indonesia banned Cu concentrate exports Jan 2025. PH still exports - FTAA/SSPE required. MGB ECC for mining operations.</div>
+  </div>
+
+  <!-- MEMORY TECHNIQUES -->
+  <div class="card hdr span3">
+    <div class="section">KWIK MEMORY AND DAILY SPRINT</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div>
+        <div style="font-size:8px;font-weight:700;color:#8b8baa;margin-bottom:3px">CHUNK</div>
+        <ul class="bl">
+          <li>Group specs by commodity. Do not mix them.</li>
+          <li>Nickel = COLOR system (LOW=green, MED=yellow, HIGH=green-bright)</li>
+          <li>Coal = Heat spectrum (low kcal = dim, high kcal = bright ORANGE)</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:8px;font-weight:700;color:#8b8baa;margin-bottom:3px">RECALL</div>
+        <ul class="bl">
+          <li>Every morning: close eyes, recite ONE commodity from memory. Check. Repeat.</li>
+          <li>After reading any report: close page, write 3 bullet points from memory.</li>
+          <li>Use HubSpot call logs as recall prompts - what did client need?</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:8px;font-weight:700;color:#8b8baa;margin-bottom:3px">25-MINUTE DAILY SPRINT</div>
+        <ul class="bl">
+          <li>Block 1: Check spot prices (Platts / IndexMundi / Metal Bulletin)</li>
+          <li>Block 2: Prospect research - 1 buyer identified, 1 warm outreach drafted</li>
+          <li>Block 3: HubSpot pipeline review - update all lead statuses</li>
+          <li>End of day: ONE sentence - what did you learn today?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="fc">
+    <h3>INCOTERMS (ECONARES RULE: FOB ONLY)</h3>
+    <ul>
+      <li><strong>FOB</strong> - Seller delivers to vessel. Buyer books freight. ECONARES arranges to port.</li>
+      <li><strong>CFR/CIF</strong> - ECONARES does NOT offer these.</li>
+      <li><strong>PH Ports:</strong> Surigao, Davao, Cebu, Manila, Pulilan</li>
+      <li><strong>Vessel:</strong> Buyer arranges. ECONARES assists documentation.</li>
+    </ul>
+  </div>
+  <div class="fc">
+    <h3>DEAL RULES (NON-NEGOTIABLE)</h3>
+    <ul>
+      <li><strong>50% DP</strong> - All buyers, all transactions.</li>
+      <li><strong>FOB only</strong> - No CIF/CFR exceptions.</li>
+      <li><strong>DSR:</strong> HTML draft first. No auto-send. Confirm before sending.</li>
+      <li><strong>ECE email:</strong> ece.eleguinresources@yahoo.com (CEO)</li>
+      <li><strong>Compliance:</strong> Flag MGB/DENR on every mining deal.</li>
+    </ul>
+  </div>
+  <div class="fc">
+    <h3>PRICE BENCHMARKS (APRIL 2026)</h3>
+    <ul>
+      <li>Nickel Ore (1.5% CIF CN): ~$75-78/wmt</li>
+      <li>Indonesia HBA Coal (5,500 GAR): ~$81-85/t</li>
+      <li>MGO CIF Singapore: ~$550-650/t</li>
+      <li>PKS CIF Japan: ~$110-150/t</li>
+      <li>Copper Conc. (25% CIF CN): ~$8,000-9,500/t</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

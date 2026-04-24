@@ -1,0 +1,126 @@
+================================================================================
+        ECONARES INTERNATIONAL TRADING CORP.
+        INDICATIVE FOB PRICING MATRIX — LOW-GRADE NICKEL LIMONITE
+        Tawi-Tawi, Philippines | LME 3-Month Benchmark: USD 17,841/MT (Apr 14, 2026)
+================================================================================
+
+REFERENCE BENCHMARK:
+LME 3-Month Nickel Official Price:  USD 17,841 per dry metric ton (DMT)
+Source: LME / Trading Economics, April 14, 2026
+
+Calculation Method:  LME 3-Mo Price minus Standard TC/RC (Treatment Charge / 
+                      Refining Charge), multiplied by payable Ni content
+TC/RC Baseline (indicative):       USD 400–500 / DMT of contained Ni units
+                              (NPI sector standard, subject to negotiation)
+
+PAYABLE NICKEL FORMULA:
+Payable Ni (%) = Ore Grade (%) × Recovery Rate (%) × Payability (%)
+
+Recovery Rate (Limonite → NPI):  ~80%
+Payability:                      ~95% (industry standard for NPI contracts)
+
+=== EFFECTIVE PAYABLE NICKEL BY GRADE ===
+
+Grade    Contained Ni    Recovery    Payable Ni    LME Adj. Price/WMT
+---------------------------------------------------------------------------
+0.50%      0.50%           80%         0.40%        Baseline
+0.60%      0.60%           80%         0.48%        Baseline + 20%
+0.70%      0.70%           80%         0.56%        Baseline + 40%
+0.80%      0.80%           80%         0.64%        Baseline + 60%
+0.90%      0.90%           80%         0.72%        Baseline + 80%
+1.00%      1.00%           80%         0.80%        Baseline + 100%
+
+================================================================================
+        INDICATIVE FOB PRICE MATRIX — Tawi-Tawi Limonite Nickel Ore
+        USD per Wet Metric Ton (WMT) | Updated: April 2026
+================================================================================
+
+                         Nickel Grade (Ni Content, Wet Basis)
+Grade:            0.50%      0.60%      0.70%      0.80%      0.90%      1.00%
+--------------------------------------------------------------------------------
+LME Adj. Ni Val  $71.36    $85.64    $100.00   $114.28   $128.56   $142.84
+Iron Credit*      $6.00     $6.00     $6.00     $6.00     $6.00     $6.00
+Gross Value      $77.36    $91.64    $106.00   $120.28   $134.56   $148.84
+less: TC/RC      -$8.00    -$9.60    -$11.20   -$12.80   -$14.40   -$16.00
+less: Logistics  -$5.00    -$5.00    -$5.00    -$5.00    -$5.00    -$5.00
+--------------------------------------------------------------------------------
+INDICATIVE FOB   $64.36    $77.04    $89.80    $102.48   $115.16   $127.84
+Tawi-Tawi (USD/WMT)
+--------------------------------------------------------------------------------
+
+ROUNDED FOR NEGOTIATION (Indicative):
+Grade:          0.50%       0.60%       0.70%       0.80%       0.90%       1.00%
+FOB Tawi-Tawi:  ~$64/WMT   ~$77/WMT    ~$90/WMT   ~$102/WMT   ~$115/WMT   ~$128/WMT
+
+================================================================================
+        CIF CHINA / JAPAN ADJUSTMENT
+================================================================================
+
+Add estimated ocean freight Tawi-Tawi → China discharge ports:
+
+Route / Vessel          Freight Estimate    WMT Basis
+--------------------------------------------------------------------------------
+Tawi-Tawi → Rizhao:     USD 5.00 – 8.00/WMT  Handymax/Panamax (Apr 2026 spot)
+Tawi-Tawi → Zhanjiang:   USD 4.00 – 6.00/WMT  Short route, optimal
+Tawi-Tawi → Fangchenggang: USD 4.00 – 6.00/WMT
+Tawi-Tawi → Zhoushan:   USD 5.00 – 8.00/WMT
+Tawi-Tawi → Japan:      USD 7.00 – 10.00/WMT
+
+=== INDICATIVE CIF MATRIX (USD/WMT) ===
+
+                        Ni 0.50%   Ni 0.60%   Ni 0.70%   Ni 0.80%   Ni 0.90%   Ni 1.00%
+--------------------------------------------------------------------------------
+FOB Tawi-Tawi            $64        $77        $90        $102       $115       $128
++ Freight (avg)           +$6        +$6        +$6        +$6        +$6        +$6
++ Insurance (1%)          +$1        +$1        +$1        +$1        +$1        +$1
+--------------------------------------------------------------------------------
+CIF China (indicative)   $71/WMT    $84/WMT    $97/WMT    $109/WMT   $122/WMT   $135/WMT
+
+================================================================================
+        NOTES & ASSUMPTIONS
+================================================================================
+
+1. All prices are indicative and subject to final assay at loading.
+2. "Iron Credit" of USD 6.00/WMT reflects value of 40% Fe content as blast 
+   furnace ferrous feed in NPI operations. Actual iron credit negotiable.
+3. TC/RC of USD 8–16/WMT reflects industry-standard NPI processing charges;
+   exact rate to be agreed with buyer during contract negotiation.
+4. Ocean freight rates are spot estimates (April 2026); contract rates differ.
+5. FOB prices assume gross weight basis (no moisture adjustment).
+   Net DMT price = WMT price × (1 - moisture%).
+6. For the 0.5% Ni / 40% Fe Tawi-Tawi stockpile specifically:
+   - INDICATIVE FOB Tawi-Tawi: USD 62–66/WMT
+   - INDICATIVE CIF Rizhao/Lanshan: USD 69–73/WMT
+   - This is the entry price for establishing off-take conversations.
+
+================================================================================
+        NEGOTIATION GUIDANCE
+================================================================================
+
+USE THIS MATRIX AS:
+- An OPENING POSITION for off-take negotiations, NOT the final price.
+- A REFERENCE to justify price expectations to buyers.
+- A BENCHMARK for comparing offers from multiple buyers.
+
+NEGOTIATION LEVERAGE:
+- If 3+ Chinese buyers are interested simultaneously, price improves by 5–10%.
+- If Bulk Ore Ltd. or Tsingshan wants volume commitment >500K WMT, 
+  lock in a floor price in the contract framework.
+- Annual volume framework contracts command 3–5% premium over spot.
+- Tawi-Tawi proximity to Zhanjiang/Fangchenggang gives freight advantage 
+  over Indonesian ore for South China NPI mills.
+
+================================================================================
+        PRICE VALIDITY
+================================================================================
+
+This matrix is valid for 30 days from the date of issue (April 2026).
+Prices are recalculated against the LME 3-Month Official Price at the time 
+of each confirmed inquiry.
+
+================================================================================
+Document Reference: ECONARES-PM-TAWI-2026-001
+Prepared by: ECONARES Trading Division | RZH
+Date: April 2026
+CONFIDENTIAL — For internal and authorized counterparty use only
+================================================================================

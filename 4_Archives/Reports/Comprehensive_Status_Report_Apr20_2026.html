@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECONARES — Comprehensive Status Report | April 21, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', Arial, sans-serif; background: #0d0d14; color: #e0e0ec; font-size: 10px; line-height: 1.5; padding: 16px; }
+  .report { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid #2a2a4a; border-radius: 10px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .header-left h1 { font-size: 18px; font-weight: 800; color: #f5c518; letter-spacing: 3px; }
+  .header-left p { font-size: 9px; color: #888; margin-top: 3px; }
+  .header-right { text-align: right; font-size: 8px; color: #666; }
+  .badge { background: #f5c518; color: #0a0a0f; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 9px; }
+  .section { background: #13131c; border: 1px solid #1e1e30; border-radius: 10px; overflow: hidden; }
+  .section-head { background: #1a1a2a; padding: 8px 14px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1e1e30; }
+  .section-head h2 { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e0e0ec; }
+  .icon { width: 20px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; }
+  .icon.gmail { background: #ea4335; } .icon.hubspot { background: #ff7a59; }
+  .icon.obsidian { background: #7c3aed; } .icon.alert { background: #dc2626; }
+  .icon.success { background: #16a34a; } .icon.info { background: #2563eb; }
+  .tag { margin-left: auto; font-size: 8px; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+  .tag.ok { background: #16a34a22; color: #4ade80; }
+  .tag.warn { background: #ca8a0422; color: #fbbf24; }
+  .tag.alert { background: #dc262622; color: #f87171; }
+  .section-body { padding: 12px 14px; }
+  table { width: 100%; border-collapse: collapse; font-size: 9px; }
+  th { text-align: left; padding: 5px 8px; background: #1a1a2a; color: #888; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 8px; border-bottom: 1px solid #1e1e30; }
+  td { padding: 5px 8px; border-bottom: 1px solid #16161f; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1a1a28; }
+  .email-col { max-width: 220px; word-break: break-all; color: #888; font-size: 8px; }
+  .subj-col { color: #c0c0d0; }
+  .prefix { display: inline-block; padding: 1px 4px; border-radius: 2px; font-size: 7px; font-weight: 700; margin-right: 3px; }
+  .prefix.ni { background: #f5c51822; color: #f5c518; }
+  .prefix.coal { background: #e07b3922; color: #e07b39; }
+  .prefix.dsl { background: #4a9eff22; color: #4a9eff; }
+  .prefix.rpt { background: #7c3aed22; color: #a78bfa; }
+  .prefix.dsr { background: #16a34a22; color: #4ade80; }
+  .date-col { color: #555; white-space: nowrap; font-size: 8px; }
+  .status.sent { color: #4ade80; } .status.fail { color: #f87171; }
+  .status.bounce { color: #fbbf24; } .status.pending { color: #888; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+  .contact-card { background: #1a1a28; border: 1px solid #1e1e30; border-radius: 6px; padding: 8px 10px; }
+  .contact-card .name { font-size: 9px; font-weight: 700; color: #e0e0ec; margin-bottom: 2px; }
+  .contact-card .company { font-size: 8px; color: #888; margin-bottom: 2px; }
+  .contact-card .email { font-size: 8px; color: #4a9eff; word-break: break-all; }
+  .contact-card .meta { font-size: 7px; color: #555; margin-top: 3px; }
+  .metric-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .metric { flex: 1; min-width: 100px; background: #1a1a28; border-radius: 6px; padding: 10px 12px; text-align: center; }
+  .metric .num { font-size: 20px; font-weight: 800; color: #f5c518; }
+  .metric .label { font-size: 8px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+  .metric.wide { min-width: 160px; }
+  .alert-box { background: #dc262622; border: 1px solid #dc262644; border-radius: 6px; padding: 10px 12px; font-size: 9px; color: #f87171; margin-bottom: 8px; }
+  .alert-box.success { background: #16a34a22; border-color: #16a34a44; color: #4ade80; }
+  .alert-box.warn { background: #ca8a0422; border-color: #ca8a0444; color: #fbbf24; }
+  .bounce-table td { color: #f87171; font-size: 8px; }
+  .deal-row { background: #1a1a28; border-radius: 6px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .deal-name { font-size: 10px; font-weight: 700; color: #e0e0ec; }
+  .deal-value { font-size: 12px; font-weight: 800; color: #f5c518; }
+  .deal-stage { font-size: 8px; color: #888; }
+  .deal-close { font-size: 8px; color: #888; }
+  .deal-close span { color: #4ade80; }
+  .file-list { font-size: 8px; }
+  .file-list li { padding: 3px 0; border-bottom: 1px solid #16161f; display: flex; justify-content: space-between; align-items: center; }
+  .file-list li:last-child { border-bottom: none; }
+  .file-path { color: #888; font-family: monospace; }
+  .file-date { color: #555; font-size: 7px; }
+  .file-size { color: #444; font-size: 7px; }
+  .checklist { font-size: 9px; }
+  .checklist li { padding: 4px 0; border-bottom: 1px solid #16161f; display: flex; align-items: flex-start; gap: 8px; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-box { width: 12px; height: 12px; border-radius: 2px; border: 1px solid #333; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; font-size: 8px; }
+  .check-box.done { background: #16a34a; border-color: #16a34a; color: white; }
+  .check-box.pending { background: transparent; border-color: #ca8a04; color: #fbbf24; }
+  .check-text.done { color: #555; text-decoration: line-through; }
+  .check-text { color: #c0c0d0; }
+  .footer { background: #13131c; border: 1px solid #1e1e30; border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; font-size: 8px; color: #444; flex-wrap: wrap; gap: 8px; }
+  .footer strong { color: #888; }
+  h3 { font-size: 9px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .correction-note { font-size: 8px; color: #555; margin-top: 10px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="report">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>ECONARES</h1>
+      <p>COMPREHENSIVE STATUS REPORT &nbsp;|&nbsp; April 21, 2026 07:38 AM &nbsp;|&nbsp; FOB Origin Basis on All Offers</p>
+    </div>
+    <div class="header-right">
+      <span class="badge">APRIL 20, 2026</span><br><br>
+      Prepared for: <strong>Reymarr Hijara (RZH)</strong><br>
+      Sales and Marketing Officer<br>
+      ECONARES — Cebu City, Philippines
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon info">◆</div>
+      <h2>Executive Summary — April 20, 2026</h2>
+      <span class="tag ok">LIVE</span>
+    </div>
+    <div class="section-body">
+      <div class="alert-box success">
+        ✓ April 20 outreach wave COMPLETE — 19 emails sent across coal, nickel, and diesel. HubSpot activity logs updated. Cebu power plant corrections documented. 4 bouncebacks detected and flagged.
+      </div>
+      <div class="metric-row">
+        <div class="metric"><div class="num">19</div><div class="label">Emails Sent Today</div></div>
+        <div class="metric"><div class="num">64</div><div class="label">HubSpot Contacts</div></div>
+        <div class="metric"><div class="num">145</div><div class="label">Activity Notes</div></div>
+        <div class="metric"><div class="num">1</div><div class="label">Active Deal</div></div>
+        <div class="metric wide"><div class="num">PHP 10.05M</div><div class="label">Bulk Ore Deal Value</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GMAIL SWEEP -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon gmail">@</div>
+      <h2>Gmail Sweep — Full Sent &amp; Inbox Analysis</h2>
+      <span class="tag warn">4 BOUNCEBACKS</span>
+    </div>
+    <div class="section-body">
+      <div class="alert-box warn">
+        ⚠ 4 DELIVERY FAILURES detected. 1 Philcement diesel outreach + 3 China nickel emails bounced. Action required.
+      </div>
+      <h3>April 20 — All Sent Emails</h3>
+      <table>
+        <thead><tr><th>Time</th><th>To</th><th>Subject</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="date-col">Apr 20, 17:13</td><td class="email-col">john_hisoler@meralcopowergen.com.ph</td><td class="subj-col"><span class="prefix coal">COAL</span> Coal Supply for MGEN Cebu — ECONARES as Domestic Partner</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 16:58</td><td class="email-col">info@aboitizpower.com</td><td class="subj-col"><span class="prefix coal">COAL</span> Coal Supply Partnership — ECONARES for Aboitiz Cebu Operations</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">sales@chinabeihai.net</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">chenbin02@baosteel.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">xct@huayou.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">xhmineral@ytxinhai.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">import@tisco.com.cn</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">anson@jinchuan-intl.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">trading@jinchuan-intl.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">procurement@tsingshan.com.cn</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">jason@tsingshan-steels.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">citicmetal@citic.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">procurement@lygend.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">rawmaterials@delonghi.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">ales@lygend.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">sales@dlnis.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">info@fortunemetals.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 20, 10:56–11:01</td><td class="email-col">info@rsdindustry.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status bounce">✗ BOUNCE</span></td></tr>
+          <tr><td class="date-col">Apr 20, 08:00</td><td class="email-col">jessie.sarias@unioncement.com.ph</td><td class="subj-col"><span class="prefix dsl">DSL</span> Diesel Fuel Supply — Philcement Corporation | ECONARES</td><td><span class="status bounce">✗ BOUNCE</span></td></tr>
+          <tr><td class="date-col">Apr 20</td><td class="email-col">ece.eleguinresources@yahoo.com</td><td class="subj-col"><span class="prefix dsr">DSR</span> Daily Sales Update — RZH | ECONARES | April 20</td><td><span class="status sent">✓ SENT</span></td></tr>
+        </tbody>
+      </table>
+      <h3 style="margin-top:14px;">April 17–18 — Earlier Outreach</h3>
+      <table>
+        <tbody>
+          <tr><td class="date-col">Apr 18</td><td class="email-col">ece.eleguinresources@yahoo.com</td><td class="subj-col"><span class="prefix rpt">RPT</span> Weekly Sales Report — RZH | ECONARES | Week April 14-20</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 18</td><td class="email-col">info@bulk-ore.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 18</td><td class="email-col">sales@chinabeihai.net</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 17</td><td class="email-col">ece.eleguinresources@yahoo.com</td><td class="subj-col"><span class="prefix dsr">DSR</span> Daily Sales Update — RZH | ECONARES | April 18, 2026</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 17</td><td class="email-col">chenbin02@baosteel.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 17</td><td class="email-col">xct@huayou.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 17</td><td class="email-col">import@tisco.com.cn</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 17</td><td class="email-col">xhmineral@ytxinhai.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+          <tr><td class="date-col">Apr 17</td><td class="email-col">jason@tsingshan-steels.com</td><td class="subj-col"><span class="prefix ni">NI</span> Philippine Nickel Ore Supply — Direct from Mindanao Mines | ECONARES</td><td><span class="status sent">✓ SENT</span></td></tr>
+        </tbody>
+      </table>
+      <p class="correction-note">Note: Gmail shows 0 drafts — all drafts were sent or deleted. Multiple bounceback notifications from Apr 19 (Sun) indicate email delivery delays/failures on that date.</p>
+    </div>
+  </div>
+
+  <!-- HUBSPOT SWEEP -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon hubspot">⬡</div>
+      <h2>HubSpot CRM — Full Sweep</h2>
+      <span class="tag ok">64 CONTACTS · 145 NOTES · 1 DEAL</span>
+    </div>
+    <div class="section-body">
+      <h3>Active Deal</h3>
+      <div class="deal-row">
+        <div>
+          <div class="deal-name">Nickel Ore — Bulk Ore Limited</div>
+          <div class="deal-stage">Stage ID: 3410654912</div>
+        </div>
+        <div>
+          <div class="deal-value">PHP 10,050,000</div>
+          <div class="deal-close">Close: <span>June 30, 2026</span></div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:14px;">Priority Contacts — MGEN / Aboitiz</h3>
+      <div class="contact-grid">
+        <div class="contact-card"><div class="name">John Rey Hisoler ⭐</div><div class="company">MERALCO PowerGen — MGEN Cebu</div><div class="email">john_hisoler@meralcopowergen.com.ph</div><div class="meta">Materials Mgmt Manager | PRIMARY COAL DECISION MAKER</div><div class="meta">HubSpot ID: 473028807382</div></div>
+        <div class="contact-card"><div class="name">Maria Agbunag</div><div class="company">MERALCO PowerGen — MGEN</div><div class="email">maria_agbunag@meralcopowergen.com.ph</div><div class="meta">VP Supply Chain | SENIOR DECISION MAKER</div><div class="meta">HubSpot ID: 474072085183</div></div>
+        <div class="contact-card"><div class="name">Jessie Sarias</div><div class="company">Philcement Corporation</div><div class="email">jessie.sarias@unioncement.com.ph</div><div class="meta">Procurement | ⚠ BOUNCED Apr 20</div></div>
+        <div class="contact-card"><div class="name">Eleizer Eleguin</div><div class="company">ECONARES (CEO)</div><div class="email">ece.eleguinresources@yahoo.com</div><div class="meta">CEO | ECONARES</div></div>
+        <div class="contact-card"><div class="name">Ed Finch</div><div class="company">Bulk Ore Limited (HK)</div><div class="email">edfinch@bulk-ore.com</div><div class="meta">CEO | Active PHP 10.05M deal</div></div>
+      </div>
+
+      <h3 style="margin-top:14px;">China Nickel Contacts (12 active, 1 bounced)</h3>
+      <div class="contact-grid">
+        <div class="contact-card"><div class="name">Tsingshan Procurement</div><div class="company">Tsingshan Holding Group</div><div class="email">procurement@tsingshan.com.cn</div><div class="meta">ID: 470037260006</div></div>
+        <div class="contact-card"><div class="name">Jason Tsingshan</div><div class="company">Tsingshan Steels</div><div class="email">jason@tsingshan-steels.com</div><div class="meta">ID: 469804539615</div></div>
+        <div class="contact-card"><div class="name">CITIC Metal</div><div class="company">CITIC Metal Co., Ltd.</div><div class="email">citicmetal@citic.com</div><div class="meta">ID: 470632714943</div></div>
+        <div class="contact-card"><div class="name">Lygend Procurement</div><div class="company">Ningbo Lygend Wisdom</div><div class="email">procurement@lygend.com</div><div class="meta">ID: 467795043061</div></div>
+        <div class="contact-card"><div class="name">Ales Lygend</div><div class="company">Ningbo Lygend</div><div class="email">ales@lygend.com</div><div class="meta">ID: 469207276255</div></div>
+        <div class="contact-card"><div class="name">TISCO Import</div><div class="company">Taiyuan Iron &amp; Steel</div><div class="email">import@tisco.com.cn</div><div class="meta">ID: 470115030720</div></div>
+        <div class="contact-card"><div class="name">Chen Bin</div><div class="company">Baosteel</div><div class="email">chenbin02@baosteel.com</div><div class="meta">ID: 470632707816</div></div>
+        <div class="contact-card"><div class="name">Qi Sun</div><div class="company">Zhejiang Huayou Cobalt</div><div class="email">xct@huayou.com</div><div class="meta">ID: 469448797917</div></div>
+        <div class="contact-card"><div class="name">Anson Wong</div><div class="company">Jinchuan Group</div><div class="email">anson@jinchuan-intl.com</div><div class="meta">ID: 471237642940</div></div>
+        <div class="contact-card"><div class="name">Beihai Procurement</div><div class="company">Beihai Chengde Nickel</div><div class="email">sales@chinabeihai.net</div><div class="meta">ID: 469448075974</div></div>
+        <div class="contact-card"><div class="name">Feifei Liu</div><div class="company">Shandong Xinhai</div><div class="email">xhmineral@ytxinhai.com</div><div class="meta">ID: 469448074998</div></div>
+        <div class="contact-card"><div class="name">RSD Procurement</div><div class="company">RSD Industry</div><div class="email">info@rsdindustry.com</div><div class="meta">ID: 473304336089 | ⚠ BOUNCED</div></div>
+      </div>
+
+      <h3 style="margin-top:14px;">Power Plant Contacts</h3>
+      <div class="contact-grid">
+        <div class="contact-card"><div class="name">Donna Mezo</div><div class="company">GNPower Dinginin</div><div class="email">gnpres@gnpower.com</div><div class="meta">GNPower Kauswagan + Dinginin coverage</div></div>
+        <div class="contact-card"><div class="name">Francisco Bordeos</div><div class="company">GNPower</div><div class="email">res-info@gnpower.com</div><div class="meta">Operations intel source</div></div>
+        <div class="contact-card"><div class="name">Michael Ko</div><div class="company">Aboitiz Power</div><div class="email">info@aboitizpower.com</div><div class="meta">Corporate procurement — EMAIL SENT Apr 20</div></div>
+        <div class="contact-card"><div class="name">Leah Mabulay</div><div class="company">Team Energy Corp</div><div class="email">l.mabulay@teamenergy.ph</div><div class="meta">Coal procurement decision maker</div></div>
+        <div class="contact-card"><div class="name">Jose Gorospe</div><div class="company">Panasia Energy</div><div class="email">info@panasiaenergy.ph</div><div class="meta">Coal/biomass IPP</div></div>
+        <div class="contact-card"><div class="name">Procurement Team</div><div class="company">First Gen Corporation</div><div class="email">info@firstgen.com.ph</div><div class="meta">Gas + coal power</div></div>
+      </div>
+
+      <h3 style="margin-top:14px;">Notes Summary (Recent — Top 10)</h3>
+      <ul class="file-list">
+        <li><span class="file-path">BOUNCE ALERT — Philcement diesel outreach bounced</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">BOUNCE ALERT — RSD Industry bounced</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">Coal EMAIL SENT — Aboitiz Power (info@aboitizpower.com)</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">Nickel EMAIL SENT — TISCO Import (import@tisco.com.cn)</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">POWER PLANT — GNPower Dinginin Ltd. Co. — full intel</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">MULTI-PLANT COVERAGE — GNPower Group</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">POWER PLANT — Therma Mobile Inc. (Navotas)</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">Meeting Request drafted — Coal Supply for Kauswagan</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">Meeting Request drafted — Diesel Supply Partnership</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">Meeting Request drafted — Coal Supply Partnership</span><span class="file-date">Apr 20</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CEBU POWER CLUSTER -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon success">⚡</div>
+      <h2>Cebu Power Cluster — Intelligence Summary</h2>
+      <span class="tag ok">739 MW TOTAL</span>
+    </div>
+    <div class="section-body">
+      <div class="alert-box success">
+        ✓ April 20 outreach sent to MGEN (John Hisoler) and Aboitiz Power. German Desuyo confirmed as HR at Carmen Copper — NOT coal buyer. Emails 7, 8, 10 deleted/not sent per RZH decision.
+      </div>
+      <table>
+        <thead><tr><th>Plant</th><th>Owner / Operator</th><th>Location</th><th>Capacity</th><th>Contact</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>CEDC</td><td>Abovant (44%) / Global Formosa (56%) / MGEN operates</td><td>Naga City</td><td>246 MW</td><td>john_hisoler@meralcopowergen.com.ph</td><td><span class="status sent">✓ SENT Apr 20</span></td></tr>
+          <tr><td>TPC (Toledo Power)</td><td>MGEN / Aboitiz</td><td>Brgy. Bato, Toledo City</td><td>~195 MW</td><td>Via john_hisoler</td><td><span class="status sent">✓ COVERED</span></td></tr>
+          <tr><td>Therma Visayas</td><td>Aboitiz Power</td><td>Brgy. Bato, Toledo City</td><td>340 MW</td><td>info@aboitizpower.com</td><td><span class="status sent">✓ SENT Apr 20</span></td></tr>
+          <tr><td>TPVI (Naga Power)</td><td>Aboitiz Power / TPI</td><td>Naga City</td><td>153.1 MW</td><td>Via Aboitiz</td><td><span class="status pending">○ CLUSTER</span></td></tr>
+          <tr><td>SMC More Power Barge</td><td>San Miguel Corporation</td><td>Cebu City</td><td>~50 MW diesel</td><td>info@smcglobalpower.ph</td><td><span class="status pending">○ NOT YET</span></td></tr>
+        </tbody>
+      </table>
+      <p class="correction-note">⚠ CORRECTIONS: Therma Visayas = Toledo City (NOT Cebu City). German Desuyo = Male/HR (NOT female buyer). CEDC = NOT Aboitiz subsidiary.</p>
+    </div>
+  </div>
+
+  <!-- OBSIDIAN VAULT -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon obsidian">◇</div>
+      <h2>Obsidian Vault — Active Files</h2>
+      <span class="tag ok">24 FILES</span>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li><span class="file-path">3_Resources/Operating_System/RZH_Operations_Manual.md</span><span class="file-size">25,366 B</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">3_Resources/Operating_System/FOB_Pricing_Reference_Sheet.md</span><span class="file-size">9,632 B</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">3_Resources/Commodity-Knowledge/HubSpot-Enrichment-Map.md</span><span class="file-size">6,373 B</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">4_Archives/Weekly_Reports/Weekly_Report_April13-17_2026.md</span><span class="file-size">5,028 B</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">1_Projects/Lead-Generation/Cebu-Power-Plants-Research.md</span><span class="file-size">3,854 B</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">THE MARKET TAILWIND.md</span><span class="file-size">2,317 B</span><span class="file-date">Apr 20</span></li>
+        <li><span class="file-path">3_Resources/Market_Intelligence/Weekly_Market_Intelligence_Apr20.md</span><span class="file-size">4,227 B</span><span class="file-date">Apr 18</span></li>
+        <li><span class="file-path">3_Resources/Buyer_Contact_Protocol/ECONARES_Buyer_Contact_Checklist.md</span><span class="file-size">6,591 B</span><span class="file-date">Apr 16</span></li>
+        <li><span class="file-path">3_Resources/Operating_System/Econares-Commodities-Pipeline-OS.md</span><span class="file-size">15,088 B</span><span class="file-date">Apr 16</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ACTION CHECKLIST -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon alert">►</div>
+      <h2>Open Items &amp; Action Checklist</h2>
+      <span class="tag warn">11 ITEMS — 3 DONE</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><div class="check-box pending">○</div><span class="check-text">Follow-up China nickel responses — window Apr 27–30</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">Resolve Philcement bounce — verify Jessie Sarias email or call Philcement directly</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">SMC More Power Barge outreach — diesel opportunity (~50 MW diesel, Cebu City)</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">Bulk Ore Limited deal — monitor June 30 close date, push for progress</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">Bulk Ore HubSpot company record — add 21 shipments (Trademo intel), Ed Finch role</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">Therma Visayas site visit opportunity — follow up with John Hisoler for Toledo</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">RSD Industry alternate contact — try info@rsdindustry.net (not .com) or LinkedIn</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">PKS supplier research — Mindanao/Palawan sources — no outreach yet</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">Copper concentrate — JX Advanced Metals follow-up — no activity since Apr 17</span></li>
+        <li><div class="check-box pending">○</div><span class="check-text">OPS MANUAL correction — CEO name: Cornelio C. Eleguin (not Eleizer)</span></li>
+        <li><div class="check-box done">✓</div><span class="check-text done">April 20 Cebu coal outreach wave — COMPLETE (2 emails sent)</span></li>
+        <li><div class="check-box done">✓</div><span class="check-text done">HubSpot activity notes for Apr 20 outreach — COMPLETE (10 notes)</span></li>
+        <li><div class="check-box done">✓</div><span class="check-text done">Cebu power plant corrections documented — COMPLETE</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MARKET INTEL -->
+  <div class="section">
+    <div class="section-head">
+      <div class="icon info">◈</div>
+      <h2>Market Intelligence — April 20 Snapshot</h2>
+      <span class="tag ok">SOURCE: Weekly Intel Apr 20</span>
+    </div>
+    <div class="section-body">
+      <div class="metric-row">
+        <div class="metric"><div class="num">$128.70/t</div><div class="label">Newcastle Coal 6k FOB</div></div>
+        <div class="metric"><div class="num">$16,934/t</div><div class="label">Indonesia HMA Nickel (Apr)</div></div>
+        <div class="metric"><div class="num">$12,895/t</div><div class="label">LME Copper 3-Mo (Apr 13)</div></div>
+        <div class="metric"><div class="num">S$4.42–4.68</div><div class="label">SGP Diesel (per L)</div></div>
+        <div class="metric"><div class="num">&lt;$80/mt</div><div class="label">PKS FOB (ID/MY)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <strong>RZH:</strong> Reymarr Hijara | Sales and Marketing Officer | ECONARES<br>
+      <strong>Mobile:</strong> +63 927 872 5194 | <strong>Email:</strong> reyzh.econares@gmail.com<br>
+      <strong>CEO:</strong> Eleizer Eleguin | ece.eleguinresources@yahoo.com<br>
+      <strong>WhatsApp | Telegram | WeChat | Viber | Landline: +63 232 6268</strong>
+    </div>
+    <div>
+      <span>Generated: April 21, 2026 07:38 AM &nbsp;|&nbsp; ECONARES CONFIDENTIAL &nbsp;|&nbsp; FOB Origin Basis</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

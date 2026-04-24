@@ -1,0 +1,128 @@
+WEEKLY SALES REPORT — RZH | ECONARES | Week of April 14-20, 2026
+================================================================================
+
+1. NICKEL ORE — CHINA MARKET
+
+This week marked ECONARES' first coordinated export push into the China nickel ore market.
+
+OUTREACH SUMMARY:
+
+BATCH 1 — April 13, 2026 (Monday)
+First-contact email to 4 companies.
+Grade: Ni 0.5%, Fe 40% (Limonite, iron-rich blending material)
+Companies: Ningbo Lygend, Tsingshan Holdings, Fortune Metals, Baosteel Resources
+
+BATCH 2 — April 14, 2026 (Tuesday)
+Second wave — 11 companies.
+Grade: Ni 0.5%, Fe 40% (Limonite)
+Companies: Jinchuan International, TISCO/Baowu, Huayou Cobalt, CITIC Metal,
+Hainan Mining, NIS, Delong Nickel, Nickel Industries, Shandong Xinhai,
+China Beihai
+
+BATCH 3 — April 17, 2026 (Friday, 11:40 PM)
+Third wave — 15 buyers across 12 companies. UPGRADED GRADE SPECS.
+Full specification matrix:
+
+  LOW-GRADE LIMONITE:
+    Ni 0.80% to 1.19%, Fe > 48%
+    Ni 1.20% to 1.29%, Fe less than or equal to 20%
+  MEDIUM GRADE:
+    Ni 1.30% to 1.39%, Fe less than or equal to 30%
+    Ni 1.40% to 1.49%, Fe less than or equal to 25%
+  HIGH GRADE / SAPROLITE:
+    Ni 1.50% to 1.59%, Fe less than or equal to 20%
+    Ni 1.60% and above, Fe less than or equal to 20%
+
+Incoterms: FOB Philippines | Inspection: SGS or CCIC at load port
+No pricing — requesting destination port and volume.
+Company profile: Attached (17.6 MB PDF)
+
+Total outreach to China buyers this week: 15 companies, 22+ contacts.
+No buyer responses received yet. All inboxes under monitoring.
+
+BULK ORE LIMITED (HK):
+  Email sent April 17 to info@bulk-ore.com.
+  Grade specs included. FOB Philippines. Company profile attached.
+  Verified legitimate HK company (since 2016). MD: Ed Finch.
+  ECE approved Apr 18 — "Please proceed."
+  Pending: Contract in Word (.docx) format for ECE review.
+
+GMAIL INTELLIGENCE:
+  Jinchuan: Mario Wong left July 2023. Anson Wong is new CFO.
+  Apr 14 email was sent to Mario's old address (trading@).
+  Anson confirmed as primary contact. HubSpot updated.
+  Joy Desuyo (CEDC): Warm lead reactivated Apr 5. Wants loop on CEDC/TPC.
+  Energy crisis delaying responses. HubSpot updated.
+
+================================================================================
+
+2. DOMESTIC DIESEL — PHILIPPINE CEMENT COMPANIES
+
+Philcement Corporation (PHINMA) — Jessie Sarias
+  Email sent Apr 20: Requirements-gathering inquiry.
+  Awaiting: Volume, location, frequency, specs, current supplier terms.
+
+Goodfound Cement Corp. — Arvi Nieva
+  WhatsApp outreach Apr 17. 14kL x 2-3x/week. Naga/Albay supplier needed.
+  Awaiting: Volume and delivery confirmation.
+
+Republic Cement — Allan Saquilayan
+  Status: Unresponsive. CEO escalation pending.
+
+================================================================================
+
+3. PIPELINE — Week of April 14-20
+
+Contacts created/updated: 50 total
+Active deals: 6
+China buyer contacts added: 15 companies, 22+ contacts
+
+New contacts added this week:
+  Ningbo Lygend (2), RSD Industry, Delong Nickel (2), CITIC Metal,
+  Jinchuan International, Tsingshan Group (2), Shandong Xinhai,
+  TISCO/Baowu, Huayou Cobalt, Baosteel Resources, China Beihai,
+  Fortune Metals, Nickel Industries, Hainan Mining, NIS,
+  Ed Finch (Bulk Ore), Jessie Sarias (Philcement), Arvi Nieva (Goodfound)
+
+Active deal tracking:
+  Tawi-Tawi Nickel Ore — China Outreach     NEGOTIATION
+  Copper Ore — JX Advanced Metals (Japan)    NEGOTIATION
+  Diesel — Philcement                       PENDING REVIEW
+  Diesel — Goodfound                        PENDING REVIEW
+  Diesel — Republic Cement                  PENDING REVIEW
+  M&H Mining LOI v2                         HIGH RISK (Do not proceed)
+
+================================================================================
+
+4. SYSTEMS & PROCESSES — Completed This Week
+
+- Gmail label system: 18 labels configured
+- Email templates: Nickel-Ore (ECE-approved), Philcement diesel
+- Daily commodity dashboard: Telegram 08:30 PH daily (cron active)
+- HubSpot intelligence: 5 notes logged, 6 contacts updated
+  Including Jinchuan contact correction and Joy Desuyo reactivation
+- Obsidian vault: Synced to GitHub master branch
+
+================================================================================
+
+5. PENDING ACTIONS — Week of April 21
+
+CRITICAL:
+  [ ] Monitor all China buyer inboxes — first responses expected this week
+  [ ] CONVERT Bulk Ore contract to Word (.docx) — send to ECE for review
+  [ ] Follow up Bulk Ore (Ed Finch) if no response by Wed Apr 23
+  [ ] Confirm Philcement diesel volume and delivery specs from Jessie
+  [ ] Source Naga/Albay diesel supplier for Goodfound
+
+HIGH:
+  [ ] Republic Cement — CEO escalation or find alternative contact
+  [ ] Ningbo Lygend, Tsingshan, Jinchuan — priority follow-up (largest)
+  [ ] Copper — JX Advanced Metals next steps (negotiation stage)
+  [ ] CC Joy Desuyo on all future CEDC/TPC/MGEN outreach
+
+MEDIUM:
+  [ ] PKS outreach: Hanwa, Iwatani, Taiheiyo (Japan)
+  [ ] 2nd outreach batch — higher-grade nickel specs (drafts ready)
+
+RZH | ECONARES | Week of April 14-20, 2026
+================================================================================

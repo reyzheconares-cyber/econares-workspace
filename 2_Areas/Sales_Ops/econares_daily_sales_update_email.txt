@@ -1,0 +1,182 @@
+Subject: Daily Sales Update - RZH | ECONARES Commodities Division
+From: Reymarr Hijara <reymarrhijara@gmail.com>
+To: ece.eliquiresresources@yahoo.com; lsf.econares@gmail.com
+Date: April 17, 2026
+
+---
+
+DAILY SALES UPDATE — RZH | ECONARES COMMODITIES DIVISION
+Date: April 17, 2026
+
+================================================================================
+SECTION 1: PRODUCT & STOCK STATUS
+================================================================================
+
+COMMODITY 1: LOW-GRADE LIMONITE NICKEL ORE
+Origin:                  Tawi-Tawi, Philippines
+Current Stock Position:  CONFIRMED AND ACCESSIBLE — Ready for immediate loading
+Available Volume:        1,000,000 – 2,000,000 Wet Metric Tons
+Grade Range in Stock:    Ni 0.5% – 1.0% (see pricing matrix below)
+Stock Status:            Active — Available for Sale
+
+COMMODITY 2: SAPROLITE & STANDARD LIMONITE (NEW — ADDED TODAY)
+Origin:                  Tawi-Tawi / Philippine origins
+Available Volume:        Available — confirm with mine operations
+Grade Range:             Saprolite (Ni 1.2%–1.8%), Standard Limonite (Ni 0.5%–1.2%)
+Stock Status:            Available for quotation
+
+NOTE: Full nickel product suite now available. Ace (DXB) and all future
+nickel outreach to reference all three products.
+
+================================================================================
+SECTION 2: ACTIVE PIPELINE
+================================================================================
+
+┌──────────────────┬─────────────────────┬──────────────┬────────────────────────┬────────────┐
+│ BUYER            │ TYPE                │ STATUS       │ ACTION REQUIRED        │ TIMELINE   │
+├──────────────────┼─────────────────────┼──────────────┼────────────────────────┼────────────┤
+│ Ace of           │ Buyer Agent         │ HOT LEAD     │ Awaiting destination   │ ASAP      │
+│ DXB China India  │ (WhatsApp GC)       │ Active       │ port from Ace to       │           │
+│ Resources        │ Ni 0.5% Ni, 50k MT  │ outreach sent│ finalize FOB pricing   │           │
+├──────────────────┼─────────────────────┼──────────────┼────────────────────────┼────────────┤
+│ Goodfound        │ End-User Buyer      │ FOLLOW-UP    │ Await Arvi response.   │ Apr 18+   │
+│ Cement Corp.     │ Diesel, 14kL x2-3x  │ Viber sent   │ Source Naga/Albay      │           │
+│ (Arvi Nieva)     │ per facility/week   │ Apr 17       │ diesel supplier        │           │
+├──────────────────┼─────────────────────┼──────────────┼────────────────────────┼────────────┤
+│ Mabuhay          │ Accredited Buyer    │ FOLLOW-UP    │ Await Lyn response.    │ Apr 18+   │
+│ Filcement Inc.   │ Coal + Diesel       │ Viber sent   │ Confirm volume +       │           │
+│ (Lyn / Celyn)    │ Bulk pricing offer  │ Apr 17       │ delivery locations     │           │
+├──────────────────┼─────────────────────┼──────────────┼────────────────────────┼────────────┤
+│ Republic Cement  │ End-User Buyer      │ ON HOLD      │ Allan not answering.   │ TBD       │
+│ (Allan Saquilayan)│ Diesel            │ No answer    │ Retry call tomorrow    │           │
+├──────────────────┼─────────────────────┼──────────────┼────────────────────────┼────────────┤
+│ Philcement       │ End-User Buyer      │ BLOCKED      │ Google OAuth broken.   │ TBD       │
+│ Corp.            │ Diesel, formal quote│ Email pending│ Re-authenticate to send│           │
+│ (Jessie Sarias)  │ drafted             │              │ formal quotation       │           │
+├──────────────────┼─────────────────────┼──────────────┼────────────────────────┼────────────┤
+│ M&H Mining /    │ Buyer Agent         │ ON HOLD      │ HIGH RISK — awaiting   │ TBD       │
+│ Bulk Ore Ltd.   │ Nickel Limonite      │ Verification │ PoF + verification.   │           │
+│                 │ 50,000+ MT          │ stalled       │ Do NOT share docs.     │           │
+└──────────────────┴─────────────────────┴──────────────┴────────────────────────┴────────────┘
+
+================================================================================
+SECTION 3: PRICING UPDATE — April 17, 2026
+================================================================================
+
+NICKEL ORE (FOB Philippines — Indicative)
+Source: SMM, Mysteel, PLATTS, Fastmarkets (Apr 2026)
+
+  Saprolite Ni 1.3%:          ~USD 32–34/wmt FOB PH
+  Saprolite Ni 1.5%:          ~USD 51–53/wmt FOB PH
+  Limonite Ni 1.2%:           ~USD 22–25/wmt FOB PH
+  Low-Grade Limonite <0.5% Ni: ~USD 5–15/wmt FOB PH (case-by-case)
+
+  CIF China benchmarks (for reference only — ECONARES transacts FOB):
+  Ni 1.3% CIF China:          ~USD 45–47/wmt
+  Ni 1.2% CIF China:          ~USD 25–27/wmt
+
+IRON ORE (62% Fe, CFR China)
+  TSI / PLATTS (Apr 16, 2026):  USD 107.11–107.45/t
+  Trend: +7% YoY, slight upward pressure
+
+CHROMITE (40–42% Cr2O3, South African concentrate, CIF China)
+  FerroAlloyNet (Mar 6, 2026):  USD 305–310/MT
+  Note: South African floods tightened supply in Q1 2026
+
+DIESEL (CIF Singapore / PH Retail)
+  CIF Singapore (Apr 17):       ~USD 72/bbl — Regional spot, -2% WoW
+  PH DOE Retail:               ~PHP 149/L — Flat
+
+COAL (Newcastle est.)
+  CIF China:                    ~USD 138/t — Steady
+
+NOTE: ECONARES transacts on FOB and Ex-works terms ONLY.
+CIF/CFR reference provided for pricing derivation purposes only.
+
+================================================================================
+SECTION 4: BUYER RESEARCH COMPLETED
+================================================================================
+
+PKS (PALM KERNEL SHELLS) — BUYER RESEARCH COMPLETED APR 17
+File: PKS Buyers - China and SEA Research.md
+Scope: China, Japan, South Korea, Taiwan
+
+Top Targets Identified:
+  Korea:    D.K. CHOI — dkchoikz@naver.com / +82-10-4804-3041 (10,000–30k MT/month)
+  China:    Daniel Sun (EC21) — Skype: danielsun_1984 (10,000+ MT/month)
+  Taiwan:   TCC Group — tcc_csr@taiwacement.com (100,000 MT/month)
+  Japan:    Hanwa / Sojitz — via website inquiry (large volume intermediary)
+
+Certifications needed: GGL (Green Gold Label) — required for Japan FiT buyers
+
+---
+
+NICKEL ORE BUYERS — RESEARCH COMPLETED APR 17
+File: Nickel Ore Buyers and Offtake Opportunities — 2026 - FOB.md
+Source: Perplexity Deep Research / CRI, Panjiva, Mysteel, Fastmarkets
+
+CHINA — PRIMARY HUNTING GROUND (92% of PH nickel ore goes to China)
+
+  Tier 1 Targets:
+  1. Ningbo Lygend — office@lygend.com / +86-574-2791-2525
+     (Top PH consignee: 243 shipments, 13.29B kg received)
+  2. RSD Industry — sales@rsdindustry.net / +86-132-2020-0710
+     (#2 consignee: 164 shipments, 9.02B kg received)
+  3. Fortune Metals — via HK registry (~$286M value, multi-miner exposure)
+  4. Win Ascend Ltd. — via HK registry (4.07B kg received)
+  5. Pacific Infinity Resources — via HK registry (3.12B kg, OVMPC exclusive)
+
+  Note: All Tier 1 buyers already proven to buy PH-origin nickel ore.
+  ECONARES enters existing trade lanes, not a new education problem.
+
+  Japan:    Strategic, slow-build. SMM (Coral Bay / Taganito HPAL) anchor.
+  Korea:    Processed nickel only (matte/ferronickel) — not raw ore buyers.
+  Taiwan:   Stainless/ferronickel downstream — not raw ore buyers.
+
+================================================================================
+SECTION 5: HUBSPOT CRM UPDATE
+================================================================================
+
+All activities for April 17, 2026 logged in HubSpot:
+  - Arvi Nieva (Goodfound): Viber sent — diesel 14kL x2-3x/week
+  - Lyn / Celyn Aves (Mabuhay): Viber sent — diesel volume inquiry + coal pitch
+  - Ace (DXB China India Resources): New contact created. WhatsApp outreach sent.
+
+GitHub vault: Synced and up to date.
+
+================================================================================
+SECTION 6: BLOCKED ITEMS
+================================================================================
+
+1. Google OAuth — HubSpot and Gmail integrations affected. Re-authentication needed.
+2. Philcement Jessie Sarias — formal diesel quotation drafted but CANNOT send until
+   Google OAuth resolved.
+3. Republic Allan Saquilayan — not answering phone. Retry Apr 18.
+4. M&H Mining / Bulk Ore Ltd. — HIGH RISK. Do not share documents until PoF received.
+
+================================================================================
+SECTION 7: PRIORITY ACTIONS FOR TOMORROW
+================================================================================
+
+Priority     Action                                          Owner     Deadline
+--------------------------------------------------------------------------------
+URGENT       Follow up Ace (DXB) — need destination port    RZH       Apr 18
+URGENT       Follow up Arvi (Goodfound) — await response    RZH       Apr 18
+URGENT       Follow up Lyn (Mabuhay) — await response        RZH       Apr 18
+HIGH         Begin outreach to Ningbo Lygend (China nickel)   RZH       Apr 18-21
+HIGH         Begin outreach to RSD Industry (China nickel)    RZH       Apr 18-21
+HIGH         Source Naga/Albay diesel supplier for Goodfound  RZH       Apr 18
+MEDIUM       Call Allan (Republic) — retry                   RZH       Apr 18
+MEDIUM       Fix Google OAuth — restore Gmail/HubSpot        RZH/ECE   Apr 18
+ONGOING      Monitor commodity prices — update matrix daily  RZH       Daily
+ONGOING      Send Daily Sales Report to ECE                  RZH       Daily EOD
+
+================================================================================
+Prepared by: Reymarr Hijara (RZH)
+Sales and Marketing Officer, Trading Division
+ECONARES International Trading Corp.
+Date: April 17, 2026
+Time: End of Day
+
+CONFIDENTIAL — For ECONARES internal team and authorized partners only
+================================================================================

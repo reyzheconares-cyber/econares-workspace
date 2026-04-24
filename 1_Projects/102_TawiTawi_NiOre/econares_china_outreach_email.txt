@@ -1,0 +1,207 @@
+Subject: China Buyer Outreach — Status Update + LME Pricing Matrix | RZH | April 14, 2026
+
+From: Reymarr Hijara <reymarrhijara@gmail.com>
+To: [ECE Team / Partner Distribution List]
+Date: April 14, 2026
+Attachments:
+  1. ECONARES — Indicative FOB Pricing Matrix (ECONARES-PM-TAWI-2026-001)
+  2. ECONARES — China Buyer Target List
+  3. ECONARES — Limonite Nickel Ore Specification Sheet (ECONARES-NIO-TAWI-2026-001)
+
+---
+
+Dear ECE Team,
+
+Please find below a status update on China buyer outreach for the Tawi-Tawi Limonite Nickel Ore (Ni 0.5% / Fe 40%) stock. Attached are the updated pricing matrix, buyer target list, and product specification sheet.
+
+---
+
+CHINA BUYER OUTREACH — STATUS UPDATE
+ECONARES Commodities Division | RZH | April 14, 2026
+
+================================================================================
+PRODUCT SUMMARY
+================================================================================
+
+Commodity:       Limonite Nickel Ore | Ni 0.50% min / Fe 40% typical
+Origin:          Tawi-Tawi, Philippines
+Stock Status:    CONFIRMED AND ACCESSIBLE — Ready for immediate loading
+Available Volume: 1,000,000 – 2,000,000 Wet Metric Tons
+LME Reference:    LME 3-Month Nickel — USD 17,841/MT (April 14, 2026)
+
+================================================================================
+SECTION 1: CHINA OUTREACH STATUS
+================================================================================
+
+OUTREACH COMPLETED THIS SESSION:
+
+We have prepared a full China buyer target list covering 12 verified Chinese buyers
+of limonite nickel ore — steel mills, NPI producers, commodity trading houses, and
+independent NPI producers across Zhejiang, Fujian, Shandong, Guangdong, and Guangxi.
+
+The following outreach package has been drafted and is ready to send:
+
+────────────────────────────────────────────────────────────────────────
+TIER 1 — IMMEDIATE OUTREACH (SEND THIS WEEK)
+────────────────────────────────────────────────────────────────────────
+
+1. TSINGSHAN GROUP | Ruian, Zhejiang
+   Role: Stainless Steel Mill / NPI Producer — World's largest
+   Why:  Benchmark buyer for Philippine limonite. Consumes ~80–100M WMT/yr.
+         Strong fit for our 0.5% Ni / 40% Fe material (NPI blending grade).
+   Action: Formal inquiry letter + spec sheet + pricing matrix — DRAFT READY
+
+2. SINOCHEM GROUP | Beijing
+   Role: State-Owned Commodity Trading House — "Big 4" SOE
+   Why:   Broad commodity mandate, active cross-border nickel ore trader,
+          large Beijing/Shanghai trading desks.
+   Action: Formal inquiry letter + spec sheet + pricing matrix — DRAFT READY
+
+3. DELONG STEEL | Tianjin
+   Role: Stainless Steel Mill — Established Philippine ore buyer
+   Why:   Known buyer of limonite ore from the Philippines, Sino-Indonesian operations,
+          direct NPI producer.
+   Action: Formal inquiry letter + spec sheet + pricing matrix — DRAFT READY
+
+────────────────────────────────────────────────────────────────────────
+TIER 2 — FOLLOW-UP OUTREACH (NEXT WEEK)
+────────────────────────────────────────────────────────────────────────
+
+4. XIAMEN IXING TRADING | Fujian
+   Role: Commodity Trading House
+   Why:   Direct Philippines-China trade lanes, Fujian proximity to Tawi-Tawi,
+          strong experience with Philippine nickel ore.
+   Action: Formal inquiry letter + spec sheet + pricing matrix — DRAFT READY
+
+5. CHINA MINMETALS | Beijing
+   Role: State-Owned Mining & Metals Trading House
+   Why:   Top 3 SOE mining group in China, global non-ferrous procurement mandate.
+   Action: Formal inquiry letter + spec sheet + pricing matrix — DRAFT READY
+
+6. QINGXIANG NICKEL | Shandong
+   Role: Independent NPI Producer
+   Why:   Shandong is China's largest nickel ore receiving province,
+          strong buyer of low-grade Philippine limonite.
+   Action: Formal inquiry letter + spec sheet + pricing matrix — DRAFT READY
+
+────────────────────────────────────────────────────────────────────────
+ADDITIONAL BUYERS IDENTIFIED (7 more companies)
+────────────────────────────────────────────────────────────────────────
+
+7.  Grand Blue / Dexin (Fujian)         — NPI Producer, Tsingshan ecosystem
+8.  Northern Stainless Steel (Shandong) — Stainless Steel Mill
+9.  Jiangyin Xinbao (Jiangsu)           — Stainless Steel Mill
+10. Zhejiang Materials Group (Hangzhou)  — SOE Trading/Logistics
+11. Hualong Nickel (Guangdong)           — Independent NPI Producer
+12. Guangxi Nickel Alloy (Guangxi)       — Independent NPI Producer
+13. Yangjiang-based NPI producers (Guangdong corridor)
+
+Full details in attached China Buyer Target List.
+
+================================================================================
+SECTION 2: PRICING MATRIX — LME-LINKED (Updated April 14, 2026)
+================================================================================
+
+Reference: LME 3-Month Nickel Official Price — USD 17,841/MT (April 14, 2026)
+
+INDICATIVE FOB TAWI-TAWI PRICES (USD/WMT):
+(All prices recalculated against LME at each confirmed order)
+
+   Ni 0.50%   Ni 0.60%   Ni 0.70%   Ni 0.80%   Ni 0.90%   Ni 1.00%
+   ~$62–66    ~$77–81    ~$89–93   ~$102–106  ~$115–119  ~$128–132
+
+INDICATIVE CIF CHINA PRICES (USD/WMT) — Ni 0.50% grade:
+
+   Rizhao / Lanshan:    ~USD 70–74/WMT
+   Zhanjiang:            ~USD 68–72/WMT
+   Fangchenggang:        ~USD 68–72/WMT
+
+PRICING METHODOLOGY:
+FOB Price = (LME 3-Mo Price × Payable Ni%) - TC/RC - Logistics
+- Payable Ni = Ore Grade × ~80% recovery × ~95% payability
+- TC/RC = Treatment/Refining Charge per industry NPI standard
+- Iron credit included (40% Fe value in NPI blast furnace feed)
+
+NOTE: All prices indicative and subject to final assay at loading.
+Full calculation methodology available in attached pricing matrix document.
+Prices valid for 30 days from April 14, 2026.
+
+================================================================================
+SECTION 3: M&H MINING / BULK ORE LTD. STATUS
+================================================================================
+
+Inbound LOI received from M&H Mining (Ref: MH-LOI-03-2026, March 28, 2026).
+M&H claims to represent Bulk Ore Ltd. (Hong Kong) as "front negotiator."
+
+Due diligence assessment: HIGH RISK — multiple Joker Broker flags identified.
+
+Verification requirements before proceeding:
+   [ ] SEC corporate registration of M&H Mining — NOT VERIFIED
+   [ ] HK Companies Registry verification of Bulk Ore Ltd. — NOT VERIFIED
+   [ ] Proof of Funds from Bulk Ore Ltd. — NOT PROVIDED
+   [ ] M&H → Bulk Ore Ltd. authorization letter — NOT PROVIDED
+   [ ] Physical office verification of M&H Surigao address — NOT DONE
+   [ ] Direct C-suite contact with Bulk Ore Ltd. — NOT ESTABLISHED
+
+Our firm response (Reply Letter v2) has been sent requiring:
+   - Direct contact details for Bulk Ore Ltd.'s authorized buyer
+   - Proof of Funds and corporate registration documents
+   - Proof of M&H's authorization to act on Bulk Ore's behalf
+
+We prefer to communicate directly with Bulk Ore Ltd. as end-buyer.
+Do NOT share stock documents until due diligence is satisfied.
+
+================================================================================
+SECTION 4: KEY CHINESE PORTS — RECEIVING INFRASTRUCTURE
+================================================================================
+
+The following ports are the primary discharge points for imported nickel ore in
+China and represent our logistics target destinations in buyer outreach:
+
+   Rizhao / Lanshan (Shandong)  — Largest nickel ore port in China
+   Zhanjiang (Guangdong)         — Shortest route from Tawi-Tawi (3–5 days)
+   Fangchenggang (Guangxi)       — Guangxi main port, Southern corridor
+   Zhoushan / Ningbo (Zhejiang)  — Tsingshan corridor
+   Yangjiang (Guangdong)         — Guangdong NPI corridor
+
+================================================================================
+SECTION 5: ATTACHMENTS
+================================================================================
+
+Please find attached the following documents for your review and use:
+
+   1. ECONARES — Indicative FOB Pricing Matrix (ECONARES-PM-TAWI-2026-001)
+        LME-linked indicative prices for Ni 0.50%–1.00% limonite ore
+        Updated: April 14, 2026 | Valid: 30 days
+
+   2. ECONARES — China Buyer Target List
+        12 verified Chinese buyers across 3 tiers
+        Includes company type, location, background, and outreach priority
+
+   3. ECONARES — Limonite Nickel Ore Specification Sheet
+        (ECONARES-NIO-TAWI-2026-001)
+        Full chemical specs, logistics overview, inspection terms, commercial terms
+
+================================================================================
+SECTION 6: RECOMMENDED IMMEDIATE ACTIONS
+================================================================================
+
+   1. Send outreach emails to Tsingshan, Sinochem, and Delong Steel by April 15
+   2. Verify Bulk Ore Ltd. via HK Companies Registry (cr.gov.hk)
+   3. Coordinate with local government units — secure Tawi-Tawi logistics
+      and shipside loading operations (ECE — Task 4 from meeting)
+   4. Establish internal communication channel with legal and consulting team
+      per meeting directive (ECE — Task 3 from meeting)
+   5. Confirm TC/RC and iron credit with Chinese NPI buyer contact to
+      sharpen pricing matrix before outreach
+
+================================================================================
+
+Prepared by: Reymarr Hijara (RZH)
+Sales Officer, Trading Division
+ECONARES International Trading Corp.
+Cebu City, Philippines
+Date: April 14, 2026
+
+CONFIDENTIAL — ECONARES internal team and authorized partners only
+================================================================================

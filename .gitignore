@@ -1,0 +1,7 @@
+.obsidian/
+.stfolder/
+*.log
+*.tmp
+.env
+*.pyc
+__pycache__/

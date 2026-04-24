@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ECONARES — Vault Reorganization Report</title>
+<style>
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #0f0f14; color: #e0e0ec; padding: 40px; font-size: 13px; line-height: 1.6; }
+  .container { max-width: 860px; margin: 0 auto; }
+  .header { border-bottom: 2px solid #2a2a3e; padding-bottom: 20px; margin-bottom: 30px; }
+  .header h1 { font-size: 22px; font-weight: 900; color: #e8e8f0; letter-spacing: 2px; margin: 0; }
+  .header p { color: #6a6a8a; margin: 4px 0 0; font-size: 12px; }
+  .meta { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin-bottom: 30px; }
+  .meta-card { background: #16162a; border: 1px solid #22223a; border-radius: 8px; padding: 14px 16px; }
+  .meta-card .label { font-size: 10px; font-weight: 700; color: #5a5a7a; text-transform: uppercase; letter-spacing: 1px; }
+  .meta-card .value { font-size: 20px; font-weight: 800; color: #d0d0ec; margin-top: 4px; }
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #5a5a7a; border-bottom: 1px solid #1e1e2e; padding-bottom: 8px; margin-bottom: 14px; }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .stat { background: #13131f; border: 1px solid #1e1e2e; border-radius: 8px; padding: 12px 14px; }
+  .stat .name { font-size: 11px; color: #7a7a9a; margin-bottom: 2px; }
+  .stat .val { font-size: 15px; font-weight: 700; color: #c0c0d8; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; font-size: 10px; font-weight: 700; color: #5a5a7a; text-transform: uppercase; letter-spacing: 1px; padding: 6px 10px; border-bottom: 1px solid #1e1e2e; }
+  td { padding: 8px 10px; border-bottom: 1px solid #16162a; color: #b0b0c8; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 7px; border-radius: 4px; margin-right: 4px; }
+  .tag-done { background: #0d2818; color: #4ade80; }
+  .tag-new { background: #1a1500; color: #fcd34d; }
+  .tag-fix { background: #1a1528; color: #a78bfa; }
+  .tag-note { background: #0d1a28; color: #60a5fa; }
+  .summary-box { background: #0d0d18; border: 1px solid #1e1e2e; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; }
+  .summary-box h3 { font-size: 12px; font-weight: 800; color: #b0b0c8; margin: 0 0 8px; }
+  .summary-box p { color: #7070a0; margin: 0; font-size: 12px; }
+  .folder-tree { font-size: 11.5px; line-height: 1.9; color: #9090a8; }
+  .folder-tree .folder { color: #7a7a9a; font-weight: 700; }
+  .folder-tree .file { padding-left: 16px; color: #808098; }
+  .folder-tree .file.new { color: #fcd34d; }
+  .folder-tree .file.moved { color: #a78bfa; }
+  .folder-tree .file.fixed { color: #4ade80; }
+  .divider { border: none; border-top: 1px solid #1a1a2a; margin: 20px 0; }
+  .footer { border-top: 1px solid #1e1e2e; padding-top: 16px; margin-top: 30px; font-size: 11px; color: #4a4a6a; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>ECONARES — OBSIDIAN VAULT</h1>
+    <p>PARA + ZETTELKASTEN REORGANIZATION REPORT &nbsp;|&nbsp; APRIL 20, 2026 &nbsp;|&nbsp; PREPARED BY: HERMES AGENT</p>
+  </div>
+
+  <div class="meta">
+    <div class="meta-card"><div class="label">Total Files</div><div class="value">39</div></div>
+    <div class="meta-card"><div class="label">Vault Size</div><div class="value">273 KB</div></div>
+    <div class="meta-card"><div class="label">Actions Taken</div><div class="value">17</div></div>
+    <div class="meta-card"><div class="label">New Files</div><div class="value">5</div></div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <div class="section-title">EXECUTIVE SUMMARY</div>
+    <div class="summary-box">
+      <h3>What Was Done</h3>
+      <p>Complete restructuring of the ECONARES Obsidian vault to align with PARA methodology (Projects, Areas, Resources, Archives) and Zettelkasten note-taking principles. All 39 files were audited, reorganized, and cross-linked. Root-level clutter was cleared. Market Intelligence was moved from Areas to Resources. Numbered prefixes (301_, 302_, etc.) were removed. Five new files were created including the Zettelkasten system guide and templates.</p>
+    </div>
+    <div class="summary-box">
+      <h3>Key Changes</h3>
+      <p>4 loose root files archived. 1 misfoldered subfolder moved (Market Intelligence). 5 numbered prefixes replaced with descriptive names. All 4 INDEX files rewritten. Zettelkasten guide + 2 templates created. Archive structure established.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ACTIONS TAKEN -->
+  <div class="section">
+    <div class="section-title">ACTIONS TAKEN</div>
+    <table>
+      <tr>
+        <th style="width:40px">#</th>
+        <th>Action</th>
+        <th style="width:100px">Type</th>
+        <th style="width:180px">Location</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Moved DSR_April20_2026.html to Archives</td>
+        <td><span class="tag tag-done">Archived</span></td>
+        <td>4_Archives/DSR_Reports/</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Moved DSR_April20_2026.txt to Archives</td>
+        <td><span class="tag tag-done">Archived</span></td>
+        <td>4_Archives/DSR_Reports/</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Moved Weekly_Report_April20_2026.txt to Archives</td>
+        <td><span class="tag tag-done">Archived</span></td>
+        <td>4_Archives/Weekly_Reports/</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Moved Gmail_HubSpot_Sync_Report_Apr20_2026.txt to Archives</td>
+        <td><span class="tag tag-done">Archived</span></td>
+        <td>4_Archives/Audit_Logs/</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Moved 203_Commodity_Market_Intelligence from Areas to Resources</td>
+        <td><span class="tag tag-fix">Fixed</span></td>
+        <td>2_Areas/ → 3_Resources/Market_Intelligence/</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Removed prefix 301_ → Operating_System</td>
+        <td><span class="tag tag-fix">Renamed</span></td>
+        <td>3_Resources/301_Trading_OS/</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Removed prefix 302_ → Buyer_Contact_Protocol</td>
+        <td><span class="tag tag-fix">Renamed</span></td>
+        <td>3_Resources/302_Buyer_Contact_Protocol/</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Removed prefix 303_ → Product_Specs</td>
+        <td><span class="tag tag-fix">Renamed</span></td>
+        <td>3_Resources/303_Product_Specs/</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Removed prefix 304_ → Buyer_Intelligence</td>
+        <td><span class="tag tag-fix">Renamed</span></td>
+        <td>3_Resources/304_Buyer_Intelligence/</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Removed prefix 306_ → Email_Intelligence</td>
+        <td><span class="tag tag-fix">Renamed</span></td>
+        <td>3_Resources/306_Email_Intelligence/</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Merged 305_Market_Intelligence into Market_Intelligence/</td>
+        <td><span class="tag tag-fix">Merged</span></td>
+        <td>3_Resources/Market_Intelligence/</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Rewrote all 4 PARA INDEX files (0 Inbox, 1, 2, 3, 4)</td>
+        <td><span class="tag tag-fix">Updated</span></td>
+        <td>All PARA folders</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Created Zettelkasten_Guide.md</td>
+        <td><span class="tag tag-new">New</span></td>
+        <td>3_Resources/Zettelkasten_Method/</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Created Atomic_Note_Template.md</td>
+        <td><span class="tag tag-new">New</span></td>
+        <td>3_Resources/Zettelkasten_Method/</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Created Project_Retrospective_Template.md</td>
+        <td><span class="tag tag-new">New</span></td>
+        <td>4_Archives/Completed_Deals/</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Created Commodity-Specs-Master.md index note</td>
+        <td><span class="tag tag-new">New</span></td>
+        <td>3_Resources/Commodity-Knowledge/</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Established Archive Log in 4_Archives/INDEX.md</td>
+        <td><span class="tag tag-new">New</span></td>
+        <td>4_Archives/INDEX.md</td>
+      </tr>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- NEW FOLDER STRUCTURE -->
+  <div class="section">
+    <div class="section-title">NEW FOLDER STRUCTURE</div>
+    <div class="folder-tree">
+      <div><span class="folder">ECONARES_WORKSPACE/</span> &nbsp;<span style="color:#4a4a6a">(PARA Vault — April 20, 2026)</span></div>
+      <div style="padding-left:16px"><span class="folder">0 Inbox/</span> &nbsp;<span style="color:#5a5a7a">— fleeting notes, unprocessed captures</span></div>
+      <div style="padding-left:16px; color:#7a7a9a; font-weight:700">1_Projects/</div>
+      <div class="file">101_Econares_Website/</div>
+      <div class="file">102_TawiTawi_NiOre/ &nbsp;<span style="color:#4ade80">(active deal)</span></div>
+      <div class="file">103_MH_BulkOre_Deal/ &nbsp;<span style="color:#4ade80">(active deal)</span></div>
+      <div class="file">ECONARES_Command_Center.xlsx</div>
+      <div style="padding-left:16px; color:#7a7a9a; font-weight:700">2_Areas/</div>
+      <div class="file">Sales_Ops/Pipeline/Pipeline_Status_HubSpot.md &nbsp;<span style="color:#a78bfa">(fixed: was misfoldered)</span></div>
+      <div class="file">Sales_Ops/*.xlsx, daily logs</div>
+      <div style="padding-left:16px; color:#7a7a9a; font-weight:700">3_Resources/</div>
+      <div class="file new">Commodity-Knowledge/ &nbsp;<span style="color:#fcd34d">(NEW: ref card + index)</span></div>
+      <div class="file">Operating_System/ &nbsp;<span style="color:#a78bfa">(renamed from 301_)</span></div>
+      <div class="file">Market_Intelligence/ &nbsp;<span style="color:#a78bfa">(merged: was 203_ in Areas + 305_ in Resources)</span></div>
+      <div class="file">Buyer_Intelligence/ &nbsp;<span style="color:#a78bfa">(renamed from 304_)</span></div>
+      <div class="file">Buyer_Contact_Protocol/ &nbsp;<span style="color:#a78bfa">(renamed from 302_)</span></div>
+      <div class="file">Email_Intelligence/ &nbsp;<span style="color:#a78bfa">(renamed from 306_)</span></div>
+      <div class="file">Product_Specs/ &nbsp;<span style="color:#a78bfa">(renamed from 303_)</span></div>
+      <div class="file new">Zettelkasten_Method/ &nbsp;<span style="color:#fcd34d">(NEW: guide + 2 templates)</span></div>
+      <div style="padding-left:16px; color:#7a7a9a; font-weight:700">4_Archives/</div>
+      <div class="file">DSR_Reports/ &nbsp;<span style="color:#4ade80">(archived this session)</span></div>
+      <div class="file">Weekly_Reports/ &nbsp;<span style="color:#4ade80">(archived this session)</span></div>
+      <div class="file">Audit_Logs/ &nbsp;<span style="color:#4ade80">(archived this session)</span></div>
+      <div class="file new">Completed_Deals/ &nbsp;<span style="color:#fcd34d">(NEW: retrospective template)</span></div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ZETTELKASTEN SYSTEM -->
+  <div class="section">
+    <div class="section-title">NEW: ZETTELKASTEN SYSTEM</div>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="name">Guide</div>
+        <div class="val">Zettelkasten_Guide.md</div>
+        <div style="font-size:11px;color:#5a5a7a;margin-top:4px">Atomic note principles, permanent note template, ECONARES-specific rules, linking methodology</div>
+      </div>
+      <div class="stat">
+        <div class="name">Templates</div>
+        <div class="val">2 files</div>
+        <div style="font-size:11px;color:#5a5a7a;margin-top:4px">Atomic_Note_Template.md (permanent notes) + Project_Retrospective_Template.md (deal post-mortems)</div>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="name">Note IDs</div>
+        <div class="val">YYYYMMDDXX</div>
+        <div style="font-size:11px;color:#5a5a7a;margin-top:4px">Example: 2026042001, 2026042002 — enables explicit cross-linking between notes</div>
+      </div>
+      <div class="stat">
+        <div class="name">Core Rule</div>
+        <div class="val">1 idea per note</div>
+        <div style="font-size:11px;color:#5a5a7a;margin-top:4px">No "everything about nickel." One atomic insight. Link to at least 2 existing notes. Write in your own words.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- NEXT STEPS -->
+  <div class="section">
+    <div class="section-title">RECOMMENDED NEXT STEPS</div>
+    <table>
+      <tr>
+        <th>Priority</th>
+        <th>Action</th>
+        <th>Where</th>
+      </tr>
+      <tr>
+        <td><span class="tag tag-note">High</span></td>
+        <td>Sync vault via Git to push changes to G405 Linux and Office Windows machines</td>
+        <td>Terminal / Git client</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-note">High</span></td>
+        <td>Start using Zettelkasten for new notes — every new insight gets an ID and a link</td>
+        <td>3_Resources/Zettelkasten_Method/</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-note">High</span></td>
+        <td>Daily 10AM recall cron is active (21 sessions) — reinforces commodity specs via James Kwik method</td>
+        <td>Telegram / Cron</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-note">High</span></td>
+        <td>After deal closes: write a Project Retrospective using the new template before archiving</td>
+        <td>4_Archives/Completed_Deals/</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-done">Medium</span></td>
+        <td>Weekly archive review — move old DSRs and reports to Archives every Monday</td>
+        <td>0 Inbox / 4_Archives</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-done">Medium</span></td>
+        <td>Add wikilinks to existing notes that are orphaned (no cross-links)</td>
+        <td>3_Resources/*</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-done">Low</span></td>
+        <td>Add Obsidian Git plugin for auto-commit on save (if not already set up)</td>
+        <td>Obsidian Community Plugins</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    ECONARES OBSIDIAN VAULT — PARA + ZETTELKASTEN REORGANIZATION REPORT<br>
+    April 20, 2026 &nbsp;|&nbsp; Vault: 39 files, 273 KB &nbsp;|&nbsp; Hermes Agent
+  </div>
+
+</div>
+</body>
+</html>

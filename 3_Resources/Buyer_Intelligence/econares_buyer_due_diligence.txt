@@ -1,0 +1,189 @@
+================================================================================
+        ECONARES INTERNATIONAL TRADING CORP.
+        BUYER DUE DILIGENCE REPORT
+        Nickel Ore — Tawi-Tawi Operations | RZH | April 2026
+================================================================================
+Buyer Evaluated:       M&H Non-Ferrous Ore Mining (Surigao, Philippines)
+LOI Reference:         MH-LOI-03-2026 | Dated: March 28, 2026
+End-Buyer Claimed:     Bulk Ore Ltd. (Hong Kong SAR)
+Mediator:              Christopher Capungan
+
+================================================================================
+        SECTION 1: JOKER BROKER RED FLAG ASSESSMENT
+================================================================================
+
+CRITERION                              STATUS          FLAG?
+--------------------------------------------------------------------------------
+1. Registered corporate entity          UNVERIFIED      YES — RED FLAG
+   (SEC Philippines / HK Companies)
+   → M&H: No SEC registration verifiable via public records
+   → Bulk Ore Ltd.: HK Companies Registry not confirmed
+
+2. Corporate email domain              FAIL            YES — RED FLAG
+   → mhmining7@gmail.com: Generic free email, not corporate domain
+   → No company website found (mhmining.com not active)
+   → "Front negotiator" role unexplained and unverifiable
+
+3. Proof of Funds (PoF)                NOT PROVIDED    YES — RED FLAG
+   → No PoF presented with LOI MH-LOI-03-2026
+   → Bulk Ore Ltd.'s financial capacity not demonstrated
+   → No bank reference letter or financial statement provided
+
+4. Proof of Product (PoP)              NOT APPLICABLE  —
+   → M&H is a trader, not an end-user — expected
+
+5. Direct C-suite contact              UNCLEAR          YES — YELLOW FLAG
+   → LOI addressed to ECE Resources, not directly to ECONARES
+   → No named individual authorized to sign contract
+   → Christopher Capungan role unclear — no title, company, or credentials
+
+6. Physical office verification        NOT DONE         YES — RED FLAG
+   → Address given: 10127 Km4 Brgy. Luna, Surigao City
+   → Physical office presence not independently verified
+   → Recommend site visit before any commitment
+
+7. Registered middleman vs. end-buyer  INTERMEDIARY    YES — RED FLAG
+   → M&H explicitly states role as "front negotiator" for Bulk Ore Ltd.
+   → This is exactly the intermediary layer the meeting directive forbids
+   → Bulk Ore Ltd. in Hong Kong cannot be reached directly through M&H
+   → Commission or margin embedded in their "front" role = price leakage
+
+================================================================================
+        SECTION 2: JOKER BROKER VERDICT — M&H MINING
+================================================================================
+
+OVERALL ASSESSMENT:  HIGH RISK — DO NOT PROCEED WITHOUT VERIFICATION
+
+M&H Mining exhibits multiple Joker Broker characteristics:
+   1. Unverifiable corporate registration
+   2. Generic email domain (no corporate website)
+   3. No Proof of Funds
+   4. "Front negotiator" role adds unnecessary intermediary layer
+   5. No named authorized signatory
+   6. Address and physical presence not independently verified
+
+RECOMMENDATION:
+   - HOLD on M&H Mining response until due diligence is complete.
+   - DO NOT send samples, financial documents, or any stock proof to M&H.
+   - DO NOT allow M&H to transmit ECONARES documents to Bulk Ore Ltd. 
+     without first establishing direct communication with Bulk Ore.
+   - Request direct contact details for Bulk Ore Ltd.'s authorized buyer 
+     (name, email, phone, WeChat) before proceeding.
+   - Demand Proof of Funds from Bulk Ore Ltd. before any contract discussion.
+
+ACTION REQUIRED:
+   → Contact Bulk Ore Ltd. directly to verify if M&H is genuinely authorized.
+   → If Bulk Ore cannot confirm M&H's authority, discard M&H entirely.
+
+================================================================================
+        SECTION 3: BULK ORE LTD. (HK) — DUE DILIGENCE
+================================================================================
+
+LEGITIMACY CHECK:
+   → Must verify via Hong Kong Companies Registry (cr.gov.hk)
+   → Look for: Company registration number, active status, appointed directors
+   → Check if they have a physical office in Hong Kong
+   → Verify any public trade records or commodity trading history
+
+REQUIRED DOCUMENTS BEFORE ENGAGING BULK ORE LTD.:
+   1. Certificate of Incorporation (HK Companies Registry)
+   2. Business Registration Certificate
+   3. Proof of Funds (bank reference letter or financial statement)
+   4. Authorized buyer identification (name + passport or company ID)
+   5. Evidence of prior nickel ore purchase transactions
+
+IF BULK ORE LTD. CANNOT PROVIDE THESE WITHIN 7 DAYS: DISCARD.
+
+================================================================================
+        SECTION 4: TIER-1 BUYER REGISTRY — VERIFIED BUYERS
+================================================================================
+
+These buyers are the PRIMARY OUTREACH TARGETS per meeting directive.
+All are direct C-suite contactable entities with verifiable corporate presence.
+
+BUYER: TSINGSHAN GROUP (青山集团)
+Location:            Ruian, Wenzhou, Zhejiang, China
+Type:                End-User (Stainless Steel / NPI Producer)
+Grade Targeting:     0.5%–1.8% Ni limonite
+Scale:               World's largest NPI producer (80–100M WMT/yr throughput)
+Verification:        www.tsingshan.com | Registered in China
+Contact Level:       Raw Materials Trading Desk / VP Procurement
+Priority:            TIER 1 — IMMEDIATE OUTREACH
+
+BUYER: SINOCHEM GROUP (中国化工集团)
+Location:            Beijing, China
+Type:                Commodity Trading House (End-User + Trader)
+Grade Targeting:     Broad (all limonite grades)
+Scale:               State-owned "Big 4" commodity house
+Verification:        www.sinochem.com | SOE registered in China
+Contact Level:       Non-Ferrous Metals Desk / Director of Procurement
+Priority:            TIER 1 — IMMEDIATE OUTREACH
+
+BUYER: CHINA MINMETALS (中国五矿集团)
+Location:            Beijing, China
+Type:                State-Owned Mining & Metals Trading House
+Grade Targeting:     All grades, global procurement mandate
+Scale:               Top 3 state mining group in China
+Verification:        www.minmetals.com | SOE registered in China
+Contact Level:       Non-Ferrous Commodities Desk
+Priority:            TIER 1 — IMMEDIATE OUTREACH
+
+BUYER: DELONG STEEL (德龙钢铁)
+Location:            Tianjin, China
+Type:                End-User (Stainless Steel Mill)
+Grade Targeting:     0.5%–1.5% Ni limonite
+Scale:               Major stainless steel producer
+Verification:        www.delongsteel.com
+Contact Level:       Raw Materials / Nickel Ore Procurement Manager
+Priority:            TIER 1 — IMMEDIATE OUTREACH
+
+BUYER: XIAMEN IXING TRADING (厦门IXING)
+Location:            Fujian, China
+Type:                Commodity Trading House
+Grade Targeting:     Philippines-origin limonite preferred
+Scale:               Mid-size trader with PH-China lane
+Verification:        Verify via Xiamen Chamber of Commerce or trade registry
+Contact Level:       Trading Desk Director
+Priority:            TIER 2 — SECOND FOLLOW-UP
+
+================================================================================
+        SECTION 5: STRATEGIC OUTREACH PRIORITY
+================================================================================
+
+IMMEDIATE (THIS WEEK):
+   1. Send firm offer to Tsingshan Group (direct)
+   2. Send firm offer to Sinochem Group (direct)
+   3. Send firm offer to Delong Steel (direct)
+   4. Send spec sheet + pricing matrix to all three simultaneously
+
+HOLD / VERIFY:
+   5. M&H Mining / Bulk Ore Ltd. — do NOT engage until PoF and authorization 
+      are verified. Reply: "We prefer to communicate directly with end-buyers. 
+      Please provide Bulk Ore Ltd.'s authorized contact details."
+
+REJECT:
+   6. Any unregistered intermediary presenting unverified buyers
+   7. Any party refusing to provide Proof of Funds within 7 days
+   8. Any party using generic free email domains as primary contact
+
+================================================================================
+        SECTION 6: ECE MEETING DIRECTIVE — COMPLIANCE NOTES
+================================================================================
+
+Meeting directives acknowledged and applied:
+   [X] Pricing calculated from LME 3-Month Official Price minus standard TC/RCs
+   [X] CIF China/Japan terms used as reference basis
+   [X] Joker Broker red flag criteria applied to M&H Mining — result: HIGH RISK
+   [X] Tier-1 Chinese and Japanese off-take buyers prioritized
+   [X] M&H/Bulk Ore intermediary approach flagged for verification
+   [ ] Japanese off-take buyers — NOT YET included in outreach (recommend adding)
+
+PENDING: Review Japanese off-take buyers (Sumitomo Metal Mining, Pacific Metals, etc.)
+         as alternative to China-only focus per meeting directive.
+
+================================================================================
+Document Reference: ECONARES-DD-2026-001
+Prepared by: ECONARES Trading Division | RZH
+Date: April 2026
+CONFIDENTIAL — Internal use only
+================================================================================
