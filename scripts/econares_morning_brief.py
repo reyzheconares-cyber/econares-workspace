@@ -17,6 +17,9 @@ try:
                 TELEGRAM_BOT_TOKEN = line.split('=')[1].strip()
 except: pass
 
+# BRAVE_API_KEY from environment
+BRAVE_KEY = os.environ.get('BRAVE_API_KEY', '')
+
 def api_post(url, token, data):
     r = subprocess.run(['curl', '-s', '-H', f'Authorization: Bearer {token}',
         '-H', 'Content-Type: application/json', '-d', json.dumps(data), url],
@@ -29,6 +32,89 @@ def api_get(url, token):
         capture_output=True, text=True, timeout=20)
     try: return json.loads(r.stdout)
     except: return {}
+
+# HARDCODE FALLBACKS (Apr 2026)
+HARDCODED = {
+    'nickel':  '$19,163/tonne LME 3M (+22% YoY | Near 3-yr high. Indo quota cuts 260-270M WMT)',
+    'coal':    '$84.50/tonne FOB GAR 5500 RTS (Apr 26 ICI Index | PH landed ~$95-110/MT)',
+    'copper':  '$14,500+/tonne LME (Record Jan 2026. Cu ore 0.5% ~$85-95/tonne mined)',
+    'diesel':  '~$610/MT FOB Korea (Asia Gasoil 10ppm | PH pump ~P58-65/liter)',
+    'pks':     '$95-110/MT fob Sumatra spot (Indonesia ~6.5M MT/yr | PH cement AF demand)',
+}
+
+def clean_price(text):
+    text = re.sub(r'<[^>]+>', '', text).strip()
+    if len(text) > 120:
+        for sep in '. ':
+            idx = text.rfind(sep, 60, 120)
+            if idx > 40:
+                text = text[:idx+1].strip()
+                break
+        else:
+            text = text[:120]
+    return text
+
+def fetch_tavily(query):
+    if not TAVILY_KEY:
+        return None
+    try:
+        r = subprocess.run(
+            ['curl', '-s', '-X', 'POST', 'https://api.tavily.com/search',
+             '-H', f'X-Api-Key: {TAVILY_KEY}',
+             '-H', 'Content-Type: application/json',
+             '-d', json.dumps({'query': query, 'max_results': 2})],
+            capture_output=True, text=True, timeout=15)
+        result = json.loads(r.stdout)
+        if result.get('results'):
+            return clean_price(result['results'][0].get('content', ''))
+    except:
+        pass
+    return None
+
+def fetch_brave(query):
+    if not BRAVE_KEY:
+        return None
+    try:
+        r = subprocess.run(
+            ['curl', '-s', '-G', 'https://api.search.brave.com/res/v1/web/search',
+             '-H', f'X-Subscription-Token: {BRAVE_KEY}',
+             '--data-urlencode', f'q={query}',
+             '--data-urlencode', 'count=2'],
+            capture_output=True, text=True, timeout=15)
+        data = json.loads(r.stdout)
+        results = data.get('web', {}).get('results', [])
+        if results:
+            return clean_price(results[0].get('description', ''))
+    except:
+        pass
+    return None
+
+def get_commodity_snapshot():
+    COMMODITY_QUERIES = [
+        ('nickel',  'nickel ore price CIF China 1.8% 2026'),
+        ('coal',    'Indonesian coal GAR 5500 price FOB 2026'),
+        ('copper',  'copper ore concentrate price 2026'),
+        ('diesel',  'Asia gasoil 10ppm FOB Korea price 2026'),
+        ('pks',     'palm kernel shells PKS price FOB Indonesia 2026'),
+    ]
+    LABELS = {
+        'nickel':  'Nickel (LME 3M)',
+        'coal':    'Coal (Indo GAR 5,500)',
+        'copper':  'Copper (LME)',
+        'diesel':  'Diesel (Asia Gasoil)',
+        'pks':     'PKS (fob Sumatra)',
+    }
+    snapshot = {}
+    for key, query in COMMODITY_QUERIES:
+        label = LABELS[key]
+        text = fetch_tavily(query)
+        if text is None:
+            text = fetch_brave(query)
+        if text is None:
+            snapshot[label] = {'text': HARDCODED.get(key, '[unavailable]'), 'fallback': True}
+        else:
+            snapshot[label] = {'text': text, 'fallback': False}
+    return snapshot
 
 today = datetime.datetime.utcnow()
 today_str = today.strftime('%Y-%m-%d')
@@ -103,23 +189,8 @@ week_res = api_post('https://api.hubapi.com/crm/v3/objects/tasks/search', PAT, {
 completed_week = len(week_res.get('results', []))
 
 # ── COMMODITY PRICES (Tavily) ────────────────────────────────────
-commodity_data = {}
-if TAVILY_KEY:
-    commodities = ['nickel ore price', 'copper ore price', 'coal thermal price', 'diesel price Asia']
-    for cmd in commodities:
-        try:
-            r = subprocess.run(['curl', '-s', '-H', f'X-Api-Key: {TAVILY_KEY}',
-                '-H', 'Content-Type: application/json',
-                '-d', json.dumps({'query': cmd, 'max_results': 3}),
-                'https://api.tavily.com/search'],
-                capture_output=True, text=True, timeout=15)
-            result = json.loads(r.stdout)
-            # Extract snippet from first result
-            if result.get('results'):
-                snippet = result['results'][0].get('content', '')[:120]
-                commodity_data[cmd] = snippet
-        except:
-            pass
+# COMMODITY PRICES: Tavily > Brave > Hardcoded
+commodity_data = get_commodity_snapshot()
 
 # ── BUILD MESSAGE ──────────────────────────────────────────────
 lines = [
@@ -165,13 +236,13 @@ else:
     lines.append("")
 
 # Commodity prices
-if commodity_data:
-    lines.append("📈 COMMODITY SNAPSHOT:")
-    for cmd, info in commodity_data.items():
-        # Shorten commodity name
-        short_name = cmd.replace(' price', '').replace(' ore', '').title()
-        lines.append(f"  • {short_name}: {info}")
-    lines.append("")
+lines.append("📈 COMMODITY SNAPSHOT:")
+for label, info in commodity_data.items():
+    marker = '◆' if info['fallback'] else '●'
+    lines.append(f"  {marker} {label}: {info['text']}")
+if any(v['fallback'] for v in commodity_data.values()):
+    lines.append("  ◆ = fallback (live data unavailable -- verify at Trading Economics / Coaltradeindo)")
+lines.append("")
 
 # Tasks
 if overdue:
@@ -205,14 +276,8 @@ lines += [
 ]
 
 msg = "\n".join(lines)
-print(msg)
 
-# ── TELEGRAM ──────────────────────────────────────────────────
-chat_id = '707620807'
-if TELEGRAM_BOT_TOKEN and msg:
-    tg = subprocess.run(['curl', '-s', '-X', 'POST',
-        f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage',
-        '-H', 'Content-Type: application/json',
-        '-d', json.dumps({'chat_id': chat_id, 'text': msg})],
-        capture_output=True, text=True, timeout=15)
-    print(f"\nTelegram: {tg.stdout[:100]}")
+# ── OUTPUT ─────────────────────────────────────────────────────
+# Cron job delivers stdout to Telegram (deliver: telegram).
+# This script outputs the full message to stdout only.
+print(msg)
