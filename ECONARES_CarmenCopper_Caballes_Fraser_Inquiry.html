@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coal & Diesel Supply Inquiry -- ECONARES [Cebu City]</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .wrapper {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 32px 0;
+  }
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-top: 5px solid #FA9D10;
+    border-bottom: 5px solid #FA9D10;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .header {
+    background-color: #0F1C2E;
+    padding: 28px 36px 22px 36px;
+  }
+  .header-brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FA9D10;
+    letter-spacing: 3px;
+    margin: 0 0 4px 0;
+  }
+  .header-tagline {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #c8d0da;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .subject-bar {
+    background-color: #0F1C2E;
+    border-top: 1px solid #1e3352;
+    padding: 10px 36px 18px 36px;
+  }
+  .subject-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #7a8fa8;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 4px 0;
+  }
+  .subject-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #FA9D10;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  .body-content {
+    padding: 36px 36px 28px 36px;
+  }
+  .salutation {
+    font-size: 16px;
+    color: #0F1C2E;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .paragraph {
+    font-size: 14.5px;
+    color: #2c2c2c;
+    line-height: 1.8;
+    margin: 0 0 18px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .section-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10.5px;
+    color: #7a8fa8;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 28px 0 14px 0;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 6px;
+  }
+  .question-block {
+    margin: 0 0 14px 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .question-border {
+    width: 4px;
+    min-height: 100%;
+    background-color: #FA9D10;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-right: 14px;
+    align-self: stretch;
+  }
+  .question-inner {
+    flex: 1;
+  }
+  .question-number {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #FA9D10;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 4px 0;
+  }
+  .question-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 1.7;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .call-box {
+    background-color: #f7f9fc;
+    border-left: 4px solid #0F1C2E;
+    padding: 16px 20px;
+    margin: 28px 0 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .call-box-text {
+    font-size: 14px;
+    color: #0F1C2E;
+    line-height: 1.75;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .call-box-text strong {
+    color: #0F1C2E;
+  }
+  .context-footer {
+    font-size: 12px;
+    color: #888888;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 0 0 8px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    border-top: 1px dashed #ddd;
+    padding-top: 18px;
+  }
+  .signature-block {
+    background-color: #0F1C2E;
+    padding: 24px 36px;
+  }
+  .sig-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FA9D10;
+    margin: 0 0 3px 0;
+    letter-spacing: 0.5px;
+  }
+  .sig-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #c8d0da;
+    margin: 0 0 1px 0;
+    letter-spacing: 0.5px;
+  }
+  .sig-company {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 14px 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .sig-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #FA9D10;
+    margin: 0 0 14px 0;
+  }
+  .sig-contact-row {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11.5px;
+    color: #a8b8cc;
+    margin: 0 0 5px 0;
+    line-height: 1.5;
+  }
+  .sig-contact-row a {
+    color: #FA9D10;
+    text-decoration: none;
+  }
+  .sig-cc-note {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #5a6e82;
+    margin: 14px 0 0 0;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #1e3352;
+    padding-top: 10px;
+  }
+  .sig-cc-note a {
+    color: #7a9ab8;
+    text-decoration: none;
+  }
+  @media only screen and (max-width: 600px) {
+    .body-content {
+      padding: 24px 20px 20px 20px;
+    }
+    .header {
+      padding: 22px 20px 16px 20px;
+    }
+    .subject-bar {
+      padding: 8px 20px 16px 20px;
+    }
+    .signature-block {
+      padding: 20px 20px;
+    }
+    .container {
+      width: 100% !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <p class="header-brand">ECONARES</p>
+      <p class="header-tagline">Eleguín Resources &amp; Energy Corporation &nbsp;|&nbsp; Cebu City, Philippines</p>
+    </div>
+
+    <!-- SUBJECT BAR -->
+    <div class="subject-bar">
+      <p class="subject-label">Subject</p>
+      <p class="subject-text">Coal &amp; Diesel Supply Inquiry &mdash;&mdash; ECONARES [Cebu City]</p>
+    </div>
+
+    <!-- BODY -->
+    <div class="body-content">
+
+      <p class="salutation">Dear Ms. Caballes,</p>
+
+      <p class="paragraph">
+        My name is <strong>Reymarr Zamora Hijara</strong>, Sales and Marketing Officer at <strong>ECONARES</strong> (Eleguín Resources &amp; Energy Corporation), a Cebu City&ndash;based commodity trading company serving mining, industrial
