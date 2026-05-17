@@ -1,0 +1,24 @@
+============================================================
+🌅 ECONARES MORNING BRIEF
+Date: May 16, 2026 | PHT
+============================================================
+
+📊 COMMODITY PRICES
+----------------------------------------
+  coal_5500_gar: USD 68-72/MT FOB Indonesia
+  nickel_1_8: USD 42-46/MT CIF China
+  diesel: USD 0.85-0.95/Liter CIF PH
+  pks: USD 95-105/MT FOB Indonesia
+
+📞 OUTREACH QUEUE (Top 5)
+----------------------------------------
+  1. Demo Contact @ Demo Corp [Coal]
+
+⏰ PENDING FOLLOW-UPS
+----------------------------------------
+  Apex Cement Corp | Quote follow-up | 2d | SOON
+  Steel Manila Inc | Contract renewal | 5d | NORMAL
+  PowerGrid Solutions | Price negotiation | 1d | URGENT
+
+============================================================
+EOF
