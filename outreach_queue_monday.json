@@ -22,10 +22,10 @@
       "commodity": "Coal/Power",
       "priority": "HIGH",
       "touch": 1,
-      "status": "QUEUED",
+      "status": "SKIPPED",
       "hs_contact_id": "486886685400",
       "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt",
-      "notes": "Owned by MGEN \u2014 deal already in progress with parent. CEDC is subsidiary. Verify with RZH before sending."
+      "notes": "Owned by MGEN \u2014 deal already in progress with parent. CEDC is subsidiary. Verify with MGEN."
     },
     {
       "company": "SMC Global Power Holdings",
