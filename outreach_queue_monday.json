@@ -4,6 +4,18 @@
   "total": 8,
   "contacts": [
     {
+      "company": "Huayou Cobalt",
+      "contact": "Recycling / Trading Desk",
+      "email": "hyxh@huayou.com",
+      "commodity": "Nickel Asia",
+      "priority": "HOT",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "469448797917",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt",
+      "notes": "Original xct@huayou.com bounced (mailbox invalid). hyxh@huayou.com verified deliverable via Verifalia. Dept is recycling \u2014 email may be forwarded internally to nickel ore procurement. Best practice: call Europe/Americas desk +86-0573-88589025 for warm intro, or send to hyxh and let internal routing handle it."
+    },
+    {
       "company": "Cebu Energy Development Corp",
       "contact": "EDC Procurement",
       "email": "scm_contact@energy.com.ph",
@@ -68,17 +80,6 @@
       "touch": 1,
       "status": "QUEUED",
       "hs_contact_id": "482963044080",
-      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
-    },
-    {
-      "company": "Huayou Cobalt",
-      "contact": "Qi Sun",
-      "email": "xct@huayou.com",
-      "commodity": "Nickel Asia",
-      "priority": "HOT",
-      "touch": 1,
-      "status": "QUEUED",
-      "hs_contact_id": "469448797917",
       "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
     },
     {
