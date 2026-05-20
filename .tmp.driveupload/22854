@@ -681,3 +681,44 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 [2026-05-19 16:03:11] PUSH FAILED
 fatal: could not read Username for 'https://github.com': No such device or address
 
+
+[2026-05-19 16:06:23] DIAGNOSTIC: Push auth failure confirmed
+[2026-05-19 16:06:23] Mode 2: 'Invalid username or token' — PAT may be expired
+[2026-05-19 16:06:23] Branch is [ahead 10] — commits are piling up
+[2026-05-19 16:06:23] ACTION REQUIRED: RZH must regenerate GitHub PAT
+[2026-05-19 16:06:23] GitHub: Settings → Developer settings → PAT → Fine-grained → repo scope
+
+[2026-05-19 16:06:23] Git autosync starting...
+[2026-05-19 16:06:23] PUSH FAILED
+[2026-05-19 16:06:23] Authentication failed — PAT expired or invalid
+[2026-05-19 20:03:04] Git autosync starting...
+[master 11f0c67] Auto-save: 2026-05-19 20:03:04
+ 14 files changed, 830 insertions(+)
+ create mode 100644 .tmp.driveupload/22823
+ create mode 100644 .tmp.driveupload/22827
+ create mode 100644 .tmp.driveupload/22829
+ create mode 100644 .tmp.driveupload/22831
+ create mode 100644 .tmp.driveupload/22833
+ create mode 100644 .tmp.driveupload/22835
+ create mode 100644 .tmp.driveupload/22837
+ create mode 100644 .tmp.driveupload/22839
+ create mode 100644 .tmp.driveupload/22841
+ create mode 100644 .tmp.driveupload/22843
+ create mode 100644 .tmp.driveupload/22845
+ create mode 100644 .tmp.driveupload/22847
+ create mode 100644 .tmp.driveupload/22849
+ create mode 100644 briefers/dsr-2026-05-19.html
+fatal: could not read Username for 'https://github.com': No such device or address
+[2026-05-19 20:03:04] PUSH FAILED
+[2026-05-19 22:02:25] Git autosync starting...
+[2026-05-19 22:02:25] Nothing to commit
+[2026-05-20 00:01:58] Git autosync starting...
+[2026-05-20 00:01:58] Nothing to commit
+[2026-05-20 00:02:13] Git autosync starting...
+[2026-05-20 00:02:13] Nothing to commit
+[2026-05-20 00:02:32] Git autosync starting...
+[2026-05-20 00:02:32] Nothing to commit
+[2026-05-20 04:01:44] Git autosync starting...
+[2026-05-20 04:01:44] Nothing to commit
+[2026-05-20 04:01:52] Git autosync starting...
+[2026-05-20 04:01:52] Nothing to commit
