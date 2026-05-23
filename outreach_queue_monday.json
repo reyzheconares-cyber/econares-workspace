@@ -1,0 +1,85 @@
+{
+  "outreach_date": "2026-05-18",
+  "followup_date": "2026-05-23",
+  "total": 7,
+  "notes": "CEDC skipped — MGEN deal in progress covers Toledo plant (CEDC + TPC). Do NOT send separate outreach to CEDC.",
+  "contacts": [
+    {
+      "company": "SMC Global Power Holdings",
+      "contact": "Procurement Team",
+      "email": "info@smcglobalpower.com.ph",
+      "commodity": "Coal/Power",
+      "priority": "HOT",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "473882456810",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    },
+    {
+      "company": "SPC Power Group",
+      "contact": "Joy Desuyo",
+      "email": "joy.desuyo@spcpowergroup.com",
+      "commodity": "Coal/Power",
+      "priority": "HOT",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "474992964291",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    },
+    {
+      "company": "Team Energy Corporation",
+      "contact": "Leah Mabulay",
+      "email": "l.mabulay@teamenergy.ph",
+      "commodity": "Coal/Power",
+      "priority": "HIGH",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "473897661130",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    },
+    {
+      "company": "Global Ferronickel Holdings (FNI)",
+      "contact": "Dante R. Bravo",
+      "email": "investorrelations@gfni.com.ph",
+      "commodity": "Nickel PH",
+      "priority": "TOP",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "482889886398",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    },
+    {
+      "company": "Nickel Asia Corporation",
+      "contact": "Martin Antonio Zamora",
+      "email": "hello@nickelasia.com",
+      "commodity": "Nickel PH",
+      "priority": "TOP",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "482963044080",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    },
+    {
+      "company": "Huayou Cobalt",
+      "contact": "Qi Sun",
+      "email": "xct@huayou.com",
+      "commodity": "Nickel Asia",
+      "priority": "HOT",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "469448797917",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    },
+    {
+      "company": "Jinchuan Group",
+      "contact": "Jinchuan Trading",
+      "email": "trading@jinchuan-intl.com",
+      "commodity": "Nickel Asia",
+      "priority": "HOT",
+      "touch": 1,
+      "status": "QUEUED",
+      "hs_contact_id": "469449514693",
+      "draft_file": "Email_Drafts_Fraser_8_Contacts_2026-05-16.txt"
+    }
+  ]
+}
