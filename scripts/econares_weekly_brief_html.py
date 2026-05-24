@@ -39,12 +39,15 @@ def get_hubspot_data():
            and d['properties'].get('hubspot_owner_id') == '164168266']
     total_pipeline = sum(float(d['properties'].get('amount',0) or 0) for d in active)
     won_amount = sum(float(d['properties'].get('amount',0) or 0) for d in won)
-    tasks_resp = hs_post('https://api.hubapi.com/crm/v3/objects/tasks/search',
-        {'filterGroups': [{'filters': [
-            {'propertyName': 'hs_task_status', 'operator': 'IN', 'value': 'NOT_STARTED,IN_PROGRESS'},
-            {'propertyName': 'hubspot_owner_id', 'operator': 'EQ', 'value': '164168266'}
-        ]}], 'properties': ['hs_task_subject','hs_timestamp','hs_task_status'], 'limit': 200})
-    all_tasks = tasks_resp.get('results', [])
+    try:
+        tasks_resp = hs_post('https://api.hubapi.com/crm/v3/objects/tasks/search',
+            {'filterGroups': [{'filters': [
+                {'propertyName': 'hs_task_status', 'operator': 'IN', 'value': 'NOT_STARTED,IN_PROGRESS'},
+                {'propertyName': 'hubspot_owner_id', 'operator': 'EQ', 'value': '164168266'}
+            ]}], 'properties': ['hs_task_subject','hs_timestamp','hs_task_status'], 'limit': 200})
+        all_tasks = tasks_resp.get('results', [])
+    except Exception:
+        all_tasks = []
     today_str = datetime.datetime.now().strftime('%Y-%m-%d')
     overdue = [t for t in all_tasks if (t['properties'].get('hs_timestamp') or '')[:10] < today_str and t['properties'].get('hs_timestamp')]
     contacts_resp = hs_post('https://api.hubapi.com/crm/v3/objects/contacts/search',
