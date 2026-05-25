@@ -30,7 +30,10 @@ if git diff --quiet && git diff --cached --quiet; then
     exit 0
 fi
 
-git add -A
+# Fix read-only files in .tmp.driveupload that block git add
+chmod -Rf u+w "$REPO/.tmp.driveupload" 2>/dev/null
+
+git add -A && git add -u
 
 if git diff --cached --quiet; then
     echo "[$TIMESTAMP] Nothing to commit" >> "$LOG"
