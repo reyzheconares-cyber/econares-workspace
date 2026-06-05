@@ -11,15 +11,10 @@ TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
 echo "[$TIMESTAMP] Git autosync starting..." >> "$LOG"
 
-git_mode=$(stat -c '%a' "$REPO/.git" 2>/dev/null)
-if [ "$git_mode" = "40555" ]; then
-    chmod u+w "$REPO/.git" 2>/dev/null
-    chmod -R u+w "$REPO/.git/objects" 2>/dev/null
-    chmod -R u+w "$REPO/.git/refs" 2>/dev/null
-    chmod u+w "$REPO/.git/index" 2>/dev/null
-elif [ -f "$REPO/.git/index.lock" ]; then
-    rm -f "$REPO/.git/index.lock"
-fi
+# FIX .git permissions — .git periodically reverts to mode 0o555 (read-only).
+# The old check `stat -c '%a'` returns decimal (e.g. 555), NOT octal 40555.
+# Unconditionally chmod to ensure write access before any git operation.
+chmod -f 755 "$REPO/.git" "$REPO/.git/objects" "$REPO/.git/refs" "$REPO/.git/index" 2>/dev/null
 
 if ! git config --get credential.helper 2>/dev/null | grep -q "/git-credential-store"; then
     git config --global credential.helper /usr/lib/git-core/git-credential-store 2>/dev/null
