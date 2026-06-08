@@ -1,29 +1,49 @@
-🌅 <b>ECONARES MORNING BRIEF</b> | May 23, 2026 PHT
-━━━━━━━━━━━━━━━━━━━━━━
+🌅 ECONARES MORNING BRIEF | Monday, June 08, 2026 PHT
+==================================================
 
-📊 <b>COMMODITY PRICES</b> (Indicative)
-  Coal (GAR 5500):    USD 84-88/MT FOB Indonesia (GAR 5500)
-  Nickel (1.8% CIF):  USD 42-46/MT CIF China (1.8% Ni)
-  Diesel (MOPS 10ppm): USD 600-620/MT FOB Korea (MOPS 10ppm)
-  PKS (FOB ID):       USD 95-110/MT FOB Indonesia (PKS spot)
-<i>⚠️ Tavily/Brave unavailable — fallback benchmarks</i>
+📊 COMMODITY PRICES (Indicative — fallback benchmarks)
+──────────────────────────────────────────────────
+  ⛏️  Nickel (1.8% CIF CN):  USD 42–46/MT CIF China (1.8% Ni) — DMO cuts tightening supply
+  🔥 Coal (GAR 5500 FOB):    USD 84–98/MT FOB Indonesia (GAR 5500); PH landed ~$108–115/MT
+  🟫 Copper (0.5% basis):    USD 85–95/MT mined (0.5% Cu basis); LME ~$14,500/t
+  ⛽ Diesel (MOPS 10ppm):    USD 600–620/MT FOB Korea (MOPS 10ppm)
+  🌴 PKS (FOB ID):           USD 95–110/MT FOB Indonesia (PKS spot)
+  🌲 Woodchips (CIF CN):     USD 130–160/m³ CIF China (tropical HW chips; Q1 log imports −11% YoY)
+  🌾 CPO (FOB MY):           USD 1,039–1,105/MT FOB Malaysia (MDEX); ID $1,090–1,215/MT (B50 support)
+⚠️  Tavily API auth failing + Brave key not loaded → using May 2026 fallback benchmarks.
 
-📞 <b>OUTREACH QUEUE</b> (Top 5)
-━━━━━━━━━━━━━━━━━━━━━━
-  1. John Glubas @ Concrete Solutions Inc. ✉️ | purchasing@concretesolutions.com.ph
-  2. Taro Sumi @ Taiheiyo Cement Philippines Inc. 📱 | eortega@taiheiyo-cement.com.ph
-  3. Rochelle G. Dedicatoria @ Suprea Ready Mixed Concrete 📱 | rdedicatoria@suprea.ph
-  4. German Desuyo @ Cebu Energy Development Corporation (CEDC) 📱 | germandesuyo@gmail.com
-  5. John Rey Hisoler @ MGEN — Meralco PowerGen / Global Business Power 📱 | jrrhisoler@mgen.com.ph
-⏰ <b>PENDING FOLLOW-UPS</b> (29 overdue)
-━━━━━━━━━━━━━━━━━━━━━━
-  🔴 Fraser Outreach — SPC Power Group
-  🔴 [Gmail ★] Philippine Nickel Ore Supply | ECONARES
-  🔴 Follow up Jessie Sarias @ Philcement
-  🔴 China Nickel follow-up - Tsingshan and YNQSGT
-  🔴 Follow up with Melanie Salinas — KEPCO SPC Power Corp
-  🔴 Research Emmanuel Castro — Acciona Daanbantayan site (diesel opportunity)
-  🔴 [Mabuhay Cement] Prepare diesel product spec sheet
-  🔴 [DEFERRED — Research Tonight] Joy Desuyo / SPC Power / KEPCO SPC
-━━━━━━━━━━━━━━━━━━━━━━
-<i>Generated: 2026-05-23 07:33 | Hermes Agent</i>
+📞 OUTREACH QUEUE — Top 5 (Mon batch)
+──────────────────────────────────────────────────
+  1. ✉️ John Glubas @ Concrete Solutions Inc.
+       purchasing@concretesolutions.com.ph
+  2. 📱 Taro Sumi @ Taiheiyo Cement Philippines Inc.
+       +63 32 230 7333
+  3. 📱 Rochelle G. Dedicatoria @ Suprea Ready Mixed Concrete
+       +63917****175
+  4. 📱 German Desuyo @ Cebu Energy Development Corporation (CEDC)
+       +63 32 322 5803
+  5. 📱 John Rey Hisoler @ MGEN — Meralco PowerGen / Global Business Power
+       +63 32 322 5803
+
+⏰ TASK STATUS
+──────────────────────────────────────────────────
+  🔴 Overdue:      21
+  🟡 Due today:    1
+  🟢 Upcoming:     0
+  ✅ Completed:    78
+
+🔴 TOP OVERDUE ITEMS (first 6 of 21)
+──────────────────────────────────────────────────
+  • [Gmail ★] Philippine Nickel Ore Supply | ECONARES
+  • China Nickel follow-up - Tsingshan and YNQSGT
+  • Research Emmanuel Castro — Acciona Daanbantayan site (diesel opportunity)
+  • [Taiheiyo Cement] Register for coal tender / bid application
+  • Follow up Carlito + Maria Otom — AboitizPower / TVI
+  • [COPPER/ZINC/LEAD] Aurelio Ramones Jr. — Isabela buyer wants Cu ore pricing URGE
+
+🟡 DUE TODAY
+──────────────────────────────────────────────────
+  • [APO CEMENT] URGENT — Submit woodchips sample package to Bong Acacio
+
+==================================================
+Generated: 2026-06-08 07:52 | ECONARES Hermes Agent
