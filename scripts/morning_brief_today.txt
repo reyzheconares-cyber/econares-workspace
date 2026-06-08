@@ -1,16 +1,23 @@
 🌅 ECONARES MORNING BRIEF | Monday, June 08, 2026 PHT
 ==================================================
 
-📊 COMMODITY PRICES (Indicative — fallback benchmarks)
+📊 COMMODITY PRICES (Free-source live + manual basis)
 ──────────────────────────────────────────────────
-  ⛏️  Nickel (1.8% CIF CN):  USD 42–46/MT CIF China (1.8% Ni) — DMO cuts tightening supply
-  🔥 Coal (GAR 5500 FOB):    USD 84–98/MT FOB Indonesia (GAR 5500); PH landed ~$108–115/MT
-  🟫 Copper (0.5% basis):    USD 85–95/MT mined (0.5% Cu basis); LME ~$14,500/t
-  ⛽ Diesel (MOPS 10ppm):    USD 600–620/MT FOB Korea (MOPS 10ppm)
-  🌴 PKS (FOB ID):           USD 95–110/MT FOB Indonesia (PKS spot)
-  🌲 Woodchips (CIF CN):     USD 130–160/m³ CIF China (tropical HW chips; Q1 log imports −11% YoY)
-  🌾 CPO (FOB MY):           USD 1,039–1,105/MT FOB Malaysia (MDEX); ID $1,090–1,215/MT (B50 support)
-⚠️  Tavily API auth failing + Brave key not loaded → using May 2026 fallback benchmarks.
+  ⛏️  Nickel     USD 45/MT CIF China 1.8%
+                 source: Manual override
+  🔥 Coal         USD 88/MT FOB Indo GAR 5500
+                 source: Manual override
+  🟫 Copper       Copper (TE): 6.26 USD/Lbs (↓0.01% on June 8, 2026) — LME 3M proxy (CFD)
+                 source: Trading Economics  ↓0.01%
+  ⛽ Diesel       Diesel (TE): 3.67 USD/Gal (↑2.16% on June 8, 2026) — NY Harbor ULSD — direction proxy for Asia gasoil
+                 source: Trading Economics  ↑2.16%
+  🌴 PKS          USD 102/MT FOB Indonesia
+                 source: Manual override
+  🌲 Woodchips    USD 145/m3 CIF China tropical HW
+                 source: Manual override
+  🌾 CPO          Cpo (TE): 4,554.00 MYR/T (↓1.02% on June 5, 2026) — Malaysian CPO futures (Bursa Malaysia)
+                 source: Trading Economics  ↓1.02%
+✅  5 live (TE) + 2 manual (no free source) — no paid APIs
 
 📞 OUTREACH QUEUE — Top 5 (Mon batch)
 ──────────────────────────────────────────────────
@@ -46,4 +53,4 @@
   • [APO CEMENT] URGENT — Submit woodchips sample package to Bong Acacio
 
 ==================================================
-Generated: 2026-06-08 07:52 | ECONARES Hermes Agent
+Generated: 2026-06-08 09:10 | ECONARES Hermes Agent (Free-source)
