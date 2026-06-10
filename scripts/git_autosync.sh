@@ -11,10 +11,15 @@ TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
 echo "[$TIMESTAMP] Git autosync starting..." >> "$LOG"
 
-# FIX .git permissions — .git periodically reverts to mode 0o555 (read-only).
-# The old check `stat -c '%a'` returns decimal (e.g. 555), NOT octal 40555.
-# Unconditionally chmod to ensure write access before any git operation.
-chmod -f 755 "$REPO/.git" "$REPO/.git/objects" "$REPO/.git/refs" "$REPO/.git/index" 2>/dev/null
+# FIX .git permissions — .git periodically reverts to mode 0o555 (read-only),
+# including the ~100 nested .git/objects/xx/ subdirs that hold packed objects.
+# Top-level chmod alone is insufficient; git fails with "insufficient permission
+# for adding an object" when any subdir under .git/objects/ is read-only.
+# Recursively restore user-write to .git so git can create new object files and
+# update refs.
+chmod -R u+rwX "$REPO/.git" 2>/dev/null
+# Belt-and-suspenders: ensure index file is writable (sometimes 0444 after fsck).
+chmod -f 644 "$REPO/.git/index" 2>/dev/null
 
 if ! git config --get credential.helper 2>/dev/null | grep -q "/git-credential-store"; then
     git config --global credential.helper /usr/lib/git-core/git-credential-store 2>/dev/null
