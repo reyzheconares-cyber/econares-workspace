@@ -1,9 +1,51 @@
 #!/usr/bin/env python3
 """ECONARES Daily Brief -- HTML Email + Obsidian Daily Note"""
 import json, datetime, os, re, urllib.request, urllib.error
+import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
+
+# Load night-pipeline helpers from the shared module
+sys.path.insert(0, os.path.expanduser('~/.hermes/scripts/econares'))
+from econares_intel import format_quota_line, latest_staging  # noqa: E402
+
+
+def _load_night_summary():
+    """Read last night's staging files. Returns dict with counts (or empty)."""
+    out = {"research": None, "dedup": None, "classify": None, "ran": False}
+    for stage in ("research", "dedup", "classify"):
+        s = latest_staging(f"nightly_{stage}")
+        if s and s.get("data"):
+            out[stage] = s["data"].get("summary", {})
+            out["ran"] = True
+    return out
+
+
+def _night_pipeline_line():
+    """One-line summary of last night's pipeline, for stdout / Obsidian."""
+    ns = _load_night_summary()
+    if not ns["ran"]:
+        return "NIGHT PIPELINE: no runs in staging (idle)"
+    parts = []
+    if ns["research"]:
+        r = ns["research"]
+        parts.append(
+            f"research: {r.get('total',0)} targets, "
+            f"{r.get('parent_inbox_routed',0)} parent-inbox, "
+            f"{r.get('smtp_ok',0)} SMTP-OK, "
+            f"{r.get('mx_dead',0)} MX-dead"
+        )
+    if ns["dedup"]:
+        d = ns["dedup"]
+        parts.append(f"dedup: {d.get('new',0)} new, {d.get('duplicates',0)} dups")
+    if ns["classify"]:
+        c = ns["classify"]
+        parts.append(
+            f"classify: hot={c.get('hot',0)} warm={c.get('warm',0)} "
+            f"monitor={c.get('monitor',0)} skip={c.get('skip',0)}"
+        )
+    return "NIGHT PIPELINE: " + " | ".join(parts) if parts else "NIGHT PIPELINE: silent"
 
 TOKENS = {}
 with open(os.path.expanduser('~/.hermes/.env')) as f:
@@ -141,6 +183,8 @@ def build_html(data):
     parts.append('<tr><td style="padding:5px 0;color:#27ae60;font-size:12px;font-weight:600;">&#9989; Syncthing</td><td style="padding:5px 0;color:#555;font-size:12px;">Running - 4 peers</td></tr>')
     parts.append('<tr><td style="padding:5px 0;color:#27ae60;font-size:12px;font-weight:600;">&#9989; Obsidian Vault</td><td style="padding:5px 0;color:#555;font-size:12px;">Synced</td></tr>')
     parts.append('<tr><td style="padding:5px 0;color:#27ae60;font-size:12px;font-weight:600;">&#9989; HubSpot</td><td style="padding:5px 0;color:#555;font-size:12px;">164 contacts - all RZH-owned</td></tr>')
+    parts.append('<tr><td style="padding:5px 0;color:#1a5276;font-size:12px;font-weight:600;">&#9881; Quota</td><td style="padding:5px 0;color:#555;font-size:11px;">' + format_quota_line() + '</td></tr>')
+    parts.append('<tr><td style="padding:5px 0;color:#1a5276;font-size:12px;font-weight:600;">&#127769; Night Pipeline</td><td style="padding:5px 0;color:#555;font-size:11px;">' + _night_pipeline_line() + '</td></tr>')
     parts.append('</table>')
     if data['overdue']:
         parts.append('<div style="margin-top:12px;font-size:14px;font-weight:bold;color:#e74c3c;margin-bottom:8px;">&#9888; ' + str(len(data['overdue'])) + ' OVERDUE TASKS</div>')
@@ -215,7 +259,9 @@ def write_obsidian_note():
     md_lines += ['## &#128161; System Status', '',
                  '- &#9989; Syncthing - Running, 4 peers connected',
                  '- &#9989; Obsidian Vault - Synced',
-                 '- &#9989; HubSpot - 164 contacts, all RZH-owned', '',
+                 '- &#9989; HubSpot - 164 contacts, all RZH-owned',
+                 '- &#9881; ' + format_quota_line(),
+                 '- &#127769; ' + _night_pipeline_line(), '',
                  '---', '*Auto-generated ' + td + ' 7:30 AM PHT - ECONARES Sales Intelligence*']
     with open(path, 'w') as f:
         f.write('\n'.join(md_lines))
@@ -224,6 +270,8 @@ def write_obsidian_note():
 
 if __name__ == '__main__':
     print('=== ECONARES DAILY BRIEF ===')
+    print('  ' + format_quota_line())
+    print('  ' + _night_pipeline_line())
     data = get_hubspot_data()
     print('  Active deals:', len(data['active_deals']), '| Pipeline: ${:,}'.format(int(data['total_pipeline'])))
     print('  Overdue:', len(data['overdue']), '| Contacts:', data['total_contacts'], '| Enriched:', data['fully_enriched'])
