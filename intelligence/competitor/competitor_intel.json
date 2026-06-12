@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-06-12T17:08:43.765046",
+  "as_of_date": "2026-06-12",
+  "prices": {
+    "indonesian_coal_5800_gar": {
+      "basis": "FOB South Kalimantan",
+      "manual_basis_usd_mt": 101.0,
+      "manual_basis_date": "2026-05-29",
+      "source": "Coaltradeindo"
+    },
+    "indonesian_coal_6000_nar": {
+      "basis": "FOB South Kalimantan (implied)",
+      "manual_basis_usd_mt": 108.0,
+      "manual_basis_date": "2026-05-29",
+      "source": "Coaltradeindo (interpolated)"
+    },
+    "hba_reference_6322_gar": {
+      "basis": "HBA index",
+      "manual_basis_usd_mt": 121.83,
+      "change_pct": 5.0,
+      "manual_basis_date": "2026-06-01",
+      "source": "HBA Indonesia MEMR"
+    },
+    "gc_newcastle_jun26": {
+      "basis": "NEWC NCFM26 futures",
+      "manual_basis_usd_mt": 149.25,
+      "change_usd": -0.95,
+      "manual_basis_date": "2026-06-10",
+      "source": "MarketWatch"
+    },
+    "nickel_ore_1_8_cif_china": {
+      "basis": "Philippine laterite CIF China",
+      "manual_basis_usd_mt": 45.0,
+      "manual_basis_date": "2026-06-08",
+      "source": "RZH manual override (Tsingshan/YNQSGT)"
+    }
+  },
+  "competitors": [
+    {
+      "name": "Semirara Mining (SCC)",
+      "threat": "MEDIUM-HIGH",
+      "products": "Coal (own mines)",
+      "production_mt_yr": 16000000,
+      "asp_php_mt": 2479,
+      "note": "Largest PH coal producer; SMC-aligned; renewable pivot"
+    },
+    {
+      "name": "Samar Pacific",
+      "threat": "MEDIUM",
+      "products": "Coal (Indo-origin blended)",
+      "note": "Mid-tier PH trader; 5800-6200 GAR; Visayas focus"
+    },
+    {
+      "name": "Jorge Griffith Enterprises",
+      "threat": "LOW-MEDIUM",
+      "products": "Coal, bunker fuel",
+      "note": "Cebu-based; relationship-led"
+    },
+    {
+      "name": "Pacific Global Coal",
+      "threat": "HIGH",
+      "products": "Indo thermal 5600-6500 GAR",
+      "note": "Direct E. Kalimantan mine contracts"
+    },
+    {
+      "name": "Glencore",
+      "threat": "MEDIUM",
+      "products": "Newcastle coal, nickel, copper",
+      "note": "GC Newcastle price-setter; PH marginal"
+    },
+    {
+      "name": "Trafigura",
+      "threat": "HIGH",
+      "products": "Nickel, coal, copper, diesel",
+      "note": "Dominant PH nickel ore to China; post-2023 compliance focus"
+    }
+  ]
+}
