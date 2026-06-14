@@ -268,6 +268,36 @@ def write_obsidian_note():
     print('OBSIDIAN: Written -> ' + path)
     return path
 
+def send_telegram_heads_up(data):
+    """Send a short Telegram summary so the cron run is visible to RZH."""
+    bot_token = TOKENS.get('tg_token', '')
+    if not bot_token:
+        print('TELEGRAM: bot token not loaded — skipping heads-up')
+        return False
+    chat_id = '707620807'
+    td = datetime.datetime.now().strftime('%B %d, %Y')
+    msg = (
+        f"📊 ECONARES Daily Brief — {td} 7:30 AM PHT\n\n"
+        f"• Active deals: {len(data['active_deals'])} | Pipeline: ${int(data['total_pipeline']):,}\n"
+        f"• Overdue tasks: {len(data['overdue'])}\n"
+        f"• Contacts: {data['total_contacts']} (enriched: {data['fully_enriched']})\n\n"
+        f"✅ HTML brief delivered to your inbox\n"
+        f"✅ Obsidian note: 2_Areas/Sales_Ops/Daily_Brief/"
+    )
+    try:
+        req = urllib.request.Request(
+            f'https://api.telegram.org/bot{bot_token}/sendMessage',
+            data=json.dumps(***'chat_id': chat_id, 'text': msg***).encode(),
+            headers=***'Content-Type': 'application/json'***, method='POST'
+        )
+        with urllib.request.urlopen(req, timeout=10) as r:
+            print('TELEGRAM: heads-up sent to 707620807')
+            return True
+    except Exception as e:
+        print(f'TELEGRAM ERROR: {e}')
+        return False
+
+
 if __name__ == '__main__':
     print('=== ECONARES DAILY BRIEF ===')
     print('  ' + format_quota_line())
@@ -278,4 +308,5 @@ if __name__ == '__main__':
     html = build_html(data)
     note_path = write_obsidian_note()
     sent = send_gmail(html)
-    print('DONE -- Obsidian:', note_path, '| Gmail:', 'Sent' if sent else 'FAILED')
+    tg = send_telegram_heads_up(data)
+    print('DONE -- Obsidian:', note_path, '| Gmail:', 'Sent' if sent else 'FAILED', '| Telegram:', 'Sent' if tg else 'FAILED')
