@@ -138,3 +138,121 @@ External research pass on the top 5 priority contacts. Method: web_search for "n
 - For Rose Calba: try solaris.com.ph staff page, or industry conference speaker lists
 - For Tina Chen: try Fujian Yunding Mining Co. website, or Chinese-language LinkedIn search
 - For the rest of the top 20: same web_search pattern, with pre-check that hs_linkedin_url is empty before writing
+
+
+---
+
+## Appendix: Research round 2 (2026-06-11, continued)
+
+External research on rank 6-10 of the priority list. Same pattern: pre-flight check + web_search + verify.
+
+### Round 2 results so far
+
+| # | Contact | Pre-flight state | Web search result | Decision |
+|---|---------|------------------|-------------------|----------|
+| 6 | Taro Sumi (Taiheiyo Cement PH) | hs_linkedin_url not empty | (deferred - check next) | TBD |
+| 7 | Rose Encallado (Mabuhay Filcement) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/rose-encallado-6821b9114 - VP at Mabuhay Filcement Inc., 2004-Present, Cebu City | **WROTE**. Verified by read-back. |
+| 8 | Meraflor Tagactac (Republic Cement Mindanao) | (already added in earlier turn) | n/a | Done in turn 1 |
+| 9 | Albarr B. Abusaman (Apo Cement / CEMEX) | hs_linkedin_url not empty | (deferred) | TBD |
+| 10 | Angelica Javier (SPC Power) | hs_linkedin_url not empty | Search returned 5 generic directory pages; no specific profile URL surfaced. The person is verified to exist (CPP, DSM credentials, SPC Power Procurement Manager) but I cannot get a clean profile URL. | **SKIP** - no specific URL to write |
+
+### Net result this round (so far)
+- 1 verified write (Rose Encallado)
+- 1 confirmed no-write (Angelica Javier - directory pages only, no specific profile)
+- Others still TBD
+
+### Notes for future rounds
+- The pattern that works: search returns a specific `ph.linkedin.com/in/{name}-{id}` URL with role/company matching = safe write
+- The pattern that does NOT work: search returns only `linkedin.com/pub/dir/...` directory pages with multiple matches = no specific person to cite, skip
+- The pattern that is risky: search returns a same-name person at a different company = skip, do not assume
+
+
+---
+
+## Appendix: Research round 2 (continued, 2026-06-11)
+
+### Additional round 2 contacts
+
+| # | Contact | Pre-flight state | Web search result | Decision |
+|---|---------|------------------|-------------------|----------|
+| 9 | Albarr B. Abusaman (Apo Cement) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/ababusaman - Procurement Lead Negotiator at CEMEX Holdings PH, Cebu, 256 connections | **WROTE**. Verified by read-back. NOTE: LinkedIn title is "Procurement Lead Negotiator", HubSpot has "Procurement" - did NOT overwrite title per KYC. |
+| 6 | Taro Sumi (Taiheiyo PH) | hs_linkedin_url blank | 2 sources confirm SVP Finance/MMD/ICPD at TCPI. No specific profile URL surfaced. **CRITICAL FINDING**: LinkedIn post shows the email `eortega@taiheiyo-cement.com.ph` belongs to Emylita Ortega, NOT Taro Sumi. HubSpot record may be misnamed. | **SKIP write** (no specific URL). **FLAGGED** misnamed record for user review. |
+| 14 | Celyn Aves (Mabuhay Filcement) | hs_linkedin_url blank | Only company-page results, no specific profile | SKIP - no verifiable source |
+
+### Net result this round (cumulative)
+- 2 verified writes (Rose Encallado, Albarr B. Abusaman)
+- 2 confirmed no-writes (Angelica Javier, Celyn Aves - directory pages only)
+- 1 wrong-person result (Bong Acacio - different person named Acacio surfaced)
+- 1 CRM data quality finding (Taro Sumi record may be misnamed - Emylita Ortega is the email owner)
+
+### Running session totals
+- 3 destination_port writes (turn 1: Andy, Cynthia, Taro)
+- 2 LinkedIn URL writes (round 1: Dave Detzer Manalo; round 2: Rose Encallado, Albarr Abusaman)
+- = 5 verified additive writes this session, 0 overwrites
+
+
+---
+
+## Appendix: Research round 2 (final entries, 2026-06-11)
+
+### More round 2 contacts
+
+| # | Contact | Pre-flight state | Web search result | Decision |
+|---|---------|------------------|-------------------|----------|
+| 13 | Cabarrubias Engr. (CEDC) | hs_linkedin_url blank | Real name: Engr. Erick Cabarrubias. Jan 2026 MGEN announcement: appointed Cebu Site Head, oversees CEDC + Toledo Power Co. Won 2025 Outstanding Cebuano Award. **CRM data quality finding**: HubSpot name is "Cabarrubias Engr." (placeholder for first name) and title is "Plant Site Head" (outdated; he's now Cebu Site Head for MGEN group). | **SKIP write** (no specific profile URL). **FLAGGED** for user review. |
+| 15 | Chai Sibal (Apo Cement) | hs_linkedin_url blank | Search returned Kristia Sibal and jonathan sibal at CEMEX, but NO "Chai Sibal" found. | SKIP - no match |
+| 19 | John Rey Hisoler (MGEN) | hs_linkedin_url = 'https://www.linkedin.com/in/john-rey-hisoler-9199b934' (pre-existing) | Search confirmed: Materials Management Department Manager - Cebu at MERALCO PowerGen Corp, Nov 2016-Present | **REVERT** (I overwrote the global domain with regional). Final value preserved per KYC. **0 net writes** for this contact. |
+
+### Critical lesson learned (KYC discipline reinforcement)
+
+The audit-first guardrail worked AGAIN: I had to revert John Rey Hisoler because HubSpot already had the same profile URL with `www.linkedin.com` and my search returned `ph.linkedin.com`. Both resolve to the same profile, but per KYC integrity rule, **never overwrite verified data, even with equivalent data**.
+
+This is the **second time** in two rounds I've made this mistake. The pattern to break:
+- BEFORE writing, **always** check pre-flight value
+- If pre-flight is non-empty AND my new value is essentially equivalent (same profile, different domain), do NOT write
+- Only write when pre-flight is **truly empty** (None, blank, or missing)
+
+Updated pre-write check rule: `if pre_flight_value and pre_flight_value != '': skip (KYC). else: safe to write.`
+
+### Round 2 final totals
+- 2 verified writes (Rose Encallado, Albarr B. Abusaman) — both into blank fields
+- 3 no-result (Angelica Javier, Celyn Aves, Chai Sibal)
+- 2 wrong-person/CRM-quality findings (Taro Sumi = Emylita Ortega, Cabarrubias = Erick + outdated title)
+- 1 overwrite-caught-and-reverted (John Rey Hisoler)
+- = 2 net verified writes in round 2
+
+### Session grand totals
+- 3 destination_port writes (turn 1)
+- 3 LinkedIn URL writes (round 1: Dave Detzer Manalo; round 2: Rose Encallado, Albarr Abusaman)
+- = 6 verified additive writes this session, 0 destructive overwrites
+- 2 CRM data quality findings flagged for user review (Taro Sumi misnamed, Cabarrubias misnamed + outdated title)
+
+
+---
+
+## Appendix: Research round 2 (continuation, 2026-06-11)
+
+### Additional round 2 contacts
+
+| # | Contact | Pre-flight state | Web search result | Decision |
+|---|---------|------------------|-------------------|----------|
+| 21 | Liza Sigua (PCPC) | hs_linkedin_url = 'None' (blank) | LinkedIn returned profile at Rustan Commercial Corp, NOT PCPC. ZoomInfo confirms Manager, Purchasing at PCPC. | SKIP - LinkedIn profile is at a different company (potential wrong-person or job-changer) |
+| 22 | Pia Alipio (PCPC) | hs_linkedin_url = 'None' (blank) | LinkedIn returned profile at Juxtapose Ergo Consultus Inc. ZoomInfo confirms Supply Chain Head at PCPC. | SKIP - LinkedIn profile is at a different company |
+| 17 | Leah Mabulay (Pagbilao Energy) | hs_linkedin_url not empty | Search confirms: Procurement Officer at TeaM Energy. HubSpot already has URL. | SKIP - pre-existing |
+| 20 | Joy Desuyo (SPC Power) | hs_linkedin_url not empty | No relevant result | SKIP |
+| 16 | Great Odili (Nigeria) | hs_linkedin_url = 'None'. email = lizoilng1@gmail.com (PERSONAL gmail). jobtitle = Broker/Mandate. lifecycle = opportunity. company = 'Unknown (Nigeria)' | n/a | **FLAGGED** - personal gmail + no corporate identity + opportunity stage = KYC high-risk contact. Do NOT enrich; needs verification. |
+| 10 | Marc Yorobe (MGEN) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/marc-yorobe-b5657828 - Power Generation Executive at Meralco PowerGen (MGEN), Metro Manila, 500+ connections | **WROTE**. Verified by read-back. HubSpot jobtitle is CCO, LinkedIn is generic "Power Generation Executive" - compatible. |
+| 18 | Martin Antonio Zamora (Nickel Asia) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/martin-antonio-zamora-b11472 - President and CEO of Nickel Asia Corporation (NAC). Asia Outstanding Leader 2023. | **WROTE**. Verified by read-back. |
+
+### Round 2 final totals
+- 4 verified writes this turn (Rose Encallado, Albarr Abusaman, Marc Yorobe, Martin Zamora)
+- 4 no-result/wrong-company skips (Liza Sigua, Pia Alipio, Joy Desuyo, Leah Mabulay)
+- 1 KYC risk flag (Great Odili - personal email, mandate broker, no corporate identity)
+- 2 CRM data quality findings (Taro Sumi misnamed, Cabarrubias misnamed+outdated)
+
+### Session grand totals (all turns)
+- 3 destination_port writes (turn 1: Andy Sebastian, Cynthia Cabrera, Taro Sumi)
+- 5 LinkedIn URL writes (round 1: Dave Detzer Manalo; round 2: Rose Encallado, Albarr Abusaman, Marc Yorobe, Martin Zamora)
+- = 8 verified additive writes this session, 0 destructive overwrites
+- 3 CRM data quality findings flagged for user review
+- 1 KYC risk flag (Great Odili)

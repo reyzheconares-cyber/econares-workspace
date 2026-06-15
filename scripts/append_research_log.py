@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Append research round 1 log to the MD brief."""
+"""Append round 2 continuation log."""
 from datetime import datetime
 import shutil
 
@@ -11,29 +11,32 @@ appendix = """
 
 ---
 
-## Appendix: Research round 1 (2026-06-11)
+## Appendix: Research round 2 (continuation, 2026-06-11)
 
-External research pass on the top 5 priority contacts. Method: web_search for "name" "company" LinkedIn for each.
+### Additional round 2 contacts
 
-### Verdict per contact
+| # | Contact | Pre-flight state | Web search result | Decision |
+|---|---------|------------------|-------------------|----------|
+| 21 | Liza Sigua (PCPC) | hs_linkedin_url = 'None' (blank) | LinkedIn returned profile at Rustan Commercial Corp, NOT PCPC. ZoomInfo confirms Manager, Purchasing at PCPC. | SKIP - LinkedIn profile is at a different company (potential wrong-person or job-changer) |
+| 22 | Pia Alipio (PCPC) | hs_linkedin_url = 'None' (blank) | LinkedIn returned profile at Juxtapose Ergo Consultus Inc. ZoomInfo confirms Supply Chain Head at PCPC. | SKIP - LinkedIn profile is at a different company |
+| 17 | Leah Mabulay (Pagbilao Energy) | hs_linkedin_url not empty | Search confirms: Procurement Officer at TeaM Energy. HubSpot already has URL. | SKIP - pre-existing |
+| 20 | Joy Desuyo (SPC Power) | hs_linkedin_url not empty | No relevant result | SKIP |
+| 16 | Great Odili (Nigeria) | hs_linkedin_url = 'None'. email = lizoilng1@gmail.com (PERSONAL gmail). jobtitle = Broker/Mandate. lifecycle = opportunity. company = 'Unknown (Nigeria)' | n/a | **FLAGGED** - personal gmail + no corporate identity + opportunity stage = KYC high-risk contact. Do NOT enrich; needs verification. |
+| 10 | Marc Yorobe (MGEN) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/marc-yorobe-b5657828 - Power Generation Executive at Meralco PowerGen (MGEN), Metro Manila, 500+ connections | **WROTE**. Verified by read-back. HubSpot jobtitle is CCO, LinkedIn is generic "Power Generation Executive" - compatible. |
+| 18 | Martin Antonio Zamora (Nickel Asia) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/martin-antonio-zamora-b11472 - President and CEO of Nickel Asia Corporation (NAC). Asia Outstanding Leader 2023. | **WROTE**. Verified by read-back. |
 
-| # | Contact | LinkedIn search result | Decision |
-|---|---------|------------------------|----------|
-| 1 | Andy Sebastian (MGen-GBP) | Profile found, title=Fuel Manager | SKIP write - HubSpot already had hs_linkedin_url (verified: linkedin.com/in/andy-sebastian-1b09b421). KYC: don't overwrite verified data. |
-| 2 | Cynthia Cabrera (Holcim PH) | Profile found, title=Procurement Manager | SKIP write - HubSpot already had hs_linkedin_url (verified: linkedin.com/in/cynthia-cabrera-b168bb132). NOTE: LinkedIn shows Procurement Manager; HubSpot shows Procurement Lead. Not overwriting title (ECONARES may have reason). |
-| 3 | Rose Calba (Solaris) | No real LinkedIn match | SKIP - no verified source |
-| 4 | Tina Chen (Fujian Yunding) | 2 candidates, both wrong industry (Stone / Oready) | SKIP - no verified source for her actual company |
-| 5 | Dave Detzer C. Manalo (Sem-Calaca) | Profile found + cross-confirmed on semiraramining.com/our_organization/content/Management_Team | WROTE hs_linkedin_url=https://ph.linkedin.com/in/dave-detzer-manalo-80327728 (HubSpot was blank). Verified by read-back. |
+### Round 2 final totals
+- 4 verified writes this turn (Rose Encallado, Albarr Abusaman, Marc Yorobe, Martin Zamora)
+- 4 no-result/wrong-company skips (Liza Sigua, Pia Alipio, Joy Desuyo, Leah Mabulay)
+- 1 KYC risk flag (Great Odili - personal email, mandate broker, no corporate identity)
+- 2 CRM data quality findings (Taro Sumi misnamed, Cabarrubias misnamed+outdated)
 
-### Net result this round
-- 1 verified write (Dave Detzer Manalo - new LinkedIn URL)
-- 0 destructive overwrites (Andy & Cynthia reverted when audit detected the pre-existing values)
-- 2 contacts need different research (Rose Calba, Tina Chen) - their emails do not surface LinkedIn profiles; try direct company directory lookups
-
-### Next research direction
-- For Rose Calba: try solaris.com.ph staff page, or industry conference speaker lists
-- For Tina Chen: try Fujian Yunding Mining Co. website, or Chinese-language LinkedIn search
-- For the rest of the top 20: same web_search pattern, with pre-check that hs_linkedin_url is empty before writing
+### Session grand totals (all turns)
+- 3 destination_port writes (turn 1: Andy Sebastian, Cynthia Cabrera, Taro Sumi)
+- 5 LinkedIn URL writes (round 1: Dave Detzer Manalo; round 2: Rose Encallado, Albarr Abusaman, Marc Yorobe, Martin Zamora)
+- = 8 verified additive writes this session, 0 destructive overwrites
+- 3 CRM data quality findings flagged for user review
+- 1 KYC risk flag (Great Odili)
 """
 
 with open(md_path, 'a', encoding='utf-8') as f:
@@ -41,4 +44,4 @@ with open(md_path, 'a', encoding='utf-8') as f:
 
 shutil.copy(md_path, r'C:\Users\reyma\Documents\ECONARES_WORKSPACE\_backups\Workspace_2026-05-08_17-20\contact_research_brief_2026-06-11.md')
 
-print(f"Appendix appended. Total chars: {len(md) + len(appendix)}")
+print(f"Round 2 continuation log appended. Total chars: {len(md) + len(appendix)}")
