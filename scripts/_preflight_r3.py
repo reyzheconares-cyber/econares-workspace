@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pre-flight for rank 16-20."""
+"""Pre-flight for next batch (rank 17-25 in brief)."""
 import json
 import os
 import urllib.request
@@ -35,23 +35,15 @@ def http(m, u, b=None):
         return e.code, {'err': e.read().decode()[:500]}
 
 
-# 470632707816 Chen Bin (Baosteel)
-# 469448074998 Feifei Liu (Shandong Xinhai)
-# 481005002437 Liza Sigua (PCPC)
-# 483002066641 Pia Alipio (PCPC)
-# 469448798938 NISCO Ecommerce (role-name)
-# 469448797917 Qi Sun (Huayou Cobalt)
-for cid, name in [
-    ('470632707816', 'Chen Bin'),
-    ('469448074998', 'Feifei Liu'),
-    ('481005002437', 'Liza Sigua'),
-    ('483002066641', 'Pia Alipio'),
-    ('469448797917', 'Qi Sun'),
-]:
-    code, body = http('GET', f'https://api.hubapi.com/crm/v3/objects/contacts/{cid}?properties=firstname,lastname,email,jobtitle,company,hs_linkedin_url,phone,lifecyclestage')
+# Pull rank 17-30 from the brief
+brief = json.load(open(r'C:/Users/reyma/AppData/Local/Temp/research_brief_full.json'))
+for lead in brief[30:60]:
+    cid = lead.get('id', '')
+    code, body = http('GET', f'https://api.hubapi.com/crm/v3/objects/contacts/{cid}?properties=firstname,lastname,email,jobtitle,company,phone,hs_linkedin_url')
     if code == 200:
         p = body.get('properties', {})
-        print(f"\n=== {cid}: {name} ===")
-        for k, v in p.items():
-            if v:
-                print(f"  {k}: {v}")
+        nm = ((p.get('firstname') or '') + ' ' + (p.get('lastname') or '')).strip()[:30]
+        co = (p.get('company') or '')[:30]
+        ph = p.get('phone') or ''
+        em = (p.get('email') or '')[:30]
+        print(f"  {cid}  {nm:<30} @ {co:<30} | phone='{ph}' | email='{em}'")

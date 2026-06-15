@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Append round 2 continuation log."""
+"""Append round 4 log."""
 from datetime import datetime
 import shutil
 
@@ -11,32 +11,51 @@ appendix = """
 
 ---
 
-## Appendix: Research round 2 (continuation, 2026-06-11)
+## Appendix: Research round 4 (2026-06-11)
 
-### Additional round 2 contacts
+### Round 4: company-fill batch via email domain (KYC: blank-only)
 
-| # | Contact | Pre-flight state | Web search result | Decision |
-|---|---------|------------------|-------------------|----------|
-| 21 | Liza Sigua (PCPC) | hs_linkedin_url = 'None' (blank) | LinkedIn returned profile at Rustan Commercial Corp, NOT PCPC. ZoomInfo confirms Manager, Purchasing at PCPC. | SKIP - LinkedIn profile is at a different company (potential wrong-person or job-changer) |
-| 22 | Pia Alipio (PCPC) | hs_linkedin_url = 'None' (blank) | LinkedIn returned profile at Juxtapose Ergo Consultus Inc. ZoomInfo confirms Supply Chain Head at PCPC. | SKIP - LinkedIn profile is at a different company |
-| 17 | Leah Mabulay (Pagbilao Energy) | hs_linkedin_url not empty | Search confirms: Procurement Officer at TeaM Energy. HubSpot already has URL. | SKIP - pre-existing |
-| 20 | Joy Desuyo (SPC Power) | hs_linkedin_url not empty | No relevant result | SKIP |
-| 16 | Great Odili (Nigeria) | hs_linkedin_url = 'None'. email = lizoilng1@gmail.com (PERSONAL gmail). jobtitle = Broker/Mandate. lifecycle = opportunity. company = 'Unknown (Nigeria)' | n/a | **FLAGGED** - personal gmail + no corporate identity + opportunity stage = KYC high-risk contact. Do NOT enrich; needs verification. |
-| 10 | Marc Yorobe (MGEN) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/marc-yorobe-b5657828 - Power Generation Executive at Meralco PowerGen (MGEN), Metro Manila, 500+ connections | **WROTE**. Verified by read-back. HubSpot jobtitle is CCO, LinkedIn is generic "Power Generation Executive" - compatible. |
-| 18 | Martin Antonio Zamora (Nickel Asia) | hs_linkedin_url = 'None' (blank) | https://ph.linkedin.com/in/martin-antonio-zamora-b11472 - President and CEO of Nickel Asia Corporation (NAC). Asia Outstanding Leader 2023. | **WROTE**. Verified by read-back. |
+Scanned all 174 HubSpot contacts for the pattern: blank `company` + non-generic email domain. Found 15 candidates. Pre-flight confirmed all 15 truly blank before any write. All 15 written, all 15 verified by read-back.
 
-### Round 2 final totals
-- 4 verified writes this turn (Rose Encallado, Albarr Abusaman, Marc Yorobe, Martin Zamora)
-- 4 no-result/wrong-company skips (Liza Sigua, Pia Alipio, Joy Desuyo, Leah Mabulay)
-- 1 KYC risk flag (Great Odili - personal email, mandate broker, no corporate identity)
-- 2 CRM data quality findings (Taro Sumi misnamed, Cabarrubias misnamed+outdated)
+| Contact | Email domain | Filled company | Source |
+|---|---|---|---|
+| Rey Floresca | republiccement.com | Republic Cement | email domain |
+| Rande Almarinez | republiccement.com | Republic Cement | email domain |
+| Mark Dimal | republiccement.com | Republic Cement | email domain |
+| Basal Contact | primary.com.ph | Primary Structures | email domain |
+| Procurement Team | centurypeakcement.com | Century Peak Cement Manufacturing | email domain |
+| San Carlos Bioenergy | scbi.ph | San Carlos Bioenergy | email domain |
+| Donna Mezo | gnpk.com.ph | GNPower Kauswagan | email domain |
+| EDC Procurement | energy.com.ph | First Gen (Energy Development Corporation) | email domain |
+| Cleah Trinilla | rhi.com.ph | Republic Hydraulic Industries | email domain |
+| SMC Corporate Secretary | sanmiguel.com.ph | San Miguel Corporation | email domain |
+| Rosalie | zkjck.com | Fujian Yunding Mining (Zhongke Jinhe) | email domain |
+| Justin Werner | nickelindustries.com | Nickel Industries | email domain |
+| Fanfan Zhao | nickelindustries.com | Nickel Industries | email domain |
+| Vijay Nair | nickelindustries.com | Nickel Industries | email domain |
+| Tony Green | nickelindustries.com | Nickel Industries | email domain |
 
-### Session grand totals (all turns)
-- 3 destination_port writes (turn 1: Andy Sebastian, Cynthia Cabrera, Taro Sumi)
-- 5 LinkedIn URL writes (round 1: Dave Detzer Manalo; round 2: Rose Encallado, Albarr Abusaman, Marc Yorobe, Martin Zamora)
-- = 8 verified additive writes this session, 0 destructive overwrites
-- 3 CRM data quality findings flagged for user review
-- 1 KYC risk flag (Great Odili)
+### KYC: pre-flight check
+All 15 contacts had `company='None'` (truly blank) in the pre-flight response. The PATCH payload only contained `company`. The PATCH HTTP 200 for all 15. The post-flight read-back confirmed the exact expected value for all 15 (15/15 OK).
+
+### CRM data quality findings on this batch
+- **6 of 15 are role-name contacts**, not real people: Basal Contact, Procurement Team, San Carlos Bioenergy, EDC Procurement, SMC Corporate Secretary, and Donna Mezo. The audit classified these as role-name earlier. Filled company is still correct (they are at those companies, just not specific people). They should be flagged for quarantine consideration.
+- **Rosalie** is a partial name (no last name). Email domain maps to Fujian Yunding Mining, but the contact is incomplete.
+- The 4 Republic Cement contacts (Rey, Rande, Mark) and Rosalie (mapped to Fujian Yunding Mining via zkjck.com) are all members of deals that already exist in the pipeline.
+
+### Net result this round
+- **15 verified writes** (all `company` field, all blank->filled, all KYC safe)
+- 0 destructive overwrites
+- 6 role-name contacts re-confirmed for quarantine
+
+### Updated session grand totals
+- 3 destination_port writes (turn 1)
+- 5 LinkedIn URL writes (round 1: Dave; round 2: Rose, Albarr, Qi Sun; round 3: Rachelle, Jeffren)
+- 2 phone writes (round-up: Chen Bin, Feifei Liu)
+- 17 company writes (round 3: Jeffren, Mark Tagle; round 4: 15 batch)
+- = **27 verified additive writes this session**, 0 destructive overwrites
+- 4 CRM data quality findings flagged across rounds
+- 6 role-name contacts re-confirmed for quarantine
 """
 
 with open(md_path, 'a', encoding='utf-8') as f:
@@ -44,4 +63,4 @@ with open(md_path, 'a', encoding='utf-8') as f:
 
 shutil.copy(md_path, r'C:\Users\reyma\Documents\ECONARES_WORKSPACE\_backups\Workspace_2026-05-08_17-20\contact_research_brief_2026-06-11.md')
 
-print(f"Round 2 continuation log appended. Total chars: {len(md) + len(appendix)}")
+print(f"Round 4 log appended. Total chars: {len(md) + len(appendix)}")

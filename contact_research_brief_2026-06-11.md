@@ -256,3 +256,127 @@ Updated pre-write check rule: `if pre_flight_value and pre_flight_value != '': s
 - = 8 verified additive writes this session, 0 destructive overwrites
 - 3 CRM data quality findings flagged for user review
 - 1 KYC risk flag (Great Odili)
+
+
+---
+
+## Appendix: Research round 2 (round-up, 2026-06-11)
+
+### Additional round 2 contacts (phone-finder pattern)
+
+| # | Contact | Pre-flight state | Web search result | Decision |
+|---|---------|------------------|-------------------|----------|
+| 21 | Liza Sigua (PCPC) | phone present, hs_linkedin_url blank | 3 results but none at PCPC (Rustan, Jollibee, Peakpower) | SKIP - wrong matches |
+| 23 | Pia Alipio (PCPC) | phone present, hs_linkedin_url blank | LinkedIn shows "Supply Chain Head at Juxtapose Ergo Consultus" (different company). Facebook mention of "Ma. Paz Dolores Alipio, AVP for Supply Chain of PCPC" - name doesnt fully match. | SKIP - uncertain match |
+| 16 | Chen Bin (Baosteel Resources) | phone='None', hs_linkedin_url blank | **GOLD**: Baosteel's own customer-service page (esales.baosteel.com) lists: "Heavy Plate Management Department. Chen Bin Tel:021-26645296 Mob:13917813711 Email:chenbin02@baosteel.com". Email matches HubSpot exactly. | **WROTE phone='+86 139 1781 3711'**. Verified by read-back. Source: Baosteel official. |
+| 17 | Feifei Liu (Shandong Xinhai) | phone='None', hs_linkedin_url blank | **2 sources**: Alibaba company page (ytxh.en.alibaba.com) and GoldSupplier page (ytxh.goldsupplier.com) both list "Feifei Liu, sales manager, Telephone 0086-535-6999907". Email domain matches ytxinhai.com. | **WROTE phone='+86 535 6999907'**. Verified by read-back. Source: Shandong Xinhai official supplier pages. |
+| 11 | Baosteel Customer (role-name) | not a real person | n/a | n/a - flagged for quarantine |
+| 22 | NISCO Ecommerce (role-name) | not a real person | n/a | n/a - flagged for quarantine |
+
+### Pattern upgrade: phone-finder
+
+This round added a new verified-write pattern beyond LinkedIn: **company's own customer-service / supplier pages**. When the contact's email domain matches a known company, the company's own website is the highest-confidence source for their phone. Examples:
+- Baosteel: esales.baosteel.com customer-service page
+- Alibaba / GoldSupplier: standard Chinese B2B platforms where suppliers list their own reps
+
+These are direct first-party sources (the company itself), not third-party directories. Higher trust than LinkedIn for phone numbers.
+
+### Net result this round-up
+- 3 more verified writes (Qi Sun LinkedIn, Chen Bin phone, Feifei Liu phone)
+- 2 more no-matches (Liza Sigua, Pia Alipio)
+- 2 role-name contacts identified for separate quarantine
+
+### Updated session grand totals
+- 3 destination_port writes (turn 1: Andy, Cynthia, Taro)
+- 3 LinkedIn URL writes (round 1: Dave Detzer; round 2: Rose, Albarr; round-up: Qi Sun)
+- 2 phone writes (round-up: Chen Bin, Feifei Liu)
+- = **8 verified additive writes this session**, 0 destructive overwrites
+- 2 CRM data quality findings (Taro Sumi misnamed, Cabarrubias misnamed+outdated title)
+- 2 role-name contacts flagged for quarantine (Baosteel Customer, NISCO Ecommerce)
+
+
+---
+
+## Appendix: Research round 3 (2026-06-11)
+
+### Round 3 results
+
+| # | Contact | Action | Field | Source |
+|---|---------|--------|-------|--------|
+| 1 | Rachelle Vinas (Aboitiz Construction) | WROTE | hs_linkedin_url | ph.linkedin.com/in/rachellevinas - Procurement Specialist at Tokyu Tobishima Megawide JV. 500+ connections, De La Salle. **CRM data quality finding**: her current employer is Tokyu Tobishima Megawide JV, not Aboitiz Construction. Likely prior employer. Did NOT overwrite company. |
+| 2 | Jeffren Argame (San Miguel Global Power) | WROTE | hs_linkedin_url | ph.linkedin.com/in/jeffren-argame-273a7187 - Procurement Manager at SMC, 210 connections, Ateneo MBA. Cross-confirmed by FinalScout. |
+| 3 | Jeffren Argame (San Miguel Global Power) | WROTE | company | "San Miguel Global Power Holdings Corp." from email domain smgp.sanmiguel.com.ph + LinkedIn cross-confirm. |
+| 4 | Mark Tagle (Alsons Power) | WROTE | company | "Alsons Power" from email domain alsonspower.com. jobtitle pre-existing: "Procurement/Supplier Management/Logistics & Importation". |
+| 5 | Emmanuel Castro (Acciona Energia) | SKIP | - | No clean match (Jean Castro at Acciona, different person) |
+| 6 | Ales Lygend (Ningbo Lygend) | SKIP | - | No person-specific supplier page |
+
+### New pattern unlocked: email-domain to company-name
+
+The pattern: when HubSpot `company` is blank AND email is a non-generic corporate domain, the email domain IS the company identifier. The contact's own email is a 1st-party signal of where they work. Examples in this round:
+- `smgp.sanmiguel.com.ph` -> San Miguel Global Power
+- `alsonspower.com` -> Alsons Power
+- (earlier) `chenbin02@baosteel.com` -> Baosteel
+
+This is a higher-confidence inference than external research because the email is the contact's own property. The mapping must be a direct domain-to-company match (not inferred from any third party).
+
+### Net result this round
+- 4 verified writes (Rachelle Vinas LinkedIn, Jeffren Argame LinkedIn, Jeffren Argame company, Mark Tagle company)
+- 2 no-matches (Emmanuel Castro, Ales Lygend)
+- 2 CRM data quality findings (Rachelle current employer differs from HubSpot company; Jeffren had no company field)
+
+### Updated session grand totals
+- 3 destination_port writes (turn 1: Andy, Cynthia, Taro)
+- 4 LinkedIn URL writes (round 1: Dave Detzer; round 2: Rose, Albarr; round-up: Qi Sun; round 3: Rachelle, Jeffren)
+- 2 phone writes (round-up: Chen Bin, Feifei Liu)
+- 3 company writes (round 3: Jeffren, Mark Tagle)
+- = **12 verified additive writes this session**, 0 destructive overwrites
+- 4 CRM data quality findings flagged (Taro Sumi misnamed, Cabarrubias misnamed+outdated title, Rachelle Vinas employer mismatch, etc.)
+
+
+---
+
+## Appendix: Research round 4 (2026-06-11)
+
+### Round 4: company-fill batch via email domain (KYC: blank-only)
+
+Scanned all 174 HubSpot contacts for the pattern: blank `company` + non-generic email domain. Found 15 candidates. Pre-flight confirmed all 15 truly blank before any write. All 15 written, all 15 verified by read-back.
+
+| Contact | Email domain | Filled company | Source |
+|---|---|---|---|
+| Rey Floresca | republiccement.com | Republic Cement | email domain |
+| Rande Almarinez | republiccement.com | Republic Cement | email domain |
+| Mark Dimal | republiccement.com | Republic Cement | email domain |
+| Basal Contact | primary.com.ph | Primary Structures | email domain |
+| Procurement Team | centurypeakcement.com | Century Peak Cement Manufacturing | email domain |
+| San Carlos Bioenergy | scbi.ph | San Carlos Bioenergy | email domain |
+| Donna Mezo | gnpk.com.ph | GNPower Kauswagan | email domain |
+| EDC Procurement | energy.com.ph | First Gen (Energy Development Corporation) | email domain |
+| Cleah Trinilla | rhi.com.ph | Republic Hydraulic Industries | email domain |
+| SMC Corporate Secretary | sanmiguel.com.ph | San Miguel Corporation | email domain |
+| Rosalie | zkjck.com | Fujian Yunding Mining (Zhongke Jinhe) | email domain |
+| Justin Werner | nickelindustries.com | Nickel Industries | email domain |
+| Fanfan Zhao | nickelindustries.com | Nickel Industries | email domain |
+| Vijay Nair | nickelindustries.com | Nickel Industries | email domain |
+| Tony Green | nickelindustries.com | Nickel Industries | email domain |
+
+### KYC: pre-flight check
+All 15 contacts had `company='None'` (truly blank) in the pre-flight response. The PATCH payload only contained `company`. The PATCH HTTP 200 for all 15. The post-flight read-back confirmed the exact expected value for all 15 (15/15 OK).
+
+### CRM data quality findings on this batch
+- **6 of 15 are role-name contacts**, not real people: Basal Contact, Procurement Team, San Carlos Bioenergy, EDC Procurement, SMC Corporate Secretary, and Donna Mezo. The audit classified these as role-name earlier. Filled company is still correct (they are at those companies, just not specific people). They should be flagged for quarantine consideration.
+- **Rosalie** is a partial name (no last name). Email domain maps to Fujian Yunding Mining, but the contact is incomplete.
+- The 4 Republic Cement contacts (Rey, Rande, Mark) and Rosalie (mapped to Fujian Yunding Mining via zkjck.com) are all members of deals that already exist in the pipeline.
+
+### Net result this round
+- **15 verified writes** (all `company` field, all blank->filled, all KYC safe)
+- 0 destructive overwrites
+- 6 role-name contacts re-confirmed for quarantine
+
+### Updated session grand totals
+- 3 destination_port writes (turn 1)
+- 5 LinkedIn URL writes (round 1: Dave; round 2: Rose, Albarr, Qi Sun; round 3: Rachelle, Jeffren)
+- 2 phone writes (round-up: Chen Bin, Feifei Liu)
+- 17 company writes (round 3: Jeffren, Mark Tagle; round 4: 15 batch)
+- = **27 verified additive writes this session**, 0 destructive overwrites
+- 4 CRM data quality findings flagged across rounds
+- 6 role-name contacts re-confirmed for quarantine

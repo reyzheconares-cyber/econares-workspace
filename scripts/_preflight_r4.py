@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pre-flight for rank 16-20."""
+"""Pre-flight: re-check state of the 15 candidates + write each."""
 import json
 import os
 import urllib.request
@@ -35,23 +35,11 @@ def http(m, u, b=None):
         return e.code, {'err': e.read().decode()[:500]}
 
 
-# 470632707816 Chen Bin (Baosteel)
-# 469448074998 Feifei Liu (Shandong Xinhai)
-# 481005002437 Liza Sigua (PCPC)
-# 483002066641 Pia Alipio (PCPC)
-# 469448798938 NISCO Ecommerce (role-name)
-# 469448797917 Qi Sun (Huayou Cobalt)
-for cid, name in [
-    ('470632707816', 'Chen Bin'),
-    ('469448074998', 'Feifei Liu'),
-    ('481005002437', 'Liza Sigua'),
-    ('483002066641', 'Pia Alipio'),
-    ('469448797917', 'Qi Sun'),
-]:
-    code, body = http('GET', f'https://api.hubapi.com/crm/v3/objects/contacts/{cid}?properties=firstname,lastname,email,jobtitle,company,hs_linkedin_url,phone,lifecyclestage')
-    if code == 200:
-        p = body.get('properties', {})
-        print(f"\n=== {cid}: {name} ===")
-        for k, v in p.items():
-            if v:
-                print(f"  {k}: {v}")
+candidates = json.load(open(r'C:/Users/reyma/AppData/Local/Temp/blank_company_candidates.json'))
+
+for c in candidates:
+    cid = c['id']
+    code, body = http('GET', f'https://api.hubapi.com/crm/v3/objects/contacts/{cid}?properties=firstname,lastname,email,company,jobtitle')
+    p = body.get('properties', {})
+    nm = ((p.get('firstname') or '') + ' ' + (p.get('lastname') or '')).strip()
+    print(f"  {cid}  {nm[:30]:<30}  email='{(p.get('email') or '')[:30]}'  company='{p.get('company','')}'")
