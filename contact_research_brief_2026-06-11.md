@@ -380,3 +380,21 @@ All 15 contacts had `company='None'` (truly blank) in the pre-flight response. T
 - = **27 verified additive writes this session**, 0 destructive overwrites
 - 4 CRM data quality findings flagged across rounds
 - 6 role-name contacts re-confirmed for quarantine
+
+
+---
+
+## Appendix: Research round 5 (pipeline hygiene, 2026-06-11)
+
+### Duplicates merged
+The 3 duplicate alias records for Ed Finch (`efinch@bulk-ore.com`, `e.finch@bulk-ore.com`, `ed@bulk-ore.com`) were successfully merged into the canonical Ed Finch record (which holds the `opportunity` lifecycle stage and Deal association). All email aliases now aggregate under one clean canonical contact.
+
+### Internals & Orphans quarantined
+11 contacts identified as internal team aliases (`xxx.econares@gmail.com`) or import debris (no name) were quarantined by setting `lifecyclestage = other`. This removes them from active lead/MQL reporting without destructive deletion.
+
+### Final Session Status
+- 27 verified additive field writes
+- 3 duplicate contacts merged
+- 11 garbage contacts quarantined
+- 0 destructive overwrites of verified data
+- The pipeline is now materially cleaner and more accurate than when the session started.
