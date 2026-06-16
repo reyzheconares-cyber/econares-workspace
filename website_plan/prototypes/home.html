@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Fuels, Minerals &amp; Construction — From One Philippine Partner | ECONARES</title>
+<meta name="description" content="ECONARES is a SEC-registered Philippine supplier of industrial fuels (steam coal, metallurgical coke, PKS, woodchips) and metallic &amp; non-metallic minerals, with a PCAB-licensed construction arm. Serving cement, sugar, power, and manufacturing industries from Cebu since 2015.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ECONARES Homepage Prototype v1
+   Brand tokens sourced from APPROVED Logo.png (2026-06-16)
+   Companion to DESIGN.md
+   ============================================================ */
+:root {
+  --c-primary:    #002A54;
+  --c-secondary:  #2E343B;
+  --c-tertiary:   #F5251D;
+  --c-accent:     #F78D1E;
+  --c-highlight:  #FDE126;
+  --c-sky:        #6DA6E3;
+  --c-blue:       #0033FF;
+  --c-green:      #6AFE01;
+  --c-neutral:    #FFFFFF;
+  --c-surface:    #F5F5F5;
+  --c-border:     #D0D5DB;
+  --c-ink:        #0E1116;
+  --c-muted:      #4F6876;
+  --c-tan:        #A98F7A;
+  --c-khaki:      #DCD3A6;
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-pill: 9999px;
+  --sh-card: 0 1px 3px rgba(14,17,22,.08), 0 1px 2px rgba(14,17,22,.04);
+  --sh-card-h: 0 10px 25px rgba(14,17,22,.10), 0 4px 10px rgba(14,17,22,.04);
+  --sh-sticky: 0 2px 8px rgba(14,17,22,.06);
+  --container: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--c-ink);
+  background: var(--c-neutral);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { max-width: 100%; display: block; }
+a { color: var(--c-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font: inherit; cursor: pointer; border: 0; background: none; }
+
+h1, h2, h3, h4 { font-family: 'Montserrat', system-ui, sans-serif; color: var(--c-primary); margin: 0 0 16px; line-height: 1.15; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 700; line-height: 1.2; }
+p { margin: 0 0 16px; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+@media (min-width: 768px) { .container { padding: 0 40px; } }
+
+.tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.eyebrow { color: var(--c-tertiary); margin-bottom: 12px; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--r-md);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  min-height: 48px;
+}
+.btn-primary { background: var(--c-tertiary); color: var(--c-neutral); }
+.btn-primary:hover { background: var(--c-accent); color: var(--c-ink); text-decoration: none; }
+.btn-secondary { background: var(--c-neutral); color: var(--c-primary); border: 2px solid var(--c-primary); }
+.btn-secondary:hover { background: var(--c-primary); color: var(--c-neutral); text-decoration: none; }
+:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
+
+/* ----- HEADER / NAV ----- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--c-neutral);
+  border-bottom: 1px solid var(--c-border);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.site-header.scrolled { box-shadow: var(--sh-sticky); }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand:hover { text-decoration: none; }
+.brand-mark { width: 44px; height: 44px; flex-shrink: 0; }
+.brand-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--c-primary); letter-spacing: -0.02em; line-height: 1; }
+.brand-sub { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 9px; letter-spacing: 0.12em; color: var(--c-muted); margin-top: 3px; }
+
+.nav-main { display: none; gap: 28px; align-items: center; }
+@media (min-width: 1024px) { .nav-main { display: flex; } }
+.nav-main a { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-ink); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav-main a:hover { color: var(--c-tertiary); text-decoration: none; }
+.nav-main a.active { color: var(--c-tertiary); border-bottom-color: var(--c-tertiary); }
+
+.nav-cta { display: flex; align-items: center; gap: 16px; }
+.nav-phone { display: none; align-items: center; gap: 6px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; color: var(--c-primary); }
+@media (min-width: 768px) { .nav-phone { display: inline-flex; } }
+.nav-phone svg { flex-shrink: 0; }
+.nav-cta .btn { display: none; padding: 10px 18px; font-size: 14px; min-height: 0; }
+@media (min-width: 1024px) { .nav-cta .btn { display: inline-flex; } }
+
+.menu-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+@media (min-width: 1024px) { .menu-toggle { display: none; } }
+
+/* ----- HERO ----- */
+.hero { padding: 64px 0 48px; }
+@media (min-width: 1024px) { .hero { padding: 96px 0; } }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+@media (min-width: 1024px) { .hero-grid { grid-template-columns: 1.1fr 1fr; gap: 64px; } }
+.hero h1 { margin-bottom: 20px; }
+.hero h1 .accent { color: var(--c-tertiary); }
+.hero-sub { font-size: 18px; color: var(--c-ink); margin-bottom: 32px; max-width: 540px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 32px; padding-top: 24px; border-top: 1px solid var(--c-border); }
+.stat-num { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--c-primary); line-height: 1; }
+.stat-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-muted); margin-top: 4px; }
+
+/* Hero carousel (CSS-only) */
+.hero-carousel {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--c-muted);
+  box-shadow: var(--sh-card-h);
+}
+.hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; display: flex; align-items: flex-end; padding: 24px; color: white; }
+.hero-slide.active { opacity: 1; }
+.hero-slide::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,42,84,0.85) 100%); z-index: 1; }
+.hero-slide span { position: relative; z-index: 2; font-family: 'Barlow Condensed'; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+.slide-1 { background: linear-gradient(135deg, #2E343B 0%, #4F6876 100%); }
+.slide-2 { background: linear-gradient(135deg, #002A54 0%, #6DA6E3 100%); }
+.slide-3 { background: linear-gradient(135deg, #A98F7A 0%, #2E343B 100%); }
+.slide-4 { background: linear-gradient(135deg, #0033FF 0%, #002A54 100%); }
+
+/* ----- TRUST STRIP ----- */
+.trust-strip { background: var(--c-primary); padding: 20px 0; }
+.trust-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--c-green);
+  color: var(--c-green);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+.trust-badge::before { content: '✓'; color: var(--c-green); font-weight: 800; }
+
+/* ----- SECTIONS ----- */
+section { padding: 64px 0; }
+@media (min-width: 1024px) { section { padding: 96px 0; } }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+.section-head p { color: var(--c-muted); font-size: 18px; }
+
+.card-grid { display: grid; gap: 24px; }
+.card-grid-3 { grid-template-columns: 1fr; }
+.card-grid-4 { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .card-grid-3 { grid-template-columns: repeat(2, 1fr); } .card-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .card-grid-3 { grid-template-columns: repeat(3, 1fr); } .card-grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* ----- PRODUCT CARDS ----- */
+.product-card { background: var(--c-neutral); border: 1px solid var(--c-border); border-radius: var(--r-lg); overflow: hidden; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.product-card:hover { border-color: var(--c-tertiary); box-shadow: var(--sh-card-h); transform: translateY(-2px); }
+.product-card a { text-decoration: none; color: inherit; display: block; }
+.product-card a:hover { text-decoration: none; }
+.product-thumb { aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+.product-thumb.fuel { background: linear-gradient(135deg, #2E343B 0%, #4F6876 100%); }
+.product-thumb.mineral-1 { background: linear-gradient(135deg, #A98F7A 0%, #DCD3A6 100%); }
+.product-thumb.mineral-2 { background: linear-gradient(135deg, #4F6876 0%, #2E343B 100%); }
+.product-thumb.mineral-3 { background: linear-gradient(135deg, #6DA6E3 0%, #002A54 100%); }
+.product-thumb-text { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+.product-body { padding: 20px 24px 24px; }
+.product-cat { color: var(--c-tertiary); margin-bottom: 8px; }
+.product-card h3 { font-size: 18px; margin-bottom: 8px; }
+.product-spec { font-size: 14px; color: var(--c-muted); margin-bottom: 16px; min-height: 44px; }
+.product-link { color: var(--c-tertiary); font-weight: 600; font-size: 14px; }
+.product-link:hover { color: var(--c-accent); }
+
+/* ----- SERVICE CARDS ----- */
+.service-card { padding: 32px 28px; background: var(--c-neutral); border: 1px solid var(--c-border); border-radius: var(--r-lg); transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.service-card:hover { border-color: var(--c-tertiary); box-shadow: var(--sh-card-h); transform: translateY(-2px); }
+.service-icon { width: 56px; height: 56px; background: var(--c-primary); color: var(--c-highlight); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.service-icon svg { width: 28px; height: 28px; }
+.service-card h3 { font-size: 20px; margin-bottom: 12px; }
+.service-card p { color: var(--c-muted); margin-bottom: 16px; font-size: 15px; }
+.service-link { color: var(--c-tertiary); font-weight: 600; font-size: 14px; }
+
+/* ----- FEATURED PROJECTS ----- */
+.project-card { position: relative; aspect-ratio: 4/3; border-radius: var(--r-lg); overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.project-card:hover { transform: translateY(-2px); box-shadow: var(--sh-card-h); }
+.project-bg { position: absolute; inset: 0; }
+.project-1 .project-bg { background: linear-gradient(135deg, #2E343B 0%, #4F6876 100%); }
+.project-2 .project-bg { background: linear-gradient(135deg, #A98F7A 0%, #DCD3A6 100%); }
+.project-3 .project-bg { background: linear-gradient(135deg, #002A54 0%, #6DA6E3 100%); }
+.project-4 .project-bg { background: linear-gradient(135deg, #F5251D 0%, #F78D1E 100%); }
+.project-5 .project-bg { background: linear-gradient(135deg, #4F6876 0%, #2E343B 100%); }
+.project-6 .project-bg { background: linear-gradient(135deg, #0033FF 0%, #6DA6E3 100%); }
+.project-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,42,84,0.92) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: white; }
+.project-overlay h3 { color: white; font-size: 18px; margin-bottom: 6px; }
+.project-meta { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+
+/* ----- WHY ECONARES ----- */
+.why-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 640px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+.why-item { padding: 32px 28px; background: var(--c-surface); border-radius: var(--r-lg); border-left: 4px solid var(--c-tertiary); }
+.why-num { font-family: 'Montserrat'; font-weight: 800; font-size: 36px; color: var(--c-tertiary); line-height: 1; margin-bottom: 12px; }
+.why-item h3 { font-size: 18px; margin-bottom: 8px; }
+.why-item p { color: var(--c-muted); font-size: 15px; margin: 0; }
+
+/* ----- INSIGHTS ----- */
+.insights-section { background: var(--c-surface); }
+.insight-card { background: var(--c-neutral); border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--c-border); }
+.insight-thumb { aspect-ratio: 16/9; }
+.insight-thumb.t1 { background: linear-gradient(135deg, #002A54, #4F6876); }
+.insight-thumb.t2 { background: linear-gradient(135deg, #A98F7A, #2E343B); }
+.insight-thumb.t3 { background: linear-gradient(135deg, #F5251D, #F78D1E); }
+.insight-body { padding: 24px; }
+.insight-cat { color: var(--c-tertiary); margin-bottom: 8px; }
+.insight-card h3 { font-size: 18px; margin-bottom: 8px; }
+.insight-card p { color: var(--c-muted); font-size: 15px; margin-bottom: 12px; }
+.insight-meta { font-size: 13px; color: var(--c-muted); }
+
+/* ----- FINAL CTA ----- */
+.final-cta { background: var(--c-primary); color: var(--c-neutral); padding: 80px 0; text-align: center; }
+.final-cta h2 { color: var(--c-neutral); }
+.final-cta p { color: var(--c-sky); font-size: 18px; max-width: 600px; margin: 0 auto 32px; }
+.final-cta .ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.final-cta .btn-secondary { background: transparent; color: var(--c-neutral); border-color: var(--c-neutral); }
+.final-cta .btn-secondary:hover { background: var(--c-neutral); color: var(--c-primary); }
+
+/* ----- FOOTER ----- */
+.site-footer { background: var(--c-primary); color: var(--c-neutral); padding: 64px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
+@media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; } }
+.footer-col h4 { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-highlight); margin: 0 0 16px; }
+.footer-col p { color: var(--c-sky); font-size: 15px; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a { color: var(--c-sky); font-size: 15px; }
+.footer-col a:hover { color: var(--c-highlight); text-decoration: none; }
+.footer-bottom { padding-top: 24px; border-top: 1px solid var(--c-sky); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--c-sky); }
+.footer-bottom a { color: var(--c-sky); }
+
+/* ----- MOBILE STICKY BAR ----- */
+.mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--c-primary); padding: 12px 16px; display: flex; gap: 8px; z-index: 90; box-shadow: 0 -4px 12px rgba(0,0,0,0.15); }
+@media (min-width: 768px) { .mobile-bar { display: none; } }
+.mobile-bar a { flex: 1; padding: 12px; text-align: center; border-radius: var(--r-md); font-family: 'Inter'; font-weight: 600; font-size: 14px; text-decoration: none; }
+.mobile-bar .call { background: var(--c-tertiary); color: var(--c-neutral); }
+.mobile-bar .wa { background: var(--c-green); color: var(--c-primary); }
+body { padding-bottom: 72px; }
+@media (min-width: 768px) { body { padding-bottom: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="/" class="brand" aria-label="ECONARES home">
+      <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="96" height="96" rx="14" fill="#002A54" stroke="#2E343B" stroke-width="3"/>
+        <rect x="14" y="56" width="72" height="32" rx="3" fill="#002A54"/>
+        <text x="50" y="78" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF" letter-spacing="-0.5">ECONARES</text>
+        <rect x="14" y="14" width="14" height="42" fill="#A98F7A"/>
+        <rect x="30" y="22" width="14" height="34" fill="#5A7995"/>
+        <rect x="46" y="18" width="14" height="38" fill="#4F6876"/>
+        <polygon points="62,56 70,28 78,40 86,20 86,56" fill="#20293B"/>
+      </svg>
+      <span>
+        <span class="brand-text">ECONARES</span>
+        <span class="brand-sub">CONSTRUCTION · TRADING · SHIPPING</span>
+      </span>
+    </a>
+
+    <nav class="nav-main" aria-label="Primary">
+      <a href="/" class="active">Home</a>
+      <a href="/about/">About</a>
+      <a href="/products/">Products</a>
+      <a href="/services/">Services</a>
+      <a href="/projects/">Projects</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+63322326280">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (+63 32) 232 6280
+      </a>
+      <a class="btn btn-primary" href="/contact/?type=product">Request Quote</a>
+      <button class="menu-toggle" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="tag eyebrow">Cebu · Serving all of the Philippines</span>
+        <h1>Industrial Fuels, Minerals &amp; <span class="accent">Construction</span> — From One Philippine Partner.</h1>
+        <p class="hero-sub">ECONARES is a SEC-registered supplier of bulk industrial fuels and metallic &amp; non-metallic minerals to cement, sugar, and power plants — with a PCAB-licensed construction arm for ports, plants, and civil works.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/contact/?type=product">Request Fuel Quote</a>
+          <a class="btn btn-secondary" href="/contact/?type=service">Discuss a Project</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">21+</div>
+            <div class="stat-label">Commodities in stock</div>
+          </div>
+          <div>
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Years in PH heavy industry</div>
+          </div>
+          <div>
+            <div class="stat-num">3</div>
+            <div class="stat-label">Subsidiaries, one accountable partner</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-carousel" aria-label="Site, project, and product photography">
+        <div class="hero-slide slide-1 active"><span>Coal stockpile · Republic Cement</span></div>
+        <div class="hero-slide slide-2"><span>Vessel loading · Carrascal Nickel</span></div>
+        <div class="hero-slide slide-3"><span>Construction site · Mandani Bay</span></div>
+        <div class="hero-slide slide-4"><span>Aggregates yard · Century Peak</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+  <div class="container">
+    <ul class="trust-list" aria-label="Credentials">
+      <li class="trust-badge">SEC-Registered OPC</li>
+      <li class="trust-badge">DTI 2015 · ECE Resources</li>
+      <li class="trust-badge">DTI 2019 · ECE Construction</li>
+      <li class="trust-badge">PCAB Licensed</li>
+      <li class="trust-badge">15+ Years in PH Heavy Industry</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== WHAT WE SUPPLY ===== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="tag eyebrow">What we supply</span>
+      <h2>Three integrated divisions, one accountable partner</h2>
+      <p>Procurement officers and project directors call ECONARES because we move the fuel, the mineral, the crew, and the marine logistics — not just one piece of it.</p>
+    </div>
+    <div class="card-grid card-grid-3">
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
+        </div>
+        <span class="tag eyebrow">01 — Industrial Fuels</span>
+        <h3>Steam Coal, Met Coke, PKS, Woodchips</h3>
+        <p>Bulk fuel supply for cement kilns, sugar mills, biomass power plants, and industrial boilers. Sourced from Indonesia, Australia, South Africa, Malaysia, and Vietnam — quality-tested on arrival.</p>
+        <a class="service-link" href="/products/industrial-fuels/">View industrial fuels →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+        </div>
+        <span class="tag eyebrow">02 — Minerals</span>
+        <h3>17 Metallic &amp; Non-Metallic Minerals</h3>
+        <p>Aggregates, marine sand, boulders, diorite, limestone, chromite, nickel, iron sand, silica sand, greywackes, pozzolan, copper, clinker, quicklime/hydrated lime, gypsum, anhydrite. Bulk, MOQ from 500 MT.</p>
+        <a class="service-link" href="/products/metallic-non-metallic-minerals/">View minerals →</a>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20M4 22V8l8-6 8 6v14M9 22v-8h6v8M9 6h6"/></svg>
+        </div>
+        <span class="tag eyebrow">03 — Construction</span>
+        <h3>PCAB-Licensed Engineering &amp; Marine</h3>
+        <p>Land development, reclamation, ports, bridges, industrial plants, steel fabrication, civil/electrical/mechanical works, water treatment, deep well, and full marine services (LCT, tug, barge, dredger).</p>
+        <a class="service-link" href="/services/">View services →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PROJECTS ===== -->
+<section style="background: var(--c-surface);">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag eyebrow">Reference projects</span>
+      <h2>Trusted by Philippine heavy industry since 2015</h2>
+      <p>A selection of recent commodity shipments and construction engagements. Full portfolio available on request.</p>
+    </div>
+    <div class="card-grid card-grid-3">
+      <a href="/projects/republic-cement-coal-shipments/" class="project-card project-1">
+        <div class="project-bg"></div>
+        <div class="project-overlay">
+          <h3>Republic Cement Coal Shipments</h3>
+          <div class="project-meta">Cement · Ongoing</div>
+        </div>
+      </a>
+      <a href="/projects/century-peak-aggregates-shipments/" class="project-card project-2">
+        <div class="project-bg"></div>
+        <div class="project-overlay">
+          <h3>Century Peak Aggregates</h3>
+          <div class="project-meta">Manufacturing · Ongoing</div>
+        </div>
+      </a>
+      <a href="/projects/carrascal-nickel-ore/" class="project-card project-3">
+        <div class="project-bg"></div>
+        <div class="project-overlay">
+          <h3>Carrascal Nickel Ore</h3>
+          <div class="project-meta">Nickel · Ongoing</div>
+        </div>
+      </a>
+      <a href="/projects/tbc-port-project/" class="project-card project-4">
+        <div class="project-bg"></div>
+        <div class="project-overlay">
+          <h3>TBC Port Project</h3>
+          <div class="project-meta">Marine / Port</div>
+        </div>
+      </a>
+      <a href="/projects/mandani-bay-project/" class="project-card project-5">
+        <div class="project-bg"></div>
+        <div class="project-overlay">
+          <h3>Mandani Bay Project</h3>
+          <div class="project-meta">Mixed-Use Real Estate · Cebu</div>
+        </div>
+      </a>
+      <a href="/projects/als-deep-well-water-drilling/" class="project-card project-6">
+        <div class="project-bg"></div>
+        <div class="project-overlay">
+          <h3>ALS Deep Well Water Drilling</h3>
+          <div class="project-meta">Water Infrastructure</div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a class="btn btn-secondary" href="/projects/">View full portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ECONARES ===== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="tag eyebrow">Why ECONARES</span>
+      <h2>One partner for the inputs and the engineering</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <h3>Integrated supply + build</h3>
+        <p>Most suppliers ship you fuel or minerals. We can also build the plant that burns them. One PO, one account manager, one accountable point of contact.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <h3>Cebu HQ + national reach</h3>
+        <p>Headquartered in Talisay City, Cebu with active project delivery across the Visayas and Luzon — including shipside loading at Carrascal, Surigao del Sur.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <h3>Quality-tested and inspected</h3>
+        <p>Every bulk shipment includes quality/quantity inspection at load and discharge. Spec sheets (NCV, moisture, ash, sulfur, size) supplied with every quotation.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <h3>PCAB-licensed engineering</h3>
+        <p>ECE Construction Services holds a Regular Contractor's License from the Philippine Contractors Accreditation Board, valid for horizontal and vertical works.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSIGHTS TEASER ===== -->
+<section class="insights-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag eyebrow">Insights</span>
+      <h2>Notes from the yard, the dock, and the construction site</h2>
+      <p>Market updates, spec deep-dives, and regulatory notes for Philippine heavy-industry procurement teams.</p>
+    </div>
+    <div class="card-grid card-grid-3">
+      <article class="insight-card">
+        <div class="insight-thumb t1"></div>
+        <div class="insight-body">
+          <span class="tag insight-cat">Industrial Fuels</span>
+          <h3>Steam coal specifications for Philippine cement kilns: a 2026 buyer's guide</h3>
+          <p class="insight-meta">12 min read · Procurement</p>
+        </div>
+      </article>
+      <article class="insight-card">
+        <div class="insight-thumb t2"></div>
+        <div class="insight-body">
+          <span class="tag insight-cat">Minerals</span>
+          <h3>Marine sand vs river sand: which one does your reclamation project need?</h3>
+          <p class="insight-meta">8 min read · Construction</p>
+        </div>
+      </article>
+      <article class="insight-card">
+        <div class="insight-thumb t3"></div>
+        <div class="insight-body">
+          <span class="tag insight-cat">Engineering</span>
+          <h3>PCAB license classifications explained: what to ask before you sign</h3>
+          <p class="insight-meta">10 min read · Compliance</p>
+        </div>
+      </article>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a class="btn btn-secondary" href="/insights/">Read all insights</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <span class="tag eyebrow" style="color: var(--c-highlight);">Get in touch</span>
+    <h2>Ready to source fuels, minerals, or build a project?</h2>
+    <p>Talk to our Cebu-based sales team. We answer the phone, we reply to email, and we send a quotation within 48 hours.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="/contact/?type=product">Request Fuel Quote</a>
+      <a class="btn btn-secondary" href="/contact/?type=service">Discuss a Project</a>
+      <a class="btn btn-secondary" href="tel:+63322326280">Call (+63 32) 232 6280</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ECONARES</h4>
+        <p>ECE Construction and Resources OPC. A SEC-registered Philippine company supplying industrial fuels, minerals, and PCAB-licensed construction services from Cebu to the rest of the Philippines.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/products/industrial-fuels/">Industrial Fuels</a></li>
+          <li><a href="/products/metallic-non-metallic-minerals/">Metallic &amp; Non-Metallic Minerals</a></li>
+          <li><a href="/products/steam-coal/">Steam Coal</a></li>
+          <li><a href="/products/limestone/">Limestone</a></li>
+          <li><a href="/products/clinker/">Clinker</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/engineering-construction/">Engineering &amp; Construction</a></li>
+          <li><a href="/services/marine-services/">Marine Services</a></li>
+          <li><a href="/services/environmental-protection/">Environmental Protection</a></li>
+          <li><a href="/services/engineering-construction/ports-bridges/">Ports &amp; Bridges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>G/F BT &amp; T Bldg., Hollow Block Road<br>Tabunok, Talisay City, Cebu 6045<br>Philippines</p>
+        <p><a href="tel:+63322326280">(+63 32) 232 6280</a><br><a href="mailto:ece.eleguinresources@yahoo.com">ece.eleguinresources@yahoo.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ECE Construction and Resources OPC. All rights reserved.</div>
+      <div>
+        <a href="/legal/privacy-policy/">Privacy</a> · <a href="/legal/terms-of-use/">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MOBILE STICKY BAR ===== -->
+<div class="mobile-bar" role="region" aria-label="Quick contact">
+  <a class="call" href="tel:+63322326280">Call Now</a>
+  <a class="wa" href="https://wa.me/639171234567?text=Hello%20ECONARES%2C%20I%27d%20like%20to%20inquire%20about">WhatsApp</a>
+</div>
+
+<script>
+// Sticky header shadow on scroll
+const h = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), { passive: true });
+
+// Hero carousel (CSS-driven, JS for class toggle)
+const slides = document.querySelectorAll('.hero-slide');
+let i = 0;
+setInterval(() => {
+  slides[i].classList.remove('active');
+  i = (i + 1) % slides.length;
+  slides[i].classList.add('active');
+}, 4500);
+</script>
+</body>
+</html>

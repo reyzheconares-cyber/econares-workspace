@@ -1,0 +1,81 @@
+---
+// src/components/Header.astro — sticky site header
+import { SITE, NAV } from '../data/site.js';
+import Logo from './Logo.astro';
+const { active = '' } = Astro.props;
+const path = Astro.url.pathname;
+const isActive = (href) => active === href || (href !== '/' && path.startsWith(href));
+---
+<header class="sticky top-0 z-50 bg-neutral border-b border-border h-20 flex items-center">
+<div class="container-page w-full flex items-center justify-between gap-6">
+  <Logo />
+  <nav class="hidden lg:flex items-center gap-7" aria-label="Primary">
+    {NAV.map(item => (
+      <a
+        href={item.href}
+        class:list={[
+          'font-tag font-bold text-sm uppercase no-underline py-1.5 border-b-2',
+          isActive(item.href) ? 'text-tertiary border-tertiary' : 'text-ink border-transparent hover:text-tertiary'
+        ]}
+        data-nav-link={item.href}
+      >{item.label}</a>
+    ))}
+  </nav>
+    <div class="flex items-center gap-4">
+      <a href={`tel:${SITE.phoneTel}`} class="hidden md:inline-flex items-center gap-1.5 font-body font-semibold text-sm text-primary hover:no-underline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        {SITE.phone}
+      </a>
+      <a href="/contact/?type=product" class="hidden lg:inline-flex btn btn-primary !py-2.5 !px-4 !text-sm !min-h-0" data-nav-cta="primary">Request Quote</a>
+      <button class="lg:hidden inline-flex items-center justify-center w-11 h-11" aria-label="Open menu" id="menuToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu drawer -->
+<div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-neutral lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="container-page pt-24 pb-8 flex flex-col gap-2 h-full overflow-y-auto">
+    <button class="absolute top-6 right-6 w-11 h-11 inline-flex items-center justify-center" aria-label="Close menu" id="menuClose">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    {NAV.map(item => (
+      <a href={item.href} class:list={['block py-4 font-tag font-bold text-2xl uppercase no-underline border-b border-border', isActive(item.href) ? 'text-tertiary' : 'text-primary']}>{item.label}</a>
+    ))}
+    <div class="mt-8 flex flex-col gap-3">
+      <a href={`tel:${SITE.phoneTel}`} class="btn btn-primary">Call {SITE.phone}</a>
+      <a href={`https://wa.me/${SITE.whatsapp}?text=Hello%20ECONARES%2C%20I%27d%20like%20to%20inquire%20about`} class="btn btn-secondary">WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const close = document.getElementById('menuClose');
+  const menu = document.getElementById('mobileMenu');
+  toggle?.addEventListener('click', () => menu?.classList.remove('hidden'));
+  close?.addEventListener('click', () => menu?.classList.add('hidden'));
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu?.classList.add('hidden')));
+
+  // Kami pages: neutralize the brand red on the Request Quote CTA and active nav link
+  // so the editorial /capabilities page reads as a single-ink-blue document.
+  const kamiPages = ['/capabilities/'];
+  const here = window.location.pathname;
+  if (kamiPages.includes(here)) {
+    document.querySelectorAll('[data-nav-cta="primary"]').forEach(el => {
+      el.classList.remove('btn-primary', 'bg-tertiary', 'text-neutral');
+      el.classList.add('bg-ink-blue', 'text-parchment', 'border', 'border-ink-blue');
+      el.style.background = '#1B365D';
+      el.style.color = '#F5F4ED';
+      el.style.borderColor = '#1B365D';
+    });
+    document.querySelectorAll('[data-nav-link]').forEach(el => {
+      if (el.classList.contains('text-tertiary') || el.classList.contains('border-tertiary')) {
+        el.classList.remove('text-tertiary', 'border-tertiary');
+        el.style.color = '#1B365D';
+        el.style.borderBottomColor = '#1B365D';
+      }
+    });
+  }
+</script>

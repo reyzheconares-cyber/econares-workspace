@@ -1,0 +1,220 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site.js';
+import { products, services } from '../data/loader.js';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: `Contact ${SITE.name}`,
+  description: `Contact ${SITE.legal} for industrial fuel, mineral, and construction RFQs. Cebu, Philippines.`,
+};
+
+const fuels = products.filter(p => p.category === 'industrial-fuels');
+const minerals = products.filter(p => p.category === 'minerals');
+const svcConstruction = services.find(s => s.slug === 'engineering-construction')?.sub_services ?? [];
+const svcEnvironmental = services.find(s => s.slug === 'environmental-protection')?.sub_services ?? [];
+const svcMarine = services.find(s => s.slug === 'marine-services')?.sub_services ?? [];
+
+const initialType = Astro.url.searchParams.get('type') === 'service' ? 'service' : 'product';
+const initialProduct = Astro.url.searchParams.get('product') ?? '';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mlgkvevq';
+---
+<Base title="Request a Quote" active="/contact/" schema={schema}>
+
+<!-- Hero -->
+<section class="bg-primary text-neutral py-20 md:py-24">
+  <div class="container-page">
+    <span class="tag text-highlight mb-3">Get in touch</span>
+    <h1 class="font-display font-extrabold text-neutral text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] mb-4">Request a Quote</h1>
+    <p class="text-sky text-lg max-w-[720px] mb-8">Tell us what you need — fuel, minerals, or a construction project — and our Cebu-based sales team will reply within 48 hours. For urgent tenders, call us directly.</p>
+    <ul class="flex flex-wrap gap-2 mt-8" aria-label="Trust signals">
+      {['48-Hour Quote Turnaround','SEC-Registered','DTI & PCAB Licensed','15+ Years in PH Heavy Industry'].map(c => (
+        <li class="inline-flex items-center px-3.5 py-1.5 border border-green text-green font-tag font-bold text-xs uppercase tracking-tag rounded-full">{c}</li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<!-- Tabbed RFQ forms -->
+<section class="pb-16 md:pb-24 -mt-8 relative z-10">
+  <div class="container-page">
+    <div class="bg-neutral rounded-lg shadow-[0_10px_40px_rgba(0,0,0,0.12)] overflow-hidden">
+      <div class="flex border-b border-border" role="tablist">
+        <button class="tab-btn flex-1 py-5 font-tag font-bold text-base uppercase tracking-tag text-muted text-center border-b-[3px] border-transparent" role="tab" aria-selected={initialType === 'product' ? 'true' : 'false'} data-tab="product">RFQ — Product</button>
+        <button class="tab-btn flex-1 py-5 font-tag font-bold text-base uppercase tracking-tag text-muted text-center border-b-[3px] border-transparent" role="tab" aria-selected={initialType === 'service' ? 'true' : 'false'} data-tab="service">RFQ — Service</button>
+      </div>
+
+      <!-- Product RFQ -->
+      <div class={`tab-panel p-10 md:p-12 ${initialType === 'product' ? 'block' : 'hidden'}`} id="tab-product" role="tabpanel">
+        <h2 class="font-display font-bold text-primary text-2xl mb-2">Industrial fuels &amp; minerals</h2>
+        <p class="text-muted mb-8">Use this form for steam coal, met coke, PKS, woodchips, or any metallic &amp; non-metallic mineral. Fields marked with <span class="text-tertiary">*</span> are required.</p>
+        <form action={FORMSPREE_ENDPOINT} method="POST">
+          <input type="hidden" name="rfq_type" value="product">
+          <input type="hidden" name="_subject" value="ECONARES Product RFQ">
+          <input type="hidden" name="source_page" value="/contact/">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Full name <span class="text-tertiary">*</span></span><input name="name" type="text" required autocomplete="name" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Company <span class="text-tertiary">*</span></span><input name="company" type="text" required autocomplete="organization" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Email <span class="text-tertiary">*</span></span><input name="email" type="email" required autocomplete="email" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Phone <span class="text-tertiary">*</span></span><input name="phone" type="tel" required autocomplete="tel" placeholder="+63 9xx xxx xxxx" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5 sm:col-span-2"><span class="tag text-primary">Commodity <span class="text-tertiary">*</span></span>
+              <select name="commodity" required class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none">
+                <option value="">Select a commodity…</option>
+                <optgroup label="Industrial Fuels">
+                  {fuels.map(f => <option value={f.slug} selected={initialProduct === f.slug}>{f.name}</option>)}
+                </optgroup>
+                <optgroup label="Metallic & Non-Metallic Minerals">
+                  {minerals.map(m => <option value={m.slug} selected={initialProduct === m.slug}>{m.name}</option>)}
+                </optgroup>
+                <option value="other">Other (specify in message)</option>
+              </select>
+            </label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Quantity (MT) <span class="text-tertiary">*</span></span><input name="quantity_mt" type="text" required placeholder="e.g. 5,000 MT" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Required delivery date</span><input name="delivery_date" type="date" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5 sm:col-span-2"><span class="tag text-primary">Delivery location (port / plant) <span class="text-tertiary">*</span></span><input name="delivery_location" type="text" required placeholder="e.g. Republic Cement, Norzagaray, Bulacan" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5 sm:col-span-2"><span class="tag text-primary">Specs, notes, or RFQ reference</span><textarea name="message" placeholder="Specific specs, packaging requirements, tender reference number, etc." class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none min-h-[120px] resize-y"></textarea><span class="text-[13px] text-muted">If you have a tender document or spec sheet, mention it here and we'll follow up with a secure upload link.</span></label>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3 items-center">
+            <button type="submit" class="btn btn-primary !min-w-[220px]">Send Product RFQ</button>
+            <span class="text-[13px] text-muted">We reply within 48 hours. Your details are used only to respond to this inquiry.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Service RFQ -->
+      <div class={`tab-panel p-10 md:p-12 ${initialType === 'service' ? 'block' : 'hidden'}`} id="tab-service" role="tabpanel">
+        <h2 class="font-display font-bold text-primary text-2xl mb-2">Construction &amp; engineering services</h2>
+        <p class="text-muted mb-8">Use this form for land development, ports, industrial plants, civil/electrical/mechanical works, marine services, or any PCAB-classified project. Fields marked with <span class="text-tertiary">*</span> are required.</p>
+        <form action={FORMSPREE_ENDPOINT} method="POST">
+          <input type="hidden" name="rfq_type" value="service">
+          <input type="hidden" name="_subject" value="ECONARES Service RFQ">
+          <input type="hidden" name="source_page" value="/contact/">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Full name <span class="text-tertiary">*</span></span><input name="name" type="text" required autocomplete="name" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Company <span class="text-tertiary">*</span></span><input name="company" type="text" required autocomplete="organization" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Email <span class="text-tertiary">*</span></span><input name="email" type="email" required autocomplete="email" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Phone <span class="text-tertiary">*</span></span><input name="phone" type="tel" required autocomplete="tel" placeholder="+63 9xx xxx xxxx" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5 sm:col-span-2"><span class="tag text-primary">Service type <span class="text-tertiary">*</span></span>
+              <select name="service_type" required class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none">
+                <option value="">Select a service…</option>
+                <optgroup label="Engineering & Construction">
+                  {svcConstruction.map(o => <option value={o.slug}>{o.name}</option>)}
+                </optgroup>
+                <optgroup label="Environmental Protection">
+                  {svcEnvironmental.map(o => <option value={o.slug}>{o.name}</option>)}
+                </optgroup>
+                <optgroup label="Marine Services">
+                  {svcMarine.map(o => <option value={o.slug}>{o.name}</option>)}
+                </optgroup>
+                <option value="other">Other (specify in message)</option>
+              </select>
+            </label>
+            <label class="flex flex-col gap-1.5 sm:col-span-2"><span class="tag text-primary">Project location <span class="text-tertiary">*</span></span><input name="project_location" type="text" required placeholder="City, province" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Estimated project value (PHP)</span><input name="estimated_value" type="text" placeholder="e.g. ₱50,000,000" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5"><span class="tag text-primary">Target timeline</span><input name="timeline" type="text" placeholder="e.g. Start Q1 2027, 12-month duration" class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none"></label>
+            <label class="flex flex-col gap-1.5 sm:col-span-2"><span class="tag text-primary">Project description, scope, or tender reference</span><textarea name="message" placeholder="Brief scope of works, key dates, any tender reference number, drawing or document links." class="px-3.5 py-3 text-[15px] bg-neutral border border-border rounded-md focus:border-tertiary focus:ring-[3px] focus:ring-[rgba(245,37,29,0.15)] focus:outline-none min-h-[120px] resize-y"></textarea><span class="text-[13px] text-muted">If you have drawings, BoQ, or a tender document, mention it here and we'll follow up with a secure upload link.</span></label>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3 items-center">
+            <button type="submit" class="btn btn-primary !min-w-[220px]">Send Service RFQ</button>
+            <span class="text-[13px] text-muted">We reply within 48 hours. For confidential tenders, request an NDA first.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Office info -->
+<section class="py-16 md:py-24 bg-surface">
+  <div class="container-page">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <span class="tag text-tertiary mb-3">Cebu headquarters</span>
+        <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-6">Visit, call, or write to us</h2>
+        {[
+          { icon: 'pin', label: 'Office Address', body: `${SITE.address.street}<br>${SITE.address.locality}<br>${SITE.address.country}` },
+          { icon: 'phone', label: 'Landline', body: `<a href="tel:${SITE.phoneTel}" class="text-blue">${SITE.phone}</a>` },
+          { icon: 'mail', label: 'Email', body: `<a href="mailto:${SITE.email}" class="text-blue">${SITE.email}</a>` },
+          { icon: 'clock', label: 'Office hours', body: 'Monday – Friday, 8:00 AM – 5:00 PM (PHT)<br>Saturday, 8:00 AM – 12:00 PM (PHT)' },
+        ].map(item => (
+          <div class="flex items-start gap-4 py-4 border-b border-border last:border-b-0">
+            <div class="w-11 h-11 bg-primary text-highlight rounded-md flex items-center justify-center shrink-0">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5" aria-hidden="true">
+                {item.icon === 'pin' && <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></>}
+                {item.icon === 'phone' && <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>}
+                {item.icon === 'mail' && <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>}
+                {item.icon === 'clock' && <><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></>}
+              </svg>
+            </div>
+            <div>
+              <strong class="block tag text-tertiary mb-1">{item.label}</strong>
+              <p class="text-ink m-0" set:html={item.body}></p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-card-h bg-[linear-gradient(135deg,#2E343B_0%,#4F6876_100%)] flex items-center justify-center text-white/60 font-tag font-bold text-sm uppercase tracking-tag" aria-label="Map placeholder for BT & T Building, Tabunok, Talisay City, Cebu">
+        Map · BT &amp; T Bldg, Tabunok, Talisay City, Cebu
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sales team -->
+<section class="py-16 md:py-24">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">Sales team direct lines</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Reach the right division on the first try</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {[
+        { tag: 'Mine Mineral Products', name: 'Sales Officer — Minerals' },
+        { tag: 'Fuel Products', name: 'Sales Officer — Fuels' },
+        { tag: 'Construction Products & Services', name: 'Sales Officer — Construction' },
+        { tag: 'Shipping & Equipment Rental', name: 'Sales Officer — Marine' },
+      ].map(o => (
+        <div class="p-6 bg-neutral border border-border rounded-lg">
+          <span class="tag text-tertiary mb-2">{o.tag}</span>
+          <h3 class="font-display font-bold text-primary text-base mb-2">{o.name}</h3>
+          <p class="m-0"><a href={`mailto:${SITE.email}?subject=${encodeURIComponent(o.tag)}`} class="text-blue text-sm">{SITE.email}</a></p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+</Base>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        b.classList.toggle('text-tertiary', b === btn);
+        b.classList.toggle('border-tertiary', b === btn);
+        b.classList.toggle('bg-surface', b === btn);
+        b.classList.toggle('text-muted', b !== btn);
+        b.classList.toggle('border-transparent', b !== btn);
+      });
+      document.querySelectorAll('.tab-panel').forEach(p => {
+        const match = p.id === `tab-${target}`;
+        p.classList.toggle('hidden', !match);
+        p.classList.toggle('block', match);
+      });
+    });
+  });
+  // Initial style sync
+  document.querySelectorAll('.tab-btn[aria-selected="true"]').forEach(btn => {
+    btn.classList.add('text-tertiary', 'border-tertiary', 'bg-surface');
+    btn.classList.remove('text-muted', 'border-transparent');
+  });
+  document.querySelectorAll('.tab-btn[aria-selected="false"]').forEach(btn => {
+    btn.classList.add('text-muted', 'border-transparent');
+  });
+</script>

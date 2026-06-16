@@ -1,0 +1,68 @@
+---
+// src/components/Footer.astro — site footer + mobile sticky bar
+import { SITE, NAV } from '../data/site.js';
+import { products, services, allSubServices } from '../data/loader.js';
+const topProducts = products.filter(p => ['steam-coal','limestone','clinker','metallurgical-coke','marine-sand','nickel'].includes(p.slug));
+const topServices = services;
+---
+<footer class="bg-primary text-neutral py-16 pb-8">
+  <div class="container-page">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr] gap-10 mb-12">
+      <div>
+        <h4 class="font-tag font-bold text-sm uppercase text-highlight mb-4 tracking-tag">{SITE.name}</h4>
+        <p class="text-sky text-[15px] leading-relaxed">{SITE.legal}. A SEC-registered Philippine company supplying industrial fuels, minerals, and PCAB-licensed construction services from Cebu to the rest of the Philippines.</p>
+      </div>
+      <div>
+        <h4 class="font-tag font-bold text-sm uppercase text-highlight mb-4 tracking-tag">Products</h4>
+        <ul class="space-y-2 list-none p-0 m-0">
+          <li><a href="/products/" class="text-sky text-[15px] hover:text-highlight hover:no-underline">All Products</a></li>
+          {topProducts.map(p => (
+            <li><a href={`/products/${p.slug}/`} class="text-sky text-[15px] hover:text-highlight hover:no-underline">{p.name}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-tag font-bold text-sm uppercase text-highlight mb-4 tracking-tag">Services</h4>
+        <ul class="space-y-2 list-none p-0 m-0">
+          <li><a href="/services/" class="text-sky text-[15px] hover:text-highlight hover:no-underline">All Services</a></li>
+          {topServices.map(s => (
+            <li><a href={`/services/${s.slug}/`} class="text-sky text-[15px] hover:text-highlight hover:no-underline">{s.name}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-tag font-bold text-sm uppercase text-highlight mb-4 tracking-tag">Company</h4>
+        <ul class="space-y-2 list-none p-0 m-0">
+          {NAV.filter(n => !['Home','Products','Services','Contact'].includes(n.label)).map(n => (
+            <li><a href={n.href} class="text-sky text-[15px] hover:text-highlight hover:no-underline">{n.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-tag font-bold text-sm uppercase text-highlight mb-4 tracking-tag">Contact</h4>
+        <p class="text-sky text-[15px] leading-relaxed mb-3">
+          {SITE.address.street}<br>
+          {SITE.address.locality}<br>
+          {SITE.address.country}
+        </p>
+        <p class="text-sky text-[15px] leading-relaxed">
+          <a href={`tel:${SITE.phoneTel}`} class="text-sky hover:text-highlight hover:no-underline">{SITE.phone}</a><br>
+          <a href={`mailto:${SITE.email}`} class="text-sky hover:text-highlight hover:no-underline">{SITE.email}</a>
+        </p>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-sky flex flex-wrap justify-between gap-4 text-[13px] text-sky">
+      <div>© 2026 {SITE.legal}. All rights reserved.</div>
+      <div>
+        <a href="/legal/privacy-policy/" class="text-sky hover:text-highlight hover:no-underline">Privacy</a> · <a href="/legal/terms-of-use/" class="text-sky hover:text-highlight hover:no-underline">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky bottom bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-primary p-3 flex gap-2 z-40 shadow-[0_-4px_12px_rgba(0,0,0,0.15)] md:hidden" role="region" aria-label="Quick contact">
+  <a href={`tel:${SITE.phoneTel}`} class="flex-1 py-3 text-center rounded-md font-body font-semibold text-sm bg-tertiary text-neutral no-underline">Call Now</a>
+  <a href={`https://wa.me/${SITE.whatsapp}?text=Hello%20ECONARES%2C%20I%27d%20like%20to%20inquire%20about`} class="flex-1 py-3 text-center rounded-md font-body font-semibold text-sm bg-green text-primary no-underline">WhatsApp</a>
+</div>
+<style>body { padding-bottom: 72px; } @media (min-width: 768px) { body { padding-bottom: 0; } }</style>

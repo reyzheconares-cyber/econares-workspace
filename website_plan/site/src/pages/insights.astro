@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site.js';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: `Insights — ${SITE.name}`,
+  description: 'Market updates, spec deep-dives, and regulatory notes for Philippine heavy-industry procurement teams.',
+};
+const posts = [
+  { slug: 'steam-coal-specifications-cement-kilns-2026', cat: 'Industrial Fuels', date: '2026-06-10', read: '12 min', title: "Steam coal specifications for Philippine cement kilns: a 2026 buyer's guide", excerpt: "The NCV, ash, sulfur, and size numbers that actually matter for cement-kiln operations — and how to read a coal spec sheet the way a procurement officer should." },
+  { slug: 'marine-sand-vs-river-sand', cat: 'Minerals', date: '2026-05-22', read: '8 min', title: "Marine sand vs river sand: which one does your reclamation project need?", excerpt: "Salt content, silt, sourcing logistics, environmental permitting, and price — the trade-offs that determine which sand is right for your project." },
+  { slug: 'pcab-license-classifications-explained', cat: 'Engineering', date: '2026-05-04', read: '10 min', title: "PCAB license classifications explained: what to ask before you sign", excerpt: "AAAA, AAA, AA, A, B, C, D — the seven PCAB license categories, what they authorize, and the questions every project owner should ask a contractor before signing." },
+  { slug: 'pks-vs-woodchips-biomass-power', cat: 'Industrial Fuels', date: '2026-04-18', read: '7 min', title: "PKS vs woodchips for biomass power: a Philippines market comparison", excerpt: "Calorific value, moisture, ash behavior, and supply chain realities for two of the most common biomass fuels in Philippine industrial applications." },
+  { slug: 'nickel-ore-shipside-loading-carrascal', cat: 'Mineral Logistics', date: '2026-03-30', read: '9 min', title: "Shipside loading at Carrascal: how Philippine nickel ore reaches global markets", excerpt: "Behind the scenes at one of the Philippines' key laterite-nickel export points — the loading operation, quality controls, and the logistics chain." },
+  { slug: 'reclamation-projects-philippines-2026', cat: 'Engineering', date: '2026-03-12', read: '11 min', title: "Reclamation projects in the Philippines: 2026 regulatory and engineering landscape", excerpt: "A practical overview of the regulatory framework, dredging options, and ground-improvement techniques that shape modern Philippine land reclamation." },
+];
+---
+<Base title="Insights" active="/insights/" schema={schema}>
+
+<section class="py-16 md:py-20">
+  <div class="container-page">
+    <span class="tag text-tertiary mb-3">Insights</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] mb-4">Market updates, spec deep-dives, and regulatory notes.</h1>
+    <p class="text-lg text-ink max-w-[720px]">Practical, no-fluff content for Philippine heavy-industry procurement teams. Written from the yard, the dock, and the construction site.</p>
+  </div>
+</section>
+
+<section class="py-8 md:py-16">
+  <div class="container-page">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {posts.map(p => (
+        <article class="bg-neutral border border-border rounded-lg overflow-hidden">
+          <div class="aspect-video bg-[linear-gradient(135deg,#002A54_0%,#4F6876_100%)]"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="tag text-tertiary">{p.cat}</span>
+              <span class="text-muted text-xs">· {p.read} read</span>
+            </div>
+            <h2 class="font-display font-bold text-primary text-lg mb-2">{p.title}</h2>
+            <p class="text-muted text-sm m-0 mb-3">{p.excerpt}</p>
+            <div class="text-muted text-xs">{new Date(p.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Want content like this in your inbox?</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">Send us a request and we'll add you to our quarterly procurement briefing — no marketing fluff, just spec data and market context.</p>
+    <a href="/contact/?type=product" class="btn btn-primary">Subscribe to the briefing</a>
+  </div>
+</section>
+
+</Base>

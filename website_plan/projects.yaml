@@ -1,0 +1,164 @@
+# ECONARES project portfolio — drives /projects/** pages
+# 12 reference projects from company profile
+
+projects:
+  # ========== COAL & RAW MATERIAL SHIPMENTS ==========
+  - slug: republic-cement-coal-shipments
+    name: Republic Cement Coal Shipments
+    category: coal-shipments
+    industry: Cement
+    year: "Ongoing"
+    scope: "Bulk coal supply to Republic Cement operations — coal loading, trimming, quality/quantity inspection, and discharge at port."
+    services: [Steam Coal Supply, Marine Logistics, Quality Inspection]
+    location: "Multiple Philippine ports"
+    images:
+      - /images/projects/republic-cement-1.jpg
+      - /images/projects/republic-cement-2.jpg
+
+  - slug: century-peak-aggregates-shipments
+    name: Century Peak Manufacturing Corp. Aggregates Shipments
+    category: mineral-shipments
+    industry: Manufacturing
+    year: "Ongoing"
+    scope: "Bulk construction aggregates supply to Century Peak — loading, trimming, discharging, and stockpiling."
+    services: [Aggregates Supply, Marine Logistics, Stockpiling]
+    location: "Philippines"
+    images:
+      - /images/projects/century-peak-1.jpg
+      - /images/projects/century-peak-2.jpg
+
+  - slug: carrascal-nickel-ore
+    name: Carrascal Nickel Ore Shipside Loading
+    category: mineral-shipments
+    industry: Nickel
+    year: "Ongoing"
+    scope: "Nickel ore shipside loading operations at Carrascal, Surigao del Sur — bulk handling and vessel loading."
+    services: [Nickel Ore, Shipside Loading, Marine Logistics]
+    location: "Carrascal, Surigao del Sur"
+    images:
+      - /images/projects/carrascal-1.jpg
+      - /images/projects/carrascal-2.jpg
+
+  - slug: limestone-diorite-deliveries
+    name: Limestone & Diorite Deliveries
+    category: mineral-shipments
+    industry: Heavy Industry
+    year: "Ongoing"
+    scope: "Bulk limestone and diorite deliveries to cement and construction projects across the Visayas and Luzon."
+    services: [Limestone, Diorite, Delivery]
+    location: "Visayas / Luzon"
+    images:
+      - /images/projects/limestone-diorite-1.jpg
+
+  - slug: marine-river-sand-shipment
+    name: Marine Sand / River Sand Shipment
+    category: mineral-shipments
+    industry: Construction
+    year: "Ongoing"
+    scope: "Marine and river sand shipment to reclamation and concrete projects."
+    services: [Marine Sand, River Sand, Marine Logistics]
+    location: "Philippines"
+    images:
+      - /images/projects/sand-1.jpg
+
+  # ========== CONSTRUCTION PROJECTS ==========
+  - slug: tbc-port-project
+    name: TBC Port Project
+    category: construction
+    industry: Marine / Port
+    year: "Recent"
+    scope: "Port construction including wharf, back-up area, and marine infrastructure."
+    services: [Port Construction, Civil Works, Marine Engineering]
+    location: "Philippines"
+    images:
+      - /images/projects/tbc-port-1.jpg
+      - /images/projects/tbc-port-2.jpg
+
+  - slug: pdodc-housing-project
+    name: PDODC Housing Project
+    category: construction
+    industry: Real Estate / Housing
+    year: "Recent"
+    scope: "Housing development with site development, road networks, and residential construction."
+    services: [Land Development, Housing Construction, Civil Works]
+    location: "Philippines"
+    images:
+      - /images/projects/pdodc-1.jpg
+
+  - slug: geordanson-complex-warehouse
+    name: Geordanson Complex Warehouse
+    category: construction
+    industry: Commercial
+    year: "Recent"
+    scope: "Warehouse complex construction with steel fabrication and civil works."
+    services: [Steel Fabrication, Civil Works, Commercial Construction]
+    location: "Philippines"
+    images:
+      - /images/projects/geordanson-1.jpg
+
+  - slug: mason-maria-luisa-land-devt
+    name: The Mason-Maria Luisa Land Development
+    category: construction
+    industry: Real Estate
+    year: "Recent"
+    scope: "Land development for residential subdivision including grading, road, drainage, and utilities."
+    services: [Land Development, Civil Works, Subdivision]
+    location: "Maria Luisa, Cebu"
+    images:
+      - /images/projects/mason-1.jpg
+
+  - slug: lpdc-land-devt
+    name: LPDC Land Development Project
+    category: construction
+    industry: Real Estate
+    year: "Recent"
+    scope: "Land development including earthmoving, road networks, and utility installation."
+    services: [Land Development, Earthmoving, Civil Works]
+    location: "Philippines"
+    images:
+      - /images/projects/lpdc-1.jpg
+
+  - slug: als-deep-well-water-drilling
+    name: ALS Deep Well Water Drilling
+    category: construction
+    industry: Water Infrastructure
+    year: "Recent"
+    scope: "Deep well drilling, casing, and water supply system installation."
+    services: [Deep Well Drilling, Water Supply, Mechanical Installation]
+    location: "Philippines"
+    images:
+      - /images/projects/als-1.jpg
+
+  - slug: mandani-bay-project
+    name: Mandani Bay Project
+    category: construction
+    industry: Mixed-Use Real Estate
+    year: "Recent"
+    scope: "Major mixed-use development — earthworks, structural works, and infrastructure."
+    services: [Earthworks, Civil Works, Structural]
+    location: "Cebu"
+    images:
+      - /images/projects/mandani-1.jpg
+      - /images/projects/mandani-2.jpg
+
+  - slug: dawis-residential-subdivision
+    name: Dawis Residential Subdivision Project
+    category: construction
+    industry: Real Estate
+    year: "Recent"
+    scope: "Residential subdivision development with full horizontal infrastructure."
+    services: [Land Development, Subdivision, Civil Works]
+    location: "Philippines"
+    images:
+      - /images/projects/dawis-1.jpg
+
+  - slug: pardo-mrb-project
+    name: Pardo MRB Project
+    category: construction
+    industry: Marine / Riverbank
+    year: "Recent"
+    scope: "Mountain River Bank protection — slope stabilization, armour rocks, and erosion control."
+    services: [Slope Protection, Armour Rock, Civil Works]
+    location: "Pardo, Cebu"
+    images:
+      - /images/projects/pardo-1.jpg

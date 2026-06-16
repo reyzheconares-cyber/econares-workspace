@@ -1,0 +1,375 @@
+# ECONARES product data — drives /products/** pages
+# 4 industrial fuels + 17 metallic & non-metallic minerals
+
+products:
+  # ========== INDUSTRIAL FUELS ==========
+  - slug: steam-coal
+    name: Steam Coal
+    category: industrial-fuels
+    hero_image: /images/products/steam-coal.jpg
+    elevator: "ECONARES supplies bulk steam coal to Philippine cement, sugar, and power-generation plants, sourced from Indonesia, Australia, and South Africa and quality-tested on arrival."
+    origin: [Indonesia, Australia, South Africa]
+    specs:
+      ncv: "5,500–6,500 kcal/kg (ARB)"
+      moisture: "12–15% max"
+      ash: "6–12%"
+      volatile_matter: "25–35%"
+      sulfur: "0.6–1.0% max"
+      size: "0–50 mm"
+    applications:
+      - Cement kilns
+      - Power generation
+      - Industrial boilers
+    packaging: "Bulk vessel"
+    moq: "5,000 MT"
+    lead_time: "30 days from PO"
+    rfq_type: product
+
+  - slug: metallurgical-coke
+    name: Metallurgical Coke
+    category: industrial-fuels
+    hero_image: /images/products/metallurgical-coke.jpg
+    elevator: "High-grade metallurgical coke for ferro-alloy, steel, and foundry operations, with consistent CSR and CRI values."
+    origin: [China, Vietnam, Indonesia]
+    specs:
+      ash: "12% max"
+      moisture: "5% max"
+      sulfur: "0.6% max"
+      csr: "60% min"
+      cri: "25% max"
+      size: "25–80 mm"
+    applications:
+      - Ferro-alloy production
+      - Steel mills
+      - Foundry operations
+    packaging: "Bulk vessel"
+    moq: "3,000 MT"
+    lead_time: "30–45 days from PO"
+    rfq_type: product
+
+  - slug: palm-kernel-shell
+    name: Palm Kernel Shell (PKS)
+    category: industrial-fuels
+    hero_image: /images/products/palm-kernel-shell.jpg
+    elevator: "Renewable biomass fuel — palm kernel shell — supplied to Philippine power plants and industrial boilers as a coal substitute."
+    origin: [Malaysia, Indonesia]
+    specs:
+      ncv: "3,800–4,200 kcal/kg"
+      moisture: "15–20% max"
+      ash: "3–6%"
+      volatile_matter: "70–80%"
+      size: "5–25 mm"
+    applications:
+      - Biomass power generation
+      - Industrial boilers
+      - Cement co-firing
+    packaging: "Bulk vessel or jumbo bags"
+    moq: "2,000 MT"
+    lead_time: "21 days from PO"
+    rfq_type: product
+
+  - slug: woodchips
+    name: Woodchips
+    category: industrial-fuels
+    hero_image: /images/products/woodchips.jpg
+    elevator: "Industrial-grade woodchips for biomass power generation, boiler fuel, and pulp applications."
+    origin: [Malaysia, Indonesia, Vietnam]
+    specs:
+      ncv: "2,800–3,500 kcal/kg"
+      moisture: "40–55%"
+      ash: "1–3%"
+      size: "G30 / G50 / custom"
+    applications:
+      - Biomass power generation
+      - Pulp & paper
+      - Boiler fuel
+    packaging: "Bulk vessel"
+    moq: "5,000 MT"
+    lead_time: "30 days from PO"
+    rfq_type: product
+
+  # ========== METALLIC & NON-METALLIC MINERALS ==========
+  - slug: aggregates
+    name: Construction Aggregates (Screened & Crushed)
+    category: minerals
+    hero_image: /images/products/aggregates.jpg
+    elevator: "Screened and crushed construction aggregates — base course, sub-base, and concrete aggregates — for roadworks and building projects."
+    specs:
+      sizes: ["G1 (20mm)", "G2 (13mm)", "G3 (10mm)", "S1 fine", "S2 sand-equivalent"]
+      abradon_loss: "30% max (LA Abrasion)"
+      soundness: "12% max (Na2SO4)"
+    applications:
+      - Road base and sub-base
+      - Ready-mix concrete
+      - Asphalt mix
+    packaging: "Bulk delivery by dump truck or barge"
+    moq: "1,000 MT"
+    lead_time: "7–14 days from PO"
+    rfq_type: product
+
+  - slug: marine-sand
+    name: Marine Sand
+    category: minerals
+    hero_image: /images/products/marine-sand.jpg
+    elevator: "Washed marine sand for concrete, backfill, and reclamation projects, with controlled salt content per ASTM C33."
+    specs:
+      fineness_modulus: "2.3–3.1"
+      chloride_content: "0.02% max"
+      silt_content: "3% max"
+    applications:
+      - Ready-mix concrete
+      - Reclamation
+      - Backfill
+    packaging: "Bulk barge or dump truck"
+    moq: "2,000 MT"
+    lead_time: "7–14 days from PO"
+    rfq_type: product
+
+  - slug: boulders-armour-rocks
+    name: Boulders / Armour Rocks
+    category: minerals
+    hero_image: /images/products/boulders.jpg
+    elevator: "Quarried boulders and armour rocks for shoreline protection, seawalls, and heavy civil foundations."
+    specs:
+      sizes: ["0.5 MT", "1 MT", "2 MT", "5 MT+"]
+      shape: "Angular, dense"
+    applications:
+      - Seawalls and breakwaters
+      - Shore protection
+      - Heavy civil foundations
+    packaging: "Bulk barge"
+    moq: "500 MT"
+    lead_time: "7–21 days from PO"
+    rfq_type: product
+
+  - slug: diorite
+    name: Diorite
+    category: minerals
+    hero_image: /images/products/diorite.jpg
+    elevator: "Dense, hard diorite rock for high-strength concrete aggregate and dimension-stone applications."
+    specs:
+      compressive_strength: "150–250 MPa"
+      density: "2,800–3,000 kg/m³"
+    applications:
+      - High-strength concrete
+      - Dimension stone
+      - Heavy infrastructure
+    packaging: "Bulk truck or barge"
+    moq: "1,000 MT"
+    lead_time: "7–14 days from PO"
+    rfq_type: product
+
+  - slug: limestone
+    name: Limestone
+    category: minerals
+    hero_image: /images/products/limestone.jpg
+    elevator: "High-calcium limestone for cement manufacture, steel flux, and agricultural lime applications."
+    specs:
+      caco3: "92% min"
+      sio2: "3% max"
+      mgo: "2% max"
+      size: "0–80 mm (custom)"
+    applications:
+      - Cement production
+      - Steel flux
+      - Agricultural lime
+    packaging: "Bulk vessel or truck"
+    moq: "2,000 MT"
+    lead_time: "14–30 days from PO"
+    rfq_type: product
+
+  - slug: chromite
+    name: Chromite
+    category: minerals
+    hero_image: /images/products/chromite.jpg
+    elevator: "Chromite ore (lump and concentrate) for ferro-chrome production and refractory applications."
+    specs:
+      cr2o3_lump: "36–44%"
+      cr2o3_concentrate: "44% min"
+      cr_fe_ratio_lump: "2.5:1 min"
+    applications:
+      - Ferro-chrome production
+      - Refractories
+      - Foundry sand
+    packaging: "Bulk vessel or 1 MT bags"
+    moq: "500 MT"
+    lead_time: "30 days from PO"
+    rfq_type: product
+
+  - slug: nickel
+    name: Nickel Ore
+    category: minerals
+    hero_image: /images/products/nickel.jpg
+    elevator: "Laterite and saprolite nickel ore for nickel pig iron and HPAL processing, with shipside loading capability in Carrascal."
+    specs:
+      ni_laterite: "1.0–1.8%"
+      ni_saprolite: "1.5–2.5%"
+      moisture: "30–40%"
+    applications:
+      - Nickel pig iron
+      - HPAL processing
+      - Stainless steel feedstock
+    packaging: "Bulk vessel, shipside loading"
+    moq: "10,000 MT"
+    lead_time: "30–60 days from PO"
+    rfq_type: product
+
+  - slug: iron-sand
+    name: Iron Sand
+    category: minerals
+    hero_image: /images/products/iron-sand.jpg
+    elevator: "Magnetite-rich iron sand for steel production, heavy-media plants, and cement applications."
+    specs:
+      fe_total: "55–65%"
+      sio2: "5% max"
+      size: "80–200 mesh"
+    applications:
+      - Steel production
+      - Heavy media separation
+      - Cement raw mix
+    packaging: "Bulk vessel or 1 MT bags"
+    moq: "1,000 MT"
+    lead_time: "21 days from PO"
+    rfq_type: product
+
+  - slug: silica-sand
+    name: Silica Sand
+    category: minerals
+    hero_image: /images/products/silica-sand.jpg
+    elevator: "High-purity silica sand for glass manufacturing, foundries, and construction applications."
+    specs:
+      sio2: "95–99%"
+      fe2o3: "0.05–0.1% max"
+      size: "Custom mesh sizes"
+    applications:
+      - Glass manufacturing
+      - Foundry sand
+      - Construction
+    packaging: "Bulk truck or 25 kg bags"
+    moq: "500 MT"
+    lead_time: "14 days from PO"
+    rfq_type: product
+
+  - slug: greywackes
+    name: Greywackes
+    category: minerals
+    hero_image: /images/products/greywackes.jpg
+    elevator: "Hard, durable greywacke rock for road construction, rail ballast, and concrete aggregate."
+    specs:
+      compressive_strength: "120–200 MPa"
+      la_abrasion: "25% max"
+    applications:
+      - Road base
+      - Rail ballast
+      - Concrete aggregate
+    packaging: "Bulk truck or barge"
+    moq: "1,000 MT"
+    lead_time: "7–14 days from PO"
+    rfq_type: product
+
+  - slug: pozzolan
+    name: Pozzolan
+    category: minerals
+    hero_image: /images/products/pozzolan.jpg
+    elevator: "Natural pozzolanic material for cement blending, improving strength and sulfate resistance."
+    specs:
+      sio2_al2o3_fe2o3: "70% min"
+      loi: "10% max"
+      fineness: "Specific surface area 300+ m²/kg"
+    applications:
+      - Cement blending (Type IP / Type P)
+      - Concrete durability
+    packaging: "Bulk truck or vessel"
+    moq: "1,000 MT"
+    lead_time: "14 days from PO"
+    rfq_type: product
+
+  - slug: copper
+    name: Copper Concentrate
+    category: minerals
+    hero_image: /images/products/copper.jpg
+    elevator: "Copper concentrate for smelter feedstock, with consistent Cu grade and low penalty elements."
+    specs:
+      cu: "20–25%"
+      as: "0.2% max"
+      moisture: "8% max"
+    applications:
+      - Smelter feedstock
+      - Refined copper production
+    packaging: "Bulk vessel"
+    moq: "1,000 DMT"
+    lead_time: "30 days from PO"
+    rfq_type: product
+
+  - slug: clinker
+    name: Clinker
+    category: minerals
+    hero_image: /images/products/clinker.jpg
+    elevator: "Portland cement clinker for cement plants and ready-mix operators, with low free-lime and consistent burn."
+    specs:
+      free_lime: "1.5% max"
+      c3s: "55–65%"
+      c2s: "10–20%"
+      size: "0–50 mm"
+    applications:
+      - Cement grinding
+      - Ready-mix concrete
+    packaging: "Bulk vessel or truck"
+    moq: "5,000 MT"
+    lead_time: "30 days from PO"
+    rfq_type: product
+
+  - slug: quicklime-hydrated-lime
+    name: Quicklime / Hydrated Lime
+    category: minerals
+    hero_image: /images/products/lime.jpg
+    elevator: "High-calcium quicklime and hydrated lime for steelmaking, water treatment, and construction."
+    specs:
+      cao_quicklime: "90% min"
+      caoh2_hydrated: "90% min"
+      reactivity: "300 mL HCl/4 min"
+    applications:
+      - Steelmaking flux
+      - Water treatment
+      - Soil stabilization
+      - Construction
+    packaging: "Bulk truck, 25 kg bags, 1 MT jumbo bags"
+    moq: "500 MT"
+    lead_time: "14 days from PO"
+    rfq_type: product
+
+  - slug: gypsum
+    name: Gypsum
+    category: minerals
+    hero_image: /images/products/gypsum.jpg
+    elevator: "Natural gypsum for cement retarder, plaster of Paris, and agricultural soil conditioning."
+    specs:
+      caso4_2h2o: "90% min"
+      purity: "Industrial / agricultural grade"
+      size: "0–50 mm or 100 mesh"
+    applications:
+      - Cement retarder
+      - Plaster of Paris
+      - Agriculture
+    packaging: "Bulk truck or 25 kg bags"
+    moq: "500 MT"
+    lead_time: "14 days from PO"
+    rfq_type: product
+
+  - slug: anhydrite
+    name: Anhydrite
+    category: minerals
+    hero_image: /images/products/anhydrite.jpg
+    elevator: "Anhydrite (CaSO4) for cement grinding, soil conditioning, and industrial chemistry."
+    specs:
+      caso4: "92% min"
+      moisture: "2% max"
+      size: "0–50 mm or custom"
+    applications:
+      - Cement grinding
+      - Soil conditioning
+      - Industrial chemistry
+    packaging: "Bulk truck or 25 kg bags"
+    moq: "500 MT"
+    lead_time: "14 days from PO"
+    rfq_type: product

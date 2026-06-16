@@ -1,0 +1,253 @@
+---
+// src/pages/capabilities.astro — Capabilities = concept B (kami editorial)
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site.js';
+import { products, services, projects } from '../data/loader.js';
+
+const fuelCount = products.filter(p => p.category === 'industrial-fuels').length;
+const mineralCount = products.filter(p => p.category === 'minerals').length;
+const constructionCount = services.find(s => s.slug === 'engineering-construction')?.sub_services.length ?? 0;
+const marineCount = services.find(s => s.slug === 'marine-services')?.sub_services.length ?? 0;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: `Capabilities Edition — ${SITE.name}`,
+  description: 'A capabilities catalogue from ECONARES: industrial fuels, minerals, and PCAB-licensed construction services. Cebu, Philippines.',
+};
+
+const mineralSample = products.filter(p => p.category === 'minerals').slice(0, 6);
+const projectList = projects.slice(0, 6);
+---
+<Base title="Capabilities" active="/capabilities/" schema={schema}>
+
+<style>
+  /* Kami overrides — scoped to this page only */
+  :global(body) { background: #F5F4ED; }
+  .kami { font-family: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, "Times New Roman", serif; color: #1B1F22; line-height: 1.55; }
+  .kami .kicker { font-family: Charter, serif; font-weight: 500; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1; color: #1B1F22; margin: 24px 0 8px; }
+  .kami .eyebrow { font-family: Inter, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #4d4c48; }
+  .kami .tag { font-family: Inter, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; background: #E4ECF5; color: #1B365D; border-radius: 2px; display: inline-block; }
+  .kami .num { font-family: Charter, serif; font-weight: 500; color: #1B365D; font-variant-numeric: tabular-nums; }
+  .kami .ink-link { color: #1B365D; border-bottom: 1px solid #E4ECF5; text-decoration: none; transition: border-color 0.2s; }
+  .kami .ink-link:hover { border-bottom-color: #1B365D; }
+  .kami .paper { background: #F5F4ED; border: 1px solid rgba(27,31,34,0.16); box-shadow: 0 4px 24px rgba(0,0,0,0.05); padding: 48px clamp(20px, 4vw, 64px); }
+  @media (min-width: 768px) { .kami .paper { padding: 64px clamp(40px, 5vw, 88px); } }
+  .kami .frame-rule { border: 0; border-top: 1px solid rgba(27,31,34,0.12); margin: 0; }
+  .kami .frame-rule-strong { border: 0; border-top: 1px solid #1B1F22; margin: 0; }
+  .kami .chapter { padding: 48px 0; border-bottom: 1px solid rgba(27,31,34,0.12); }
+  .kami .chapter:last-of-type { border-bottom: 0; }
+  .kami .chapter-num { font-family: Charter, serif; font-weight: 500; font-size: 1.25rem; color: #1B365D; }
+  .kami .chapter-title { font-family: Charter, serif; font-weight: 500; font-size: 1.75rem; color: #1B1F22; margin: 0 0 8px 0; line-height: 1.15; }
+  .kami .chapter-lede { font-family: Charter, serif; font-size: 1.1rem; line-height: 1.55; color: #4d4c48; }
+  .kami .metric { padding-left: 16px; border-left: 1px solid rgba(27,31,34,0.12); }
+  .kami .metric .v { font-family: Charter, serif; font-weight: 500; font-size: 2.25rem; color: #1B365D; line-height: 1; font-variant-numeric: tabular-nums; }
+  .kami .metric .l { font-family: Inter, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #5B5A3E; margin-top: 8px; }
+  .kami .metric .s { font-family: Charter, serif; font-size: 0.9rem; color: #4d4c48; margin-top: 4px; }
+  .kami table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: Inter, sans-serif; font-size: 0.9rem; }
+  .kami table th, .kami table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(27,31,34,0.12); }
+  .kami table th { font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #4d4c48; background: rgba(27,31,34,0.04); }
+  .kami table td:first-child { font-family: Charter, serif; font-weight: 500; color: #1B365D; width: 40%; }
+  .kami .closing { background: #1B1F22; color: #F5F4ED; padding: 80px 0; }
+  .kami .closing h2 { color: #F5F4ED; font-family: Charter, serif; font-weight: 500; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.1; margin: 0 0 24px 0; }
+  .kami .closing p { color: rgba(245,244,237,0.72); }
+  .kami .closing .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; font-family: Inter, sans-serif; font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid #1B365D; border-radius: 2px; text-decoration: none; transition: background 0.2s, color 0.2s; }
+  .kami .closing .btn-p { background: #1B365D; color: #F5F4ED; }
+  .kami .closing .btn-p:hover { background: #F5F4ED; color: #1B1F22; border-color: #F5F4ED; }
+  .kami .closing .btn-s { background: transparent; color: #F5F4ED; border-color: rgba(245,244,237,0.4); }
+  .kami .closing .btn-s:hover { border-color: #F5F4ED; }
+  .kami .dash-list { list-style: none; padding: 0; margin: 16px 0 0; }
+  .kami .dash-list li { padding: 8px 0 8px 20px; position: relative; font-size: 0.95rem; }
+  .kami .dash-list li::before { content: '—'; position: absolute; left: 0; color: #1B365D; font-weight: 500; }
+</style>
+
+<div class="kami">
+
+  <!-- Paper frame -->
+  <div class="container-page !max-w-[1100px]">
+    <div class="paper">
+      <div class="flex flex-wrap justify-between items-baseline gap-4 pb-8 mb-14 border-b border-[rgba(27,31,34,0.12)]">
+        <div class="eyebrow">{SITE.legal}</div>
+        <div class="flex gap-4">
+          <a href="/capabilities/" class="ink-link" style="color: #1B1F22; border-bottom: 1px solid #1B1F22; padding-bottom: 2px;">EN</a>
+          <a href="/capabilities/?lang=fil" class="ink-link" style="color: #4d4c48;">FIL</a>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div class="pb-8">
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="tag">Industrial Fuels</span>
+          <span class="tag">Minerals</span>
+          <span class="tag">Construction</span>
+          <span class="tag">Marine Services</span>
+        </div>
+        <h1 class="font-display" style="font-family: Charter, serif; font-weight: 500; font-size: clamp(3rem, 8vw, 6.5rem); line-height: 1.1; letter-spacing: -0.02em; color: #1B1F22; margin: 0 0 24px 0;">
+          From one Cebu yard, we move the inputs and the engineering that build <span style="color: #1B365D;">Philippine heavy industry</span>.
+        </h1>
+        <p style="font-size: 1.25rem; color: #4d4c48; max-width: 640px; line-height: 1.5; margin: 0 0 48px 0;">
+          A capabilities catalogue from {SITE.legal} — bulk industrial fuels, metallic and non-metallic minerals, and PCAB-licensed construction services, since 2015.
+        </p>
+        <div class="flex flex-wrap gap-8 pt-6 border-t border-[rgba(27,31,34,0.12)]">
+          <div><div class="num" style="font-size: 1.75rem;">{products.length}</div><div class="eyebrow mt-1.5">Commodities in active supply</div></div>
+          <div><div class="num" style="font-size: 1.75rem;">2015</div><div class="eyebrow mt-1.5">Year founded</div></div>
+          <div><div class="num" style="font-size: 1.75rem;">PCAB</div><div class="eyebrow mt-1.5">Regular contractor license</div></div>
+          <div><div class="num" style="font-size: 1.75rem;">3</div><div class="eyebrow mt-1.5">Subsidiaries, one account</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manifesto -->
+  <div class="container-page !max-w-[1100px] py-20">
+    <div class="eyebrow mb-6">Manifesto</div>
+    <p style="font-size: 1.3rem; line-height: 1.65; max-width: 720px;">We are a SEC-registered Philippine construction and trading company headquartered in Talisay City, Cebu. We supply steam coal, metallurgical coke, palm kernel shell, woodchips, and {mineralCount} metallic and non-metallic minerals to cement, sugar, and power-generation plants across the country. We build ports, plants, and civil works under our PCAB license. We charter the marine fleet that ships it all.</p>
+    <p style="font-size: 1.3rem; line-height: 1.65; max-width: 720px;">The objective of this company is to provide high quality construction and engineering services to Philippine industry that could help the national economic progress and development in the country. However, it has always the objective and the will to protect the environment and preserve life while using its resources wisely and prudently for the benefit of all mankind and the many generations to come.</p>
+    <div class="font-body text-xs font-medium tracking-[0.1em] uppercase text-muted mt-6 pt-4 border-t border-[rgba(27,31,34,0.12)]" style="color: #4d4c48;">By the partners of {SITE.legal} · Tabunok, Talisay City, Cebu</div>
+  </div>
+
+  <!-- Metrics row -->
+  <div class="container-page !max-w-[1100px]">
+    <hr class="frame-rule-strong">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 py-8">
+      <div class="metric">
+        <div class="v">5,000 MT</div>
+        <div class="l">Steam Coal MOQ</div>
+        <div class="s">Vessel delivery, 30-day lead</div>
+      </div>
+      <div class="metric">
+        <div class="v">{mineralCount}</div>
+        <div class="l">Mineral grades stocked</div>
+        <div class="s">Aggregates, marine sand, limestone, chromite, nickel, copper, clinker, lime, gypsum…</div>
+      </div>
+      <div class="metric">
+        <div class="v">{constructionCount + marineCount}</div>
+        <div class="l">Service divisions</div>
+        <div class="s">Land dev, ports, plants, steel, civil/MEP, water, marine</div>
+      </div>
+      <div class="metric">
+        <div class="v">4</div>
+        <div class="l">Marine assets</div>
+        <div class="s">LCT, tug &amp; barge, piling barge, cutter suction dredger</div>
+      </div>
+    </div>
+    <hr class="frame-rule-strong">
+  </div>
+
+  <!-- Chapters -->
+  <div class="container-page !max-w-[1100px] py-20">
+    <div>
+
+      <!-- Chapter 01: Industrial Fuels -->
+      <article class="chapter">
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 md:gap-8 items-baseline mb-6">
+          <div class="chapter-num">01</div>
+          <h2 class="chapter-title">Industrial fuels</h2>
+          <p class="chapter-lede">The energy inputs that keep cement kilns, sugar mills, biomass power plants, and industrial boilers running across the country.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 md:gap-8">
+          <div></div>
+          <div>
+            <p>ECONARES supplies {fuelCount} primary industrial fuels at bulk scale, with quality/quantity inspection at load and discharge on every vessel. Source origins include Indonesia, Australia, South Africa, Malaysia, and Vietnam — selected per customer specification and current market price.</p>
+            <ul class="dash-list">
+              {products.filter(p=>p.category==='industrial-fuels').map(p => (
+                <li><a href={`/products/${p.slug}/`} class="ink-link"><strong>{p.name}</strong></a> — {Object.values(p.specs || {}).slice(0, 1).join('')}. {p.applications?.[0] ?? ''}.</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chapter 02: Minerals -->
+      <article class="chapter">
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 md:gap-8 items-baseline mb-6">
+          <div class="chapter-num">02</div>
+          <h2 class="chapter-title">Minerals</h2>
+          <p class="chapter-lede">{mineralCount} metallic and non-metallic minerals in active supply, MOQ 500 MT and up.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 md:gap-8">
+          <div></div>
+          <div>
+            <p>From construction aggregates to nickel ore shipside-loaded at Carrascal, Surigao del Sur. Each grade ships with a full certificate of analysis.</p>
+            <table aria-label="Mineral supply at a glance">
+              <thead>
+                <tr><th>Mineral</th><th>Primary application</th><th>MOQ</th></tr>
+              </thead>
+              <tbody>
+                {mineralSample.map(p => (
+                  <tr>
+                    <td><a href={`/products/${p.slug}/`} class="ink-link">{p.name}</a></td>
+                    <td>{p.applications?.[0] ?? '—'}</td>
+                    <td>{p.moq ?? '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p><a href="/products/" class="ink-link">View all {mineralCount} minerals →</a></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chapter 03: Construction & Engineering -->
+      <article class="chapter">
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 md:gap-8 items-baseline mb-6">
+          <div class="chapter-num">03</div>
+          <h2 class="chapter-title">Construction &amp; engineering</h2>
+          <p class="chapter-lede">PCAB-licensed horizontal and vertical works — from land development to industrial plant construction.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 md:gap-8">
+          <div></div>
+          <div>
+            <p>ECE Construction Services holds a Regular Contractor's License from the Philippine Contractors Accreditation Board, valid for both horizontal and vertical works. The full capabilities list covers {constructionCount + marineCount} sub-services across three categories: engineering &amp; construction, environmental protection, and marine services.</p>
+            <ul class="dash-list">
+              {services.flatMap(s => (s.sub_services ?? []).slice(0, 12).map(sub => (
+                <li><a href={`/services/${s.slug}/${sub.slug}/`} class="ink-link"><strong>{sub.name}</strong></a> — {sub.description}</li>
+              )))}
+            </ul>
+            <p><a href="/services/" class="ink-link">View all capabilities →</a></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chapter 04: Reference projects -->
+      <article class="chapter">
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 md:gap-8 items-baseline mb-6">
+          <div class="chapter-num">04</div>
+          <h2 class="chapter-title">Reference projects</h2>
+          <p class="chapter-lede">A selection of recent commodity shipments and construction engagements.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-6 md:gap-8">
+          <div></div>
+          <div>
+            {projectList.slice(0, 3).map(p => (
+              <p><strong><a href={`/projects/${p.slug}/`} class="ink-link">{p.name}</a></strong> — {p.scope}</p>
+            ))}
+          </div>
+          <div>
+            {projectList.slice(3, 6).map(p => (
+              <p><strong><a href={`/projects/${p.slug}/`} class="ink-link">{p.name}</a></strong> — {p.scope}</p>
+            ))}
+            <p><a href="/projects/" class="ink-link">View full portfolio →</a></p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <section class="closing">
+    <div class="container-page text-center" style="max-width: 720px;">
+      <div class="eyebrow" style="color: rgba(245,244,237,0.6); margin-bottom: 16px;">Reach the partners</div>
+      <h2>Send your spec, your tonnage, your project location. We reply within forty-eight hours.</h2>
+      <p>{SITE.address.street}, {SITE.address.locality}, {SITE.address.country} · {SITE.phone} · {SITE.email}</p>
+      <div class="flex flex-wrap gap-3 justify-center mt-10">
+        <a href={`mailto:${SITE.email}?subject=ECONARES%20RFQ`} class="btn btn-p">Request a Quotation</a>
+        <a href={`tel:${SITE.phoneTel}`} class="btn btn-s">Call the Cebu Office</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</Base>

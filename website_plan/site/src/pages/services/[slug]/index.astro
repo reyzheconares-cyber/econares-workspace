@@ -1,0 +1,66 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { SITE } from '../../../data/site.js';
+import { services } from '../../../data/loader.js';
+
+export function getStaticPaths() {
+  return services.map(s => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const service = services.find(s => s.slug === slug);
+if (!service) throw new Error(`Service not found: ${slug}`);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  description: service.elevator,
+  provider: { '@type': 'Organization', name: SITE.legal },
+  areaServed: { '@type': 'Country', name: 'Philippines' },
+};
+---
+<Base title={service.name} description={service.elevator} active="/services/" schema={schema}>
+
+<nav class="pt-5 container-page font-tag font-bold text-[13px] uppercase tracking-tag text-muted" aria-label="Breadcrumb">
+  <a href="/" class="text-muted hover:text-tertiary no-underline">Home</a><span class="mx-2 text-border">›</span>
+  <a href="/services/" class="text-muted hover:text-tertiary no-underline">Services</a><span class="mx-2 text-border">›</span>
+  <span class="text-primary">{service.name}</span>
+</nav>
+
+<section class="py-12 md:py-16">
+  <div class="container-page">
+    <span class="tag text-tertiary mb-3">Service category</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] mb-4">{service.name}</h1>
+    <p class="text-lg text-ink max-w-[720px] mb-10">{service.elevator}</p>
+    <a href="/contact/?type=service" class="btn btn-primary">Discuss a project</a>
+  </div>
+</section>
+
+<section class="py-12 md:py-16 bg-surface">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">{service.sub_services.length} sub-services</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">What we deliver</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {service.sub_services.map(sub => (
+        <a href={`/services/${service.slug}/${sub.slug}/`} class="block p-6 bg-neutral border border-border rounded-lg hover:border-tertiary hover:shadow-card transition-all no-underline">
+          <h3 class="font-display font-bold text-primary text-lg mb-2">{sub.name}</h3>
+          <p class="text-muted text-[15px] m-0">{sub.description}</p>
+          <span class="inline-block mt-3 text-tertiary font-semibold text-sm">View details →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Get a quotation for {service.name}</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">Send us your scope, location, and timeline. We reply within 48 hours.</p>
+    <a href="/contact/?type=service" class="btn btn-primary">Request a Project Discussion</a>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+---
+<Base title="Terms of Use" active="" noindex={true}>
+<section class="py-16 md:py-20">
+  <div class="container-page max-w-prose">
+    <span class="tag text-tertiary mb-3">Legal</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2rem,4vw,3rem)] leading-[1.1] mb-6">Terms of Use</h1>
+    <p class="text-muted text-sm mb-8">Last updated: {new Date().toISOString().slice(0, 10)}</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Acceptance</h2>
+    <p class="text-ink">By accessing {SITE.url} (the "Site"), you agree to these Terms of Use. If you do not agree, do not use the Site.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Use of the Site</h2>
+    <p class="text-ink">The Site is provided for general information about {SITE.legal} (trade name: {SITE.name}) and its products and services. You agree not to use the Site for any unlawful purpose, to attempt to gain unauthorized access to any portion of the Site, or to interfere with the Site's operation.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">No offer or contract</h2>
+    <p class="text-ink">Information on the Site — including product specifications, pricing references, and project references — is for general information only and does not constitute an offer, quotation, or contract. All quotations are subject to confirmation in writing by {SITE.legal} and to the negotiated terms of a specific supply or service agreement.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Intellectual property</h2>
+    <p class="text-ink">All content on the Site, including text, graphics, logos, and images, is the property of {SITE.legal} or its licensors and is protected by Philippine and international copyright laws.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Limitation of liability</h2>
+    <p class="text-ink">The Site is provided "as is" without warranties of any kind. {SITE.legal} is not liable for any damages arising from the use of, or inability to use, the Site.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Governing law</h2>
+    <p class="text-ink">These Terms are governed by the laws of the Republic of the Philippines. Any disputes shall be resolved in the appropriate courts of Cebu City, Philippines.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Contact</h2>
+    <p class="text-ink">Questions about these Terms? Write to <a href={`mailto:${SITE.email}`} class="text-blue">{SITE.email}</a> or call {SITE.phone}.</p>
+  </div>
+</section>
+</Base>

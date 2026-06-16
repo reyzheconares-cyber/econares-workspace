@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="2" y="2" width="96" height="96" rx="14" fill="#002A54" stroke="#2E343B" stroke-width="3"/>
+  <rect x="14" y="56" width="72" height="32" rx="3" fill="#002A54"/>
+  <text x="50" y="78" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF" letter-spacing="-0.5">ECONARES</text>
+  <rect x="14" y="14" width="14" height="42" fill="#A98F7A"/>
+  <rect x="30" y="22" width="14" height="34" fill="#5A7995"/>
+  <rect x="46" y="18" width="14" height="38" fill="#4F6876"/>
+  <polygon points="62,56 70,28 78,40 86,20 86,56" fill="#20293B"/>
+</svg>

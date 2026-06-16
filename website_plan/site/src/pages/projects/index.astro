@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+import { projects } from '../../data/loader.js';
+const groups = [
+  { id: 'coal-shipments', label: 'Coal Shipments' },
+  { id: 'mineral-shipments', label: 'Mineral Shipments' },
+  { id: 'construction', label: 'Construction' },
+];
+const byGroup = Object.fromEntries(groups.map(g => [g.id, projects.filter(p => p.category === g.id)]));
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Projects — ${SITE.name}`,
+  description: 'Reference projects from ECONARES: commodity shipments and PCAB-licensed construction engagements across the Philippines.',
+};
+---
+<Base title="Projects" active="/projects/" schema={schema}>
+
+<section class="py-16 md:py-20">
+  <div class="container-page">
+    <span class="tag text-tertiary mb-3">Reference projects</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] mb-4">{projects.length} reference projects across the Philippines.</h1>
+    <p class="text-lg text-ink max-w-[720px]">A selection of recent commodity shipments and construction engagements. Full portfolio and case studies available on request.</p>
+  </div>
+</section>
+
+{groups.map(g => (
+  <section id={g.id} class="py-8 md:py-12 scroll-mt-24">
+    <div class="container-page">
+      <div class="mb-6">
+        <span class="tag text-tertiary">{groups.indexOf(g) + 1} — {g.label}</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {byGroup[g.id].map((p, i) => (
+          <a href={`/projects/${p.slug}/`} class="group block relative aspect-[4/3] rounded-lg overflow-hidden hover:shadow-card-h transition-all">
+            <div class:list={['absolute inset-0 transition-transform duration-300 group-hover:scale-105', [
+              'bg-[linear-gradient(135deg,#2E343B_0%,#4F6876_100%)]',
+              'bg-[linear-gradient(135deg,#A98F7A_0%,#DCD3A6_100%)]',
+              'bg-[linear-gradient(135deg,#002A54_0%,#6DA6E3_100%)]',
+              'bg-[linear-gradient(135deg,#F5251D_0%,#F78D1E_100%)]',
+              'bg-[linear-gradient(135deg,#4F6876_0%,#2E343B_100%)]',
+              'bg-[linear-gradient(135deg,#0033FF_0%,#6DA6E3_100%)]',
+            ][(groups.indexOf(g) * 3 + i) % 6]]}></div>
+            <div class="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(0,42,84,0.92)_100%)] flex flex-col justify-end p-5 text-neutral">
+              <h3 class="font-display font-bold text-neutral text-lg mb-1.5">{p.name}</h3>
+              <div class="font-tag font-bold text-xs uppercase tracking-tag opacity-85">{p.industry}{p.year ? ' · ' + p.year : ''}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+))}
+
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Need a similar engagement?</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">Tell us about your project or supply requirement. We'll send a quotation and a relevant case study.</p>
+    <a href="/contact/?type=product" class="btn btn-primary">Request a Quotation</a>
+  </div>
+</section>
+
+</Base>

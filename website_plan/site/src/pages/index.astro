@@ -1,0 +1,230 @@
+---
+// src/pages/index.astro — Homepage = concept A (industrial)
+import Base from '../layouts/Base.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import { SITE } from '../data/site.js';
+import { products, services, projects } from '../data/loader.js';
+
+const featuredProducts = products.filter(p => ['steam-coal','limestone','clinker','marine-sand','metallurgical-coke','nickel','palm-kernel-shell','gypsum'].includes(p.slug)).slice(0, 8);
+const featuredProjects = projects.filter(p => ['republic-cement-coal-shipments','century-peak-aggregates-shipments','carrascal-nickel-ore','tbc-port-project','mandani-bay-project','als-deep-well-water-drilling'].includes(p.slug)).slice(0, 6);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  url: SITE.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/products/?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+<Base title="" active="/" schema={schema}>
+
+<!-- ===== HERO ===== -->
+<section class="py-16 md:py-24">
+  <div class="container-page">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center">
+      <div>
+        <span class="tag text-tertiary mb-3">Cebu · Serving all of the Philippines</span>
+        <h1 class="font-display font-extrabold text-primary text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] tracking-tight mb-5">
+          Industrial Fuels, Minerals &amp; <span class="text-tertiary">Construction</span> — From One Philippine Partner.
+        </h1>
+        <p class="text-lg text-ink mb-8 max-w-[540px]">ECONARES is a SEC-registered supplier of bulk industrial fuels and metallic &amp; non-metallic minerals to cement, sugar, and power plants — with a PCAB-licensed construction arm for ports, plants, and civil works.</p>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <a href="/contact/?type=product" class="btn btn-primary">Request Fuel Quote</a>
+          <a href="/contact/?type=service" class="btn btn-secondary">Discuss a Project</a>
+        </div>
+        <div class="flex flex-wrap gap-8 pt-6 border-t border-border">
+          <div>
+            <div class="font-display font-extrabold text-[32px] text-primary leading-none">{products.length}+</div>
+            <div class="tag text-muted text-[12px] mt-1">Commodities in stock</div>
+          </div>
+          <div>
+            <div class="font-display font-extrabold text-[32px] text-primary leading-none">15+</div>
+            <div class="tag text-muted text-[12px] mt-1">Years in PH heavy industry</div>
+          </div>
+          <div>
+            <div class="font-display font-extrabold text-[32px] text-primary leading-none">3</div>
+            <div class="tag text-muted text-[12px] mt-1">Subsidiaries, one partner</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-muted shadow-card-h" aria-label="Site, project, and product photography">
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 flex items-end p-6 text-white [background:linear-gradient(135deg,#2E343B_0%,#4F6876_100%)]" data-slide>
+          <span class="relative z-[2] font-tag font-bold text-sm uppercase tracking-tag">Coal stockpile · Republic Cement</span>
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 flex items-end p-6 text-white [background:linear-gradient(135deg,#002A54_0%,#6DA6E3_100%)]" data-slide>
+          <span class="relative z-[2] font-tag font-bold text-sm uppercase tracking-tag">Vessel loading · Carrascal Nickel</span>
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 flex items-end p-6 text-white [background:linear-gradient(135deg,#A98F7A_0%,#2E343B_100%)]" data-slide>
+          <span class="relative z-[2] font-tag font-bold text-sm uppercase tracking-tag">Construction site · Mandani Bay</span>
+        </div>
+        <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 flex items-end p-6 text-white [background:linear-gradient(135deg,#0033FF_0%,#002A54_100%)] active" data-slide>
+          <span class="relative z-[2] font-tag font-bold text-sm uppercase tracking-tag">Aggregates yard · Century Peak</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<TrustStrip />
+
+<!-- ===== WHAT WE SUPPLY ===== -->
+<section class="py-16 md:py-24">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">What we supply</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Three integrated divisions, one accountable partner</h2>
+      <p class="text-muted text-lg">Procurement officers and project directors call ECONARES because we move the fuel, the mineral, the crew, and the marine logistics — not just one piece of it.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="p-8 bg-neutral border border-border rounded-lg hover:border-tertiary hover:shadow-card-h transition-all">
+        <div class="w-14 h-14 bg-primary text-highlight rounded-md flex items-center justify-center mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
+        </div>
+        <span class="tag text-tertiary mb-2">01 — Industrial Fuels</span>
+        <h3 class="font-display font-bold text-primary text-xl mb-3">Steam Coal, Met Coke, PKS, Woodchips</h3>
+        <p class="text-muted text-[15px] mb-4">Bulk fuel supply for cement kilns, sugar mills, biomass power plants, and industrial boilers. Sourced from Indonesia, Australia, South Africa, Malaysia, and Vietnam — quality-tested on arrival.</p>
+        <a href="/products/" class="text-tertiary font-semibold text-sm hover:text-accent no-underline">View industrial fuels →</a>
+      </article>
+      <article class="p-8 bg-neutral border border-border rounded-lg hover:border-tertiary hover:shadow-card-h transition-all">
+        <div class="w-14 h-14 bg-primary text-highlight rounded-md flex items-center justify-center mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+        </div>
+        <span class="tag text-tertiary mb-2">02 — Minerals</span>
+        <h3 class="font-display font-bold text-primary text-xl mb-3">{products.filter(p=>p.category==='minerals').length} Metallic &amp; Non-Metallic Minerals</h3>
+        <p class="text-muted text-[15px] mb-4">Aggregates, marine sand, boulders, diorite, limestone, chromite, nickel, iron sand, silica sand, greywackes, pozzolan, copper, clinker, quicklime/hydrated lime, gypsum, anhydrite. Bulk, MOQ from 500 MT.</p>
+        <a href="/products/" class="text-tertiary font-semibold text-sm hover:text-accent no-underline">View minerals →</a>
+      </article>
+      <article class="p-8 bg-neutral border border-border rounded-lg hover:border-tertiary hover:shadow-card-h transition-all">
+        <div class="w-14 h-14 bg-primary text-highlight rounded-md flex items-center justify-center mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7" aria-hidden="true"><path d="M2 22h20M4 22V8l8-6 8 6v14M9 22v-8h6v8M9 6h6"/></svg>
+        </div>
+        <span class="tag text-tertiary mb-2">03 — Construction</span>
+        <h3 class="font-display font-bold text-primary text-xl mb-3">PCAB-Licensed Engineering &amp; Marine</h3>
+        <p class="text-muted text-[15px] mb-4">Land development, reclamation, ports, bridges, industrial plants, steel fabrication, civil/electrical/mechanical works, water treatment, deep well, and full marine services (LCT, tug, barge, dredger).</p>
+        <a href="/services/" class="text-tertiary font-semibold text-sm hover:text-accent no-underline">View services →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PROJECTS ===== -->
+<section class="py-16 md:py-24 bg-surface">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">Reference projects</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Trusted by Philippine heavy industry since 2015</h2>
+      <p class="text-muted text-lg">A selection of recent commodity shipments and construction engagements. Full portfolio available on request.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featuredProjects.map((p, i) => (
+        <a href={`/projects/${p.slug}/`} class="group block relative aspect-[4/3] rounded-lg overflow-hidden hover:shadow-card-h transition-all">
+          <div class:list={['absolute inset-0 transition-transform duration-300 group-hover:scale-105', [
+            'bg-[linear-gradient(135deg,#2E343B_0%,#4F6876_100%)]',
+            'bg-[linear-gradient(135deg,#A98F7A_0%,#DCD3A6_100%)]',
+            'bg-[linear-gradient(135deg,#002A54_0%,#6DA6E3_100%)]',
+            'bg-[linear-gradient(135deg,#F5251D_0%,#F78D1E_100%)]',
+            'bg-[linear-gradient(135deg,#4F6876_0%,#2E343B_100%)]',
+            'bg-[linear-gradient(135deg,#0033FF_0%,#6DA6E3_100%)]',
+          ][i]]}></div>
+          <div class="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(0,42,84,0.92)_100%)] flex flex-col justify-end p-5 text-neutral">
+            <h3 class="font-display font-bold text-neutral text-lg mb-1.5">{p.name}</h3>
+            <div class="font-tag font-bold text-xs uppercase tracking-tag opacity-85">{p.industry}{p.year ? ' · ' + p.year : ''}</div>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="text-center mt-10">
+      <a href="/projects/" class="btn btn-secondary">View full portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ECONARES ===== -->
+<section class="py-16 md:py-24">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">Why ECONARES</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">One partner for the inputs and the engineering</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {[
+        { n: '01', t: 'Integrated supply + build', d: 'Most suppliers ship you fuel or minerals. We can also build the plant that burns them. One PO, one account manager, one accountable point of contact.' },
+        { n: '02', t: 'Cebu HQ + national reach', d: 'Headquartered in Talisay City, Cebu with active project delivery across the Visayas and Luzon — including shipside loading at Carrascal, Surigao del Sur.' },
+        { n: '03', t: 'Quality-tested and inspected', d: 'Every bulk shipment includes quality/quantity inspection at load and discharge. Spec sheets (NCV, moisture, ash, sulfur, size) supplied with every quotation.' },
+        { n: '04', t: 'PCAB-licensed engineering', d: 'ECE Construction Services holds a Regular Contractor\'s License from the Philippine Contractors Accreditation Board, valid for horizontal and vertical works.' },
+      ].map(item => (
+        <div class="p-8 bg-surface rounded-lg border-l-4 border-tertiary">
+          <div class="font-display font-extrabold text-[36px] text-tertiary leading-none mb-3">{item.n}</div>
+          <h3 class="font-display font-bold text-primary text-lg mb-2">{item.t}</h3>
+          <p class="text-muted text-[15px] m-0">{item.d}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSIGHTS TEASER ===== -->
+<section class="py-16 md:py-24 bg-surface">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">Insights</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Notes from the yard, the dock, and the construction site</h2>
+      <p class="text-muted text-lg">Market updates, spec deep-dives, and regulatory notes for Philippine heavy-industry procurement teams.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        { cat: 'Industrial Fuels', t: 'Steam coal specifications for Philippine cement kilns: a 2026 buyer\'s guide', t1: 'linear-gradient(135deg,#002A54,#4F6876)', meta: '12 min · Procurement' },
+        { cat: 'Minerals', t: 'Marine sand vs river sand: which one does your reclamation project need?', t1: 'linear-gradient(135deg,#A98F7A,#2E343B)', meta: '8 min · Construction' },
+        { cat: 'Engineering', t: 'PCAB license classifications explained: what to ask before you sign', t1: 'linear-gradient(135deg,#F5251D,#F78D1E)', meta: '10 min · Compliance' },
+      ].map(post => (
+        <article class="bg-neutral rounded-lg overflow-hidden border border-border">
+          <div class="aspect-video" style={`background: ${post.t1};`}></div>
+          <div class="p-6">
+            <span class="tag text-tertiary mb-2">{post.cat}</span>
+            <h3 class="font-display font-bold text-primary text-lg mb-2">{post.t}</h3>
+            <p class="text-muted text-sm m-0">{post.meta}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="text-center mt-10">
+      <a href="/insights/" class="btn btn-secondary">Read all insights</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <span class="tag text-highlight mb-3">Get in touch</span>
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Ready to source fuels, minerals, or build a project?</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">Talk to our Cebu-based sales team. We answer the phone, we reply to email, and we send a quotation within 48 hours.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="/contact/?type=product" class="btn btn-primary">Request Fuel Quote</a>
+      <a href="/contact/?type=service" class="btn !bg-transparent !text-neutral !border-2 !border-neutral hover:!bg-neutral hover:!text-primary">Discuss a Project</a>
+      <a href={`tel:${SITE.phoneTel}`} class="btn !bg-transparent !text-neutral !border-2 !border-neutral hover:!bg-neutral hover:!text-primary">Call {SITE.phone}</a>
+    </div>
+  </div>
+</section>
+
+</Base>
+
+<script>
+  // Hero carousel — vanilla JS, no framework
+  const slides = document.querySelectorAll('[data-slide]');
+  if (slides.length > 1) {
+    let i = Array.from(slides).findIndex(s => s.classList.contains('active'));
+    if (i < 0) i = 0;
+    setInterval(() => {
+      slides[i].classList.remove('active');
+      slides[i].style.opacity = '0';
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('active');
+      slides[i].style.opacity = '1';
+    }, 4500);
+  }
+</script>

@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+import { projects } from '../../data/loader.js';
+
+export function getStaticPaths() {
+  return projects.map(p => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const project = projects.find(p => p.slug === slug);
+if (!project) throw new Error(`Project not found: ${slug}`);
+
+const groupLabels = { 'coal-shipments': 'Coal Shipments', 'mineral-shipments': 'Mineral Shipments', 'construction': 'Construction' };
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: project.name,
+  description: project.scope,
+  about: project.industry,
+  provider: { '@type': 'Organization', name: SITE.legal },
+  locationCreated: { '@type': 'Place', name: project.location ?? 'Philippines' },
+};
+---
+<Base title={project.name} description={project.scope} active="/projects/" schema={schema}>
+
+<nav class="pt-5 container-page font-tag font-bold text-[13px] uppercase tracking-tag text-muted" aria-label="Breadcrumb">
+  <a href="/" class="text-muted hover:text-tertiary no-underline">Home</a><span class="mx-2 text-border">›</span>
+  <a href="/projects/" class="text-muted hover:text-tertiary no-underline">Projects</a><span class="mx-2 text-border">›</span>
+  <a href={`/projects/#${project.category}`} class="text-muted hover:text-tertiary no-underline">{groupLabels[project.category] ?? project.category}</a><span class="mx-2 text-border">›</span>
+  <span class="text-primary">{project.name}</span>
+</nav>
+
+<section class="py-12 md:py-16">
+  <div class="container-page">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 items-start">
+      <div class="aspect-[4/3] rounded-lg bg-[linear-gradient(135deg,#2E343B_0%,#4F6876_100%)] flex items-end p-8 text-white shadow-card-h">
+        <span class="font-tag font-bold text-sm uppercase tracking-tag opacity-85">{project.industry} · {project.year ?? 'Recent'}</span>
+      </div>
+      <div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="meta-chip">{groupLabels[project.category]}</span>
+          <span class="meta-chip">{project.industry}</span>
+          {project.year && <span class="meta-chip">{project.year}</span>}
+        </div>
+        <h1 class="font-display font-extrabold text-primary text-[clamp(2rem,4vw,3rem)] leading-[1.1] mb-4">{project.name}</h1>
+        <p class="text-lg text-ink mb-6">{project.scope}</p>
+        {project.location && (
+          <p class="text-muted text-sm mb-4"><strong class="text-primary">Location:</strong> {project.location}</p>
+        )}
+        {project.services?.length > 0 && (
+          <p class="text-muted text-sm mb-6"><strong class="text-primary">Services delivered:</strong> {project.services.join(' · ')}</p>
+        )}
+        <a href="/contact/?type=product" class="btn btn-primary">Request a similar engagement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .meta-chip { display: inline-block; padding: 4px 12px; background: #F5F5F5; color: #002A54; border-radius: 9999px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+</style>
+
+<section class="py-12 md:py-16 bg-surface">
+  <div class="container-page max-w-prose">
+    <span class="tag text-tertiary mb-3">Project detail</span>
+    <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">About this engagement</h2>
+    <p class="text-ink mb-4">{project.scope}</p>
+    <p class="text-ink">This project is part of ECONARES' ongoing work for {project.industry.toLowerCase()} customers across the Philippines. For more detail or to discuss a similar engagement, request a meeting with our project team.</p>
+  </div>
+</section>
+
+</Base>

@@ -1,0 +1,190 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+import { products, relatedProducts } from '../../data/loader.js';
+
+export function getStaticPaths() {
+  return products.map(p => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const product = products.find(p => p.slug === slug);
+if (!product) throw new Error(`Product not found: ${slug}`);
+
+const related = relatedProducts(slug, 4);
+const categoryLabel = product.category === 'industrial-fuels' ? 'Industrial Fuels' : 'Metallic & Non-Metallic Minerals';
+const categoryHref = product.category === 'industrial-fuels' ? '/products/#fuels' : '/products/#minerals';
+const specRows = Object.entries(product.specs ?? {});
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.name,
+  description: product.elevator,
+  brand: { '@type': 'Brand', name: SITE.name },
+  manufacturer: { '@type': 'Organization', name: SITE.legal },
+  category: categoryLabel,
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'USD',
+    priceValidUntil: '2027-12-31',
+    seller: { '@type': 'Organization', name: SITE.legal },
+  },
+};
+---
+<Base title={`${product.name} Supplier in the Philippines`} description={`ECONARES supplies bulk ${product.name.toLowerCase()} to Philippine cement, sugar, and power-generation plants. Quality-tested, vessel-delivered. Request a quotation.`} active="/products/" schema={schema}>
+
+<nav class="pt-5 container-page font-tag font-bold text-[13px] uppercase tracking-tag text-muted" aria-label="Breadcrumb">
+  <a href="/" class="text-muted hover:text-tertiary no-underline">Home</a><span class="mx-2 text-border">›</span>
+  <a href="/products/" class="text-muted hover:text-tertiary no-underline">Products</a><span class="mx-2 text-border">›</span>
+  <a href={categoryHref} class="text-muted hover:text-tertiary no-underline">{categoryLabel}</a><span class="mx-2 text-border">›</span>
+  <span class="text-primary">{product.name}</span>
+</nav>
+
+<!-- Hero -->
+<section class="py-8 md:py-12">
+  <div class="container-page">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-center">
+      <div class="aspect-[4/3] rounded-lg bg-[linear-gradient(135deg,#2E343B_0%,#4F6876_100%)] flex items-end p-8 text-white shadow-card-h">
+        <span class="font-tag font-bold text-sm uppercase tracking-tag opacity-85">{categoryLabel} · Bulk supply</span>
+      </div>
+      <div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="meta-chip">{categoryLabel}</span>
+          <span class="meta-chip">Bulk</span>
+          <span class="meta-chip">Vessel Delivery</span>
+        </div>
+        <h1 class="font-display font-extrabold text-primary text-[clamp(2rem,4vw,3rem)] leading-[1.1] mb-4">{product.name}</h1>
+        <p class="text-lg text-ink mb-4">{product.elevator}</p>
+        {product.origin && (
+          <p class="text-muted text-sm mb-6"><strong class="text-primary">Typical origins:</strong> {product.origin.join(' · ')}</p>
+        )}
+        <div class="flex flex-wrap gap-3">
+          <a href={`/contact/?type=product&product=${product.slug}`} class="btn btn-primary">Request a Quote for {product.name}</a>
+          <a href="/products/" class="btn btn-secondary">View all {categoryLabel}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .meta-chip { display: inline-block; padding: 4px 12px; background: #F5F5F5; color: #002A54; border-radius: 9999px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+</style>
+
+<!-- Spec table -->
+{specRows.length > 0 && (
+  <section class="py-16 md:py-24 bg-surface">
+    <div class="container-page">
+      <div class="text-center max-w-[720px] mx-auto mb-12">
+        <span class="tag text-tertiary mb-3">Typical specifications</span>
+        <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">What you can expect per shipment</h2>
+        <p class="text-muted text-lg">Specs below reflect ECONARES' typical supply range. Final values are confirmed per contract and may be tailored to your plant's requirements.</p>
+      </div>
+      <div class="max-w-[800px] mx-auto bg-neutral rounded-lg overflow-hidden shadow-card">
+        <div class="grid grid-cols-[1fr_1.5fr] bg-primary text-neutral font-tag font-bold text-sm uppercase tracking-tag p-4">
+          <div>Property</div><div>Typical Value</div>
+        </div>
+        {specRows.map(([k, v], i) => (
+          <div class:list={['grid grid-cols-[1fr_1.5fr] p-4 border-b border-border last:border-b-0', i % 2 === 0 ? 'bg-neutral' : 'bg-surface']}>
+            <div class="font-tag font-bold text-sm uppercase tracking-wide text-tertiary">{k.replace(/_/g, ' ')}</div>
+            <div class="text-[15px] text-ink">{v}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- Logistics -->
+<section class="py-16 md:py-24">
+  <div class="container-page">
+    <div class="text-center max-w-[720px] mx-auto mb-12">
+      <span class="tag text-tertiary mb-3">Logistics</span>
+      <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Packaging, MOQ, and lead time</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {[
+        { l: 'Packaging & Delivery', v: product.packaging ?? 'Bulk vessel' },
+        { l: 'Minimum Order', v: product.moq ?? '500 MT' },
+        { l: 'Lead Time', v: product.lead_time ?? '30 days from PO' },
+      ].map(item => (
+        <div class="p-8 bg-neutral border border-border rounded-lg">
+          <h3 class="font-tag font-bold text-sm uppercase tracking-tag text-tertiary mb-2">{item.l}</h3>
+          <p class="font-display font-extrabold text-primary text-2xl leading-tight m-0">{item.v}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Applications -->
+{product.applications?.length > 0 && (
+  <section class="py-16 md:py-24 bg-surface">
+    <div class="container-page">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <span class="tag text-tertiary mb-3">Primary applications</span>
+          <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-6">What our customers use it for</h2>
+          <ul class="list-none p-0 m-0">
+            {product.applications.map(a => (
+              <li class="flex gap-3 py-3 border-b border-border last:border-b-0 text-base">
+                <span class="text-tertiary font-extrabold shrink-0">✓</span>
+                <span>{a}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <span class="tag text-tertiary mb-3">Quality assurance</span>
+          <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-6">How we test every shipment</h2>
+          <ul class="list-none p-0 m-0">
+            {['Pre-shipment analysis at the load port by independent surveyor','Quality/quantity inspection at discharge','Spec analysis (NCV, moisture, ash, sulfur, size) on every vessel','Size analysis by sieve test on every shipment','Full certificate of analysis (COA) delivered with shipping documents'].map(q => (
+              <li class="flex gap-3 py-3 border-b border-border last:border-b-0 text-base">
+                <span class="text-tertiary font-extrabold shrink-0">✓</span>
+                <span>{q}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- Related -->
+{related.length > 0 && (
+  <section class="py-16 md:py-24">
+    <div class="container-page">
+      <div class="text-center max-w-[720px] mx-auto mb-12">
+        <span class="tag text-tertiary mb-3">Related products</span>
+        <h2 class="font-display font-bold text-primary text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Other commodities our customers pair with this</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {related.map(r => (
+          <a href={`/products/${r.slug}/`} class="block p-5 bg-neutral border border-border rounded-lg hover:border-tertiary transition-colors no-underline">
+            <span class="tag text-tertiary mb-1.5">{r.category === 'industrial-fuels' ? 'Industrial Fuel' : 'Mineral'}</span>
+            <h3 class="font-display font-bold text-primary text-base mb-2 hover:text-tertiary">{r.name}</h3>
+            <p class="text-muted text-sm m-0 line-clamp-2">{r.elevator}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- Final CTA -->
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <span class="tag text-highlight mb-3">Get a quote</span>
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Send us your spec, your tonnage, your delivery port</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">We reply to RFQs within 48 hours. For urgent tenders, call us directly.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href={`/contact/?type=product&product=${product.slug}`} class="btn btn-primary">Request {product.name} Quote</a>
+      <a href={`tel:${SITE.phoneTel}`} class="btn !bg-transparent !text-neutral !border-2 !border-neutral hover:!bg-neutral hover:!text-primary">Call {SITE.phone}</a>
+    </div>
+  </div>
+</section>
+
+</Base>

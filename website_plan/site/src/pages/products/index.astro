@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+import { products } from '../../data/loader.js';
+const fuels = products.filter(p => p.category === 'industrial-fuels');
+const minerals = products.filter(p => p.category === 'minerals');
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Products — ${SITE.name}`,
+  description: 'Industrial fuels and metallic & non-metallic minerals supplied by ECONARES in the Philippines.',
+};
+---
+<Base title="Products" active="/products/" schema={schema}>
+
+<section class="py-16 md:py-20">
+  <div class="container-page">
+    <span class="tag text-tertiary mb-3">All products</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] mb-4">{fuels.length + minerals.length} commodities, bulk supply, quality-tested.</h1>
+    <p class="text-lg text-ink max-w-[720px]">From steam coal to nickel ore to clinker, ECONARES supplies the full range of inputs that Philippine cement, sugar, and power-generation plants need to keep running.</p>
+  </div>
+</section>
+
+<section class="py-8 md:py-12">
+  <div class="container-page">
+    <div class="mb-6"><span class="tag text-tertiary">01 — Industrial Fuels</span></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      {fuels.map(p => (
+        <a href={`/products/${p.slug}/`} class="group block bg-neutral border border-border rounded-lg overflow-hidden hover:border-tertiary hover:shadow-card-h transition-all">
+          <div class="aspect-[4/3] bg-[linear-gradient(135deg,#2E343B_0%,#4F6876_100%)] flex items-end p-4 text-white">
+            <span class="font-tag font-bold text-xs uppercase tracking-tag opacity-85">Industrial Fuel</span>
+          </div>
+          <div class="p-5">
+            <span class="tag text-tertiary mb-1.5">Industrial Fuel</span>
+            <h3 class="font-display font-bold text-primary text-lg mb-1.5 group-hover:text-tertiary">{p.name}</h3>
+            <p class="text-muted text-sm m-0 line-clamp-2">{p.elevator}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="py-8 md:py-12 bg-surface">
+  <div class="container-page">
+    <div class="mb-6"><span class="tag text-tertiary">02 — Metallic &amp; Non-Metallic Minerals</span></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      {minerals.map((p, i) => (
+        <a href={`/products/${p.slug}/`} class="group block bg-neutral border border-border rounded-lg overflow-hidden hover:border-tertiary hover:shadow-card-h transition-all">
+          <div class:list={['aspect-[4/3] flex items-end p-4 text-white', [
+            'bg-[linear-gradient(135deg,#A98F7A_0%,#DCD3A6_100%)]',
+            'bg-[linear-gradient(135deg,#4F6876_0%,#2E343B_100%)]',
+            'bg-[linear-gradient(135deg,#6DA6E3_0%,#002A54_100%)]',
+          ][i % 3]]}>
+            <span class="font-tag font-bold text-xs uppercase tracking-tag opacity-85">Mineral</span>
+          </div>
+          <div class="p-5">
+            <span class="tag text-tertiary mb-1.5">Mineral</span>
+            <h3 class="font-display font-bold text-primary text-lg mb-1.5 group-hover:text-tertiary">{p.name}</h3>
+            <p class="text-muted text-sm m-0 line-clamp-2">{p.elevator}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Don't see your commodity?</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">Talk to us about custom specifications, alternate origins, or specialty grades. We source on RFQ.</p>
+    <a href="/contact/?type=product" class="btn btn-primary">Request a Quotation</a>
+  </div>
+</section>
+
+</Base>

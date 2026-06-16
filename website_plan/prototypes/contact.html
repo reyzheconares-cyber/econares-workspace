@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Request a Quote | ECONARES</title>
+<meta name="description" content="Request a quotation for industrial fuels, minerals, or a construction project from ECONARES. Two RFQ forms — product and service. Cebu-based sales team, 48-hour response time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-primary: #002A54; --c-secondary: #2E343B; --c-tertiary: #F5251D; --c-accent: #F78D1E;
+  --c-highlight: #FDE126; --c-sky: #6DA6E3; --c-blue: #0033FF; --c-green: #6AFE01;
+  --c-neutral: #FFFFFF; --c-surface: #F5F5F5; --c-border: #D0D5DB; --c-ink: #0E1116; --c-muted: #4F6876;
+  --r-sm: 4px; --r-md: 8px; --r-lg: 12px; --r-pill: 9999px;
+  --container: 1280px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.6; color: var(--c-ink); background: var(--c-neutral); -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: var(--c-blue); text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; }
+h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: var(--c-primary); margin: 0 0 16px; }
+h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 700; }
+p { margin: 0 0 16px; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+@media (min-width: 768px) { .container { padding: 0 40px; } }
+.tag { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; display: inline-block; }
+.eyebrow { color: var(--c-tertiary); margin-bottom: 12px; }
+:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
+
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--c-neutral); border-bottom: 1px solid var(--c-border); height: 80px; display: flex; align-items: center; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-mark { width: 44px; height: 44px; flex-shrink: 0; }
+.brand-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--c-primary); letter-spacing: -0.02em; line-height: 1; }
+.brand-sub { display: block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 9px; letter-spacing: 0.12em; color: var(--c-muted); margin-top: 3px; }
+.nav-main { display: none; gap: 28px; align-items: center; }
+@media (min-width: 1024px) { .nav-main { display: flex; } }
+.nav-main a { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-ink); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav-main a:hover { color: var(--c-tertiary); text-decoration: none; }
+.nav-main a.active { color: var(--c-tertiary); border-bottom-color: var(--c-tertiary); }
+.nav-cta { display: flex; align-items: center; gap: 16px; }
+.nav-phone { display: none; align-items: center; gap: 6px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; color: var(--c-primary); }
+@media (min-width: 768px) { .nav-phone { display: inline-flex; } }
+.nav-cta .btn { display: none; padding: 10px 18px; font-size: 14px; min-height: 0; }
+@media (min-width: 1024px) { .nav-cta .btn { display: inline-flex; } }
+.menu-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+@media (min-width: 1024px) { .menu-toggle { display: none; } }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; border-radius: var(--r-md); font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; transition: background 0.15s, color 0.15s; min-height: 48px; }
+.btn-primary { background: var(--c-tertiary); color: var(--c-neutral); }
+.btn-primary:hover { background: var(--c-accent); color: var(--c-ink); }
+.btn-secondary { background: var(--c-neutral); color: var(--c-primary); border: 2px solid var(--c-primary); }
+.btn-secondary:hover { background: var(--c-primary); color: var(--c-neutral); }
+
+/* Contact page hero */
+.contact-hero { background: var(--c-primary); color: var(--c-neutral); padding: 80px 0 60px; }
+.contact-hero h1 { color: var(--c-neutral); margin-bottom: 16px; }
+.contact-hero p { color: var(--c-sky); font-size: 18px; max-width: 720px; margin: 0; }
+.trust-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+.trust-pill { padding: 6px 14px; background: transparent; border: 1px solid var(--c-green); color: var(--c-green); border-radius: var(--r-pill); font-family: 'Barlow Condensed'; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Tabs */
+.tabs-section { padding: 0 0 64px; margin-top: -32px; }
+@media (min-width: 1024px) { .tabs-section { padding: 0 0 96px; } }
+.tabs-wrap { background: var(--c-neutral); border-radius: var(--r-lg); box-shadow: 0 10px 40px rgba(0,0,0,0.12); overflow: hidden; }
+.tabs-nav { display: flex; border-bottom: 1px solid var(--c-border); }
+.tab-btn { flex: 1; padding: 20px 16px; font-family: 'Barlow Condensed'; font-weight: 700; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-muted); text-align: center; cursor: pointer; border-bottom: 3px solid transparent; transition: color 0.15s, border-color 0.15s; }
+.tab-btn[aria-selected="true"] { color: var(--c-tertiary); border-bottom-color: var(--c-tertiary); background: var(--c-surface); }
+.tab-btn:hover { color: var(--c-tertiary); }
+.tab-panel { display: none; padding: 40px; }
+@media (min-width: 768px) { .tab-panel { padding: 48px; } }
+.tab-panel.active { display: block; }
+
+/* Form */
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-primary); }
+.field label .req { color: var(--c-tertiary); }
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--c-ink);
+  background: var(--c-neutral);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--c-tertiary);
+  box-shadow: 0 0 0 3px rgba(245, 37, 29, 0.15);
+  outline: none;
+}
+.field textarea { min-height: 120px; resize: vertical; }
+.field .help { font-size: 13px; color: var(--c-muted); }
+.form-actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.form-actions .btn { min-width: 220px; }
+.form-note { font-size: 13px; color: var(--c-muted); }
+
+/* Office info */
+.office-section { padding: 64px 0; background: var(--c-surface); }
+@media (min-width: 1024px) { .office-section { padding: 96px 0; } }
+.office-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+@media (min-width: 768px) { .office-grid { grid-template-columns: 1fr 1fr; } }
+.office-info h2 { margin-bottom: 24px; }
+.contact-line { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--c-border); }
+.contact-line:last-child { border-bottom: 0; }
+.contact-icon { width: 44px; height: 44px; background: var(--c-primary); color: var(--c-highlight); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-icon svg { width: 20px; height: 20px; }
+.contact-text strong { display: block; font-family: 'Barlow Condensed'; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-tertiary); margin-bottom: 4px; }
+.contact-text p, .contact-text a { font-size: 15px; color: var(--c-ink); margin: 0; }
+.contact-text a { color: var(--c-blue); }
+.map-frame { aspect-ratio: 4/3; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-card-h); background: linear-gradient(135deg, #2E343B 0%, #4F6876 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-family: 'Barlow Condensed'; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Sales team */
+.team-section { padding: 64px 0; }
+@media (min-width: 1024px) { .team-section { padding: 96px 0; } }
+.team-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+.team-card { padding: 24px; background: var(--c-neutral); border: 1px solid var(--c-border); border-radius: var(--r-lg); }
+.team-card .tag { color: var(--c-tertiary); margin-bottom: 8px; }
+.team-card h3 { font-size: 16px; margin-bottom: 4px; }
+.team-card p { font-size: 14px; color: var(--c-muted); margin: 0; }
+.team-card a { color: var(--c-blue); }
+
+/* Footer */
+.site-footer { background: var(--c-primary); color: var(--c-neutral); padding: 64px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
+@media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; } }
+.footer-col h4 { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-highlight); margin: 0 0 16px; }
+.footer-col p, .footer-col a { color: var(--c-sky); font-size: 15px; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a:hover { color: var(--c-highlight); text-decoration: none; }
+.footer-bottom { padding-top: 24px; border-top: 1px solid var(--c-sky); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--c-sky); }
+
+.mobile-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--c-primary); padding: 12px 16px; display: flex; gap: 8px; z-index: 90; box-shadow: 0 -4px 12px rgba(0,0,0,0.15); }
+@media (min-width: 768px) { .mobile-bar { display: none; } }
+.mobile-bar a { flex: 1; padding: 12px; text-align: center; border-radius: var(--r-md); font-family: 'Inter'; font-weight: 600; font-size: 14px; text-decoration: none; }
+.mobile-bar .call { background: var(--c-tertiary); color: var(--c-neutral); }
+.mobile-bar .wa { background: var(--c-green); color: var(--c-primary); }
+body { padding-bottom: 72px; }
+@media (min-width: 768px) { body { padding-bottom: 0; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="/" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="96" height="96" rx="14" fill="#002A54" stroke="#2E343B" stroke-width="3"/>
+        <rect x="14" y="56" width="72" height="32" rx="3" fill="#002A54"/>
+        <text x="50" y="78" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF" letter-spacing="-0.5">ECONARES</text>
+        <rect x="14" y="14" width="14" height="42" fill="#A98F7A"/>
+        <rect x="30" y="22" width="14" height="34" fill="#5A7995"/>
+        <rect x="46" y="18" width="14" height="38" fill="#4F6876"/>
+        <polygon points="62,56 70,28 78,40 86,20 86,56" fill="#20293B"/>
+      </svg>
+      <span>
+        <span class="brand-text">ECONARES</span>
+        <span class="brand-sub">CONSTRUCTION · TRADING · SHIPPING</span>
+      </span>
+    </a>
+    <nav class="nav-main">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/products/">Products</a>
+      <a href="/services/">Services</a>
+      <a href="/projects/">Projects</a>
+      <a href="/contact/" class="active">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+633****6280">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (+63 32) 232 6280
+      </a>
+      <a class="btn btn-primary" href="/contact/?type=product">Request Quote</a>
+      <button class="menu-toggle" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="contact-hero">
+  <div class="container">
+    <span class="tag" style="color: var(--c-highlight);">Get in touch</span>
+    <h1>Request a Quote</h1>
+    <p>Tell us what you need — fuel, minerals, or a construction project — and our Cebu-based sales team will reply within 48 hours. For urgent tenders, call us directly.</p>
+    <div class="trust-pills">
+      <span class="trust-pill">48-Hour Quote Turnaround</span>
+      <span class="trust-pill">SEC-Registered</span>
+      <span class="trust-pill">DTI &amp; PCAB Licensed</span>
+      <span class="trust-pill">15+ Years in PH Heavy Industry</span>
+    </div>
+  </div>
+</section>
+
+<section class="tabs-section">
+  <div class="container">
+    <div class="tabs-wrap">
+      <div class="tabs-nav" role="tablist">
+        <button class="tab-btn" role="tab" aria-selected="true" data-tab="product">RFQ — Product</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="service">RFQ — Service</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-product" role="tabpanel">
+        <h2 style="margin-bottom: 8px;">Industrial fuels &amp; minerals</h2>
+        <p style="color: var(--c-muted); margin-bottom: 32px;">Use this form for steam coal, met coke, PKS, woodchips, or any metallic &amp; non-metallic mineral. Fields marked with <span class="req" style="color: var(--c-tertiary);">*</span> are required.</p>
+        <form action="https://formspree.io/f/PLACEHOLDER" method="POST">
+          <input type="hidden" name="rfq_type" value="product">
+          <div class="form-grid">
+            <div class="field">
+              <label for="p-name">Full name <span class="req">*</span></label>
+              <input id="p-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="p-company">Company <span class="req">*</span></label>
+              <input id="p-company" name="company" type="text" required autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="p-email">Email <span class="req">*</span></label>
+              <input id="p-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="p-phone">Phone <span class="req">*</span></label>
+              <input id="p-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+63 9xx xxx xxxx">
+            </div>
+            <div class="field">
+              <label for="p-commodity">Commodity <span class="req">*</span></label>
+              <select id="p-commodity" name="commodity" required>
+                <option value="">Select a commodity…</option>
+                <optgroup label="Industrial Fuels">
+                  <option>Steam Coal</option>
+                  <option>Metallurgical Coke</option>
+                  <option>Palm Kernel Shell (PKS)</option>
+                  <option>Woodchips</option>
+                </optgroup>
+                <optgroup label="Metallic &amp; Non-Metallic Minerals">
+                  <option>Aggregates (Screened &amp; Crushed)</option>
+                  <option>Marine Sand</option>
+                  <option>Boulders / Armour Rocks</option>
+                  <option>Diorite</option>
+                  <option>Limestone</option>
+                  <option>Chromite</option>
+                  <option>Nickel Ore</option>
+                  <option>Iron Sand</option>
+                  <option>Silica Sand</option>
+                  <option>Greywackes</option>
+                  <option>Pozzolan</option>
+                  <option>Copper Concentrate</option>
+                  <option>Clinker</option>
+                  <option>Quicklime / Hydrated Lime</option>
+                  <option>Gypsum</option>
+                  <option>Anhydrite</option>
+                </optgroup>
+                <option value="other">Other (specify in message)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="p-qty">Quantity (MT) <span class="req">*</span></label>
+              <input id="p-qty" name="quantity_mt" type="text" required placeholder="e.g. 5,000 MT">
+            </div>
+            <div class="field">
+              <label for="p-delivery-loc">Delivery location (port / plant) <span class="req">*</span></label>
+              <input id="p-delivery-loc" name="delivery_location" type="text" required placeholder="e.g. Republic Cement, Norzagaray, Bulacan">
+            </div>
+            <div class="field">
+              <label for="p-delivery-date">Required delivery date</label>
+              <input id="p-delivery-date" name="delivery_date" type="date">
+            </div>
+            <div class="field full">
+              <label for="p-message">Specs, notes, or RFQ reference</label>
+              <textarea id="p-message" name="message" placeholder="Specific specs, packaging requirements, tender reference number, etc."></textarea>
+              <span class="help">If you have a tender document or spec sheet, mention it here and we'll follow up with a secure upload link.</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send Product RFQ</button>
+            <span class="form-note">We reply within 48 hours. Your details are used only to respond to this inquiry.</span>
+          </div>
+        </form>
+      </div>
+
+      <div class="tab-panel" id="tab-service" role="tabpanel">
+        <h2 style="margin-bottom: 8px;">Construction &amp; engineering services</h2>
+        <p style="color: var(--c-muted); margin-bottom: 32px;">Use this form for land development, ports, industrial plants, civil/electrical/mechanical works, marine services, or any PCAB-classified project. Fields marked with <span class="req" style="color: var(--c-tertiary);">*</span> are required.</p>
+        <form action="https://formspree.io/f/PLACEHOLDER" method="POST">
+          <input type="hidden" name="rfq_type" value="service">
+          <div class="form-grid">
+            <div class="field">
+              <label for="s-name">Full name <span class="req">*</span></label>
+              <input id="s-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="s-company">Company <span class="req">*</span></label>
+              <input id="s-company" name="company" type="text" required autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="s-email">Email <span class="req">*</span></label>
+              <input id="s-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="s-phone">Phone <span class="req">*</span></label>
+              <input id="s-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+63 9xx xxx xxxx">
+            </div>
+            <div class="field">
+              <label for="s-service">Service type <span class="req">*</span></label>
+              <select id="s-service" name="service_type" required>
+                <option value="">Select a service…</option>
+                <optgroup label="Engineering &amp; Construction">
+                  <option>Land Development &amp; Housing</option>
+                  <option>Reclamation</option>
+                  <option>Ports &amp; Bridges</option>
+                  <option>Shipyards</option>
+                  <option>Industrial &amp; Manufacturing Plant</option>
+                  <option>Steel Fabrication &amp; Installation</option>
+                  <option>Commercial Buildings &amp; Civil Works</option>
+                  <option>Electrical Works</option>
+                  <option>Mechanical / Electromechanical</option>
+                  <option>Cooling / Ventilation</option>
+                  <option>Water Treatment Facilities</option>
+                  <option>Deep Well &amp; Water Filtration</option>
+                  <option>Surveying &amp; Designing</option>
+                  <option>Mineral Processing Plant Installation</option>
+                </optgroup>
+                <optgroup label="Environmental Protection">
+                  <option>Waste Water Treatment</option>
+                  <option>Deep Well &amp; Water Filtration</option>
+                  <option>Environmental Consultation</option>
+                </optgroup>
+                <optgroup label="Marine Services">
+                  <option>LCT / Tug &amp; Barge</option>
+                  <option>Vessel Piling Barge</option>
+                  <option>Crane Cutter Suction / 3-in-1 Dredger</option>
+                  <option>Marine Survey</option>
+                </optgroup>
+                <option value="other">Other (specify in message)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="s-value">Estimated project value (PHP)</label>
+              <input id="s-value" name="estimated_value" type="text" placeholder="e.g. ₱50,000,000">
+            </div>
+            <div class="field full">
+              <label for="s-loc">Project location <span class="req">*</span></label>
+              <input id="s-loc" name="project_location" type="text" required placeholder="City, province">
+            </div>
+            <div class="field full">
+              <label for="s-timeline">Target timeline</label>
+              <input id="s-timeline" name="timeline" type="text" placeholder="e.g. Start Q1 2027, 12-month duration">
+            </div>
+            <div class="field full">
+              <label for="s-message">Project description, scope, or tender reference</label>
+              <textarea id="s-message" name="message" placeholder="Brief scope of works, key dates, any tender reference number, drawing or document links."></textarea>
+              <span class="help">If you have drawings, BoQ, or a tender document, mention it here and we'll follow up with a secure upload link.</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send Service RFQ</button>
+            <span class="form-note">We reply within 48 hours. For confidential tenders, request an NDA first.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="office-section">
+  <div class="container">
+    <div class="office-grid">
+      <div class="office-info">
+        <span class="tag eyebrow">Cebu headquarters</span>
+        <h2>Visit, call, or write to us</h2>
+
+        <div class="contact-line">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Office Address</strong>
+            <p>G/F BT &amp; T Bldg., Hollow Block Road<br>Tabunok, Talisay City, Cebu 6045<br>Philippines</p>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Landline</strong>
+            <p><a href="tel:+633****6280">(+63 32) 232 6280</a></p>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Email</strong>
+            <p><a href="mailto:ece.eleguinresources@yahoo.com">ece.eleguinresources@yahoo.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-line">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Office hours</strong>
+            <p>Monday – Friday, 8:00 AM – 5:00 PM (PHT)<br>Saturday, 8:00 AM – 12:00 PM (PHT)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-frame" aria-label="Map placeholder for BT &amp; T Building, Tabunok, Talisay City, Cebu">
+        Map · BT &amp; T Bldg, Tabunok, Talisay City, Cebu
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="container">
+    <div class="section-head" style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+      <span class="tag eyebrow">Sales team direct lines</span>
+      <h2>Reach the right division on the first try</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <span class="tag">Mine Mineral Products</span>
+        <h3>Sales &amp; Marketing Officer — Minerals</h3>
+        <p><a href="mailto:ece.eleguinresources@yahoo.com?subject=Mineral%20Products">ece.eleguinresources@yahoo.com</a></p>
+      </div>
+      <div class="team-card">
+        <span class="tag">Fuel Products</span>
+        <h3>Sales &amp; Marketing Officer — Fuels</h3>
+        <p><a href="mailto:ece.eleguinresources@yahoo.com?subject=Fuel%20Products">ece.eleguinresources@yahoo.com</a></p>
+      </div>
+      <div class="team-card">
+        <span class="tag">Construction Products &amp; Services</span>
+        <h3>Sales &amp; Marketing Officer — Construction</h3>
+        <p><a href="mailto:ece.eleguinresources@yahoo.com?subject=Construction%20Services">ece.eleguinresources@yahoo.com</a></p>
+      </div>
+      <div class="team-card">
+        <span class="tag">Shipping &amp; Equipment Rental</span>
+        <h3>Sales &amp; Marketing Officer — Marine</h3>
+        <p><a href="mailto:ece.eleguinresources@yahoo.com?subject=Marine%20%26%20Shipping">ece.eleguinresources@yahoo.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ECONARES</h4>
+        <p>ECE Construction and Resources OPC. A SEC-registered Philippine company supplying industrial fuels, minerals, and PCAB-licensed construction services from Cebu to the rest of the Philippines.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/products/industrial-fuels/">Industrial Fuels</a></li>
+          <li><a href="/products/metallic-non-metallic-minerals/">Metallic &amp; Non-Metallic Minerals</a></li>
+          <li><a href="/products/steam-coal/">Steam Coal</a></li>
+          <li><a href="/products/limestone/">Limestone</a></li>
+          <li><a href="/products/clinker/">Clinker</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/engineering-construction/">Engineering &amp; Construction</a></li>
+          <li><a href="/services/marine-services/">Marine Services</a></li>
+          <li><a href="/services/environmental-protection/">Environmental Protection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>G/F BT &amp; T Bldg., Hollow Block Road<br>Tabunok, Talisay City, Cebu 6045<br>Philippines</p>
+        <p><a href="tel:+633****6280">(+63 32) 232 6280</a><br><a href="mailto:ece.eleguinresources@yahoo.com">ece.eleguinresources@yahoo.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ECE Construction and Resources OPC. All rights reserved.</div>
+      <div><a href="/legal/privacy-policy/">Privacy</a> · <a href="/legal/terms-of-use/">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+633****6280">Call Now</a>
+  <a class="wa" href="https://wa.me/639171234567?text=Hello%20ECONARES%2C%20I%27d%20like%20to%20inquire%20about">WhatsApp</a>
+</div>
+
+<script>
+// Tab switching
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+    tabBtns.forEach(b => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
+    tabPanels.forEach(p => p.classList.toggle('active', p.id === `tab-${target}`));
+  });
+});
+
+// Auto-select tab from query string (?type=product or ?type=service)
+const params = new URLSearchParams(window.location.search);
+const type = params.get('type');
+if (type === 'service') {
+  const svcBtn = document.querySelector('[data-tab="service"]');
+  if (svcBtn) svcBtn.click();
+}
+</script>
+</body>
+</html>

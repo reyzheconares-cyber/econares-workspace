@@ -1,0 +1,22 @@
+---
+// src/components/Logo.astro — inline SVG wordmark + emblem, no external assets
+// Derived from APPROVED Logo.png (7200x7200), vectors reconstructed
+import { SITE } from '../data/site.js';
+const { size = 'md' } = Astro.props;
+const dim = size === 'sm' ? 32 : size === 'lg' ? 64 : 44;
+---
+<a href="/" class="inline-flex items-center gap-2.5 no-underline" aria-label={`${SITE.name} home`}>
+  <svg width={dim} height={dim} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="shrink-0">
+    <rect x="2" y="2" width="96" height="96" rx="14" fill="#002A54" stroke="#2E343B" stroke-width="3"/>
+    <rect x="14" y="56" width="72" height="32" rx="3" fill="#002A54"/>
+    <text x="50" y="78" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF" letter-spacing="-0.5">ECONARES</text>
+    <rect x="14" y="14" width="14" height="42" fill="#A98F7A"/>
+    <rect x="30" y="22" width="14" height="34" fill="#5A7995"/>
+    <rect x="46" y="18" width="14" height="38" fill="#4F6876"/>
+    <polygon points="62,56 70,28 78,40 86,20 86,56" fill="#20293B"/>
+  </svg>
+  <span>
+    <span class="block font-display font-extrabold text-[22px] text-primary leading-none tracking-tight">{SITE.name}</span>
+    <span class="block font-tag font-bold text-[9px] tracking-[0.12em] text-muted mt-0.5">{SITE.tagline}</span>
+  </span>
+</a>

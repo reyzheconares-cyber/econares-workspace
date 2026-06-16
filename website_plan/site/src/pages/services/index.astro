@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+import { services } from '../../data/loader.js';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Services — ${SITE.name}`,
+  description: 'PCAB-licensed engineering, construction, environmental, and marine services from ECONARES, Cebu, Philippines.',
+};
+---
+<Base title="Services" active="/services/" schema={schema}>
+
+<section class="py-16 md:py-20">
+  <div class="container-page">
+    <span class="tag text-tertiary mb-3">All services</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.1] mb-4">PCAB-licensed engineering, construction, environmental, and marine services.</h1>
+    <p class="text-lg text-ink max-w-[720px]">From land development and reclamation to ports, industrial plants, water treatment, and full marine logistics. ECE Construction Services holds a Regular Contractor's License from the Philippine Contractors Accreditation Board (PCAB).</p>
+  </div>
+</section>
+
+<section class="py-8 md:py-16">
+  <div class="container-page space-y-16">
+    {services.map(svc => (
+      <article id={svc.slug} class="scroll-mt-24">
+        <div class="flex items-start gap-6 mb-6">
+          <div class="w-14 h-14 bg-primary text-highlight rounded-md flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-7 h-7" aria-hidden="true">
+              {svc.slug === 'engineering-construction' && <><path d="M2 22h20M4 22V8l8-6 8 6v14M9 22v-8h6v8M9 6h6"/></>}
+              {svc.slug === 'environmental-protection' && <><path d="M2 22h20M5 18l3-9 4 5 3-7 4 11"/><circle cx="12" cy="6" r="2"/></>}
+              {svc.slug === 'marine-services' && <><path d="M3 18l2-2h14l2 2M12 4v10M5 11l7-7 7 7M2 18h20v2H2z"/></>}
+            </svg>
+          </div>
+          <div>
+            <span class="tag text-tertiary mb-1.5">0{services.indexOf(svc) + 1} — {svc.category}</span>
+            <h2 class="font-display font-bold text-primary text-3xl mb-2">{svc.name}</h2>
+            <p class="text-muted text-lg max-w-[720px]">{svc.elevator}</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {svc.sub_services.map(sub => (
+            <a href={`/services/${svc.slug}/${sub.slug}/`} class="block p-5 bg-neutral border border-border rounded-lg hover:border-tertiary hover:shadow-card transition-all no-underline">
+              <h3 class="font-display font-bold text-primary text-base mb-2">{sub.name}</h3>
+              <p class="text-muted text-sm m-0">{sub.description}</p>
+            </a>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="bg-primary text-neutral py-20 text-center">
+  <div class="container-page">
+    <h2 class="font-display font-bold text-neutral text-[clamp(1.75rem,3.5vw,2.5rem)] mb-4">Ready to discuss a project?</h2>
+    <p class="text-sky text-lg max-w-[600px] mx-auto mb-8">Send us your scope, location, and timeline. We reply within 48 hours.</p>
+    <a href="/contact/?type=service" class="btn btn-primary">Request a Project Discussion</a>
+  </div>
+</section>
+
+</Base>

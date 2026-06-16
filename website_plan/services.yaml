@@ -1,0 +1,90 @@
+# ECONARES service data — drives /services/** pages
+# Three service categories with sub-services
+
+services:
+  - slug: engineering-construction
+    name: Engineering & Construction (Horizontal & Vertical)
+    category: construction
+    hero_image: /images/services/construction.jpg
+    elevator: "PCAB-licensed horizontal and vertical engineering works — from land development and reclamation to ports, industrial plants, and full civil/electrical/mechanical scopes."
+    sub_services:
+      - slug: land-development
+        name: Land Development & Housing Works
+        description: "Site grading, road networks, drainage, subdivision development, and housing construction."
+      - slug: reclamation
+        name: Reclamation Projects
+        description: "Coastal and offshore land reclamation with dredging, filling, and ground improvement."
+      - slug: ports-bridges
+        name: Ports & Bridges
+        description: "Port facilities, wharves, bridges, and marine infrastructure for commercial and industrial use."
+      - slug: shipyards
+        name: Shipyards
+        description: "Shipyard construction, dry-dock facilities, and marine repair infrastructure."
+      - slug: industrial-plants
+        name: Industrial & Manufacturing Plant Construction
+        description: "Cement, sugar, power, and manufacturing plant construction from foundation to commissioning."
+      - slug: steel-fabrication
+        name: Structural Steel Fabrication & Installation
+        description: "Heavy steel fabrication and erection for industrial and commercial structures."
+      - slug: commercial-buildings
+        name: Commercial Buildings & Civil Works
+        description: "Office, retail, mixed-use, and warehouse construction with full civil-works scope."
+      - slug: electrical-works
+        name: Electrical Works
+        description: "Industrial and commercial electrical systems, substation, and power distribution."
+      - slug: mechanical-electromechanical
+        name: Mechanical / Electromechanical Engineering
+        description: "Mechanical installation, HVAC, plumbing, and electromechanical systems."
+      - slug: cooling-ventilation
+        name: Cooling System / Ventilation Installation
+        description: "Industrial cooling, ventilation, and air-handling system design and installation."
+      - slug: water-treatment
+        name: Water Treatment Facilities
+        description: "Wastewater treatment plants, water filtration, and supply systems."
+      - slug: deep-well
+        name: Deep Well & Water Supply Filtration
+        description: "Deep-well drilling, pump installation, and water treatment/filtration systems."
+      - slug: surveying-designing
+        name: Surveying & Designing
+        description: "Topographic, hydrographic, and cadastral surveying; engineering design."
+      - slug: mineral-processing
+        name: Mineral Processing Plant Installation
+        description: "Crushing, screening, washing, and mineral beneficiation plant construction."
+    rfq_type: service
+
+  - slug: environmental-protection
+    name: Environmental Protection
+    category: environmental
+    hero_image: /images/services/environmental.jpg
+    elevator: "Wastewater treatment, deep-well water filtration, and environmental consulting services aligned with the company's mission to protect the environment."
+    sub_services:
+      - slug: waste-water-treatment
+        name: Waste Water Treatment
+        description: "Design, construction, and operation of industrial and municipal wastewater treatment plants."
+      - slug: deep-well-water-filtration
+        name: Deep Well & Water Filtration
+        description: "Deep-well construction and water filtration systems for industrial and community use."
+      - slug: consultation
+        name: Environmental Consultation
+        description: "Environmental impact assessment, permitting, and compliance consulting."
+    rfq_type: service
+
+  - slug: marine-services
+    name: Marine Services
+    category: marine
+    hero_image: /images/services/marine.jpg
+    elevator: "Full-spectrum marine logistics — LCT and tug & barge charter, vessel piling barge, and crane cutter suction / 3-in-1 dredger services for ports, reclamation, and shore protection."
+    sub_services:
+      - slug: lct-tug-barge
+        name: LCT / Tug & Barge
+        description: "Landing craft tank and tug-and-barge charter for bulk cargo and project cargo transport."
+      - slug: vessel-piling-barge
+        name: Vessel Piling Barge
+        description: "Piling barge for wharf, bridge, and marine foundation piling works."
+      - slug: crane-cutter-suction-dredger
+        name: Crane Cutter Suction / 3-in-1 Dredger
+        description: "Hydraulic cutter suction dredging for port deepening, reclamation, and channel maintenance."
+      - slug: survey
+        name: Marine Survey
+        description: "Hydrographic and bathymetric surveys for marine projects."
+    rfq_type: service

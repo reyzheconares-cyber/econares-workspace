@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../data/site.js';
+---
+<Base title="Privacy Policy" active="" noindex={true}>
+<section class="py-16 md:py-20">
+  <div class="container-page max-w-prose">
+    <span class="tag text-tertiary mb-3">Legal</span>
+    <h1 class="font-display font-extrabold text-primary text-[clamp(2rem,4vw,3rem)] leading-[1.1] mb-6">Privacy Policy</h1>
+    <p class="text-muted text-sm mb-8">Last updated: {new Date().toISOString().slice(0, 10)}</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Who we are</h2>
+    <p class="text-ink">{SITE.legal} (trade name: {SITE.name}), with principal office at {SITE.address.street}, {SITE.address.locality}, {SITE.address.country}.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">What we collect</h2>
+    <p class="text-ink">When you submit an RFQ or contact form on this site, we collect: your name, company, email, phone, the commodity or service you're inquiring about, delivery location, and any message content you provide.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">How we use it</h2>
+    <p class="text-ink">We use your details solely to respond to your inquiry, prepare a quotation, and follow up on your project or supply request. We do not sell, rent, or share your personal information with third parties except as required to deliver services to you (e.g., sharing shipping details with a vessel operator when arranging bulk delivery).</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">How long we keep it</h2>
+    <p class="text-ink">We retain inquiry records for up to 3 years for audit and contract follow-up purposes, after which they are deleted. You can request deletion at any time.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Your rights</h2>
+    <p class="text-ink">Under the Philippines Data Privacy Act of 2012, you have the right to access, correct, or request deletion of your personal data. Contact us at <a href={`mailto:${SITE.email}`} class="text-blue">{SITE.email}</a> to exercise these rights.</p>
+
+    <h2 class="font-display font-bold text-primary text-2xl mt-8 mb-3">Contact</h2>
+    <p class="text-ink">Questions about this policy? Write to <a href={`mailto:${SITE.email}`} class="text-blue">{SITE.email}</a> or call {SITE.phone}.</p>
+  </div>
+</section>
+</Base>

@@ -1,0 +1,1 @@
+import"./hoisted.DWIkIr-H.js";const e=document.querySelectorAll("[data-slide]");if(e.length>1){let t=Array.from(e).findIndex(s=>s.classList.contains("active"));t<0&&(t=0),setInterval(()=>{e[t].classList.remove("active"),e[t].style.opacity="0",t=(t+1)%e.length,e[t].classList.add("active"),e[t].style.opacity="1"},4500)}
