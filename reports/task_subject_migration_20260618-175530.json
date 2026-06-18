@@ -1,0 +1,772 @@
+{
+  "generated_at": "2026-06-18T09:55:30.949401+00:00",
+  "mode": "dry_run",
+  "totals": {
+    "unchanged": 37,
+    "changed": 96,
+    "failed": 0
+  },
+  "operations": [
+    {
+      "id": "361654833887",
+      "status": "noop_canonical",
+      "subject": "MMD Proposal Letter"
+    },
+    {
+      "id": "364469163759",
+      "status": "noop_canonical",
+      "subject": "Initial contact via SMS"
+    },
+    {
+      "id": "364469209814",
+      "status": "dry_run",
+      "before": "Follow up with Liezel Muro",
+      "after": "Follow up: Liezel Muro"
+    },
+    {
+      "id": "364478411479",
+      "status": "dry_run",
+      "before": "Follow up with Nadine Malto",
+      "after": "Follow up: Nadine Malto"
+    },
+    {
+      "id": "365462133439",
+      "status": "dry_run",
+      "before": "Follow up Marc Yorobe @ MGEN",
+      "after": "Follow up: Marc Yorobe @ MGEN"
+    },
+    {
+      "id": "365474280178",
+      "status": "noop_canonical",
+      "subject": "[Gmail \u2605] Philippine Nickel Ore Supply | ECONARES"
+    },
+    {
+      "id": "365485536963",
+      "status": "dry_run",
+      "before": "Follow up Jessie Sarias @ Philcement",
+      "after": "Follow up: Jessie Sarias @ Philcement"
+    },
+    {
+      "id": "365485793980",
+      "status": "dry_run",
+      "before": "Follow up John Rey Hisoler @ MGEN",
+      "after": "Follow up: John Rey Hisoler @ MGEN"
+    },
+    {
+      "id": "365485966013",
+      "status": "noop_canonical",
+      "subject": "China Nickel follow-up - Tsingshan and YNQSGT"
+    },
+    {
+      "id": "365488023289",
+      "status": "noop_canonical",
+      "subject": "Call/WhatsApp Lyn @ Mabuhay Filcement"
+    },
+    {
+      "id": "365489814223",
+      "status": "noop_canonical",
+      "subject": "Call/WhatsApp Allan Saquilayan @ Republic Cement"
+    },
+    {
+      "id": "365491588850",
+      "status": "dry_run",
+      "before": "Follow up AboitizPower",
+      "after": "Follow up: AboitizPower"
+    },
+    {
+      "id": "365582962386",
+      "status": "noop_canonical",
+      "subject": "[MGEN/CEDC] Coal Spec Sheet \u2014 Awaiting CEO sample data + May 13 plant visit"
+    },
+    {
+      "id": "365600483049",
+      "status": "dry_run",
+      "before": "Follow up with Melanie Salinas \u2014 KEPCO SPC Power Corp",
+      "after": "Follow up: Melanie Salinas | KEPCO SPC Power Corp"
+    },
+    {
+      "id": "365619775164",
+      "status": "dry_run",
+      "before": "Research Emmanuel Castro \u2014 Acciona Daanbantayan site (diesel opportunity)",
+      "after": "Research: Emmanuel Castro | Acciona Daanbantayan site (diesel opportunity)"
+    },
+    {
+      "id": "365623911108",
+      "status": "dry_run",
+      "before": "Follow up Joy Desuyo \u2014 CEDC (same city as TVI Toledo)",
+      "after": "Follow up: Joy Desuyo | CEDC (same city as TVI Toledo)"
+    },
+    {
+      "id": "366014277331",
+      "status": "noop_canonical",
+      "subject": "[Mabuhay Cement] Send appointment email to plant manager"
+    },
+    {
+      "id": "366037849810",
+      "status": "noop_canonical",
+      "subject": "Send FCO"
+    },
+    {
+      "id": "366050338535",
+      "status": "noop_canonical",
+      "subject": "[Apo Cement / Taiheiyo] Follow up on field visit results"
+    },
+    {
+      "id": "366091924199",
+      "status": "noop_canonical",
+      "subject": "[DEFERRED \u2014 Identity Verification] [Durano Paper/Sugar] Research company and coal requirements"
+    },
+    {
+      "id": "366311710414",
+      "status": "noop_canonical",
+      "subject": "[APO CEMENT] Confirm if open to third-party coal suppliers"
+    },
+    {
+      "id": "366317030133",
+      "status": "noop_canonical",
+      "subject": "[APO CEMENT] Outreach to Rey Tolosa \u2014 Coal/RDF opportunity"
+    },
+    {
+      "id": "366347057869",
+      "status": "dry_run",
+      "before": "Follow-up Re:SMS on Rey Tolosa",
+      "after": "Follow up: Re:SMS on Rey Tolosa"
+    },
+    {
+      "id": "366522313461",
+      "status": "dry_run",
+      "before": "Follow up Rey Tolosa \u2014 Apo Cement / CEMEX",
+      "after": "Follow up: Rey Tolosa | Apo Cement / CEMEX"
+    },
+    {
+      "id": "366557628109",
+      "status": "dry_run",
+      "before": "Follow up Kenneth \u2014 Taiheiyo Cement / PKS inquiry",
+      "after": "Follow up: Kenneth | Taiheiyo Cement / PKS inquiry"
+    },
+    {
+      "id": "366578069178",
+      "status": "noop_canonical",
+      "subject": "[DEFERRED \u2014 Research Tonight] Joy Desuyo / SPC Power / KEPCO SPC"
+    },
+    {
+      "id": "366581643994",
+      "status": "dry_run",
+      "before": "Follow up John Rey Hisoler \u2014 MGEN coal inquiry",
+      "after": "Follow up: John Rey Hisoler | MGEN coal inquiry"
+    },
+    {
+      "id": "366622898875",
+      "status": "dry_run",
+      "before": "Follow up Carlito + Maria Otom \u2014 AboitizPower / TVI",
+      "after": "Follow up: Carlito + Maria Otom | AboitizPower / TVI"
+    },
+    {
+      "id": "366794161866",
+      "status": "noop_canonical",
+      "subject": "[MGEN/CEDC] Full team visit \u2014 May 12 (week of) appointment"
+    },
+    {
+      "id": "366796883678",
+      "status": "noop_canonical",
+      "subject": "[APO CEMENT] URGENT \u2014 Submit woodchips sample package to Bong Acacio"
+    },
+    {
+      "id": "366800672475",
+      "status": "noop_canonical",
+      "subject": "[COPPER/ZINC/LEAD] Aurelio Ramones Jr. \u2014 Isabela buyer wants Cu ore pricing URGENT"
+    },
+    {
+      "id": "366807541446",
+      "status": "noop_canonical",
+      "subject": "[APO CEMENT] Outreach to Bong Acacio \u2014 Alternative Fuels"
+    },
+    {
+      "id": "366821746384",
+      "status": "noop_canonical",
+      "subject": "[MGEN] Follow up John Rey Hisoler \u2014 Call scheduled"
+    },
+    {
+      "id": "366828507879",
+      "status": "noop_canonical",
+      "subject": "[APO CEMENT] Outreach to Chai Sibal \u2014 Alternative Fuels"
+    },
+    {
+      "id": "366882596551",
+      "status": "noop_canonical",
+      "subject": "[MGEN/CEDC] Send formal email \u2014 request coal technical specs"
+    },
+    {
+      "id": "367254061766",
+      "status": "noop_canonical",
+      "subject": "Follow up: Sebastian (MGEN SCM-FMD) \u2014 No Reply \u2014 May 13 Meeting"
+    },
+    {
+      "id": "367269522168",
+      "status": "noop_canonical",
+      "subject": "Presentation Meeting: ECONARES \u00d7 MGEN Sebastian (SCM-FMD) \u2014 Tuesday May 13"
+    },
+    {
+      "id": "367270340324",
+      "status": "dry_run",
+      "before": "Follow up with Sebastian, Andres Jr. A. Andres",
+      "after": "Follow up: Sebastian, Andres Jr. A. Andres"
+    },
+    {
+      "id": "367438391020",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Mary Grace Caballes / Carmen Copper Corp",
+      "after": "Outreach: Mary Grace Caballes / Carmen Copper Corp"
+    },
+    {
+      "id": "367498462938",
+      "status": "dry_run",
+      "before": "Follow up with Mary Grace Caballes",
+      "after": "Follow up: Mary Grace Caballes"
+    },
+    {
+      "id": "367498696405",
+      "status": "dry_run",
+      "before": "Follow up with Liza Sigua",
+      "after": "Follow up: Liza Sigua"
+    },
+    {
+      "id": "367595601630",
+      "status": "noop_canonical",
+      "subject": "Send: Coal & Diesel Supply Inquiry \u2014 Mary Grace Caballes (Carmen Copper)"
+    },
+    {
+      "id": "367603452632",
+      "status": "dry_run",
+      "before": "Follow up with Republic Cement",
+      "after": "Follow up: Republic Cement"
+    },
+    {
+      "id": "367837175508",
+      "status": "dry_run",
+      "before": "MTG CONFIRMED: Sebastian/MGEN \u2014 May 4, 10:30 AM Virtual",
+      "after": "Meeting: Sebastian/MGEN | May 4, 10:30 AM Virtual"
+    },
+    {
+      "id": "367837349576",
+      "status": "dry_run",
+      "before": "FOLLOW UP Allan Saquilayan \u2014 Republic Cement (profile sent)",
+      "after": "Follow up: Allan Saquilayan | Republic Cement (profile sent)"
+    },
+    {
+      "id": "367867559658",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Rose Calba (Solaris)",
+      "after": "Outreach: Rose Calba (Solaris)"
+    },
+    {
+      "id": "368115021519",
+      "status": "dry_run",
+      "before": "Follow up with Allan Saquilayan",
+      "after": "Follow up: Allan Saquilayan"
+    },
+    {
+      "id": "368124944065",
+      "status": "dry_run",
+      "before": "Follow up with Jose Alfonso \"Alfie Miras",
+      "after": "Follow up: Jose Alfonso \"Alfie Miras"
+    },
+    {
+      "id": "368330274506",
+      "status": "noop_canonical",
+      "subject": "[MGEN] Send finalized coal spec sheet to MGEN"
+    },
+    {
+      "id": "368489071311",
+      "status": "dry_run",
+      "before": "Follow up with Rose Calba",
+      "after": "Follow up: Rose Calba"
+    },
+    {
+      "id": "368489882301",
+      "status": "dry_run",
+      "before": "Follow up with Nickel Industries",
+      "after": "Follow up: Nickel Industries"
+    },
+    {
+      "id": "368495619797",
+      "status": "dry_run",
+      "before": "Follow up with Mary Grace Caballes",
+      "after": "Follow up: Mary Grace Caballes"
+    },
+    {
+      "id": "368543211256",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Ningbo Lygend Wisdom | Day 1 Email (DRAFT)",
+      "after": "Outreach: Ningbo Lygend Wisdom | Day 1 Email (DRAFT)"
+    },
+    {
+      "id": "368545238723",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Jinchuan Group International Resources | Day 1 Email",
+      "after": "Outreach: Jinchuan Group International Resources | Day 1 Email"
+    },
+    {
+      "id": "368546997997",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Ningbo Lygend Wisdom Co. Ltd. | Day 1 Email",
+      "after": "Outreach: Ningbo Lygend Wisdom Co. Ltd. | Day 1 Email"
+    },
+    {
+      "id": "368546998996",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Delong Nickel Co. Ltd. | Day 1 Email",
+      "after": "Outreach: Delong Nickel Co. Ltd. | Day 1 Email"
+    },
+    {
+      "id": "368550511313",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Delong Nickel | sales@dlnis.com | SOFT PITCH (parent in restructuring)",
+      "after": "Outreach: Delong Nickel | sales@dlnis.com | SOFT PITCH (parent in restructuring)"
+    },
+    {
+      "id": "368565424856",
+      "status": "dry_run",
+      "before": "Follow up \u2014 L.M. Pantilo, Carmen Copper | lmpantilo@carmencopper.com",
+      "after": "Follow up: L.M. Pantilo, Carmen Copper | lmpantilo@carmencopper.com"
+    },
+    {
+      "id": "368593698533",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Zhejiang Huayou Cobalt Co. Ltd. | Day 1 Email",
+      "after": "Outreach: Zhejiang Huayou Cobalt Co. Ltd. | Day 1 Email"
+    },
+    {
+      "id": "368597648095",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Tsingshan Holding Group | Day 1 Email (DRAFT)",
+      "after": "Outreach: Tsingshan Holding Group | Day 1 Email (DRAFT)"
+    },
+    {
+      "id": "368605582019",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Nickel Industries Ltd. | Day 1 Email",
+      "after": "Outreach: Nickel Industries Ltd. | Day 1 Email"
+    },
+    {
+      "id": "368605583077",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Jinchuan Group | Day 1 Email (DRAFT)",
+      "after": "Outreach: Jinchuan Group | Day 1 Email (DRAFT)"
+    },
+    {
+      "id": "368607412946",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Zhejiang Huayou Cobalt | Day 1 Email (DRAFT)",
+      "after": "Outreach: Zhejiang Huayou Cobalt | Day 1 Email (DRAFT)"
+    },
+    {
+      "id": "368607412976",
+      "status": "dry_run",
+      "before": "Outreach \u2014 Nickel Industries Ltd. | Day 1 Email (DRAFT)",
+      "after": "Outreach: Nickel Industries Ltd. | Day 1 Email (DRAFT)"
+    },
+    {
+      "id": "369077319409",
+      "status": "dry_run",
+      "before": "Follow up with Rose Calba",
+      "after": "Follow up: Rose Calba"
+    },
+    {
+      "id": "369295942380",
+      "status": "dry_run",
+      "before": "Follow up Cynthia Cabrera \u2014 Holcim Philippines | 7400-7500 GAR Premium Coal",
+      "after": "Follow up: Cynthia Cabrera | Holcim Philippines | 7400-7500 GAR Premium Coal"
+    },
+    {
+      "id": "369482007262",
+      "status": "noop_canonical",
+      "subject": "CLOSED \u2014 purchasing@pcpc.ph + corpcomms@pcpc.ph both BOUNCED May 14. Find procurement contact via phone/LinkedIn/website."
+    },
+    {
+      "id": "369530608328",
+      "status": "dry_run",
+      "before": "Follow up Tina Chen \u2014 Fujian Yunding Mining | Copper/Nickel ore pricing",
+      "after": "Follow up: Tina Chen | Fujian Yunding Mining | Copper/Nickel ore pricing"
+    },
+    {
+      "id": "369676916440",
+      "status": "noop_canonical",
+      "subject": "Message Andy MGEN: 10K MT Vessel Accommodation at Cebu Port"
+    },
+    {
+      "id": "369831974639",
+      "status": "noop_canonical",
+      "subject": "Fraser Outreach \u2014 Huayou Cobalt"
+    },
+    {
+      "id": "369842134732",
+      "status": "noop_canonical",
+      "subject": "Fraser Outreach \u2014 Jinchuan Group"
+    },
+    {
+      "id": "369842216663",
+      "status": "noop_canonical",
+      "subject": "Fraser Outreach \u2014 Team Energy Corporation"
+    },
+    {
+      "id": "370180074190",
+      "status": "dry_run",
+      "before": "Follow up on Nickel Ore \u2014 Bulk Ore Limited",
+      "after": "Follow up: on Nickel Ore | Bulk Ore Limited"
+    },
+    {
+      "id": "370198712041",
+      "status": "dry_run",
+      "before": "Follow up with Andy Sebastian",
+      "after": "Follow up: Andy Sebastian"
+    },
+    {
+      "id": "370317048567",
+      "status": "dry_run",
+      "before": "Follow up with Tina Chen",
+      "after": "Follow up: Tina Chen"
+    },
+    {
+      "id": "370318472908",
+      "status": "dry_run",
+      "before": "Follow up with Anson Wong",
+      "after": "Follow up: Anson Wong"
+    },
+    {
+      "id": "370463310540",
+      "status": "dry_run",
+      "before": "Follow up with Concrete Solutions",
+      "after": "Follow up: Concrete Solutions"
+    },
+    {
+      "id": "370589007591",
+      "status": "dry_run",
+      "before": "Follow up with Team Energy",
+      "after": "Follow up: TeaM Energy"
+    },
+    {
+      "id": "370688225008",
+      "status": "dry_run",
+      "before": "Follow up with San Miguel Global Power",
+      "after": "Follow up: San Miguel Global Power"
+    },
+    {
+      "id": "370688387816",
+      "status": "dry_run",
+      "before": "Follow up with SPC Power",
+      "after": "Follow up: SPC Power"
+    },
+    {
+      "id": "370780305124",
+      "status": "dry_run",
+      "before": "Follow up with Fujian Yunding Mining Co., Ltd.",
+      "after": "Follow up: Fujian Yunding Mining Co., Ltd."
+    },
+    {
+      "id": "370918197980",
+      "status": "dry_run",
+      "before": "Follow up with Jeffren Argame",
+      "after": "Follow up: Jeffren Argame"
+    },
+    {
+      "id": "370961718992",
+      "status": "dry_run",
+      "before": "Follow up \u2014 Rosalie / Fujian Panshi Mining (Copper Ore)",
+      "after": "Follow up: Rosalie / Fujian Panshi Mining (Copper Ore)"
+    },
+    {
+      "id": "371217997526",
+      "status": "dry_run",
+      "before": "Follow up with San Miguel Global Power",
+      "after": "Follow up: San Miguel Global Power"
+    },
+    {
+      "id": "371684376274",
+      "status": "dry_run",
+      "before": "Follow up with Procurement Minergy",
+      "after": "Follow up: Procurement Minergy"
+    },
+    {
+      "id": "371707497154",
+      "status": "dry_run",
+      "before": "follow up with san miguel global power",
+      "after": "Follow up: San Miguel Global Power"
+    },
+    {
+      "id": "371707984583",
+      "status": "dry_run",
+      "before": "Follow up with Nickel Industries",
+      "after": "Follow up: Nickel Industries"
+    },
+    {
+      "id": "371720944355",
+      "status": "dry_run",
+      "before": "Follow up with Anson Wong",
+      "after": "Follow up: Anson Wong"
+    },
+    {
+      "id": "371987346120",
+      "status": "dry_run",
+      "before": "Follow up with Jessie Sarias",
+      "after": "Follow up: Jessie Sarias"
+    },
+    {
+      "id": "371987394266",
+      "status": "dry_run",
+      "before": "Follow up with Cynthia Cabrera",
+      "after": "Follow up: Cynthia Cabrera"
+    },
+    {
+      "id": "371997918920",
+      "status": "dry_run",
+      "before": "Follow up with S. Tarega",
+      "after": "Follow up: S. Tarega"
+    },
+    {
+      "id": "371998103230",
+      "status": "dry_run",
+      "before": "Follow up with Concrete Solutions",
+      "after": "Follow up: Concrete Solutions"
+    },
+    {
+      "id": "372350993101",
+      "status": "dry_run",
+      "before": "Follow up with Andy Sebastian",
+      "after": "Follow up: Andy Sebastian"
+    },
+    {
+      "id": "372359011002",
+      "status": "dry_run",
+      "before": "Follow up with Cynthia Cabrera",
+      "after": "Follow up: Cynthia Cabrera"
+    },
+    {
+      "id": "372367727325",
+      "status": "dry_run",
+      "before": "Follow up with Procurement Minergy",
+      "after": "Follow up: Procurement Minergy"
+    },
+    {
+      "id": "372367782643",
+      "status": "dry_run",
+      "before": "follow up with san miguel global power",
+      "after": "Follow up: San Miguel Global Power"
+    },
+    {
+      "id": "372827252468",
+      "status": "noop_canonical",
+      "subject": "Discovery call \u2013 GNPK fuel procurement (coal)"
+    },
+    {
+      "id": "372963235519",
+      "status": "dry_run",
+      "before": "Follow up with Sarah Tarega",
+      "after": "Follow up: Sarah Tarega"
+    },
+    {
+      "id": "372989884141",
+      "status": "dry_run",
+      "before": "Follow up with Nickel Industries",
+      "after": "Follow up: Nickel Industries"
+    },
+    {
+      "id": "372990449364",
+      "status": "dry_run",
+      "before": "Follow up with Rolando Ong",
+      "after": "Follow up: Rolando Ong"
+    },
+    {
+      "id": "372991520464",
+      "status": "dry_run",
+      "before": "Follow up with Concrete Solutions",
+      "after": "Follow up: Concrete Solutions"
+    },
+    {
+      "id": "373275119291",
+      "status": "dry_run",
+      "before": "Follow up with Nickel Industries",
+      "after": "Follow up: Nickel Industries"
+    },
+    {
+      "id": "373607176893",
+      "status": "dry_run",
+      "before": "Follow up with Jovy Manrique",
+      "after": "Follow up: Jovy Manrique"
+    },
+    {
+      "id": "373642001119",
+      "status": "dry_run",
+      "before": "Follow up with Sarangani Energy Corporation",
+      "after": "Follow up: Sarangani Energy Corporation"
+    },
+    {
+      "id": "373643454162",
+      "status": "dry_run",
+      "before": "Follow up with Jose Mari Enriquez Gorospe",
+      "after": "Follow up: Jose Mari Enriquez Gorospe"
+    },
+    {
+      "id": "373644282575",
+      "status": "dry_run",
+      "before": "Follow up with Liza Sigua",
+      "after": "Follow up: Liza Sigua"
+    },
+    {
+      "id": "373644474082",
+      "status": "dry_run",
+      "before": "Follow up with Mark Tagle",
+      "after": "Follow up: Mark Tagle"
+    },
+    {
+      "id": "374063493850",
+      "status": "noop_canonical",
+      "subject": "CALLBACK RETRY: GNPower Dinginin / Ilijan / Masinloc \u2014 wrong number format"
+    },
+    {
+      "id": "374360291054",
+      "status": "dry_run",
+      "before": "Follow up with Donna Mezo",
+      "after": "Follow up: Donna Mezo"
+    },
+    {
+      "id": "374361318108",
+      "status": "dry_run",
+      "before": "Follow up with Goodfound Cement Corporation",
+      "after": "Follow up: Goodfound Cement Corporation"
+    },
+    {
+      "id": "374424100540",
+      "status": "noop_canonical",
+      "subject": "MONITOR \u2014 Holcim Accreditation Requirements List from Cynthia Cabrera"
+    },
+    {
+      "id": "374561171149",
+      "status": "noop_canonical",
+      "subject": "Send COA + Spec Sheet + Indicative Pricing \u2014 Cynthia Cabrera / Holcim Coal"
+    },
+    {
+      "id": "374731610866",
+      "status": "noop_canonical",
+      "subject": "FINALIZE + SEND Fraser intro email to QPL/PEPOI (v2 draft ready, for TOMORROW)"
+    },
+    {
+      "id": "374748500673",
+      "status": "dry_run",
+      "before": "Follow up with Calaca Power Complex",
+      "after": "Follow up: Calaca Power Complex"
+    },
+    {
+      "id": "374776166097",
+      "status": "dry_run",
+      "before": "Research EGCO Group (Thailand) Bangkok procurement contact \u2014 coal supply",
+      "after": "Research: EGCO Group (Thailand) Bangkok procurement contact | coal supply"
+    },
+    {
+      "id": "374793344744",
+      "status": "noop_canonical",
+      "subject": "Phone-verify direct line \u2014 Frank Thiel (QPL MD + SBPL GM)"
+    },
+    {
+      "id": "374813650631",
+      "status": "noop_canonical",
+      "subject": "Phone-verify direct line + email \u2014 Walter L. Laptew (PEPOI Facility Mgr)"
+    },
+    {
+      "id": "374963365620",
+      "status": "dry_run",
+      "before": "Follow up with Republic Cement",
+      "after": "Follow up: Republic Cement"
+    },
+    {
+      "id": "375099955917",
+      "status": "dry_run",
+      "before": "Follow up with Leah Mabulay",
+      "after": "Follow up: Leah Mabulay"
+    },
+    {
+      "id": "375100091085",
+      "status": "dry_run",
+      "before": "Follow up with Procurement Team",
+      "after": "Follow up: Procurement Team"
+    },
+    {
+      "id": "375100904178",
+      "status": "dry_run",
+      "before": "Follow up with Sarah Tarega",
+      "after": "Follow up: Sarah Tarega"
+    },
+    {
+      "id": "375100949184",
+      "status": "dry_run",
+      "before": "follow up with san miguel global power",
+      "after": "Follow up: San Miguel Global Power"
+    },
+    {
+      "id": "375599966969",
+      "status": "dry_run",
+      "before": "follow up with san miguel global power",
+      "after": "Follow up: San Miguel Global Power"
+    },
+    {
+      "id": "375600331458",
+      "status": "dry_run",
+      "before": "Follow up with Tina Chen",
+      "after": "Follow up: Tina Chen"
+    },
+    {
+      "id": "375805371075",
+      "status": "dry_run",
+      "before": "Follow up with Andy Sebastian",
+      "after": "Follow up: Andy Sebastian"
+    },
+    {
+      "id": "375805371101",
+      "status": "dry_run",
+      "before": "Follow up with Meraflor Tagactac",
+      "after": "Follow up: Meraflor Tagactac"
+    },
+    {
+      "id": "375805921000",
+      "status": "dry_run",
+      "before": "Follow up with Cynthia Cabrera",
+      "after": "Follow up: Cynthia Cabrera"
+    },
+    {
+      "id": "375806537408",
+      "status": "dry_run",
+      "before": "Follow up with Kenneth S. Sambalod",
+      "after": "Follow up: Kenneth S. Sambalod"
+    },
+    {
+      "id": "375806805694",
+      "status": "dry_run",
+      "before": "Follow up with Minergy Power Corporation \u2013 Balingasag Power Station",
+      "after": "Follow up: Minergy Power Corporation \u2013 Balingasag Power Station"
+    },
+    {
+      "id": "375806869186",
+      "status": "dry_run",
+      "before": "Follow up with Alsons Power Group",
+      "after": "Follow up: Alsons Power Group"
+    },
+    {
+      "id": "376012955327",
+      "status": "dry_run",
+      "before": "Follow up with Sarah Tarega",
+      "after": "Follow up: Sarah Tarega"
+    },
+    {
+      "id": "376012955382",
+      "status": "dry_run",
+      "before": "Follow up with Concrete Solutions",
+      "after": "Follow up: Concrete Solutions"
+    },
+    {
+      "id": "376358260435",
+      "status": "dry_run",
+      "before": "Follow up with Sarah Tarega",
+      "after": "Follow up: Sarah Tarega"
+    }
+  ]
+}
