@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-06-18T05:23:47.584574+00:00",
+  "mode": "dry_run",
+  "rollback_ops": [
+    {
+      "op": "rename",
+      "revert": "PATCH hs_task_subject back to 'before' value",
+      "items": []
+    },
+    {
+      "op": "re_due",
+      "revert": "PATCH hs_timestamp back to 'before' value",
+      "items": []
+    },
+    {
+      "op": "re_associate",
+      "revert": "PUT to v4 default association. To remove, use: DELETE /crm/v4/objects/tasks/{tid}/associations/default/{type}/{id}",
+      "items": [
+        {
+          "op": "re_associate",
+          "id": "369842216663",
+          "subject": "Fraser Outreach \u2014 Team Energy Corporation",
+          "current_associations": {
+            "contacts": [],
+            "companies": [],
+            "deals": []
+          },
+          "search_results": {
+            "company": [
+              {
+                "id": "319034577647",
+                "name": "TeaM Energy Corporation"
+              }
+            ],
+            "deals_via_company": []
+          },
+          "links_applied": [
+            {
+              "type": "companies",
+              "id": "319034577647",
+              "status": "dry_run"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "op": "re_associate",
+          "id": "368565424856",
+          "subject": "Follow up \u2014 L.M. Pantilo, Carmen Copper | lmpantilo@carmencopper.com",
+          "current_associations": {
+            "contacts": [],
+            "companies": [],
+            "deals": []
+          },
+          "search_results": {
+            "company": [],
+            "contact": [
+              {
+                "id": "482909437631",
+                "name": "L.M. Pantilo",
+                "email": "lmpantilo@carmencopper.com"
+              }
+            ],
+            "company_via_contact": {
+              "id": "324008042227",
+              "name": "Atlas Mining"
+            },
+            "deals_via_company": []
+          },
+          "links_applied": [
+            {
+              "type": "companies",
+              "id": "324008042227",
+              "status": "dry_run"
+            },
+            {
+              "type": "contacts",
+              "id": "482909437631",
+              "status": "dry_run"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "op": "re_associate",
+          "id": "367837349576",
+          "subject": "FOLLOW UP Allan Saquilayan \u2014 Republic Cement (profile sent)",
+          "current_associations": {
+            "contacts": [],
+            "companies": [],
+            "deals": []
+          },
+          "search_results": {
+            "company": [
+              {
+                "id": "319761962702",
+                "name": "Republic Cement Danao Plant"
+              },
+              {
+                "id": "320106199766",
+                "name": "Republic Cement"
+              }
+            ],
+            "contact": [
+              {
+                "id": "471331594971",
+                "name": "Allan Saquilayan",
+                "email": "allan.saquilayan@republiccement.com"
+              }
+            ],
+            "deals_via_company": []
+          },
+          "links_applied": [
+            {
+              "type": "companies",
+              "id": "319761962702",
+              "status": "dry_run"
+            },
+            {
+              "type": "contacts",
+              "id": "471331594971",
+              "status": "dry_run"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "op": "re_associate",
+          "id": "367837175508",
+          "subject": "MTG CONFIRMED: Sebastian/MGEN \u2014 May 4, 10:30 AM Virtual",
+          "current_associations": {
+            "contacts": [],
+            "companies": [],
+            "deals": []
+          },
+          "search_results": {
+            "company": [
+              {
+                "id": "321653547724",
+                "name": "Meralco PowerGen"
+              }
+            ],
+            "contact": [
+              {
+                "id": "484523980528",
+                "name": "Andy Sebastian",
+                "email": "aasebastian@mgen.com.ph"
+              }
+            ],
+            "deals_via_company": []
+          },
+          "links_applied": [
+            {
+              "type": "companies",
+              "id": "321653547724",
+              "status": "dry_run"
+            },
+            {
+              "type": "contacts",
+              "id": "484523980528",
+              "status": "dry_run"
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "op": "re_associate",
+          "id": "366050338535",
+          "subject": "[Apo Cement / Taiheiyo] Follow up on field visit results",
+          "current_associations": {
+            "contacts": [],
+            "companies": [],
+            "deals": []
+          },
+          "search_results": {
+            "company": [
+              {
+                "id": "321897429737",
+                "name": "Apo Cement Corporation"
+              }
+            ],
+            "deals_via_company": []
+          },
+          "links_applied": [
+            {
+              "type": "companies",
+              "id": "321897429737",
+              "status": "dry_run"
+            }
+          ],
+          "status": "ok"
+        }
+      ]
+    }
+  ]
+}
