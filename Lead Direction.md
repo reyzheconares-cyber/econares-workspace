@@ -3,9 +3,6 @@
 Your current prospecting base is still usable, but it needs a cleaner split between accounts that are worth another touch and accounts that should be replaced with fresh targets. Right now, the strongest next-source pools are power and cement companies with procurement, purchasing, supply chain, and fuel-related roles.
 
 
-
-
-
 ### What this means
 
 The fastest way to find better leads is not to widen outreach randomly. It is to tighten your target list around companies already matching power, utilities, oil and energy, building materials, glass, ceramics, and concrete profiles, then focus contact discovery on procurement and purchasing titles first, with supply chain and alternative fuels roles as secondary targets.
