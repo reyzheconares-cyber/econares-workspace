@@ -63,9 +63,10 @@ def load_env():
 
 def send_telegram(message, env):
     bot = env.get("TELEGRAM_BOT_TOKEN", "")
-    chat = env.get("TELEGRAM_CHAT_ID", "")
+    # ECONARES uses TELEGRAM_HOME_CHANNEL as the chat id key (per .hermes/.env)
+    chat = env.get("TELEGRAM_HOME_CHANNEL", "") or env.get("TELEGRAM_CHAT_ID", "")
     if not bot or not chat:
-        print("  ! Telegram not configured (no TELEGRAM_BOT_TOKEN/CHAT_ID in .env).")
+        print("  ! Telegram not configured (no TELEGRAM_BOT_TOKEN or TELEGRAM_HOME_CHANNEL in .env).")
         return False
     url = "https://api.telegram.org/bot" + bot + "/sendMessage"
     payload = json.dumps({

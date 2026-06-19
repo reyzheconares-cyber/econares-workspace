@@ -1,0 +1,1113 @@
+{
+  "generated_at": "2026-06-18T10:15:51.490090+00:00",
+  "portal_id": 245683432,
+  "totals": {
+    "total_tasks": 133,
+    "open": 40,
+    "completed": 93,
+    "gmail_sync": 1,
+    "manual": 132,
+    "orphan_no_associations": 133,
+    "status_breakdown": {
+      "COMPLETED": 93,
+      "NOT_STARTED": 38,
+      "IN_PROGRESS": 2
+    }
+  },
+  "duplicates": {
+    "tier1_exact_subject_day_status": {
+      "group_count": 2,
+      "total_dupe_task_ids": 4,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel global power",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "tier2_normalized_day_status": {
+      "group_count": 2,
+      "total_dupe_task_ids": 4,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel global power",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "tier3_prefix_day_status": {
+      "group_count": 3,
+      "total_dupe_task_ids": 6,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "outreach  ningbo lygend wisdom",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368543211256",
+            "368546997997"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel glob",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "gmail_thread_dupes": {
+      "group_count": 0,
+      "total_dupe_task_ids": 0,
+      "groups": []
+    }
+  },
+  "noisy_subjects_top20": [
+    {
+      "subject": "follow up with san miguel global power",
+      "count": 6
+    },
+    {
+      "subject": "follow up with nickel industries",
+      "count": 4
+    },
+    {
+      "subject": "follow up with concrete solutions",
+      "count": 4
+    },
+    {
+      "subject": "follow up with sarah tarega",
+      "count": 4
+    },
+    {
+      "subject": "follow up with andy sebastian",
+      "count": 3
+    },
+    {
+      "subject": "follow up with cynthia cabrera",
+      "count": 3
+    },
+    {
+      "subject": "follow up with mary grace caballes",
+      "count": 2
+    },
+    {
+      "subject": "follow up with liza sigua",
+      "count": 2
+    },
+    {
+      "subject": "follow up with republic cement",
+      "count": 2
+    },
+    {
+      "subject": "follow up with rose calba",
+      "count": 2
+    },
+    {
+      "subject": "follow up with tina chen",
+      "count": 2
+    },
+    {
+      "subject": "follow up with anson wong",
+      "count": 2
+    },
+    {
+      "subject": "follow up with procurement minergy",
+      "count": 2
+    }
+  ],
+  "orphan_tasks_no_associations": [
+    {
+      "id": "376358260435",
+      "subject": "Follow up with Sarah Tarega",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-17T08:16:47.897Z",
+      "body_excerpt": "Regarding call logged on Wednesday, June 17, 2026 4:16 PM"
+    },
+    {
+      "id": "376012955382",
+      "subject": "Follow up with Concrete Solutions",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-16T07:32:46.700Z",
+      "body_excerpt": "Regarding call logged on Tuesday, June 16, 2026 3:32 PM"
+    },
+    {
+      "id": "376012955327",
+      "subject": "Follow up with Sarah Tarega",
+      "status": "COMPLETED",
+      "createdate": "2026-06-16T07:31:41.494Z",
+      "body_excerpt": "Regarding call logged on Tuesday, June 16, 2026 3:31 PM"
+    },
+    {
+      "id": "375805371101",
+      "subject": "Follow up with Meraflor Tagactac",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T08:55:58.447Z",
+      "body_excerpt": "Regarding call logged on Wednesday, June 10, 2026 4:46 PM"
+    },
+    {
+      "id": "375805371075",
+      "subject": "Follow up with Andy Sebastian",
+      "status": "COMPLETED",
+      "createdate": "2026-06-15T08:55:21.360Z",
+      "body_excerpt": "<div dir=\"auto\" data-top-level=\"true\"><p style=\"margin:0;\">ECE told me to wait for his physical meeting with Jun in their corporate office instead.</p></div>"
+    },
+    {
+      "id": "375806869186",
+      "subject": "Follow up with Alsons Power Group",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T08:54:43.817Z",
+      "body_excerpt": "Regarding email: Following up on your steam coal requirement, sent on Monday, June 15, 2026 4:54 PM"
+    },
+    {
+      "id": "375600331458",
+      "subject": "Follow up with Tina Chen",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T08:29:45.554Z",
+      "body_excerpt": "Regarding note logged on Monday, June 15, 2026 4:29 PM"
+    },
+    {
+      "id": "375806805694",
+      "subject": "Follow up with Minergy Power Corporation \u2013 Balingasag Power Station",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T08:21:03.758Z",
+      "body_excerpt": "Regarding email: Steam Coal Supply Inquiry \u2014 ECONARES / ECE Construction and Resources OPC, sent on Monday, June 15, 2026 4:21 PM"
+    },
+    {
+      "id": "375806537408",
+      "subject": "Follow up with Kenneth S. Sambalod",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T06:55:05.005Z",
+      "body_excerpt": "Taiheiyo conducts bid per shipment. Need to: (1) Confirm tender schedule with Arnold Gascon/Kenneth Sambalod, (2) Submit required documents for supplier registr"
+    },
+    {
+      "id": "375599966969",
+      "subject": "follow up with san miguel global power",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T06:54:21.900Z",
+      "body_excerpt": "Regarding call logged on Monday, June 15, 2026 2:54 PM"
+    },
+    {
+      "id": "375805921000",
+      "subject": "Follow up with Cynthia Cabrera",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-15T01:40:08.354Z",
+      "body_excerpt": "Cynthia Cabrera (Holcim Philippines) confirmed requirement: 5,800 GAR steam coal, ~15,000 MT/month. She requested a Certificate of Analysis (COA). Prepare and s"
+    },
+    {
+      "id": "375100949184",
+      "subject": "follow up with san miguel global power",
+      "status": "COMPLETED",
+      "createdate": "2026-06-11T03:50:31.699Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 11, 2026 11:50 AM"
+    },
+    {
+      "id": "375100091085",
+      "subject": "Follow up with Procurement Team",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-11T03:48:56.662Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 11, 2026 11:48 AM"
+    },
+    {
+      "id": "375099955917",
+      "subject": "Follow up with Leah Mabulay",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-11T03:45:14.182Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 11, 2026 11:45 AM"
+    },
+    {
+      "id": "375100904178",
+      "subject": "Follow up with Sarah Tarega",
+      "status": "COMPLETED",
+      "createdate": "2026-06-11T03:41:15.331Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 11, 2026 11:41 AM"
+    },
+    {
+      "id": "374963365620",
+      "subject": "Follow up with Republic Cement",
+      "status": "COMPLETED",
+      "createdate": "2026-06-10T08:45:53.476Z",
+      "body_excerpt": "Regarding call logged on Wednesday, June 10, 2026 4:46 PM"
+    },
+    {
+      "id": "374748500673",
+      "subject": "Follow up with Calaca Power Complex",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-10T04:03:33.706Z",
+      "body_excerpt": "Regarding call logged on Wednesday, June 10, 2026 12:03 PM"
+    },
+    {
+      "id": "374776166097",
+      "subject": "Research EGCO Group (Thailand) Bangkok procurement contact \u2014 coal supply",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-09T09:03:33.633Z",
+      "body_excerpt": "Contact ID: 499312223964 (Walter Laptew) / 499284710077 (Frank Thiel)\nCompany ID: 326810588898 / 326532899525\nParent: EGCO Group (Thailand) \u2014 Electricity Genera"
+    },
+    {
+      "id": "374731610866",
+      "subject": "FINALIZE + SEND Fraser intro email to QPL/PEPOI (v2 draft ready, for TOMORROW)",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-09T09:03:30.666Z",
+      "body_excerpt": "=== FRASER INTRO EMAIL - QPL/PEPOI - v2 DRAFT READY, FINALIZE TOMORROW ===\n\nSTATUS: Draft complete (Fraser Method, Segment A - Coal-Fired Power Plants). Awaitin"
+    },
+    {
+      "id": "374793344744",
+      "subject": "Phone-verify direct line \u2014 Frank Thiel (QPL MD + SBPL GM)",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-09T09:03:27.560Z",
+      "body_excerpt": "Contact ID: 499284710077 (Frank Thiel, Managing Director)\nCompany ID: 326532899525 (Quezon Power (Philippines) Limited Co.)\nPEPOI Company ID: 326810588898 (Pear"
+    },
+    {
+      "id": "374813650631",
+      "subject": "Phone-verify direct line + email \u2014 Walter L. Laptew (PEPOI Facility Mgr)",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-09T09:03:21.760Z",
+      "body_excerpt": "Contact ID: 499312223964 (Walter L. Laptew, Facility Manager)\nCompany ID: 326810588898 (Pearl Energy Philippines Operating, Inc. / PEPOI)\nQPL Company ID: 326532"
+    },
+    {
+      "id": "374360291054",
+      "subject": "Follow up with Donna Mezo",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-08T08:14:27.250Z",
+      "body_excerpt": "Regarding call logged on Monday, June 8, 2026 4:14 PM"
+    },
+    {
+      "id": "374361318108",
+      "subject": "Follow up with Goodfound Cement Corporation",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-08T08:09:23.107Z",
+      "body_excerpt": "Regarding call logged on Monday, June 8, 2026 4:09 PM"
+    },
+    {
+      "id": "374424100540",
+      "subject": "MONITOR \u2014 Holcim Accreditation Requirements List from Cynthia Cabrera",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-08T07:41:54.445Z",
+      "body_excerpt": "Ms. Cabrera (Holcim Philippines) committed to sending the supplier accreditation requirements list to ECONARES. Monitor email inbox (rzh24.econares@gmail.com) f"
+    },
+    {
+      "id": "374561171149",
+      "subject": "Send COA + Spec Sheet + Indicative Pricing \u2014 Cynthia Cabrera / Holcim Coal",
+      "status": "COMPLETED",
+      "createdate": "2026-06-08T06:20:04.600Z",
+      "body_excerpt": "Cynthia Cabrera (Holcim Philippines) confirmed requirement: 5,800 GAR steam coal, ~15,000 MT/month. She requested a Certificate of Analysis (COA). Prepare and s"
+    },
+    {
+      "id": "374063493850",
+      "subject": "CALLBACK RETRY: GNPower Dinginin / Ilijan / Masinloc \u2014 wrong number format",
+      "status": "COMPLETED",
+      "createdate": "2026-06-05T06:19:29.453Z",
+      "body_excerpt": "CALL-BACK RETRY \u2014 3 plants where RZH's Jun 5, 2026 call attempt hit machine rejection.\n\nCompanies:\n  \u2022 GNPower Dinginin Ltd. Co. (ID 320650095342) \u2014 dialed (32)"
+    },
+    {
+      "id": "373644474082",
+      "subject": "Follow up with Mark Tagle",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-04T08:47:06.806Z",
+      "body_excerpt": "Regarding email: Steam Coal Supply Inquiry \u2014 ECONARES (Philippines-Based Supplier), sent on Thursday, June 4, 2026 4:47 PM"
+    },
+    {
+      "id": "373643454162",
+      "subject": "Follow up with Jose Mari Enriquez Gorospe",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-04T08:13:53.861Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 4, 2026 4:13 PM"
+    },
+    {
+      "id": "373644282575",
+      "subject": "Follow up with Liza Sigua",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-04T07:27:28.623Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 4, 2026 3:27 PM"
+    },
+    {
+      "id": "373642001119",
+      "subject": "Follow up with Sarangani Energy Corporation",
+      "status": "COMPLETED",
+      "createdate": "2026-06-04T07:00:38.006Z",
+      "body_excerpt": "Regarding call logged on Thursday, June 4, 2026 3:00 PM"
+    },
+    {
+      "id": "373607176893",
+      "subject": "Follow up with Jovy Manrique",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-04T03:03:44.413Z",
+      "body_excerpt": "Regarding note logged on Thursday, June 4, 2026 11:03 AM"
+    },
+    {
+      "id": "373275119291",
+      "subject": "Follow up with Nickel Industries",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-03T03:59:46.422Z",
+      "body_excerpt": "Regarding email: Philippines Nickle Ore Supply, sent on Wednesday, June 3, 2026 12:00 PM"
+    },
+    {
+      "id": "372991520464",
+      "subject": "Follow up with Concrete Solutions",
+      "status": "COMPLETED",
+      "createdate": "2026-06-02T09:01:55.139Z",
+      "body_excerpt": "Regarding call logged on Tuesday, June 2, 2026 5:02 PM"
+    },
+    {
+      "id": "372963235519",
+      "subject": "Follow up with Sarah Tarega",
+      "status": "COMPLETED",
+      "createdate": "2026-06-02T08:34:35.023Z",
+      "body_excerpt": "Regarding email: Following up on our coal and fuel supply inquiry, sent on Tuesday, June 2, 2026 4:34 PM"
+    },
+    {
+      "id": "372990449364",
+      "subject": "Follow up with Rolando Ong",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-02T06:03:17.502Z",
+      "body_excerpt": "Regarding SMS logged on Tuesday, June 2, 2026 2:03 PM"
+    },
+    {
+      "id": "372989884141",
+      "subject": "Follow up with Nickel Industries",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-02T05:16:22.879Z",
+      "body_excerpt": "Regarding email logged on Tuesday, June 2, 2026 1:16 PM"
+    },
+    {
+      "id": "372827252468",
+      "subject": "Discovery call \u2013 GNPK fuel procurement (coal)",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-01T03:23:11.746Z",
+      "body_excerpt": "<div style=\"\" dir=\"auto\" data-top-level=\"true\"><p style=\"margin:0;\">Objective: identify current coal suppliers, contract tenor, volume, and spec; position ECONA"
+    },
+    {
+      "id": "372367782643",
+      "subject": "follow up with san miguel global power",
+      "status": "COMPLETED",
+      "createdate": "2026-05-29T09:04:38.250Z",
+      "body_excerpt": "Regarding call logged on Friday, May 29, 2026 5:04 PM"
+    },
+    {
+      "id": "372367727325",
+      "subject": "Follow up with Procurement Minergy",
+      "status": "COMPLETED",
+      "createdate": "2026-05-29T08:27:56.819Z",
+      "body_excerpt": "Regarding call logged on Friday, May 29, 2026 4:28 PM"
+    },
+    {
+      "id": "372359011002",
+      "subject": "Follow up with Cynthia Cabrera",
+      "status": "COMPLETED",
+      "createdate": "2026-05-29T01:51:55.605Z",
+      "body_excerpt": "Regarding call logged on Friday, May 29, 2026 9:52 AM"
+    },
+    {
+      "id": "372350993101",
+      "subject": "Follow up with Andy Sebastian",
+      "status": "COMPLETED",
+      "createdate": "2026-05-29T01:49:25.803Z",
+      "body_excerpt": "Regarding SMS logged on Friday, May 29, 2026 9:49 AM"
+    },
+    {
+      "id": "371998103230",
+      "subject": "Follow up with Concrete Solutions",
+      "status": "COMPLETED",
+      "createdate": "2026-05-28T08:38:16.175Z",
+      "body_excerpt": "Regarding call logged on Thursday, May 28, 2026 4:38 PM"
+    },
+    {
+      "id": "371997918920",
+      "subject": "Follow up with S. Tarega",
+      "status": "COMPLETED",
+      "createdate": "2026-05-28T06:59:35.417Z",
+      "body_excerpt": "Regarding email: Coal &amp; Fuel Supply Inquiry \u2014 ECONARES (Cebu-based Supplier), sent on Thursday, May 28, 2026 2:59 PM"
+    },
+    {
+      "id": "371987346120",
+      "subject": "Follow up with Jessie Sarias",
+      "status": "NOT_STARTED",
+      "createdate": "2026-05-28T01:35:37.785Z",
+      "body_excerpt": "Regarding email: Follow-up on coal / PKS / woodchip requirements, sent on Thursday, May 28, 2026 9:35 AM"
+    },
+    {
+      "id": "371987394266",
+      "subject": "Follow up with Cynthia Cabrera",
+      "status": "COMPLETED",
+      "createdate": "2026-05-28T01:29:07.188Z",
+      "body_excerpt": "Regarding email: Following up on our earlier discussion, sent on Thursday, May 28, 2026 9:29 AM"
+    },
+    {
+      "id": "371720944355",
+      "subject": "Follow up with Anson Wong",
+      "status": "NOT_STARTED",
+      "createdate": "2026-05-26T08:53:47.768Z",
+      "body_excerpt": "Regarding email: Direct Nickel Ore Supply from ECONARES, sent on Tuesday, May 26, 2026 4:53 PM"
+    },
+    {
+      "id": "371707984583",
+      "subject": "Follow up with Nickel Industries",
+      "status": "COMPLETED",
+      "createdate": "2026-05-26T08:32:05.515Z",
+      "body_excerpt": "Regarding email: Nickel ore \u2013 Philippine off\u2011take discussion, sent on Tuesday, May 26, 2026 4:32 PM"
+    },
+    {
+      "id": "371707497154",
+      "subject": "follow up with san miguel global power",
+      "status": "COMPLETED",
+      "createdate": "2026-05-26T06:50:33.279Z",
+      "body_excerpt": "Regarding call logged on Tuesday, May 26, 2026 2:50 PM"
+    },
+    {
+      "id": "371684376274",
+      "subject": "Follow up with Procurement Minergy",
+      "status": "COMPLETED",
+      "createdate": "2026-05-26T06:31:50.359Z",
+      "body_excerpt": "Regarding call logged on Tuesday, May 26, 2026 2:31 PM"
+    },
+    {
+      "id": "371217997526",
+      "subject": "Follow up with San Miguel Global Power",
+      "status": "COMPLETED",
+      "createdate": "2026-05-22T23:53:04.219Z",
+      "body_excerpt": ""
+    },
+    {
+      "id": "370918197980",
+      "subject": "Follow up with Jeffren Argame",
+      "status": "COMPLETED",
+      "createdate": "2026-05-22T06:59:03.480Z",
+      "body_excerpt": "Regarding email: Thank you for your time, Jeffren, sent on Friday, May 22, 2026 2:59 PM"
+    },
+    {
+      "id": "370961718992",
+      "subject": "Follow up \u2014 Rosalie / Fujian Panshi Mining (Copper Ore)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-22T02:47:41.804Z",
+      "body_excerpt": "PENDING: company registration cert, buyer full name and title, previous import reference, LC/bank instrument confirmation, assay penalty terms, inspection body,"
+    },
+    {
+      "id": "370780305124",
+      "subject": "Follow up with Fujian Yunding Mining Co., Ltd.",
+      "status": "COMPLETED",
+      "createdate": "2026-05-22T01:46:06.393Z",
+      "body_excerpt": "Regarding email: Re: LOI-Copper ores, sent on Friday, May 22, 2026 9:46 AM"
+    },
+    {
+      "id": "370688387816",
+      "subject": "Follow up with SPC Power",
+      "status": "COMPLETED",
+      "createdate": "2026-05-21T08:41:24.085Z",
+      "body_excerpt": "Regarding call logged on Thursday, May 21, 2026 4:41 PM"
+    },
+    {
+      "id": "370688225008",
+      "subject": "Follow up with San Miguel Global Power",
+      "status": "COMPLETED",
+      "createdate": "2026-05-21T06:55:47.938Z",
+      "body_excerpt": "Regarding call logged on Thursday, May 21, 2026 2:55 PM"
+    },
+    {
+      "id": "370589007591",
+      "subject": "Follow up with Team Energy",
+      "status": "COMPLETED",
+      "createdate": "2026-05-21T01:15:35.618Z",
+      "body_excerpt": "Regarding email: Thermal Coal &amp; Biomass Supply Inquiry \u2014 ECONARES [Cebu, Philippines], sent on Thursday, May 21, 2026 9:15 AM"
+    },
+    {
+      "id": "370317048567",
+      "subject": "Follow up with Tina Chen",
+      "status": "COMPLETED",
+      "createdate": "2026-05-20T03:24:34.750Z",
+      "body_excerpt": "Regarding email: Re: LOI-Copper ores, sent on Wednesday, May 20, 2026 11:24 AM"
+    },
+    {
+      "id": "370318472908",
+      "subject": "Follow up with Anson Wong",
+      "status": "COMPLETED",
+      "createdate": "2026-05-20T03:17:04.783Z",
+      "body_excerpt": "Regarding email: Follow-Up and Updated Email Address, sent on Wednesday, May 20, 2026 11:17 AM"
+    },
+    {
+      "id": "370463310540",
+      "subject": "Follow up with Concrete Solutions",
+      "status": "COMPLETED",
+      "createdate": "2026-05-20T01:58:26.562Z",
+      "body_excerpt": "Regarding call logged on Wednesday, May 20, 2026 9:58 AM"
+    },
+    {
+      "id": "370198712041",
+      "subject": "Follow up with Andy Sebastian",
+      "status": "COMPLETED",
+      "createdate": "2026-05-19T08:14:04.699Z",
+      "body_excerpt": "SMS the following:<br>Hi sir Jun, RZH/Econares here. Following up from our May 5 discussion on coal supply for CEDC/TPC Toledo \u2014 can your Toledo facilities acco"
+    },
+    {
+      "id": "370180074190",
+      "subject": "Follow up on Nickel Ore \u2014 Bulk Ore Limited",
+      "status": "NOT_STARTED",
+      "createdate": "2026-05-19T02:57:01.627Z",
+      "body_excerpt": "Regarding email: Re: Updated Contact Details \u2014 ECONARES, sent on Tuesday, May 19, 2026 10:57 AM"
+    },
+    {
+      "id": "369842134732",
+      "subject": "Fraser Outreach \u2014 Jinchuan Group",
+      "status": "COMPLETED",
+      "createdate": "2026-05-16T17:19:12.874Z",
+      "body_excerpt": "OUTREACH QUEUE \u2014 2026-05-18\n\nContact: Jinchuan Trading \nCompany: Jinchuan Group\nCommodity: Nickel Asia\n\nAction: Send Fraser-positioning email (Touch 1)\n- Inquir"
+    },
+    {
+      "id": "369831974639",
+      "subject": "Fraser Outreach \u2014 Huayou Cobalt",
+      "status": "COMPLETED",
+      "createdate": "2026-05-16T17:19:11.847Z",
+      "body_excerpt": "OUTREACH QUEUE \u2014 2026-05-18\n\nContact: Qi Sun \nCompany: Huayou Cobalt\nCommodity: Nickel Asia\n\nAction: Send Fraser-positioning email (Touch 1)\n- Inquiry-first, 3 "
+    },
+    {
+      "id": "369842216663",
+      "subject": "Fraser Outreach \u2014 Team Energy Corporation",
+      "status": "COMPLETED",
+      "createdate": "2026-05-16T17:19:08.637Z",
+      "body_excerpt": "OUTREACH QUEUE \u2014 2026-05-18\n\nContact: Leah Mabulay \nCompany: Team Energy Corporation\nCommodity: Coal/Power\n\nAction: Send Fraser-positioning email (Touch 1)\n- In"
+    },
+    {
+      "id": "369676916440",
+      "subject": "Message Andy MGEN: 10K MT Vessel Accommodation at Cebu Port",
+      "status": "COMPLETED",
+      "createdate": "2026-05-15T09:55:11.420Z",
+      "body_excerpt": ""
+    },
+    {
+      "id": "369530608328",
+      "subject": "Follow up Tina Chen \u2014 Fujian Yunding Mining | Copper/Nickel ore pricing",
+      "status": "COMPLETED",
+      "createdate": "2026-05-14T10:47:45.779Z",
+      "body_excerpt": ""
+    },
+    {
+      "id": "369482007262",
+      "subject": "CLOSED \u2014 purchasing@pcpc.ph + corpcomms@pcpc.ph both BOUNCED May 14. Find procurement contact via phone/LinkedIn/website.",
+      "status": "COMPLETED",
+      "createdate": "2026-05-14T07:54:59.946Z",
+      "body_excerpt": ""
+    },
+    {
+      "id": "369295942380",
+      "subject": "Follow up Cynthia Cabrera \u2014 Holcim Philippines | 7400-7500 GAR Premium Coal",
+      "status": "COMPLETED",
+      "createdate": "2026-05-13T03:51:39.248Z",
+      "body_excerpt": "Email sent: Follow-Up \u2014 Coal Supply Partnership | ECONARES \u00d7 Holcim Philippines (May 13, 2026). Attached company profile. Awaiting response. Discovery questions"
+    },
+    {
+      "id": "369077319409",
+      "subject": "Follow up with Rose Calba",
+      "status": "COMPLETED",
+      "createdate": "2026-05-12T05:33:47.513Z",
+      "body_excerpt": "Regarding email: RE: PCPC Coal Procurement &amp; Biomass Blending Inquiry, sent on Tuesday, May 12, 2026 1:34 PM"
+    },
+    {
+      "id": "368565424856",
+      "subject": "Follow up \u2014 L.M. Pantilo, Carmen Copper | lmpantilo@carmencopper.com",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T08:11:16.183Z",
+      "body_excerpt": "\ud83d\udce7 OUTREACH SENT \u2014 2026-05-08\nTo: lmpantilo@carmencopper.com\nBounce resolved: RZH forwarded supplier inquiry directly.\n\nNext actions:\n1. Await response from L.M."
+    },
+    {
+      "id": "368495619797",
+      "subject": "Follow up with Mary Grace Caballes",
+      "status": "NOT_STARTED",
+      "createdate": "2026-05-08T07:53:15.203Z",
+      "body_excerpt": "Regarding email: Fwd: Coal &amp; Diesel Supply Inquiry \u2014 ECONARES [Talisay City], sent on Friday, May 8, 2026 3:53 PM"
+    },
+    {
+      "id": "368489882301",
+      "subject": "Follow up with Nickel Industries",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T05:21:50.992Z",
+      "body_excerpt": "Regarding email: info@nickelindustries.com, sent on Friday, May 8, 2026 1:21 PM"
+    },
+    {
+      "id": "368489071311",
+      "subject": "Follow up with Rose Calba",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:49:39.003Z",
+      "body_excerpt": "Regarding email: PCPC Coal Procurement &amp; Biomass Blending Inquiry, sent on Friday, May 8, 2026 10:49 AM"
+    },
+    {
+      "id": "368607412976",
+      "subject": "Outreach \u2014 Nickel Industries Ltd. | Day 1 Email (DRAFT)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:38:04.414Z",
+      "body_excerpt": "\u2705 SENT \u2014 2026-05-07\nTo: info@nickelindustries.com\n\nEMAIL SENT \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu) | Fraser positioning | 3 alignment questions | 1"
+    },
+    {
+      "id": "368550511313",
+      "subject": "Outreach \u2014 Delong Nickel | sales@dlnis.com | SOFT PITCH (parent in restructuring)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:37:58.851Z",
+      "body_excerpt": "\u2705 SENT \u2014 2026-05-08\nTo: sales@dlnis.com\n\nEMAIL SENT \u2014 soft pitch revision | acknowledged restructuring context | no volume push | positioned as supportive suppl"
+    },
+    {
+      "id": "368597648095",
+      "subject": "Outreach \u2014 Tsingshan Holding Group | Day 1 Email (DRAFT)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:37:53.315Z",
+      "body_excerpt": "\u2705 SENT \u2014 2026-05-07\nTo: procurement@tsingshan.com.cn\n\nEMAIL SENT \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu) | Fraser positioning | 3 alignment questions "
+    },
+    {
+      "id": "368605583077",
+      "subject": "Outreach \u2014 Jinchuan Group | Day 1 Email (DRAFT)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:37:47.410Z",
+      "body_excerpt": "\u2705 SENT \u2014 2026-05-07\nTo: trading@jinchuan-intl.com\n\nEMAIL SENT \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu) | Fraser positioning | 3 alignment questions | 1"
+    },
+    {
+      "id": "368607412946",
+      "subject": "Outreach \u2014 Zhejiang Huayou Cobalt | Day 1 Email (DRAFT)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:37:41.417Z",
+      "body_excerpt": "\u2705 SENT \u2014 2026-05-07\nTo: xct@huayou.com\n\nEMAIL SENT \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu) | Fraser positioning | 3 alignment questions | 10-15 min ca"
+    },
+    {
+      "id": "368543211256",
+      "subject": "Outreach \u2014 Ningbo Lygend Wisdom | Day 1 Email (DRAFT)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:37:35.930Z",
+      "body_excerpt": "\u2705 SENT \u2014 2026-05-07\nTo: procurement@lygend.com\n\nEMAIL SENT \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu) | Fraser positioning | 3 alignment questions | 10-1"
+    },
+    {
+      "id": "368605582019",
+      "subject": "Outreach \u2014 Nickel Industries Ltd. | Day 1 Email",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:36:44.267Z",
+      "body_excerpt": "Send outreach email \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu)\n\nEmail: info@nickelindustries.com\n\nNOTE: Do not auto-send. Draft only \u2014 present to RZH fir"
+    },
+    {
+      "id": "368546998996",
+      "subject": "Outreach \u2014 Delong Nickel Co. Ltd. | Day 1 Email",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:36:39.191Z",
+      "body_excerpt": "Send outreach email \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu)\n\nEmail: rawmaterials@delonghi.com\n\nNOTE: Do not auto-send. Draft only \u2014 present to RZH fir"
+    },
+    {
+      "id": "368545238723",
+      "subject": "Outreach \u2014 Jinchuan Group International Resources | Day 1 Email",
+      "status": "NOT_STARTED",
+      "createdate": "2026-05-08T02:36:27.945Z",
+      "body_excerpt": "Send outreach email \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu)\n\nEmail: trading@jinchuan-intl.com\n\nNOTE: Do not auto-send. Draft only \u2014 present to RZH fir"
+    },
+    {
+      "id": "368593698533",
+      "subject": "Outreach \u2014 Zhejiang Huayou Cobalt Co. Ltd. | Day 1 Email",
+      "status": "NOT_STARTED",
+      "createdate": "2026-05-08T02:36:22.331Z",
+      "body_excerpt": "Send outreach email \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu)\n\nEmail: xct@huayou.com\n\nNOTE: Do not auto-send. Draft only \u2014 present to RZH first."
+    },
+    {
+      "id": "368546997997",
+      "subject": "Outreach \u2014 Ningbo Lygend Wisdom Co. Ltd. | Day 1 Email",
+      "status": "COMPLETED",
+      "createdate": "2026-05-08T02:36:16.989Z",
+      "body_excerpt": "Send outreach email \u2014 Philippine Nickel Ore Supply Inquiry (FOB Cebu)\n\nEmail: procurement@lygend.com\n\nNOTE: Do not auto-send. Draft only \u2014 present to RZH first."
+    },
+    {
+      "id": "368330274506",
+      "subject": "[MGEN] Send finalized coal spec sheet to MGEN",
+      "status": "COMPLETED",
+      "createdate": "2026-05-07T06:27:56.025Z",
+      "body_excerpt": "<div dir=\"auto\" data-top-level=\"true\"><p style=\"margin:0;\">ECE told me to wait for his physical meeting with Jun in their corporate office instead.</p></div>"
+    },
+    {
+      "id": "368124944065",
+      "subject": "Follow up with Jose Alfonso \"Alfie Miras",
+      "status": "COMPLETED",
+      "createdate": "2026-05-06T06:07:47.054Z",
+      "body_excerpt": "Regarding note logged on Wednesday, May 6, 2026 2:07 PM"
+    },
+    {
+      "id": "368115021519",
+      "subject": "Follow up with Allan Saquilayan",
+      "status": "COMPLETED",
+      "createdate": "2026-05-06T00:47:01.828Z",
+      "body_excerpt": "Regarding email: ECONARES Company Profile \u2014 For Procurement Colleague | Coal, PKS &amp; Diesel Supply, sent on Monday, May 4, 2026 1:56 PM"
+    },
+    {
+      "id": "367867559658",
+      "subject": "Outreach \u2014 Rose Calba (Solaris)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-04T08:38:11.059Z",
+      "body_excerpt": "Rose Calba confirmed as procurement contact at Solaris/JNCC. Email: rcalba@solaris.com.ph. Call +632 8584 6706 to follow up. Solaris 58MWp Iloilo solar project "
+    },
+    {
+      "id": "367498696405",
+      "subject": "Follow up with Liza Sigua",
+      "status": "COMPLETED",
+      "createdate": "2026-05-04T07:11:07.836Z",
+      "body_excerpt": "<div style=\"\" dir=\"auto\" data-top-level=\"true\"><p style=\"margin:0;\">Regarding email: Coal Supply Inquiry \u2014 ECONARES | 135 MW CFB Plant, Concepcion Iloilo, sent "
+    },
+    {
+      "id": "367837349576",
+      "subject": "FOLLOW UP Allan Saquilayan \u2014 Republic Cement (profile sent)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-04T06:03:08.799Z",
+      "body_excerpt": "Republic Cement / Allan Saquilayan \u2014 Follow up\n\nContact ID: 471331594971\nStatus: Company profile sent May 3. Allan to forward to colleague handling coal procure"
+    },
+    {
+      "id": "367603452632",
+      "subject": "Follow up with Republic Cement",
+      "status": "COMPLETED",
+      "createdate": "2026-05-04T05:56:07.802Z",
+      "body_excerpt": "Regarding email: ECONARES Company Profile \u2014 For Procurement Colleague | Coal, PKS &amp; Diesel Supply, sent on Monday, May 4, 2026 1:56 PM"
+    },
+    {
+      "id": "367837175508",
+      "subject": "MTG CONFIRMED: Sebastian/MGEN \u2014 May 4, 10:30 AM Virtual",
+      "status": "COMPLETED",
+      "createdate": "2026-05-04T05:22:49.022Z",
+      "body_excerpt": "VIRTUAL MEETING \u2014 Sebastian Andres Jr. | MGEN SCM-FMD Head\n\n\ud83d\udcc5 May 4, 2026 | 10:30 AM | Virtual (platform TBD)\n\nAGENDA:\n\u25a1 Intro ECONARES (FOB coal, PKS, woodchip"
+    },
+    {
+      "id": "367498462938",
+      "subject": "Follow up with Mary Grace Caballes",
+      "status": "COMPLETED",
+      "createdate": "2026-05-03T04:28:17.965Z",
+      "body_excerpt": "Regarding email: Coal &amp; Diesel Supply Inquiry \u2014 ECONARES [Talisay City], sent on Sunday, May 3, 2026 12:28 PM"
+    },
+    {
+      "id": "367595601630",
+      "subject": "Send: Coal & Diesel Supply Inquiry \u2014 Mary Grace Caballes (Carmen Copper)",
+      "status": "COMPLETED",
+      "createdate": "2026-05-01T16:43:39.484Z",
+      "body_excerpt": "Email scheduled for Monday 0730 AM via Gmail scheduled send.\nTo: purchasing@atlasmining.com.ph\nCC: ece.eleguinresources@yahoo.com\nSubject: Coal &amp; Diesel Sup"
+    },
+    {
+      "id": "367438391020",
+      "subject": "Outreach \u2014 Mary Grace Caballes / Carmen Copper Corp",
+      "status": "COMPLETED",
+      "createdate": "2026-05-01T04:58:26.841Z",
+      "body_excerpt": "Fraser-style inquiry: ask about diesel/fuel supply contracts at Carmen Copper Toledo mine. No pitch on first contact. Target: 10-15 min call. Primary channel: L"
+    },
+    {
+      "id": "367269522168",
+      "subject": "Presentation Meeting: ECONARES \u00d7 MGEN Sebastian (SCM-FMD) \u2014 Tuesday May 13",
+      "status": "COMPLETED",
+      "createdate": "2026-04-30T08:14:10.107Z",
+      "body_excerpt": "CONFIRMED: Tuesday, May 13 at 10:30 AM.\n\nMeeting with Sebastian, Andres Jr. A. (SCM-FMD Head, MGEN).\n\nAgenda:\n1. Present ECONARES company profile\n2. Discuss MGE"
+    },
+    {
+      "id": "367254061766",
+      "subject": "Follow up: Sebastian (MGEN SCM-FMD) \u2014 No Reply \u2014 May 13 Meeting",
+      "status": "COMPLETED",
+      "createdate": "2026-04-30T07:23:18.736Z",
+      "body_excerpt": "Sebastian replied Apr 30. Meeting CONFIRMED for Tuesday May 13 at 10:30 AM. Task complete \u2014 next is May 13 meeting preparation."
+    },
+    {
+      "id": "367270340324",
+      "subject": "Follow up with Sebastian, Andres Jr. A. Andres",
+      "status": "COMPLETED",
+      "createdate": "2026-04-30T07:04:36.912Z",
+      "body_excerpt": "Regarding email: Coal Supply Discussion \u2014 ECONARES / Referred by Sir John Hisoler, sent on Thursday, April 30, 2026 3:04 PM"
+    },
+    {
+      "id": "366794161866",
+      "subject": "[MGEN/CEDC] Full team visit \u2014 May 12 (week of) appointment",
+      "status": "COMPLETED",
+      "createdate": "2026-04-28T10:09:10.206Z",
+      "body_excerpt": "ECE directive: Bring full team for on-site visit. Schedule Tuesday morning appointment with John Hisoler / CEDC team. Bring: (1) Company profile, (2) 3kg coal s"
+    },
+    {
+      "id": "366882596551",
+      "subject": "[MGEN/CEDC] Send formal email \u2014 request coal technical specs",
+      "status": "COMPLETED",
+      "createdate": "2026-04-28T10:09:08.911Z",
+      "body_excerpt": "Action: Send formal email to John Hisoler (jrrhisoler@mgen.com.ph) requesting:\n(1) Full coal technical specs: calorific value (kcal/kg GAR), ash %, moisture %, "
+    },
+    {
+      "id": "366800672475",
+      "subject": "[COPPER/ZINC/LEAD] Aurelio Ramones Jr. \u2014 Isabela buyer wants Cu ore pricing URGENT",
+      "status": "NOT_STARTED",
+      "createdate": "2026-04-28T08:48:59.803Z",
+      "body_excerpt": "URGENT \u2014 Aurelio Ramones Jr. (San Mateo, Isabela) is pushing for copper ore indicative pricing. Also interested in Zn/Pb ore (40%+ grade, bulk qty). Payment at "
+    },
+    {
+      "id": "366796883678",
+      "subject": "[APO CEMENT] URGENT \u2014 Submit woodchips sample package to Bong Acacio",
+      "status": "IN_PROGRESS",
+      "createdate": "2026-04-28T06:41:42.525Z",
+      "body_excerpt": "April 28 \u2014 Bong Acacio contacted RZH via Viber. Key contact behavior:\n- Bong CUT OFF RZH multiple times mid-conversation \u2014 NOT connection drops\n- Bong's impatie"
+    },
+    {
+      "id": "366821746384",
+      "subject": "[MGEN] Follow up John Rey Hisoler \u2014 Call scheduled",
+      "status": "COMPLETED",
+      "createdate": "2026-04-28T06:00:34.639Z",
+      "body_excerpt": "\u2705 CALL COMPLETED April 28 \u2014 Key intel from John Hisoler / MGEN Cebu (CEDC Toledo City):\n\nCURRENT SUPPLY: (1) Indonesia \u2014 long-term contract, (2) Semirara \u2014 dome"
+    },
+    {
+      "id": "366828507879",
+      "subject": "[APO CEMENT] Outreach to Chai Sibal \u2014 Alternative Fuels",
+      "status": "IN_PROGRESS",
+      "createdate": "2026-04-28T04:03:31.428Z",
+      "body_excerpt": "April 28 \u2014 Bong Acacio already contacted RZH. Chai Sibal may be second approver/parallel contact at Apo Cement. Await Bong's response before escalating to Chai."
+    },
+    {
+      "id": "366807541446",
+      "subject": "[APO CEMENT] Outreach to Bong Acacio \u2014 Alternative Fuels",
+      "status": "COMPLETED",
+      "createdate": "2026-04-28T04:03:30.101Z",
+      "body_excerpt": "Referral from Rey Tolosa (April 28). Bong Acacio handles alternative fuels procurement for Apo Cement plants. PKS, RDF, woodchips \u2014 position as alternative fuel"
+    },
+    {
+      "id": "366578069178",
+      "subject": "[DEFERRED \u2014 Research Tonight] Joy Desuyo / SPC Power / KEPCO SPC",
+      "status": "COMPLETED",
+      "createdate": "2026-04-27T08:50:24.346Z",
+      "body_excerpt": "\u26a0\ufe0f BOUNCED April 27: joy.desuyo@spcpower.com invalid. Research needed tonight: (1) Find Angelica Javier full email \u2014 current Procurement Manager at SPC Power, ("
+    },
+    {
+      "id": "366581643994",
+      "subject": "Follow up John Rey Hisoler \u2014 MGEN coal inquiry",
+      "status": "COMPLETED",
+      "createdate": "2026-04-27T08:17:27.160Z",
+      "body_excerpt": "Email sent April 27. Phone outreach failed (landline drops/blocked). MGEN has 300MW coal plant in Toledo City, Cebu. John Rey = warmest coal lead in pipeline. F"
+    },
+    {
+      "id": "366622898875",
+      "subject": "Follow up Carlito + Maria Otom \u2014 AboitizPower / TVI",
+      "status": "NOT_STARTED",
+      "createdate": "2026-04-27T07:45:32.916Z",
+      "body_excerpt": "Email sent April 27 (Fraser inquiry positioning) to Carlito and Maria Otom. Phone outreach failed (main line blocks calls). LinkedIn pending. Follow up if no re"
+    },
+    {
+      "id": "366557628109",
+      "subject": "Follow up Kenneth \u2014 Taiheiyo Cement / PKS inquiry",
+      "status": "COMPLETED",
+      "createdate": "2026-04-27T06:01:26.542Z",
+      "body_excerpt": "SMS sent April 27 probing alternative fuel interest. Research shows Taiheiyo Japan at 20% thermal substitution from alt fuels. Cebu plant (new 2024 line) may be"
+    },
+    {
+      "id": "366347057869",
+      "subject": "Follow-up Re:SMS on Rey Tolosa",
+      "status": "COMPLETED",
+      "createdate": "2026-04-27T04:00:37.244Z",
+      "body_excerpt": ""
+    },
+    {
+      "id": "366522313461",
+      "subject": "Follow up Rey Tolosa \u2014 Apo Cement / CEMEX",
+      "status": "COMPLETED",
+      "createdate": "2026-04-27T03:08:53.536Z",
+      "body_excerpt": "SMS sent April 26. Albarr Abusaman referred RZH to Rey for alternative fuel/PKS/RDF inquiry. No reply yet. Follow up via call if no response by April 29."
+    },
+    {
+      "id": "366317030133",
+      "subject": "[APO CEMENT] Outreach to Rey Tolosa \u2014 Coal/RDF opportunity",
+      "status": "COMPLETED",
+      "createdate": "2026-04-25T08:27:43.624Z",
+      "body_excerpt": "OUTREACH TASK | Contact: Rey Tolosa, Coal/RDF Procurement, Apo Cement Corporation.\n\nPhone/WhatsApp: 09173248312.\n\nTalking points: (1) Introduce Econares as a co"
+    },
+    {
+      "id": "366311710414",
+      "subject": "[APO CEMENT] Confirm if open to third-party coal suppliers",
+      "status": "COMPLETED",
+      "createdate": "2026-04-25T08:27:42.502Z",
+      "body_excerpt": "QUALIFICATION TASK | Contacts: Albarr B. Abusaman (Procurement, 09175870334) + Rey Tolosa (Coal/RDF Procurement, 09173248312) at Apo Cement Corporation, Danao C"
+    },
+    {
+      "id": "366037849810",
+      "subject": "Send FCO",
+      "status": "COMPLETED",
+      "createdate": "2026-04-24T10:37:28.707Z",
+      "body_excerpt": "Taiheiyo conducts bid per shipment. Need to: (1) Confirm tender schedule with Arnold Gascon/Kenneth Sambalod, (2) Submit required documents for supplier registr"
+    },
+    {
+      "id": "366050338535",
+      "subject": "[Apo Cement / Taiheiyo] Follow up on field visit results",
+      "status": "COMPLETED",
+      "createdate": "2026-04-24T09:59:20.995Z",
+      "body_excerpt": "Yesterday's visit (April 23). Gather: (1) Quantity (MT/month), (2) Quality specs (GAR/NAR, ash, sulfur), (3) Discharge port, (4) Payment terms. Both are INTEGRA"
+    },
+    {
+      "id": "366091924199",
+      "subject": "[DEFERRED \u2014 Identity Verification] [Durano Paper/Sugar] Research company and coal requirements",
+      "status": "COMPLETED",
+      "createdate": "2026-04-24T09:59:18.819Z",
+      "body_excerpt": "DEFERRED \u2014 2026-04-27: Identity verification needed before any outreach. Field intel says 'Chinese national owner' \u2014 research shows Durano family is Filipino. N"
+    },
+    {
+      "id": "366014277331",
+      "subject": "[Mabuhay Cement] Send appointment email to plant manager",
+      "status": "COMPLETED",
+      "createdate": "2026-04-24T09:59:14.829Z",
+      "body_excerpt": "Contact: Nona Santha Libradilla | purchasing@mabuhaycement.com | 0966 7955 265. Plant hours: 8-5 M-S. Diesel: 10KL/order/90days. Grinding-only plant - NOT a coa"
+    },
+    {
+      "id": "365619775164",
+      "subject": "Research Emmanuel Castro \u2014 Acciona Daanbantayan site (diesel opportunity)",
+      "status": "NOT_STARTED",
+      "createdate": "2026-04-22T08:00:19.012Z",
+      "body_excerpt": "Contact: Emmanuel Castro, Procurement Executive, Acciona-DMCI JV\nLinkedIn: https://ph.linkedin.com/in/emmanuel-m-castro-6323a610a\nOpportunity: Diesel supply for"
+    },
+    {
+      "id": "365623911108",
+      "subject": "Follow up Joy Desuyo \u2014 CEDC (same city as TVI Toledo)",
+      "status": "COMPLETED",
+      "createdate": "2026-04-22T08:00:17.883Z",
+      "body_excerpt": "Priority: HIGH \u2014 CEDC is in Toledo City, SAME CITY as TVI. Cluster visit opportunity on Friday.\n\nContact: Joy Desuyo, Procurement Manager\nPhone: +63 32 260 9200"
+    },
+    {
+      "id": "365600483049",
+      "subject": "Follow up with Melanie Salinas \u2014 KEPCO SPC Power Corp",
+      "status": "COMPLETED",
+      "createdate": "2026-04-22T07:12:11.970Z",
+      "body_excerpt": "Send LinkedIn connection request to Melanie Salinas (Procurement Specialist, KEPCO SPC Power Corp). Target: coal supply opportunity. KEPCO SPC operates ~82MW Nu"
+    },
+    {
+      "id": "365582962386",
+      "subject": "[MGEN/CEDC] Coal Spec Sheet \u2014 Awaiting CEO sample data + May 13 plant visit",
+      "status": "COMPLETED",
+      "createdate": "2026-04-22T03:26:59.837Z",
+      "body_excerpt": "Warm lead: Joy Desuyo (procurement). 164MW coal plant in Naga. 30 min from Talisay. Backup diesel demand. WhatsApp follow-up \u2014 her mobile preferred."
+    },
+    {
+      "id": "365485966013",
+      "subject": "China Nickel follow-up - Tsingshan and YNQSGT",
+      "status": "NOT_STARTED",
+      "createdate": "2026-04-21T08:30:10.563Z",
+      "body_excerpt": "Follow-up window closes Apr 24. Drafts were deleted - need to re-draft and send. Contacts: contact@ttsgroup.com.cn, rszpc@ynqsgt.com. Commodity: Nickel Ore all "
+    },
+    {
+      "id": "365489814223",
+      "subject": "Call/WhatsApp Allan Saquilayan @ Republic Cement",
+      "status": "COMPLETED",
+      "createdate": "2026-04-21T08:30:09.505Z",
+      "body_excerpt": "No email in HubSpot. Republic Cement is a major cement buyer. Try phone or WhatsApp. Commodity: Thermal Coal."
+    },
+    {
+      "id": "365488023289",
+      "subject": "Call/WhatsApp Lyn @ Mabuhay Filcement",
+      "status": "COMPLETED",
+      "createdate": "2026-04-21T08:30:08.327Z",
+      "body_excerpt": "No email in HubSpot. Mabuhay Filcement is a cement buyer. Try phone or WhatsApp. Commodity: Thermal Coal."
+    },
+    {
+      "id": "365491588850",
+      "subject": "Follow up AboitizPower",
+      "status": "COMPLETED",
+      "createdate": "2026-04-21T08:30:05.056Z",
+      "body_excerpt": "Apr 20 email delivered, no response yet. Call main line (632) 8464-1600 or try WhatsApp if contact available. Commodity: Thermal Coal, Diesel, PKS."
+    },
+    {
+      "id": "365485793980",
+      "subject": "Follow up John Rey Hisoler @ MGEN",
+      "status": "COMPLETED",
+      "createdate": "2026-04-21T08:30:02.956Z",
+      "body_excerpt": "Check response to Apr 21 outreach with corrected email jrrhisoler@mgen.com.ph. MGEN procurement contact. Commodity: Thermal Coal, Diesel, PKS."
+    },
+    {
+      "id": "365462133439",
+      "subject": "Follow up Marc Yorobe @ MGEN",
+      "status": "COMPLETED",
+      "createdate": "2026-04-21T08:30:01.680Z",
+      "body_excerpt": "Check response to Apr 21 outreach. Marc is CCO at MGEN - key decision maker. Commodity: Thermal Coal, Diesel, PKS."
+    },
+    {
+      "id": "365485536963",
+      "subject": "Follow up Jessie Sarias @ Philcement",
+      "status": "COMPLETED",
+      "createdate": "2026-04-21T08:30:00.388Z",
+      "body_excerpt": "Check if Apr 21 email was delivered. If no response, call or WhatsApp Lyn @ Mabuhay Filcement or try LinkedIn for Jessies direct contact. Commodity: Thermal Coa"
+    },
+    {
+      "id": "365474280178",
+      "subject": "[Gmail \u2605] Philippine Nickel Ore Supply | ECONARES",
+      "status": "NOT_STARTED",
+      "createdate": "2026-04-21T03:45:26.908Z",
+      "body_excerpt": "From: RZH Econares \nDate: Sat, 18 Apr 2026 14:28:47 +0800\n\nSnippet: Ma'am/Sir, Good day. I am writing on behalf of ECONARES, a Philippine-based commodity suppli"
+    },
+    {
+      "id": "364478411479",
+      "subject": "Follow up with Nadine Malto",
+      "status": "COMPLETED",
+      "createdate": "2026-04-15T05:35:02.972Z",
+      "body_excerpt": "Regarding SMS logged on Wednesday, April 15, 2026 1:35 PM"
+    },
+    {
+      "id": "364469209814",
+      "subject": "Follow up with Liezel Muro",
+      "status": "COMPLETED",
+      "createdate": "2026-04-15T05:34:10.465Z",
+      "body_excerpt": "Regarding SMS logged on Wednesday, April 15, 2026 1:34 PM"
+    },
+    {
+      "id": "364469163759",
+      "subject": "Initial contact via SMS",
+      "status": "COMPLETED",
+      "createdate": "2026-04-15T05:16:32.001Z",
+      "body_excerpt": ""
+    },
+    {
+      "id": "361654833887",
+      "subject": "MMD Proposal Letter",
+      "status": "COMPLETED",
+      "createdate": "2026-03-31T08:58:40.097Z",
+      "body_excerpt": ""
+    }
+  ]
+}

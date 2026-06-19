@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-06-18T10:16:31.508066+00:00",
+  "portal_id": 245683432,
+  "totals": {
+    "total_tasks": 133,
+    "open": 40,
+    "completed": 93,
+    "gmail_sync": 1,
+    "manual": 132,
+    "orphan_no_associations": 1,
+    "status_breakdown": {
+      "COMPLETED": 93,
+      "NOT_STARTED": 38,
+      "IN_PROGRESS": 2
+    }
+  },
+  "duplicates": {
+    "tier1_exact_subject_day_status": {
+      "group_count": 2,
+      "total_dupe_task_ids": 4,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel global power",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "tier2_normalized_day_status": {
+      "group_count": 2,
+      "total_dupe_task_ids": 4,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel global power",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "tier3_prefix_day_status": {
+      "group_count": 3,
+      "total_dupe_task_ids": 6,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "outreach  ningbo lygend wisdom",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368543211256",
+            "368546997997"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel glob",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "gmail_thread_dupes": {
+      "group_count": 0,
+      "total_dupe_task_ids": 0,
+      "groups": []
+    }
+  },
+  "noisy_subjects_top20": [
+    {
+      "subject": "follow up with san miguel global power",
+      "count": 6
+    },
+    {
+      "subject": "follow up with nickel industries",
+      "count": 4
+    },
+    {
+      "subject": "follow up with concrete solutions",
+      "count": 4
+    },
+    {
+      "subject": "follow up with sarah tarega",
+      "count": 4
+    },
+    {
+      "subject": "follow up with andy sebastian",
+      "count": 3
+    },
+    {
+      "subject": "follow up with cynthia cabrera",
+      "count": 3
+    },
+    {
+      "subject": "follow up with mary grace caballes",
+      "count": 2
+    },
+    {
+      "subject": "follow up with liza sigua",
+      "count": 2
+    },
+    {
+      "subject": "follow up with republic cement",
+      "count": 2
+    },
+    {
+      "subject": "follow up with rose calba",
+      "count": 2
+    },
+    {
+      "subject": "follow up with tina chen",
+      "count": 2
+    },
+    {
+      "subject": "follow up with anson wong",
+      "count": 2
+    },
+    {
+      "subject": "follow up with procurement minergy",
+      "count": 2
+    }
+  ],
+  "orphan_tasks_no_associations": [
+    {
+      "id": "366091924199",
+      "subject": "[DEFERRED \u2014 Identity Verification] [Durano Paper/Sugar] Research company and coal requirements",
+      "status": "COMPLETED",
+      "createdate": "2026-04-24T09:59:18.819Z",
+      "body_excerpt": "DEFERRED \u2014 2026-04-27: Identity verification needed before any outreach. Field intel says 'Chinese national owner' \u2014 research shows Durano family is Filipino. N"
+    }
+  ]
+}

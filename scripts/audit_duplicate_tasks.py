@@ -129,21 +129,49 @@ def fetch_all_tasks(tok: str) -> list:
     return all_tasks
 
 
-# --- fetch associations for a batch ---
+# --- fetch associations for a batch (v4 batch endpoint, ~40x faster than per-task) ---
 def fetch_associations(tok: str, task_ids: list) -> dict:
-    """For each task, GET associations to contacts/companies/deals."""
+    """For each task, fetch associations to contacts/companies/deals.
+    Uses the v4 batch/read endpoint which processes up to 100 ids per call.
+    Response shape: {"results": [{"from": {"id": "..."}, "to": [{"toObjectId": ...}]}],
+                     "errors":  [{"context": {"fromObjectId": "..."}, ...}]}
+    Tasks with no associations appear in `errors` with NO_ASSOCIATIONS_FOUND.
+    """
     h = headers(tok)
-    out = {}
-    for tid in task_ids:
-        out[tid] = {"contacts": [], "companies": [], "deals": []}
-        for kind in ("contacts", "companies", "deals"):
-            url = f"{BASE}/crm/v3/objects/tasks/{tid}/associations/{kind}"
+    out = {tid: {"contacts": [], "companies": [], "deals": []} for tid in task_ids}
+    BATCH = 100
+    for kind in ("contacts", "companies", "deals"):
+        for i in range(0, len(task_ids), BATCH):
+            chunk = [{"id": tid} for tid in task_ids[i:i + BATCH]]
+            url = f"{BASE}/crm/v4/associations/tasks/{kind}/batch/read"
             try:
-                d = get_json(url, h)
-                ids = [r["id"] for r in d.get("results", [])]
-                out[tid][kind] = ids
+                r = requests.post(url, headers=h, json={"inputs": chunk}, timeout=60)
+                # 200 = all success, 207 = multi-status (mix of success and per-id errors)
+                if r.status_code not in (200, 207):
+                    for entry in chunk:
+                        out[entry["id"]][kind] = f"ERR: {r.status_code}"
+                    continue
+                d = r.json()
+                # Successful results
+                for entry in d.get("results", []):
+                    from_id = entry.get("from", {}).get("id")
+                    to_ids = [t.get("toObjectId") for t in entry.get("to", [])]
+                    if from_id and from_id in out:
+                        out[from_id][kind] = to_ids
+                # Tasks with no associations land in errors
+                for err in d.get("errors", []):
+                    ctx = err.get("context", {}) or {}
+                    from_id = (ctx.get("fromObjectId") or [""])[0] if isinstance(ctx.get("fromObjectId"), list) else ctx.get("fromObjectId")
+                    if from_id and from_id in out:
+                        # NO_ASSOCIATIONS_FOUND == empty list, treat as "no assoc" not error
+                        sub = err.get("subCategory", "")
+                        if sub == "crm.associations.NO_ASSOCIATIONS_FOUND":
+                            out[from_id][kind] = []  # explicit empty
+                        else:
+                            out[from_id][kind] = f"ERR: {sub}"
             except Exception as e:
-                out[tid][kind] = f"ERR: {e}"
+                for entry in chunk:
+                    out[entry["id"]][kind] = f"ERR: {e}"
     return out
 
 
