@@ -287,8 +287,8 @@ def send_telegram_heads_up(data):
     try:
         req = urllib.request.Request(
             f'https://api.telegram.org/bot{bot_token}/sendMessage',
-            data=json.dumps(***'chat_id': chat_id, 'text': msg***).encode(),
-            headers=***'Content-Type': 'application/json'***, method='POST'
+            data=json.dumps({'chat_id': chat_id, 'text': msg}).encode(),
+            headers={'Content-Type': 'application/json'}, method='POST'
         )
         with urllib.request.urlopen(req, timeout=10) as r:
             print('TELEGRAM: heads-up sent to 707620807')
