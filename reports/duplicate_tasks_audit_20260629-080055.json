@@ -1,0 +1,356 @@
+{
+  "generated_at": "2026-06-29T00:00:55.918554+00:00",
+  "portal_id": 245683432,
+  "totals": {
+    "total_tasks": 167,
+    "open": 59,
+    "completed": 108,
+    "gmail_sync": 1,
+    "manual": 166,
+    "orphan_no_associations": 14,
+    "status_breakdown": {
+      "COMPLETED": 108,
+      "NOT_STARTED": 57,
+      "IN_PROGRESS": 2
+    }
+  },
+  "duplicates": {
+    "tier1_exact_subject_day_status": {
+      "group_count": 3,
+      "total_dupe_task_ids": 6,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel global power",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with jose mari enriquez gorospe",
+            "2026-06-23",
+            "NOT_STARTED"
+          ],
+          "task_ids": [
+            "377397218017",
+            "377397249749"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "tier2_normalized_day_status": {
+      "group_count": 3,
+      "total_dupe_task_ids": 6,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel global power",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with jose mari enriquez gorospe",
+            "2026-06-23",
+            "NOT_STARTED"
+          ],
+          "task_ids": [
+            "377397218017",
+            "377397249749"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "tier3_prefix_day_status": {
+      "group_count": 5,
+      "total_dupe_task_ids": 10,
+      "groups": [
+        {
+          "signature": [
+            "follow up with rose calba",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368489071311",
+            "369077319409"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "outreach  ningbo lygend wisdom",
+            "2026-05-19",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "368543211256",
+            "368546997997"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with san miguel glob",
+            "2026-05-29",
+            "COMPLETED"
+          ],
+          "task_ids": [
+            "371217997526",
+            "371707497154"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "follow up with jose mari enriq",
+            "2026-06-23",
+            "NOT_STARTED"
+          ],
+          "task_ids": [
+            "377397218017",
+            "377397249749"
+          ],
+          "count": 2
+        },
+        {
+          "signature": [
+            "website form outreach: concret",
+            "2026-06-27",
+            "NOT_STARTED"
+          ],
+          "task_ids": [
+            "378499796698",
+            "378560680682"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    "gmail_thread_dupes": {
+      "group_count": 0,
+      "total_dupe_task_ids": 0,
+      "groups": []
+    }
+  },
+  "noisy_subjects_top20": [
+    {
+      "subject": "follow up with san miguel global power",
+      "count": 6
+    },
+    {
+      "subject": "follow up with concrete solutions",
+      "count": 4
+    },
+    {
+      "subject": "follow up with sarah tarega",
+      "count": 4
+    },
+    {
+      "subject": "follow up with liza sigua",
+      "count": 3
+    },
+    {
+      "subject": "follow up with nickel industries",
+      "count": 3
+    },
+    {
+      "subject": "follow up with andy sebastian",
+      "count": 3
+    },
+    {
+      "subject": "follow up with cynthia cabrera",
+      "count": 3
+    },
+    {
+      "subject": "follow up with jose mari enriquez gorospe",
+      "count": 3
+    },
+    {
+      "subject": "follow up with nadine malto",
+      "count": 2
+    },
+    {
+      "subject": "follow up with mary grace caballes",
+      "count": 2
+    },
+    {
+      "subject": "follow up with republic cement",
+      "count": 2
+    },
+    {
+      "subject": "follow up with rose calba",
+      "count": 2
+    },
+    {
+      "subject": "follow up with tina chen",
+      "count": 2
+    },
+    {
+      "subject": "follow up with anson wong",
+      "count": 2
+    },
+    {
+      "subject": "follow up with procurement minergy",
+      "count": 2
+    },
+    {
+      "subject": "follow up with jessie sarias",
+      "count": 2
+    },
+    {
+      "subject": "follow up with rolando ong",
+      "count": 2
+    },
+    {
+      "subject": "follow up with jovy manrique",
+      "count": 2
+    },
+    {
+      "subject": "follow up with mark tagle",
+      "count": 2
+    },
+    {
+      "subject": "follow up with procurement team",
+      "count": 2
+    }
+  ],
+  "orphan_tasks_no_associations": [
+    {
+      "id": "378499796712",
+      "subject": "WEBSITE FORM OUTREACH: Tsingshan Holding Group",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:55.563Z",
+      "body_excerpt": "Company ID: 317279658732\nCompany: Tsingshan Holding Group\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttp://www.tssgroup.com.cn/contact\n\nU"
+    },
+    {
+      "id": "378591758030",
+      "subject": "WEBSITE FORM OUTREACH: Atlas Mining",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:54.251Z",
+      "body_excerpt": "Company ID: 324008042227\nCompany: Atlas Mining\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://atlasmining.com.ph/contact-us\n\nURL METHO"
+    },
+    {
+      "id": "378520671936",
+      "subject": "WEBSITE FORM OUTREACH: Nickel Asia Corporation",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:52.950Z",
+      "body_excerpt": "Company ID: 321987505875\nCompany: Nickel Asia Corporation\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://nickelasia.com/contact\n\nURL M"
+    },
+    {
+      "id": "378505271006",
+      "subject": "WEBSITE FORM OUTREACH: Eramen",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:51.500Z",
+      "body_excerpt": "Company ID: 321971366608\nCompany: Eramen\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\n[MANUAL \u2014 RZH to find via browser search: 'Eramen Phil"
+    },
+    {
+      "id": "378545313486",
+      "subject": "WEBSITE FORM OUTREACH: Global Ferronickel Holdings",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:50.013Z",
+      "body_excerpt": "Company ID: 321983909568\nCompany: Global Ferronickel Holdings\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://gfni.com.ph/en/contact\n\nU"
+    },
+    {
+      "id": "378560680682",
+      "subject": "WEBSITE FORM OUTREACH: Concrete Solutions",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:48.685Z",
+      "body_excerpt": "Company ID: 315405784781\nCompany: Concrete Solutions\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://concretesolutions.com.ph/contact-u"
+    },
+    {
+      "id": "378564171497",
+      "subject": "WEBSITE FORM OUTREACH: CEMEX Philippines",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:47.558Z",
+      "body_excerpt": "Company ID: 320080163556\nCompany: CEMEX Philippines\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\n[MANUAL \u2014 RZH to find via browser search: '"
+    },
+    {
+      "id": "378499796698",
+      "subject": "WEBSITE FORM OUTREACH: Concrete Stone",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:46.341Z",
+      "body_excerpt": "Company ID: 322926584552\nCompany: Concrete Stone\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://concretestonecorp.com/contactus\n\nURL M"
+    },
+    {
+      "id": "378563995324",
+      "subject": "WEBSITE FORM OUTREACH: Mabuhay Filcement",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:45.167Z",
+      "body_excerpt": "Company ID: 320872980166\nCompany: Mabuhay Filcement\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\n[MANUAL \u2014 RZH to find via browser search: '"
+    },
+    {
+      "id": "378599105238",
+      "subject": "WEBSITE FORM OUTREACH: Union Cement",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:43.963Z",
+      "body_excerpt": "Company ID: 325351362236\nCompany: Union Cement\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://unioncement.com.ph/en/contact\n\nURL METHO"
+    },
+    {
+      "id": "378522421954",
+      "subject": "WEBSITE FORM OUTREACH: Goodfound Cement",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:42.680Z",
+      "body_excerpt": "Company ID: 322503647935\nCompany: Goodfound Cement\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://goodfoundcement.com/contact\n\nURL MET"
+    },
+    {
+      "id": "378564171487",
+      "subject": "WEBSITE FORM OUTREACH: Century Peak Cement Manufacturing",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:41.348Z",
+      "body_excerpt": "Company ID: 322958059202\nCompany: Century Peak Cement Manufacturing\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://centurypeakcement.c"
+    },
+    {
+      "id": "378505270992",
+      "subject": "WEBSITE FORM OUTREACH: Taiheiyo Cement Philippines",
+      "status": "NOT_STARTED",
+      "createdate": "2026-06-24T05:30:39.485Z",
+      "body_excerpt": "Company ID: 315966974677\nCompany: Taiheiyo Cement Philippines\nPriority: HIGH\nDue: Submit form within 3 days\n\nCONTACT FORM URL:\nhttps://taiheiyo-cement.com.ph/co"
+    },
+    {
+      "id": "366091924199",
+      "subject": "[DEFERRED \u2014 Identity Verification] [Durano Paper/Sugar] Research company and coal requirements",
+      "status": "COMPLETED",
+      "createdate": "2026-04-24T09:59:18.819Z",
+      "body_excerpt": "DEFERRED \u2014 2026-04-27: Identity verification needed before any outreach. Field intel says 'Chinese national owner' \u2014 research shows Durano family is Filipino. N"
+    }
+  ]
+}
