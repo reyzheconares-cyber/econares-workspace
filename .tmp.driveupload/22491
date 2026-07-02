@@ -233,11 +233,11 @@
   },
   "active": "5f2215e7ea6bb52f",
   "lastOpenFiles": [
+    "logs/~syncthing~git_autosync.log.tmp",
     "scripts/_republic_cement_enrich.py",
     "scripts/_bulk_enrich_all.py",
     "scripts/_pcpc_rose_enrich.py",
     "scripts/_enrich_all_hubspot.py",
-    "logs/~syncthing~git_autosync.log.tmp",
     "scripts/_hinduja_fix_verify.py",
     "scripts/_hinduja_cleanup.py",
     "scripts/_smm_cleanup.py",
