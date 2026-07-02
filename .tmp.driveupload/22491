@@ -234,6 +234,8 @@
   "active": "5f2215e7ea6bb52f",
   "lastOpenFiles": [
     "logs/~syncthing~git_autosync.log.tmp",
+    "briefers/dsr-2026-07-02.html",
+    "briefers/~syncthing~dsr-2026-07-02.html.tmp",
     "scripts/_republic_cement_enrich.py",
     "scripts/_bulk_enrich_all.py",
     "scripts/_pcpc_rose_enrich.py",
@@ -242,8 +244,6 @@
     "scripts/_hinduja_cleanup.py",
     "scripts/_smm_cleanup.py",
     "scripts/_nippon_steel_create.py",
-    "scripts/_posco_cleanup_v2.py",
-    "scripts/_posco_cleanup.py",
     "0 Inbox/QPL_LINKEDIN_OUTREACH_DRAFT - 20260702.md",
     "4_Archives/GNPD_OUTREACH_DRAFT - 20260701.md",
     "0 Inbox/QPL_OUTREACH_DRAFT - 20260702.md",
