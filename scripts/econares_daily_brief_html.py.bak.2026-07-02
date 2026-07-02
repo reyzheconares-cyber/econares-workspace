@@ -47,29 +47,14 @@ def _night_pipeline_line():
         )
     return "NIGHT PIPELINE: " + " | ".join(parts) if parts else "NIGHT PIPELINE: silent"
 
-TOKENS = {'gmail_app_pw': '', 'hs_token': '', 'tg_token': ''}
+TOKENS = {}
 with open(os.path.expanduser('~/.hermes/.env')) as f:
-    for raw in f:
-        # Tolerate both 'export KEY=val' and bare 'KEY=val' styles in .env.
-        # Some Hermes-installed env lines (e.g. TELEGRAM_BOT_TOKEN) drop the
-        # 'export' prefix, so we strip it instead of relying on startswith.
-        line = raw.strip()
-        if line.startswith('export '):
-            line = line[len('export '):].lstrip()
-        if not line or line.startswith('#') or '=' not in line:
-            continue
-        key, _, value = line.partition('=')
-        value = value.strip().strip('"').strip("'")
-        if not value:
-            continue
-        if key == 'GMAIL_APP_PASSWORD':
-            TOKENS['gmail_app_pw'] = value
-        elif key == 'HUBSPOT_ACCESS_TOKEN':
-            # Token may contain special chars; prefer quoted extraction if present
-            mq = re.search(r'"([^"]+)"', raw)
-            TOKENS['hs_token'] = mq.group(1) if mq else value
-        elif key == 'TELEGRAM_BOT_TOKEN':
-            TOKENS['tg_token'] = value
+    for line in f:
+        line = line.strip()
+        if line.startswith('export GMAIL_APP_PASSWORD'):
+            TOKENS['gmail_app_pw'] = line.split('=')[1].strip().strip('"')
+        elif line.startswith('export HUBSPOT_ACCESS_TOKEN'):
+            TOKENS['hs_token'] = re.search(r'"([^"]+)"', line).group(1)
 
 HS_TOKEN = TOKENS.get('hs_token', '')
 GMAIL_FROM = 'rzh24.econares@gmail.com'
@@ -235,39 +220,6 @@ def send_gmail(html_body):
     except Exception as e:
         print('GMAIL ERROR: ' + str(e)); return False
 
-def _ensure_writable_dir(path):
-    """Relax a directory's perms just enough to write a file inside.
-
-    Returns True if we relaxed perms (caller MUST restore in a finally
-    block) and False if no relaxation was needed. Self-heals the
-    Syncthing-applied 0o555 read-only posture on the Obsidian Daily_Brief
-    folder without manual chmod intervention between cron runs.
-    """
-    try:
-        cur = os.stat(path).st_mode & 0o777
-        if cur & 0o200:
-            return False
-        os.chmod(path, 0o755)
-        return True
-    except FileNotFoundError:
-        os.makedirs(path, exist_ok=True)
-        os.chmod(path, 0o755)
-        return True
-
-
-def _restore_readonly(path):
-    """Restore 0o555 read-only posture on a directory.
-
-    Best-effort; failure is logged but never raised. Keeps Syncthing's
-    sync semantics intact after a write that needed temporary write perms.
-    """
-    try:
-        os.chmod(path, 0o555)
-    except Exception as e:
-        print(f'WARN: could not restore chmod 0o555 on {path}: {e}')
-
-
-
 def write_obsidian_note():
     vault = OBSIDIAN_VAULT
     daily_dir = os.path.join(vault, '2_Areas', 'Sales_Ops', 'Daily_Brief')
@@ -311,15 +263,10 @@ def write_obsidian_note():
                  '- &#9881; ' + format_quota_line(),
                  '- &#127769; ' + _night_pipeline_line(), '',
                  '---', '*Auto-generated ' + td + ' 7:30 AM PHT - ECONARES Sales Intelligence*']
-    relaxed = _ensure_writable_dir(daily_dir)
-    try:
-        with open(path, 'w') as f:
-            f.write('\n'.join(md_lines))
-        print('OBSIDIAN: Written -> ' + path)
-        return path
-    finally:
-        if relaxed:
-            _restore_readonly(daily_dir)
+    with open(path, 'w') as f:
+        f.write('\n'.join(md_lines))
+    print('OBSIDIAN: Written -> ' + path)
+    return path
 
 def send_telegram_heads_up(data):
     """Send a short Telegram summary so the cron run is visible to RZH."""
