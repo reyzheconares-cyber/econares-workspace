@@ -1,13 +1,21 @@
 {
-  "generated_at": "2026-07-04T09:11:01.781222+00:00",
+  "generated_at": "2026-07-04T10:55:03.804893+00:00",
   "threshold_days": 14,
   "min_amount_php": 0,
   "owner_only": false,
   "open_deals_scanned": 10,
   "skipped_owner_mismatch": 0,
   "skipped_below_amount": 0,
+  "parents_with_open_deals": [
+    "AboitizPower",
+    "PCPC / Jin Navitas",
+    "Republic Cement",
+    "SMC Global Power"
+  ],
   "stale_count": 2,
   "untouched_count": 7,
+  "actionable_untouched_count": 4,
+  "excluded_untouched_count": 3,
   "stale": [
     {
       "deal_id": "325250304712",
@@ -26,6 +34,8 @@
       "contact_email": "tina@zkjck.com",
       "commodity": "Copper Ore",
       "company": "Fujian Yunding Mining",
+      "parent_group": null,
+      "parent_excluded": false,
       "draft_note": "Hi Tina, circling back on the Copper Ore conversation from a few weeks back. Any update on your end, or should I send a refreshed rate sheet? \u2014 RZH"
     },
     {
@@ -45,6 +55,8 @@
       "contact_email": "rcalba@solaris.com.ph",
       "commodity": "Steam Coal",
       "company": "Palm Concepcion Power (PCPC)",
+      "parent_group": "PCPC / Jin Navitas",
+      "parent_excluded": true,
       "draft_note": "Hi Rose, quick check-in on whether Palm Concepcion Power (PCPC)'s procurement timeline for Steam Coal has firmed up. Open to a 10-min call this week. \u2014 RZH"
     }
   ],
@@ -62,7 +74,9 @@
       "last_modified": "2026-07-02T05:15:16.354Z",
       "owner_id": "164168266",
       "commodity": "1.0-1.2M MT/yr Davao",
-      "company": "Therma South (TSI)"
+      "company": "Therma South (TSI)",
+      "parent_group": "AboitizPower",
+      "parent_excluded": true
     },
     {
       "deal_id": "331756274422",
@@ -77,7 +91,9 @@
       "last_modified": "2026-07-02T05:50:26.357Z",
       "owner_id": "164168266",
       "commodity": "Mindanao Cement",
-      "company": "Republic Cement (RCMI Iligan)"
+      "company": "Republic Cement (RCMI Iligan)",
+      "parent_group": "Republic Cement",
+      "parent_excluded": true
     },
     {
       "deal_id": "331848431329",
@@ -92,7 +108,9 @@
       "last_modified": "2026-07-02T05:15:14.424Z",
       "owner_id": "164168266",
       "commodity": "275-440k MT/yr Villanueva",
-      "company": "Philippine Sinter Corp (PSC)"
+      "company": "Philippine Sinter Corp (PSC)",
+      "parent_group": null,
+      "parent_excluded": false
     },
     {
       "deal_id": "331864002293",
@@ -107,7 +125,9 @@
       "last_modified": "2026-07-02T05:15:14.180Z",
       "owner_id": "164168266",
       "commodity": "500k MT/yr Villanueva",
-      "company": "FDC Misamis"
+      "company": "FDC Misamis",
+      "parent_group": null,
+      "parent_excluded": false
     },
     {
       "deal_id": "331885143770",
@@ -122,7 +142,9 @@
       "last_modified": "2026-07-02T05:15:14.668Z",
       "owner_id": "164168266",
       "commodity": "Forward Demand 1.5-2M MT/yr (2028-2030)",
-      "company": "FDC Misamis Expansion"
+      "company": "FDC Misamis Expansion",
+      "parent_group": null,
+      "parent_excluded": false
     },
     {
       "deal_id": "331939030733",
@@ -137,7 +159,9 @@
       "last_modified": "2026-07-02T05:15:16.119Z",
       "owner_id": "164168266",
       "commodity": "500-600k MT/yr Davao Occidental",
-      "company": "SMC Malita Restart"
+      "company": "SMC Malita Restart",
+      "parent_group": "SMC Global Power",
+      "parent_excluded": true
     },
     {
       "deal_id": "331974077120",
@@ -152,7 +176,9 @@
       "last_modified": "2026-07-02T05:15:11.546Z",
       "owner_id": "164168266",
       "commodity": "400-500k MT/yr Zamboanga (2027-2028)",
-      "company": "San Ramon Power (SRPI)"
+      "company": "San Ramon Power (SRPI)",
+      "parent_group": null,
+      "parent_excluded": false
     }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-07-04",
+  "source": "HubSpot deals + associations",
+  "candidate_count": 5,
+  "candidates": [
+    {
+      "contact_id": "501853038315",
+      "deal_name": "Bulk Ore Limited - Nickel Ore Supply",
+      "name": "Ed Finch",
+      "email": "edfinch@bulk-ore.com",
+      "phone": "+852 3960 6380",
+      "jobtitle": "Managing Director",
+      "company": "Bulk Ore Limited",
+      "lead_status": "IN_PROGRESS"
+    },
+    {
+      "contact_id": "484496958153",
+      "deal_name": "Fujian Yunding Mining - Copper Ore Supply",
+      "name": "Tina Chen",
+      "email": "tina@zkjck.com",
+      "phone": "+86 136 5501 9560",
+      "jobtitle": "Assistance to the Chairman",
+      "company": "Fujian Yunding Mining Co., Ltd.",
+      "lead_status": "IN_PROGRESS"
+    },
+    {
+      "contact_id": "489723759321",
+      "deal_name": "Fujian Yunding Mining - Copper Ore Supply",
+      "name": "Rosalie None",
+      "email": "rosalie@zkjck.com",
+      "phone": null,
+      "jobtitle": "Trading",
+      "company": "Fujian Yunding Mining (Zhongke Jinhe)",
+      "lead_status": "OPEN"
+    },
+    {
+      "contact_id": "481007634163",
+      "deal_name": "Palm Concepcion Power (PCPC) - Steam Coal Supply",
+      "name": "Rose Calba",
+      "email": "rcalba@solaris.com.ph",
+      "phone": "+632 8584 6706",
+      "jobtitle": "Procurement Officer, Solaris Inc. (Jin Navitas group \u2014 sister company of PCPC). NOT a PCPC employee. Solaris handles solar/renewable projects; PCPC handles coal power.",
+      "company": "Solaris",
+      "lead_status": "OPEN"
+    },
+    {
+      "contact_id": "485891997387",
+      "deal_name": "Palm Concepcion Power (PCPC) - Steam Coal Supply",
+      "name": "PCPC Corporate Communications",
+      "email": "corpcomms@pcpc.ph",
+      "phone": "+63 2 8584 6706",
+      "jobtitle": "Corporate Communications",
+      "company": "Palm Concepcion Power Corporation",
+      "lead_status": "ATTEMPTED_TO_CONTACT"
+    }
+  ]
+}

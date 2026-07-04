@@ -51,6 +51,64 @@ STAGE_LABELS = {
     "closedlost": "Closed Lost",
 }
 
+# Parent-group exclusion map (verified 2026-07-04, per
+# econares-crm-and-outreach-operations skill).
+# If a PARENT GROUP has an OPEN deal in the portal, its subsidiaries are
+# excluded from new outreach — they go through the existing deal channel only.
+PARENT_GROUPS = {
+    "MGEN / Meralco PowerGen": {
+        "subsidiaries": ["CEDC", "Global Business Power", "GBP", "Meralco PowerGen",
+                         "Toledo Power", "Redondo", "SPPC"],
+        "parent_keywords": ["MGEN", "Meralco"],
+    },
+    "AboitizPower": {
+        "subsidiaries": ["Therma Visayas", "Therma South", "TSI", "Therma Marine",
+                         "Therma Subic", "Hedcor", "AP Renewables", "Aboitiz Power",
+                         "SN Aboitiz", "Aboitiz", "PTC", "Philippine Hydro"],
+        "parent_keywords": ["Aboitiz"],
+    },
+    "SMC Global Power": {
+        "subsidiaries": ["Limay", "Mariveles", "Malita", "Sarangani", "SMC",
+                         "San Miguel Power", "SMCGP", "SMC Power"],
+        "parent_keywords": ["SMC", "San Miguel"],
+    },
+    "GNPower": {
+        "subsidiaries": ["GNPower", "Dinginin", "Kauswagan", "GN Power"],
+        "parent_keywords": ["GNPower", "GN Power"],
+    },
+    "SPC Power Group": {
+        "subsidiaries": ["Panay Energy", "PEDC", "SPC Power", "Naga", "SPC"],
+        "parent_keywords": ["SPC", "Panay Energy"],
+    },
+    "Holcim Philippines": {
+        "subsidiaries": ["Holcim", "La Union", "Bulacan", "Lugait", "Davao",
+                         "Holcim Philippines"],
+        "parent_keywords": ["Holcim"],
+    },
+    "Republic Cement": {
+        "subsidiaries": ["Republic Cement", "RCMI", "Danao", "Teresa",
+                         "Republic", "Republic Cement Norzagaray"],
+        "parent_keywords": ["Republic Cement", "Republic"],
+    },
+    "PCPC / Jin Navitas": {
+        "subsidiaries": ["Palm Concepcion", "PCPC", "Iloilo CFBC",
+                         "Jin Navitas"],
+        "parent_keywords": ["PCPC", "Palm Concepcion", "Jin Navitas"],
+    },
+}
+
+
+def detect_parent_group(deal_name, company_name=""):
+    """Return parent group name if deal/company matches a known subsidiary.
+    Returns None if no match. Case-insensitive substring on deal+company."""
+    text = f"{deal_name or ''} {company_name or ''}".lower()
+    for parent, info in PARENT_GROUPS.items():
+        for kw in info["subsidiaries"]:
+            if kw.lower() in text:
+                return parent
+    return None
+
+
 ACTIVITY_PROPS = [
     "notes_last_contacted",
     "notes_last_updated",
@@ -284,18 +342,37 @@ def format_report(stale, untouched, threshold_days, now):
 
     # === UNTOUCHED SECTION ===
     if untouched:
-        L.append(f"=== UNTOUCHED QUEUE ({len(untouched)}) — STAGED BUT NEVER WORKED ===")
+        actionable = [u for u in untouched if not u.get("parent_excluded")]
+        excluded = [u for u in untouched if u.get("parent_excluded")]
+        L.append(f"=== UNTOUCHED QUEUE ({len(untouched)} total) ===")
+        L.append(f"  Actionable (no parent-group exclusion): {len(actionable)}")
+        L.append(f"  Excluded (parent group has live deal):   {len(excluded)}")
+        L.append("")
         L.append("These deals have NO engagement activity logged (no notes,")
         L.append("emails, or meetings). They were likely batch-imported or")
         L.append("created manually but no outreach has happened yet.")
         L.append("Highest-value next-action: research contact + draft first touch.")
         L.append("")
-        untouched_sorted = sorted(untouched, key=lambda u: -(u.get("amount_php") or 0))
-        for u in untouched_sorted[:10]:
-            L.append(format_untouched_line(u))
-        if len(untouched) > 10:
-            L.append(f"  ... +{len(untouched) - 10} more in JSON")
-        L.append("")
+
+        if actionable:
+            L.append(f"--- ACTIONABLE ({len(actionable)}) ---")
+            actionable_sorted = sorted(actionable, key=lambda u: -(u.get("amount_php") or 0))
+            for u in actionable_sorted[:10]:
+                L.append(format_untouched_line(u))
+            if len(actionable) > 10:
+                L.append(f"  ... +{len(actionable) - 10} more in JSON")
+            L.append("")
+
+        if excluded:
+            L.append(f"--- EXCLUDED — parent group has live deal ({len(excluded)}) ---")
+            excluded_sorted = sorted(excluded, key=lambda u: u.get("parent_group", ""))
+            for u in excluded_sorted[:10]:
+                L.append(format_untouched_line(u))
+                if u.get("parent_group"):
+                    L.append(f"      parent: {u['parent_group']} (active deal exists)")
+            if len(excluded) > 10:
+                L.append(f"  ... +{len(excluded) - 10} more in JSON")
+            L.append("")
 
     L.append("=== NEXT ACTIONS ===")
     L.append(f"  Stale ({len(stale)}): review drafted re-engagement notes; confirm 'let's go' to send")
@@ -324,6 +401,16 @@ def main():
     print(f"[FETCH] Loading open deals from ECONARES pipeline ...", file=sys.stderr)
     deals = fetch_open_deals()
     print(f"[FETCH] {len(deals)} open deals", file=sys.stderr)
+
+    # === Build live parent-group exclusion set ===
+    # If a parent group name appears in any open deal name, treat that group as
+    # having a live deal → all its subsidiaries are EXCLUDED from outreach.
+    parents_with_open_deals = set()
+    for d in deals:
+        parent = detect_parent_group(d["properties"].get("dealname", ""))
+        if parent:
+            parents_with_open_deals.add(parent)
+    print(f"[EXCL] Parent groups with live open deals: {sorted(parents_with_open_deals)}", file=sys.stderr)
 
     now = datetime.now(timezone.utc)
     stale = []
@@ -357,6 +444,8 @@ def main():
 
         # === UNTOUCHED branch: no engagement ever logged ===
         if not any_activity:
+            parent_group = detect_parent_group(props.get("dealname", ""), company)
+            parent_excluded = parent_group in parents_with_open_deals
             untouched.append({
                 "deal_id": d["id"],
                 "deal_name": props.get("dealname"),
@@ -371,6 +460,8 @@ def main():
                 "owner_id": owner,
                 "commodity": commodity,
                 "company": company,
+                "parent_group": parent_group,
+                "parent_excluded": parent_excluded,
             })
             continue
 
@@ -409,6 +500,9 @@ def main():
         template = TEMPLATES.get(stage_id, TEMPLATES["3410654913"])
         draft = template.format(first=first_name, company=company, commodity=commodity)
 
+        parent_group = detect_parent_group(props.get("dealname", ""), company)
+        parent_excluded = parent_group in parents_with_open_deals
+
         stale.append({
             "deal_id": d["id"],
             "deal_name": props.get("dealname"),
@@ -426,6 +520,8 @@ def main():
             "contact_email": contact_email,
             "commodity": commodity,
             "company": company,
+            "parent_group": parent_group,
+            "parent_excluded": parent_excluded,
             "draft_note": draft,
         })
 
@@ -434,6 +530,8 @@ def main():
         f"stale_deals_{now.strftime('%Y-%m-%d')}.json"
     )
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    actionable_untouched = [u for u in untouched if not u.get("parent_excluded")]
+    excluded_untouched = [u for u in untouched if u.get("parent_excluded")]
     snapshot = {
         "generated_at": now.isoformat(),
         "threshold_days": args.days,
@@ -442,8 +540,11 @@ def main():
         "open_deals_scanned": len(deals),
         "skipped_owner_mismatch": skipped_owner,
         "skipped_below_amount": skipped_amount,
+        "parents_with_open_deals": sorted(parents_with_open_deals),
         "stale_count": len(stale),
         "untouched_count": len(untouched),
+        "actionable_untouched_count": len(actionable_untouched),
+        "excluded_untouched_count": len(excluded_untouched),
         "stale": stale,
         "untouched": untouched,
     }
@@ -453,7 +554,9 @@ def main():
     print(f"[SAVE] {out_path}", file=sys.stderr)
     print(f"[RESULT] {len(stale)} stale + {len(untouched)} untouched "
           f"(stale threshold >{args.days}d, "
-          f"{'RZH-owned' if args.owner_only else 'all owners'})",
+          f"{'RZH-owned' if args.owner_only else 'all owners'}, "
+          f"{len(actionable_untouched)} actionable / "
+          f"{len(excluded_untouched)} parent-excluded)",
           file=sys.stderr)
 
     if args.report:

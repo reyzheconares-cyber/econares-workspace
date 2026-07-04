@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-07-04T17:00:00+08:00",
+  "for": "Tier 3 Wave 2 subagents (Agent C + Agent D)",
+  "rzh_context": {
+    "name": "Reymarr Zamora Hijara",
+    "alias": "RZH",
+    "role": "Sales & Marketing Officer",
+    "employer": "ECONARES",
+    "location": "Cebu City, Philippines (GMT+8)",
+    "ceo": "Eleizer Eleguin",
+    "phone": "+639278725194",
+    "email": "rzh24.econares@gmail.com"
+  },
+  "company_context": {
+    "name": "ECONARES (never 'Trading Corporation')",
+    "positioning": "commodity supplier (not 'trading and logistics')",
+    "geography": "entire country (never 'Visayas and Mindanao')",
+    "incoterms": "FOB-only",
+    "deal_terms": "50% down payment, all buyers",
+    "commodities": [
+      "nickel ore",
+      "copper ore",
+      "diesel",
+      "coal",
+      "PKS",
+      "woodchips",
+      "CPO"
+    ],
+    "nickel_origin": "Philippine (when selling to PH miners like FNI, NAC)",
+    "coal_origin": "Indonesian (when selling to PH buyers)"
+  },
+  "hubspot_context": {
+    "portal_id": "245683432",
+    "rzh_owner_id": "164168266",
+    "dead_owner_id": "90091659"
+  },
+  "buyer_candidates_for_persona_cards": "/home/mauiclaw/ECONARES_WORKSPACE/intelligence/buyer_personas/buyer_candidates_2026-07-04.json",
+  "deal_candidates_4_actionable": [
+    {
+      "company": "Philippine Sinter Corp (PSC)",
+      "commodity": "Coke Breeze",
+      "volume": "275-440k MT/yr",
+      "location": "Villanueva"
+    },
+    {
+      "company": "FDC Misamis",
+      "commodity": "Coal",
+      "volume": "500k MT/yr",
+      "location": "Villanueva"
+    },
+    {
+      "company": "FDC Misamis Expansion",
+      "commodity": "Coal",
+      "volume": "1.5-2M MT/yr (2028-2030)",
+      "location": "Villanueva"
+    },
+    {
+      "company": "San Ramon Power (SRPI)",
+      "commodity": "Coal",
+      "volume": "400-500k MT/yr",
+      "location": "Zamboanga (2027-2028)"
+    }
+  ],
+  "deal_candidates_stale_re_engage": [
+    {
+      "company": "Fujian Yunding Mining",
+      "commodity": "Copper Ore",
+      "contact": "Tina Chen <tina@zkjck.com>"
+    },
+    {
+      "company": "Palm Concepcion Power (PCPC)",
+      "commodity": "Steam Coal",
+      "contact": "Rose Calba <rcalba@solaris.com.ph>"
+    }
+  ],
+  "mgb_denr_watch": {
+    "note": "Direct HTTP probing of mgb.gov.ph and denr.gov.ph returns 403 (UA-blocked). Subagent D must use web_search with explicit queries instead of trying to scrape.",
+    "watch_topics": [
+      "Mines and Geosciences Bureau (MGB) permit issuances",
+      "DENR mine suspension orders",
+      "PH nickel export ban policy changes",
+      "MGB mineral industry statistics",
+      "DENR environmental compliance orders (ECOs)",
+      "PH mining moratorium / ban extensions"
+    ]
+  },
+  "today_date": "2026-07-04"
+}

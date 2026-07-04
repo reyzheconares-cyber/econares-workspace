@@ -1,0 +1,912 @@
+{
+  "generated_at": "2026-07-04T10:50:17.106708+00:00",
+  "stages_run": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "results": {
+    "dedup": {
+      "stage": "dedup",
+      "summary": {
+        "duplicate_companies": 8,
+        "duplicate_contacts": 0,
+        "companies_missing_domain": 24
+      },
+      "duplicate_companies": [
+        {
+          "domain": "lygend.com",
+          "companies": [
+            {
+              "id": "317292201658",
+              "name": "Lygend",
+              "city": null
+            },
+            {
+              "id": "321962320633",
+              "name": "Ningbo Lygend Wisdom Co. Ltd.",
+              "city": null
+            }
+          ]
+        },
+        {
+          "domain": "smcglobalpower.com.ph",
+          "companies": [
+            {
+              "id": "318814924485",
+              "name": "San Miguel Global Power Holdings Corporation",
+              "city": "Mandaluyong City"
+            },
+            {
+              "id": "320729061083",
+              "name": "San Miguel Global Power",
+              "city": "Masinloc"
+            }
+          ]
+        },
+        {
+          "domain": "aboitizpower.com",
+          "companies": [
+            {
+              "id": "319028131556",
+              "name": "AboitizPower Corporation",
+              "city": "Lapu-Lapu City"
+            },
+            {
+              "id": "319338076898",
+              "name": "AboitizPower Therma Visayas, Inc.",
+              "city": "Cebu"
+            },
+            {
+              "id": "320527614681",
+              "name": "Pagbilao Energy Corporation",
+              "city": "Pagbilao"
+            },
+            {
+              "id": "320650095346",
+              "name": "AboitizPower",
+              "city": "Villanueva"
+            }
+          ]
+        },
+        {
+          "domain": "republiccement.com",
+          "companies": [
+            {
+              "id": "319761962702",
+              "name": "Republic Cement",
+              "city": "Danao City"
+            },
+            {
+              "id": "320106199766",
+              "name": "Republic Cement",
+              "city": "Taguig City"
+            }
+          ]
+        },
+        {
+          "domain": "gnpd.ph",
+          "companies": [
+            {
+              "id": "320650095342",
+              "name": "GNPD",
+              "city": null
+            },
+            {
+              "id": "331367108307",
+              "name": "GNPower Dinginin Ltd. Co.",
+              "city": "Mariveles"
+            }
+          ]
+        },
+        {
+          "domain": "alsonspower.com",
+          "companies": [
+            {
+              "id": "320696450796",
+              "name": "Alsons Power Group",
+              "city": "Maasim"
+            },
+            {
+              "id": "320722047717",
+              "name": "Alsons Power Group",
+              "city": "Makati City"
+            }
+          ]
+        },
+        {
+          "domain": "pcpc.ph",
+          "companies": [
+            {
+              "id": "321424104150",
+              "name": "Peakpower Energy",
+              "city": null
+            },
+            {
+              "id": "322716960491",
+              "name": "Palm Concepcion Power Corporation",
+              "city": "Concepcion"
+            }
+          ]
+        },
+        {
+          "domain": "smm.co.jp",
+          "companies": [
+            {
+              "id": "322924743370",
+              "name": "Sumitomo Metal Mining Philippine Holdings Corporation",
+              "city": "Manila"
+            },
+            {
+              "id": "331687676658",
+              "name": "Sumitomo Metal Mining Co., Ltd.",
+              "city": "Tokyo"
+            }
+          ]
+        }
+      ],
+      "duplicate_contacts": [],
+      "companies_missing_domain": [
+        {
+          "id": "315999425217",
+          "name": "Suprea Ready Mixed Concrete (Suprea Phils. Devt. Corp.)"
+        },
+        {
+          "id": "319163864785",
+          "name": "Aboitiz Power"
+        },
+        {
+          "id": "320523465441",
+          "name": "Minergy Coal Corporation"
+        },
+        {
+          "id": "320531373785",
+          "name": "Misamis Oriental Power Station"
+        },
+        {
+          "id": "320531373787",
+          "name": "Toledo Power Co."
+        },
+        {
+          "id": "320551132866",
+          "name": "Malita Power Plant"
+        },
+        {
+          "id": "320729112283",
+          "name": "Limay Coal Power Plant"
+        },
+        {
+          "id": "321761471205",
+          "name": "Toledo Power Corporation (TPC)"
+        },
+        {
+          "id": "322934209213",
+          "name": "East Asia Utilities Corporation"
+        },
+        {
+          "id": "322934717137",
+          "name": "Meridian Power, Inc."
+        },
+        {
+          "id": "322979449541",
+          "name": "Global Ferronickel Holdings (FNI)"
+        },
+        {
+          "id": "322997670643",
+          "name": "Cebu Energy Development Corporation"
+        },
+        {
+          "id": "323822456564",
+          "name": "Fujian Panshi Mining Co., Ltd."
+        },
+        {
+          "id": "325877933814",
+          "name": "Asia Pacific Energy Corp."
+        },
+        {
+          "id": "326191917802",
+          "name": "Ilijan Power Plant"
+        },
+        {
+          "id": "326257477313",
+          "name": "Calaca Power Complex"
+        },
+        {
+          "id": "326810588898",
+          "name": "Pearl Energy Philippines Operating, Inc. (PEPOI)"
+        },
+        {
+          "id": "329303353037",
+          "name": "SMC Malita Power Plant"
+        },
+        {
+          "id": "329322443499",
+          "name": "FDC Misamis 6x135 MW Expansion"
+        },
+        {
+          "id": "329331631865",
+          "name": "Sarangani Energy Corporation"
+        }
+      ]
+    },
+    "commodity_tag": {
+      "stage": "commodity_tag",
+      "summary": {
+        "contacts_with_commodity_signal": 5,
+        "contacts_needing_research": 152,
+        "open_deals_analyzed": 10,
+        "open_deals_with_commodity_signal": 10
+      },
+      "schema_note": "No 'econares_commodity_interest' property exists yet. Surface this plan to RZH before applying (requires admin).",
+      "tagged_preview": [
+        {
+          "id": "481007634163",
+          "name": "Rose Calba",
+          "email": "rcalba@solaris.com.ph",
+          "company": "Solaris",
+          "commodities": [
+            "coal"
+          ]
+        },
+        {
+          "id": "484496958153",
+          "name": "Tina Chen",
+          "email": "tina@zkjck.com",
+          "company": "Fujian Yunding Mining Co., Ltd.",
+          "commodities": [
+            "copper"
+          ]
+        },
+        {
+          "id": "485891997387",
+          "name": "PCPC Corporate Communications",
+          "email": "corpcomms@pcpc.ph",
+          "company": "Palm Concepcion Power Corporation",
+          "commodities": [
+            "coal"
+          ]
+        },
+        {
+          "id": "489723759321",
+          "name": "Rosalie None",
+          "email": "rosalie@zkjck.com",
+          "company": "Fujian Yunding Mining (Zhongke Jinhe)",
+          "commodities": [
+            "copper"
+          ]
+        },
+        {
+          "id": "501853038315",
+          "name": "Ed Finch",
+          "email": "edfinch@bulk-ore.com",
+          "company": "Bulk Ore Limited",
+          "commodities": [
+            "nickel"
+          ]
+        }
+      ],
+      "untagged_preview": [
+        {
+          "id": "462100688624",
+          "name": "John Glubas",
+          "email": "purchasing@concretesolutions.com.ph",
+          "company": "Concrete Solutions Inc."
+        },
+        {
+          "id": "462552038097",
+          "name": "Lemuel Felisario",
+          "email": "lsf.econares@gmail.com",
+          "company": "ECONARES"
+        },
+        {
+          "id": "462552038119",
+          "name": "Eleizer Eleguin",
+          "email": "ece.eleguinresources@yahoo.com",
+          "company": "ECE (Eleguin Resources Corporation)"
+        },
+        {
+          "id": "463858964181",
+          "name": "Taro Sumi",
+          "email": "eortega@taiheiyo-cement.com.ph",
+          "company": "Taiheiyo Cement Philippines Inc."
+        },
+        {
+          "id": "463860405976",
+          "name": "Rochelle G. Dedicatoria",
+          "email": "rdedicatoria@suprea.ph",
+          "company": "Suprea Ready Mixed Concrete"
+        },
+        {
+          "id": "464341160651",
+          "name": "Jessica Capeding",
+          "email": "jc.econares@gmail.com",
+          "company": "ECONARES"
+        },
+        {
+          "id": "464524163823",
+          "name": "German Desuyo",
+          "email": "germandesuyo@gmail.com",
+          "company": "Cebu Energy Development Corporation (CEDC)"
+        },
+        {
+          "id": "464524351190",
+          "name": "John Rey Hisoler",
+          "email": "jrrhisoler@mgen.com.ph",
+          "company": "MGEN \u2014 Meralco PowerGen / Global Business Power"
+        },
+        {
+          "id": "467756809950",
+          "name": "Copper Procurement",
+          "email": "purchase@jmm.co.jp",
+          "company": "JX Advanced Metals Corporation"
+        },
+        {
+          "id": "467756809963",
+          "name": "Trading Team",
+          "email": "contact@yuantuo.com",
+          "company": "Yuantuo Resources Pte. Ltd."
+        },
+        {
+          "id": "467765774067",
+          "name": "Trading Team",
+          "email": "contact@tssgroup.com.cn",
+          "company": "Tsingshan Holding Group"
+        },
+        {
+          "id": "467765775047",
+          "name": "Supply Chain",
+          "email": "procurement@byd.com",
+          "company": "BYD Company Ltd."
+        },
+        {
+          "id": "467767582405",
+          "name": "Supply Chain",
+          "email": "supply@catl.com",
+          "company": "CATL \u2014 Contemporary Amperex Technology Co. Ltd."
+        },
+        {
+          "id": "467767582413",
+          "name": "Trading Team",
+          "email": "contact@dingchuang.com",
+          "company": "Dingchuang Groups Ltd."
+        },
+        {
+          "id": "467795043061",
+          "name": "Lygend Procurement",
+          "email": "procurement@lygend.com",
+          "company": "Ningbo Lygend Wisdom Co. Ltd."
+        }
+      ]
+    },
+    "lead_rescore": {
+      "stage": "lead_rescore",
+      "summary": {
+        "open_in_progress_leads": 42,
+        "hot_3plus_notes_30d": 0,
+        "warm_1to2_notes_30d": 0,
+        "cold_0_notes_30d": 42
+      },
+      "hot_preview": [],
+      "warm_preview": [],
+      "cold_preview": [
+        {
+          "id": "463858964181",
+          "name": "Taro Sumi",
+          "company": "Taiheiyo Cement Philippines Inc.",
+          "email": "eortega@taiheiyo-cement.com.ph",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": 95
+        },
+        {
+          "id": "463860405976",
+          "name": "Rochelle G. Dedicatoria",
+          "company": "Suprea Ready Mixed Concrete",
+          "email": "rdedicatoria@suprea.ph",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467756809950",
+          "name": "Copper Procurement",
+          "company": "JX Advanced Metals Corporation",
+          "email": "purchase@jmm.co.jp",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467767582405",
+          "name": "Supply Chain",
+          "company": "CATL \u2014 Contemporary Amperex Technology Co. Ltd.",
+          "email": "supply@catl.com",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467804014277",
+          "name": "Qin Yang",
+          "company": "Big Wave Resources Ltd.",
+          "email": "info@bigwaveresources.com",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467767582413",
+          "name": "Trading Team",
+          "company": "Dingchuang Groups Ltd.",
+          "email": "contact@dingchuang.com",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467756809963",
+          "name": "Trading Team",
+          "company": "Yuantuo Resources Pte. Ltd.",
+          "email": "contact@yuantuo.com",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467807623899",
+          "name": "Trading Team",
+          "company": "Bright Point Trading Pte. Ltd.",
+          "email": "contact@brightpoint.com.sg",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "467765775047",
+          "name": "Supply Chain",
+          "company": "BYD Company Ltd.",
+          "email": "procurement@byd.com",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        },
+        {
+          "id": "471237642940",
+          "name": "Anson Wong",
+          "company": "Jinchuan Group International Resources Co. Ltd.",
+          "email": "anson@jinchuan-intl.com",
+          "lead_status": "OPEN",
+          "notes_last_30d": 0,
+          "last_outreach_days_ago": null
+        }
+      ]
+    },
+    "dead_threads": {
+      "stage": "dead_threads",
+      "summary": {
+        "hubspot_stale_leads": 0,
+        "gmail_stale_threads": 0,
+        "gmail_imap_status": "error: IMAP error: error: b'[ALERT] Invalid credentials (Failure)'"
+      },
+      "hubspot_stale": [],
+      "gmail_stale": []
+    },
+    "backfill": {
+      "stage": "backfill",
+      "summary": {
+        "contacts_scanned": 220,
+        "companies_scanned": 122,
+        "open_deals_scanned": 10
+      },
+      "contact_missing_counts": {
+        "phone": 112,
+        "country": 127,
+        "firstname": 19,
+        "lastname": 22,
+        "email": 63,
+        "company": 70,
+        "jobtitle": 7
+      },
+      "company_missing_counts": {
+        "industry": 38,
+        "country": 34,
+        "city": 54,
+        "numberofemployees": 72,
+        "domain": 24,
+        "name": 4
+      },
+      "deal_missing_counts": {
+        "amount": 1,
+        "closedate": 7
+      },
+      "contact_missing_samples": {
+        "phone": [
+          {
+            "id": "462100688624",
+            "name": "John Glubas",
+            "email": "purchasing@concretesolutions.com.ph",
+            "company": "Concrete Solutions Inc."
+          },
+          {
+            "id": "462552038119",
+            "name": "Eleizer Eleguin",
+            "email": "ece.eleguinresources@yahoo.com",
+            "company": "ECE (Eleguin Resources Corporation)"
+          },
+          {
+            "id": "469207276255",
+            "name": "Ales Lygend",
+            "email": "ales@lygend.com",
+            "company": "Ningbo Lygend Wisdom Co. Ltd."
+          },
+          {
+            "id": "469207276256",
+            "name": "None None",
+            "email": "info@lygend.com",
+            "company": "Ningbo Lygend Wisdom Co. Ltd."
+          },
+          {
+            "id": "469207486197",
+            "name": "TISCO Procurement",
+            "email": "sales@chinatisco.com",
+            "company": "TISCO (Baowu Group)"
+          }
+        ],
+        "country": [
+          {
+            "id": "464524163823",
+            "name": "German Desuyo",
+            "email": "germandesuyo@gmail.com",
+            "company": "Cebu Energy Development Corporation (CEDC)"
+          },
+          {
+            "id": "473304336089",
+            "name": "RSD Procurement",
+            "email": "info@rsdindustry.com",
+            "company": "RSD Industry"
+          },
+          {
+            "id": "473882456810",
+            "name": "Procurement Team",
+            "email": "info@smcglobalpower.com.ph",
+            "company": "SMC Global Power Holdings Corp. (Masinloc / Malita)"
+          },
+          {
+            "id": "476392981207",
+            "name": "Nona Santha Libradilla",
+            "email": "purchasing@mabuhaycement.com",
+            "company": "Mabuhay Filcement Inc. (MFI)"
+          },
+          {
+            "id": "476392986318",
+            "name": "Eric Durano",
+            "email": null,
+            "company": "Durano Paper Sugar Mill"
+          }
+        ],
+        "firstname": [
+          {
+            "id": "469207276256",
+            "name": "None None",
+            "email": "info@lygend.com",
+            "company": "Ningbo Lygend Wisdom Co. Ltd."
+          },
+          {
+            "id": "469448074997",
+            "name": "None None",
+            "email": "marketing@ytxinhai.com",
+            "company": "Shandong Xinhai Mining Equipment Co. Ltd."
+          },
+          {
+            "id": "469448797918",
+            "name": "None None",
+            "email": "information@huayou.com",
+            "company": "Zhejiang Huayou Cobalt Co. Ltd."
+          },
+          {
+            "id": "469449517802",
+            "name": "None None",
+            "email": "mail@hnmstrading.com",
+            "company": "Hainan Mining Co. Ltd."
+          },
+          {
+            "id": "469804523234",
+            "name": "None None",
+            "email": "asb.econares@gmail.com",
+            "company": "ECONARES"
+          }
+        ],
+        "lastname": [
+          {
+            "id": "469207276256",
+            "name": "None None",
+            "email": "info@lygend.com",
+            "company": "Ningbo Lygend Wisdom Co. Ltd."
+          },
+          {
+            "id": "469448074997",
+            "name": "None None",
+            "email": "marketing@ytxinhai.com",
+            "company": "Shandong Xinhai Mining Equipment Co. Ltd."
+          },
+          {
+            "id": "469448797918",
+            "name": "None None",
+            "email": "information@huayou.com",
+            "company": "Zhejiang Huayou Cobalt Co. Ltd."
+          },
+          {
+            "id": "469449517802",
+            "name": "None None",
+            "email": "mail@hnmstrading.com",
+            "company": "Hainan Mining Co. Ltd."
+          },
+          {
+            "id": "469804523234",
+            "name": "None None",
+            "email": "asb.econares@gmail.com",
+            "company": "ECONARES"
+          }
+        ],
+        "email": [
+          {
+            "id": "472646950609",
+            "name": "Ace None",
+            "email": null,
+            "company": "DXB China India Resources FZE"
+          },
+          {
+            "id": "475074540280",
+            "name": "Zyra Fe Quijano",
+            "email": null,
+            "company": "Cebu Energy Development Corp (CEDC)"
+          },
+          {
+            "id": "476392986318",
+            "name": "Eric Durano",
+            "email": null,
+            "company": "Durano Paper Sugar Mill"
+          },
+          {
+            "id": "478141744834",
+            "name": "Angelica Javier, CPP, DSM",
+            "email": null,
+            "company": null
+          },
+          {
+            "id": "478391918271",
+            "name": "Aurelio B. Ramones, Jr.",
+            "email": null,
+            "company": "Independent Agent (San Mateo, Isabela)"
+          }
+        ],
+        "company": [
+          {
+            "id": "478141744834",
+            "name": "Angelica Javier, CPP, DSM",
+            "email": null,
+            "company": null
+          },
+          {
+            "id": "480948409032",
+            "name": "Mailchimp Imports None",
+            "email": "imports@mailchimp.com",
+            "company": null
+          },
+          {
+            "id": "480965105357",
+            "name": "Bethany Self",
+            "email": "bself@hubspot.com",
+            "company": null
+          },
+          {
+            "id": "480965293814",
+            "name": "None None",
+            "email": "clabeto@mgen.com.ph",
+            "company": null
+          },
+          {
+            "id": "482151092961",
+            "name": "Gezamaris Bonghanoy",
+            "email": "gbteconares@gmail.com",
+            "company": null
+          }
+        ],
+        "jobtitle": [
+          {
+            "id": "498977570522",
+            "name": "None None",
+            "email": "info@bergs-mpc.com",
+            "company": null
+          },
+          {
+            "id": "503923490490",
+            "name": "None None",
+            "email": "corporate.communication@gmec.ph",
+            "company": null
+          },
+          {
+            "id": "507436263139",
+            "name": "None None",
+            "email": "info@chelseashipping.com",
+            "company": null
+          },
+          {
+            "id": "508006897348",
+            "name": "None None",
+            "email": "infocomm@gnpower.com",
+            "company": null
+          },
+          {
+            "id": "508373979836",
+            "name": "None None",
+            "email": "sales@asianshipping.com.ph",
+            "company": null
+          }
+        ]
+      },
+      "company_missing_samples": {
+        "industry": [
+          {
+            "id": "315966974677",
+            "name": "Taiheiyo Cement Philippines"
+          },
+          {
+            "id": "317258178250",
+            "name": "Yuantuo"
+          },
+          {
+            "id": "317270684380",
+            "name": "BYD"
+          },
+          {
+            "id": "317274262208",
+            "name": "Bright Point Trading Pte. Ltd."
+          },
+          {
+            "id": "317279658733",
+            "name": "Fortune Metals"
+          }
+        ],
+        "country": [
+          {
+            "id": "315966974677",
+            "name": "Taiheiyo Cement Philippines"
+          },
+          {
+            "id": "315999425217",
+            "name": "Suprea Ready Mixed Concrete (Suprea Phils. Devt. Corp.)"
+          },
+          {
+            "id": "317258178250",
+            "name": "Yuantuo"
+          },
+          {
+            "id": "317270684380",
+            "name": "BYD"
+          },
+          {
+            "id": "317279658733",
+            "name": "Fortune Metals"
+          }
+        ],
+        "city": [
+          {
+            "id": "315966974677",
+            "name": "Taiheiyo Cement Philippines"
+          },
+          {
+            "id": "317258178250",
+            "name": "Yuantuo"
+          },
+          {
+            "id": "317270684380",
+            "name": "BYD"
+          },
+          {
+            "id": "317274262208",
+            "name": "Bright Point Trading Pte. Ltd."
+          },
+          {
+            "id": "317279658733",
+            "name": "Fortune Metals"
+          }
+        ],
+        "numberofemployees": [
+          {
+            "id": "315966974677",
+            "name": "Taiheiyo Cement Philippines"
+          },
+          {
+            "id": "315999425217",
+            "name": "Suprea Ready Mixed Concrete (Suprea Phils. Devt. Corp.)"
+          },
+          {
+            "id": "317258178250",
+            "name": "Yuantuo"
+          },
+          {
+            "id": "317270684380",
+            "name": "BYD"
+          },
+          {
+            "id": "317274262208",
+            "name": "Bright Point Trading Pte. Ltd."
+          }
+        ],
+        "domain": [
+          {
+            "id": "315999425217",
+            "name": "Suprea Ready Mixed Concrete (Suprea Phils. Devt. Corp.)"
+          },
+          {
+            "id": "319163864785",
+            "name": "Aboitiz Power"
+          },
+          {
+            "id": "320523465441",
+            "name": "Minergy Coal Corporation"
+          },
+          {
+            "id": "320531373785",
+            "name": "Misamis Oriental Power Station"
+          },
+          {
+            "id": "320531373787",
+            "name": "Toledo Power Co."
+          }
+        ],
+        "name": [
+          {
+            "id": "322951072459",
+            "name": "?"
+          },
+          {
+            "id": "329303726833",
+            "name": "?"
+          },
+          {
+            "id": "329644727004",
+            "name": "?"
+          },
+          {
+            "id": "330875977444",
+            "name": "?"
+          }
+        ]
+      },
+      "deal_missing_samples": {
+        "amount": [
+          {
+            "id": "325250304712",
+            "name": "Fujian Yunding Mining - Copper Ore Supply"
+          }
+        ],
+        "closedate": [
+          {
+            "id": "331655170775",
+            "name": "Therma South (TSI) - Coal - 1.0-1.2M MT/yr Davao"
+          },
+          {
+            "id": "331756274422",
+            "name": "Republic Cement (RCMI Iligan) - Coal - Mindanao Cement"
+          },
+          {
+            "id": "331848431329",
+            "name": "Philippine Sinter Corp (PSC) - Coke Breeze - 275-440k MT/yr Villanueva"
+          },
+          {
+            "id": "331864002293",
+            "name": "FDC Misamis - Coal - 500k MT/yr Villanueva"
+          },
+          {
+            "id": "331885143770",
+            "name": "FDC Misamis Expansion - Coal - Forward Demand 1.5-2M MT/yr (2028-2030)"
+          }
+        ]
+      }
+    }
+  }
+}
