@@ -13,24 +13,11 @@ from econares_intel import format_quota_line, latest_staging  # noqa: E402
 
 def _load_night_summary():
     """Read last night's staging files. Returns dict with counts (or empty)."""
-    out = {
-        "research": None, "dedup": None, "classify": None,
-        "crm_enrichment": None, "deal_staleness": None, "feed_targets": None,
-        "ran": False,
-    }
-    # Core night pipeline (lead-gen research)
+    out = {"research": None, "dedup": None, "classify": None, "ran": False}
     for stage in ("research", "dedup", "classify"):
         s = latest_staging(f"nightly_{stage}")
         if s and s.get("data"):
             out[stage] = s["data"].get("summary", {})
-            out["ran"] = True
-    # CRM enrichment + deal-staleness + target-feed (added 2026-07-05)
-    for stage in ("crm_enrichment", "deal_staleness", "feed_nightly_targets"):
-        s = latest_staging(stage)
-        if s and s.get("data"):
-            out[stage.replace("crm_enrichment", "crm_enrichment").replace(
-                "deal_staleness", "deal_staleness").replace(
-                "feed_nightly_targets", "feed_targets")] = s["data"].get("summary", {})
             out["ran"] = True
     return out
 
@@ -57,29 +44,6 @@ def _night_pipeline_line():
         parts.append(
             f"classify: hot={c.get('hot',0)} warm={c.get('warm',0)} "
             f"monitor={c.get('monitor',0)} skip={c.get('skip',0)}"
-        )
-    # CRM enrichment summary (weekly, Sun 23:00)
-    if ns.get("crm_enrichment"):
-        e = ns["crm_enrichment"]
-        parts.append(
-            f"crm: {e.get('total_contacts',0)} contacts, "
-            f"{e.get('no_email',0)} no-email, "
-            f"{e.get('no_phone',0)} no-phone, "
-            f"{e.get('stale_over_180d',0)} stale>180d"
-        )
-    # Deal staleness summary (weekly, Mon 01:30)
-    if ns.get("deal_staleness"):
-        d = ns["deal_staleness"]
-        parts.append(
-            f"deals: {d.get('open_deals',0)} open, "
-            f"{d.get('stale_over_14d',0)} stale>14d, "
-            f"{d.get('stuck_early_over_30d',0)} stuck-early>30d"
-        )
-    # Target feed summary (weekdays 18:00)
-    if ns.get("feed_targets"):
-        f_ = ns["feed_targets"]
-        parts.append(
-            f"targets: fed {f_.get('written',0)} to research queue"
         )
     return "NIGHT PIPELINE: " + " | ".join(parts) if parts else "NIGHT PIPELINE: silent"
 
