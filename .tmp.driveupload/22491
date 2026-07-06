@@ -1,0 +1,282 @@
+{
+  "main": {
+    "id": "82e6908c460276d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "37aab1de15420855",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08fc3bda757de730",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "proposals/CEO_COSTING_PROPOSAL_2026-06-16.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "CEO_COSTING_PROPOSAL_2026-06-16"
+            }
+          },
+          {
+            "id": "548089274527aa9d",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lead Direction.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Lead Direction"
+            }
+          },
+          {
+            "id": "46aeeec027f08a2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nickel Specs ECONARES.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Nickel Specs ECONARES"
+            }
+          },
+          {
+            "id": "168dc7be28d98b24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_backups/Obsidian_Vault_2026-05-08_17-18/Obsidian Vault/1_Projects/109_LEMRY-OIL-Terminal/LEMRY-OIL-TERMINAL-CORP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LEMRY-OIL-TERMINAL-CORP"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1104869c8e2aa0e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d4118084992fc6b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e58296116f967ec1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5f2215e7ea6bb52f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a565b90503c37dce",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bd845be9c63e0b66",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f83bab66890432b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8058e751145650b3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "4_Archives/Weekly_Reports/Weekly_Report_April13-17_2026.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Weekly_Report_April13-17_2026"
+            }
+          },
+          {
+            "id": "6bd2a952a318cc94",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "4_Archives/Weekly_Reports/Weekly_Report_April13-17_2026.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Weekly_Report_April13-17_2026"
+            }
+          },
+          {
+            "id": "2c56f712b0a70257",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a17a0e622ffc8a3e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1f4effffe66e9abb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "4_Archives/Weekly_Reports/Weekly_Report_April13-17_2026.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Weekly_Report_April13-17_2026"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "168dc7be28d98b24",
+  "lastOpenFiles": [
+    "scripts/_bounce_flag_hubspot.py",
+    "_backups/Obsidian_Vault_2026-05-08_17-18/Obsidian Vault/1_Projects/104 PCO Hub Webapp/007 PCO Notes.md",
+    "contact_research_brief_2026-06-11.md",
+    "intelligence/competitor/~syncthing~competitor_intel.json.tmp",
+    "intelligence/competitor/~syncthing~competitor_history.csv.tmp",
+    "briefers/dsr-2026-07-03.html",
+    "briefers/~syncthing~dsr-2026-07-03.html.tmp",
+    "logs/~syncthing~git_autosync.log.tmp",
+    "ebooks/Econares_75_Cold_Call_Hooks_Commodity_Trading_Edition.pdf",
+    "0 Inbox/QPL_OUTREACH_DRAFT - 20260702.md",
+    "scripts/_nickel_email_01_huayou.py",
+    "briefers/dsr-2026-07-02.html",
+    "briefers/~syncthing~dsr-2026-07-02.html.tmp",
+    "scripts/_republic_cement_enrich.py",
+    "0 Inbox/QPL_LINKEDIN_OUTREACH_DRAFT - 20260702.md",
+    "4_Archives/GNPD_OUTREACH_DRAFT - 20260701.md",
+    "reports/duplicate_tasks_audit_20260618-120132.md",
+    "reports/duplicate_tasks_audit_20260618-181650.md",
+    "reports/duplicate_tasks_audit_20260618-181631.md",
+    "reports/duplicate_tasks_audit_20260618-181551.md",
+    "reports/duplicate_tasks_audit_20260618-181456.md",
+    "reports/duplicate_tasks_audit_20260618-181348.md",
+    "reports/duplicate_tasks_audit_20260618-180825.md",
+    "reports/duplicate_tasks_audit_20260618-180213.md",
+    "_backups/Obsidian_Vault_2026-05-08_17-18/Obsidian Vault/1_Projects/104 PCO Hub Webapp/104 PCO Hub Webapp.md",
+    "Lead Direction.md",
+    "Nickel Specs ECONARES.md",
+    "proposals/CEO_COSTING_PROPOSAL_2026-06-16.md",
+    "_backups/Obsidian_Vault_2026-05-08_17-18/Obsidian Vault/Company Intelligence/PCPC - Research Deep Dive [TONIGHT].md",
+    "website_plan/prototypes/_preview-home.png",
+    "website_plan/DESIGN.md",
+    "website_plan/README.md",
+    "website_plan/BRAND_TOKENS.md",
+    "website_plan/WEBSITE_DEVELOPMENT_PLAN.md",
+    "website_plan/logo_source.png",
+    "scripts/commodity-dashboard-FREE.png",
+    "2_Areas/Sales_Ops/Weekly_Report_2026-06-05.md",
+    "1_Projects/Master_Intelligence_Compiled.md",
+    "_backups/Obsidian_Vault_2026-05-08_17-20/0 Inbox/Republic Cement.md",
+    "infographics/palm-oil-deck.png",
+    "infographics/pks-deck.png",
+    "infographics/woodchips-deck.png",
+    "infographics/diesel-deck.png",
+    "infographics/copper-ore-deck.png",
+    "infographics/thermal-coal-deck.png",
+    "infographics/nickel-ore-deck.png"
+  ]
+}
