@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; }
+h1 { color: #1a3c5e; border-bottom: 3px solid #c8a84b; padding-bottom: 8px; }
+h2 { color: #2e6da4; margin-top: 24px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th { background: #1a3c5e; color: white; padding: 8px 12px; text-align: left; }
+td { padding: 8px 12px; border-bottom: 1px solid #ddd; }
+tr:nth-child(even) { background: #f5f5f5; }
+.highlight { background: #fff3cd; }
+.blocker { color: #c0392b; font-weight: bold; }
+.meta { color: #666; font-size: 12px; }
+</style>
+</head>
+<body>
+<p class="meta">ECONARES Daily Sales Report | July 06, 2026 | Prepared by RZH</p>
+<h1>DAILY SALES REPORT — July 06, 2026</h1>
+
+<h2>TASKS</h2>
+<table>
+<tr><th>Status</th><th>Task</th><th>Contact/Company</th><th>Due</th></tr>
+<tr><td>🟡 IN PROGRESS</td><td>[APO CEMENT] Outreach to Chai Sibal — Alternative Fuels</td><td>—</td><td>08/28 11:15</td></tr>
+<tr><td>🟡 IN PROGRESS</td><td>[APO CEMENT] URGENT — Submit woodchips sample package to Bong Acacio</td><td>—</td><td>07/15 11:15</td></tr>
+<tr><td>🟡 IN PROGRESS</td><td>Follow up with Jose Mari Enriquez Gorospe</td><td>—</td><td>06/23 10:00</td></tr>
+<tr class="highlight"><td>📅 DUE TODAY</td><td>Follow up for Jul 15 Appointment</td><td>—</td><td>07/06 10:00</td></tr>
+<tr class="highlight"><td>📅 DUE TODAY</td><td>Follow up with Mark Tagle</td><td>—</td><td>07/06 10:00</td></tr>
+<tr class="highlight"><td>📅 DUE TODAY</td><td>Follow up with fdcui.com.ph</td><td>—</td><td>07/06 10:00</td></tr>
+<tr class="highlight"><td>📅 DUE TODAY</td><td>Confirm full legal name and registration number of 磐石 (Panshi) subsidiary</td><td>—</td><td>07/06 08:00</td></tr>
+<tr class="highlight"><td>📅 DUE TODAY</td><td>Request Tina Chen to send sample contract format</td><td>—</td><td>07/06 08:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>PEPOI Follow-Up — Check Email/Web Form Replies + Escalate If No Response</td><td>—</td><td>07/02 16:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with Tony Green</td><td>—</td><td>07/02 10:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with KEPCO SPC</td><td>—</td><td>07/02 10:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with San Miguel Global Power Holdings Corporation</td><td>—</td><td>07/01 10:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with Sarah Tarega</td><td>—</td><td>07/01 10:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with Frank Thiel</td><td>—</td><td>07/01 10:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with MINERGY</td><td>—</td><td>07/01 10:00</td></tr>
+<tr class="blocker"><td>⚠️ OVERDUE</td><td>Follow up with Pagbilao Energy Corporation</td><td>—</td><td>07/01 10:00</td></tr>
+<tr><td colspan="4" class="meta">+28 more overdue tasks (see full list in HubSpot)</td></tr>
+</table>
+
+<h2>PIPELINE SNAPSHOT (10 active deals)</h2>
+<table>
+<tr><th>Deal</th><th>Company</th><th>Value</th><th>Stage</th><th>Close Date</th></tr>
+<tr><td>Bulk Ore Limited - Nickel Ore Supply</td><td>—</td><td>₱10.1M</td><td>Needs Analysis</td><td>2026-06-30</td></tr>
+<tr><td>Fujian Yunding Mining - Copper Ore Supply</td><td>—</td><td>—</td><td>Initial Contact</td><td>2026-05-31</td></tr>
+<tr><td>Palm Concepcion Power (PCPC) - Steam Coal Supply</td><td>—</td><td>—</td><td>Lead Generated</td><td>2026-12-31</td></tr>
+<tr><td>Therma South (TSI) - Coal - 1.0-1.2M MT/yr Davao</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+<tr><td>Republic Cement (RCMI Iligan) - Coal - Mindanao Ce</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+<tr><td>Philippine Sinter Corp (PSC) - Coke Breeze - 275-4</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+<tr><td>FDC Misamis - Coal - 500k MT/yr Villanueva</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+<tr><td>FDC Misamis Expansion - Coal - Forward Demand 1.5-</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+<tr><td>SMC Malita Restart - Coal - 500-600k MT/yr Davao O</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+<tr><td>San Ramon Power (SRPI) - Coal - 400-500k MT/yr Zam</td><td>—</td><td>—</td><td>Initial Contact</td><td>—</td></tr>
+</table>
+
+<h2>RECENT CONTACTS (228 total in CRM)</h2>
+<table>
+<tr><th>Name</th><th>Company</th><th>Title</th><th>Last Modified</th></tr>
+<tr><td colspan="4">No recent contacts</td></tr>
+</table>
+
+<h2>RECENT NOTES (last 3 days)</h2>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 16:20</div><div>**LINKEDIN CONNECTION REQUEST SENT - 2026-07-06 ~16:15 PHT**
+
+Channel: LinkedIn Connect + 300-char connection note (one-liner)
+Profile: https://www.linkedin.com/in/jungeun-christine-yi-58b1a224
+Note length: ~280 chars (under 300 limit)
+
+ONE-LINER USED:
+"Hi Ms. Yi - I'm Reymarr Hijara with ECONARES (PH nickel ore supplier). Reaching out re: POSCO Future M's NPSI/MC Group JV + your 10+ yrs in POSCO raw materials procurement. Detailed email sent to jungeun.yi@posco.com (CC Young-Hoon YOU). - RZH"
+
+...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 16:17</div><div>**LINKEDIN MESSAGE SENT - 2026-07-06 ~16:05 PHT**
+
+Channel: LinkedIn direct message
+Profile: https://www.linkedin.com/in/jungeun-christine-yi-58b1a224
+Message length: 1,392 chars (202 words, within LinkedIn 1900 char InMail limit)
+
+KEY ANGLES USED:
+- Referenced her 10+ years experience in raw materials procurement + transportation at POSCO Steel
+- Referenced NPSI (Nickel Premium Solutions) JV with MC Group
+- Connected to POSCO Future M HPAL/MHP battery supply chain
+- Referenced her deep expertis...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 16:15</div><div>**LINKEDIN MESSAGE SENT - 2026-07-06 ~15:40 PHT**
+
+Channel: LinkedIn direct message
+Profile: https://www.linkedin.com/in/young-hoon-you-9a1863140
+Message length: 1,273 chars (184 words, within LinkedIn 1900 char InMail limit)
+
+KEY ANGLES USED:
+- Referenced NPSI (Nickel Premium Solutions) JV with MC Group
+- Referenced his SMSP/POSCO JV board membership
+- Connected to POSCO Future M HPAL/MHP battery supply chain
+- Referenced his 10+ years procurement of Ni Cathodes/Briquette/Ferro-Ni
+- Cross-refer...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 15:38</div><div>**BOUNCE FLAG - 2026-07-06**
+
+Email xct@huayou.com returned 554 "dosnt exist" on 2026-07-06 nickel send.
+
+Huayou email format is NOT first.last — uses department codes (from official IR page huayou.com/en/invester):
+- xnymarket@huayou.com (New Energy Market — Ni ore procurement)
+- fdc@huayou.com (raw materials trading)
+- xclmarket@huayou.com (precursors)
+- hyxh@huayou.com (Quzhou ops)
+- information@huayou.com (general IR)
+
+Next action: Use xnymarket@huayou.com for new nickel ore outreach.
+
+ALSO:...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 15:38</div><div>**EMAIL VERIFIED + LINKEDIN CONFIRMED - 2026-07-06**
+
+LinkedIn: https://www.linkedin.com/in/xingwei-liang
+Current role (Sep 2025-present): Commercial Manager (Commodity Sales &amp; Procurement), CDM (Huayou)
+Location: Lubumbashi, Haut-Katanga, DRC
+Background: Imperial College London
+Scope: Procurement + sales of bulk auxiliary materials, chemical products, copper cathodes; import/export trade process + market analysis
+
+Email pattern: first.last@huayou.com (dept-codes also work)
+Applied: xingwei....</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 14:27</div><div><div style="" dir="auto" data-top-level="true"><p style="margin:0;">Sent message via Tsingshan Holding Group website contact form (<a href="https://www.tssgroup.com.cn/en/contact/line/)" target="_blank">https://www.tssgroup.com.cn/en/contact/line/)</a></p><p style="margin:0;"><br class="hs-trailingbreak"></p><p style="margin:0;">Subject: Philippine Nickel Ore Supply for Tsingshan Steel</p><p style="margin:0;">From: Reymarr Hijara | Sales | rzh24.econares@gmail.com</p><p style="margin:0;">City fi...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 13:56</div><div>**CONTACT CREATED - 2026-07-06 (verified)**
+
+LinkedIn: https://www.linkedin.com/in/arthur-wang-608a374a
+Current role: Procurement Manager, Shanghai Tsingshan Mineral Co., Ltd.
+Scope: Nickel ore sourcing - supplier contacts, contract negotiation, B/L audit, vessel logistics, sampling/QC tracking
+Prior: Procurement Manager, Shanghai Tsingshan Mining Investment Limited Company
+
+Email pattern applied: arthur.wang@tssgroup.com.cn | Backup: arthurwang@tssgroup.com.cn
+WHY KEY: Day-to-day nickel ore pro...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 13:56</div><div>**CONTACT CREATED - 2026-07-06 (verified)**
+
+LinkedIn: https://www.linkedin.com/in/monalisa-mancong-61b110166
+Current role: Purchasing Administrator, Tsingshan Holding Group (Morowali, Central Sulawesi, Indonesia)
+Department: Nickel Purchasing Department site
+Since: Feb 2022-present
+
+Email pattern applied: monalisa.mancong@tssgroup.com.cn | Backup: monalisamancong@tssgroup.com.cn
+WHY KEY: Site-level purchasing admin for the largest Tsingshan nickel operation (IMIP). Best channel for inbound nick...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 13:56</div><div>**EMAIL VERIFIED + LINKEDIN CONFIRMED - 2026-07-06**
+
+LinkedIn: https://www.linkedin.com/in/rhea-li-b470b5102
+Role: Procurement at Board of Directors, Tsingshan Steel (Sep 2015-present, Shanghai)
+Purchases: Nickel Cathodes, Nickel Briquette, Ferro-nickel
+Prior (Jul 2014-Sep 2015): Department Manager, Shanghai Tsingshan Mineral Co., Ltd. Nickel Ore Resource Dept.
+
+Email pattern applied (LeadIQ 95% confidence): first.last@tssgroup.com.cn
+Applied: rhea.li@tssgroup.com.cn | Backup: rheali@tssgroup.c...</div></div>
+<div style="margin: 8px 0; padding: 8px; background: #f9f9f9; border-left: 3px solid #2e6da4;"><div class="meta">07/06 13:56</div><div>**EMAIL VERIFIED - 2026-07-06**
+
+LinkedIn profile at Morowali nickel purchasing: linkedin.com/in/monalisa-mancong-61b110166
+Profile title: Nickel Purchasing Department at Tsingshan Group (Morowali Site)
+Location: Morowali, Central Sulawesi, Indonesia
+Since: Feb 2022-present (4 yr at Tsingshan)
+
+NOTE: HubSpot record 512586467027 lists contact name as Juliet Stephanie (Purchasing Administrator). LinkedIn shows Monalisa Mancong in the same role/location. Possible internal promotion/rotation OR reco...</div></div>
+
+<h2>BLOCKERS</h2>
+<ul>
+<li class="blocker">Research EGCO Group (Thailand) Bangkok procurement contact — coal supply — 19 days overdue</li>
+</ul>
+
+<h2>TOMORROW'S ACTION PLAN</h2>
+<ol>
+<li>Review 36 overdue task(s) and prioritize top 3</li>
+<li>Process 5 task(s) due today</li>
+<li>Follow up on 10 active deal(s)</li>
+</ol>
+
+<p class="meta">ECONARES Intelligence System | RZH — Sales and Marketing Officer</p>
+</body>
+</html>
