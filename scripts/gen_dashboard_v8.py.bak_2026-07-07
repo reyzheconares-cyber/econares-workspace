@@ -35,34 +35,13 @@ def en(t,p,d=None):
  try: return float(m.group(1).replace(',',''))
  except: return d
 def flme():
- # LME Nickel 3-month via TradingEconomics meta description (format: "N USD/T" or "$N/t").
  t=fp('https://tradingeconomics.com/commodity/nickel')
- m=re.search(r'Nickel[^.]{0,80}?(\d[\d,]*\.?\d*)\s*USD(?:/T|\s*t)',t,re.I)
- if m:
-  v=float(m.group(1).replace(',',''))
-  if 14000<v<25000: return round(v,2),'tradingeconomics.com/nickel','HIGH'
- # Fallback: also accept "$NNNNN" form
  v=en(t,r'\$(\d{4,5})')
- if v and 14000<v<25000: return v,'tradingeconomics.com/nickel ($N form)','HIGH'
+ if v and 14000<v<25000: return v,'tradingeconomics.com','HIGH'
  t=fp('https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Ni_cash')
  v=en(t,r'(\d{4,5}[\.\d]*)')
- if v and 14000<v<25000: return v,'westmetall.com LME_Ni_cash','HIGH'
+ if v and 14000<v<25000: return v,'westmetall.com','HIGH'
  return 18360.0,'lme.com (fallback)','LOW'
-def flme_cu():
- # Dedicated LME Copper fetch via TradingEconomics meta description.
- # Quote format: USD/lb. Convert to USD/t via 2204.62 lb/t.
- # Valid range widened to $8,000-$15,000/t (covers 2024-2026 LME range incl. recent strength).
- t=fp('https://tradingeconomics.com/commodity/copper')
- m=re.search(r'Copper[^.]{0,80}?(\d+\.\d+)\s*USD/Lbs',t,re.I)
- if m:
-  v_per_lb=float(m.group(1))
-  per_t=round(v_per_lb*2204.62,2)
-  if 8000<per_t<15000:
-   return per_t,'tradingeconomics.com/copper (USD/lb→USD/t)','HIGH'
- t=fp('https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash')
- v=en(t,r'(\d{4,5}[\.\d]*)')
- if v and 8000<v<15000: return v,'westmetall.com LME_Cu_cash','HIGH'
- return None,None,None
 def fther():
  # coaltradeindo prices are FOB Kalimantan already -- no conversion
  t=fp('https://coaltradeindo.com/ici-coal-price/')
@@ -102,7 +81,7 @@ def fcuore(l):
  payable=0.965
  cif_cn=round(l*0.20*payable,0)
  return cif_cn,'LME Cu x 20% x 96.5% payable'
-PAST={'NICKEL SAPROLITE':54.0,'NICKEL MEDIUM':49.0,'NICKEL LIMONITE':27.0,'IRON ORE':92.0,'CHROMITE':181.0,'COPPER ORE':2580.0,'THERMAL COAL':88.0,'COKING COAL':200.0,'DIESEL':660.0,'PALM KERNEL SHELLS':97.0,'WOODCHIPS':70.0,'PALM OIL (CPO)':910.0}
+PAST={'NICKEL SAPROLITE':54.0,'NICKEL MEDIUM':49.0,'NICKEL LIMONITE':27.0,'IRON ORE':92.0,'CHROMITE':181.0,'COPPER ORE':1900.0,'THERMAL COAL':88.0,'COKING COAL':200.0,'DIESEL':660.0,'PALM KERNEL SHELLS':97.0,'WOODCHIPS':73.0,'PALM OIL (CPO)':910.0}
 def wow(n,c):
  p=PAST.get(n)
  if p and p>0:
@@ -110,9 +89,6 @@ def wow(n,c):
   sg='+' if pct>=0 else ''
   return sg+f'{pct:.1f}%','up' if pct>0.3 else('down' if pct<-0.3 else 'flat')
  return 'N/A','flat'
-import sys as _sys
-NOSEND = '--no-send' in _sys.argv
-if NOSEND: print('GATE: --no-send flag set -- image will still be generated, Telegram delivery skipped.')
 print('=== STEP 1: FETCHING ===')
 log={'generated_at':datetime.now().strftime('%Y-%m-%d %H:%M PH'),'commodities':{},'sources':{}}
 COMM=[]
@@ -130,16 +106,7 @@ ad('NICKEL MEDIUM','Ni 1.3-1.5% | Fe 15-25%','NPI / HPAL blend',50.0,'/wmt','FOB
 ad('NICKEL LIMONITE','Ni 0.8-1.2% | Fe 30-50%','HPAL battery feed',27.0,'/wmt','FOB Palawan-Mindanao, PH','smm_metal.com','SMM NI1.0% FOB PH est.','MED','HPAL sector digestion ongoing; limonite faces floor-price pressure.')
 ir,irs,irc=firon(); ad('IRON ORE','62% Fe Fines | ICX','Steel-making benchmark',ir,'/t','FOB Pilbara, AU',irs,'62% Fe Fines FOB AU est.',irc,'AU supply discipline + CN restocking lift steel sentiment.')
 ad('CHROMITE','42-48% Cr2O3 | MgO 8-15%','Metallurgical / HPAL',180.0,'/t','FOB Dinagat-Surigao, PH','asianmetal.com','AsianMetal 42-48% Cr2O3 range $150-220 midpoint','LOW','Chromite flat; Indonesian HPAL demand underpins PH export parity.')
-lcu,lcs,lcc=flme_cu()
-if lcu is None:
- lcu,round_safe=lme,'fallback (LME Ni substituted, see warning)'
- lcs='lme.com (LME Cu fetch failed; using Ni as proxy)'
- lcc='LOW'
-else:
- lcs=lcs
- lcc=lcc
-print(f'LME Cu: ${lcu:,.0f}/t [{lcc}] src={lcs}')
-cu,fcu_raw=fcuore(lcu)
+cu,fcu_raw=fcuore(lme)
 ad('COPPER ORE','15-25% Cu | ROM/dump','Direct smelter or leaching feed',cu,'/t','FOB Papua-NG / Indonesia (reference)','LME derived','LME Cu x 20% x 96.5% payable; no TC/RC on ore','MED','PH copper ore demand from Lepanto, TVI; strong LME Cu supporting Co 1.8-2.0% ore at $1,800-2,000/t.')
 ad('THERMAL COAL','5,500 kcal/kg GAR','Steam / power generation',tc,'/t','FOB Kalimantan, ID',ts,f'GAR 5500 FOB ID ${tc:.1f}/t',tc2,f'ICI 3 (GAR 5500) ${tc:.1f}/t FOB Kalimantan; PH power demand firm.')
 ckp,ckx,ckc=fcook(); ad('COKING COAL','HCC | PLV 64% CSR','Metallurgical steel',ckp,'/t','FOB Newcastle, AU','kallanish.com',f'HCC FOB AU ~${ckp:.0f}/t',ckx,'Chinese PMI contraction pressures premium coal; HCC $180-220.')
@@ -198,9 +165,6 @@ def dc(c,x,y,ac):
   lh=bs(CF,ln)[1]; d.text((px,cy),ln,font=CF,fill=G3); cy+=lh+1
 for i,c in enumerate(COMM): r=i//4; col=i%4; dc(c,cx(col),ry(r),AC[i] if i<len(AC) else CD)
 img.save(OUT,'PNG'); print(f'Image saved: {OUT} ({W}x{H})')
-if NOSEND:
- print('=== STEP 3: TELEGRAM (SKIPPED: --no-send) ===')
- import sys as _sys2; _sys2.exit(0)
 print('=== STEP 3: TELEGRAM ===')
 bt=None
 with open('/home/mauiclaw/.hermes/.env') as f:
