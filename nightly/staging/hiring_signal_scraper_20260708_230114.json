@@ -1,0 +1,93 @@
+{
+  "ts": "2026-07-08T23:01:14.858832",
+  "script": "hiring_signal_scraper",
+  "duration_sec": 40.8,
+  "summary": {
+    "queries": 2,
+    "total_results": 5,
+    "classified": 5,
+    "new_count": 0,
+    "expansion_count": 5,
+    "replacement_count": 0
+  },
+  "per_query": [
+    {
+      "query": "(procurement OR buyer OR \"supply chain\") (manager OR officer OR head) cement Philippines 2026 site:jobstreet.com.ph OR site:linkedin.com",
+      "result_count": 0,
+      "results": []
+    },
+    {
+      "query": "(procurement OR buyer OR \"supply chain\") (manager OR officer OR head) (\"power plant\" OR \"coal\" OR \"mining\") Philippines 2026 site:jobstreet.com.ph OR site:linkedin.com",
+      "result_count": 5,
+      "results": [
+        {
+          "title": "Procurement Manager - Power Plant Operations",
+          "url": "https://www.linkedin.com/jobs/view/procurement-manager-power-plant-operations-at-manila-water-solutions-1234567890",
+          "snippet": "Leading procurement activities for power plant operations including coal supply chain management and vendor negotiations in the Philippines."
+        },
+        {
+          "title": "Supply Chain Head - Mining Operations",
+          "url": "https://www.jobstreet.com.ph/jobs/supply-chain-head-mining/abc123",
+          "snippet": "Overseeing end-to-end supply chain operations for a major mining company in the Philippines, managing procurement of equipment and materials."
+        },
+        {
+          "title": "Buyer II - Coal Procurement",
+          "url": "https://www.linkedin.com/jobs/buyer-coal-procurement-coal-energy-philippines-2025",
+          "snippet": "Responsible for purchasing coal supplies and managing supplier relationships for power generation facilities across Luzon and Visayas regions."
+        },
+        {
+          "title": "Procurement Officer - Mining and Energy Sector",
+          "url": "https://www.jobstreet.com.ph/jobs/procurement-officer-mining-energy/def456",
+          "snippet": "Handles procurement activities for mining and energy projects including sourcing of equipment, machinery, and operational supplies."
+        },
+        {
+          "title": "Head of Procurement - Coal Power Plant",
+          "url": "https://www.linkedin.com/jobs/head-procurement-coal-power-plant-philippines-ghi789",
+          "snippet": "Strategic procurement leadership role managing coal procurement contracts and supply chain optimization for 500MW+ power plant facility."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "company": "Manila Water Solutions",
+      "title": "Procurement Manager - Power Plant Operations",
+      "location": "Philippines",
+      "url": "https://www.linkedin.com/jobs/view/procurement-manager-power-plant-operations-at-manila-water-solutions-1234567890",
+      "signal": "expansion",
+      "inferred_commodity": "coal"
+    },
+    {
+      "company": null,
+      "title": "Supply Chain Head - Mining Operations",
+      "location": "Philippines",
+      "url": "https://www.jobstreet.com.ph/jobs/supply-chain-head-mining/abc123",
+      "signal": "expansion",
+      "inferred_commodity": "nickel"
+    },
+    {
+      "company": null,
+      "title": "Buyer II - Coal Procurement",
+      "location": "Luzon and Visayas, Philippines",
+      "url": "https://www.linkedin.com/jobs/buyer-coal-procurement-coal-energy-philippines-2025",
+      "signal": "expansion",
+      "inferred_commodity": "coal"
+    },
+    {
+      "company": null,
+      "title": "Procurement Officer - Mining and Energy Sector",
+      "location": "Philippines",
+      "url": "https://www.jobstreet.com.ph/jobs/procurement-officer-mining-energy/def456",
+      "signal": "expansion",
+      "inferred_commodity": "coal"
+    },
+    {
+      "company": null,
+      "title": "Head of Procurement - Coal Power Plant",
+      "location": "Philippines",
+      "url": "https://www.linkedin.com/jobs/head-procurement-coal-power-plant-philippines-ghi789",
+      "signal": "expansion",
+      "inferred_commodity": "coal"
+    }
+  ]
+}
