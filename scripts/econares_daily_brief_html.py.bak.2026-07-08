@@ -16,8 +16,6 @@ def _load_night_summary():
     out = {
         "research": None, "dedup": None, "classify": None,
         "crm_enrichment": None, "deal_staleness": None, "feed_targets": None,
-        "trade_news": None, "hiring_signal": None, "equipment_monitor": None,
-        "osint_enrich_targets": None, "osint_resolve_contacts": None,
         "ran": False,
     }
     # Core night pipeline (lead-gen research)
@@ -33,21 +31,6 @@ def _load_night_summary():
             out[stage.replace("crm_enrichment", "crm_enrichment").replace(
                 "deal_staleness", "deal_staleness").replace(
                 "feed_nightly_targets", "feed_targets")] = s["data"].get("summary", {})
-            out["ran"] = True
-    # Idle lead-gen signal scrapers (added 2026-07-08 — trade news / hiring / equipment)
-    for stage in ("trade_news_scraper", "hiring_signal_scraper", "equipment_monitor"):
-        s = latest_staging(stage)
-        if s and s.get("data"):
-            out[stage] = s["data"].get("summary", {})  # full key e.g. "trade_news_scraper"
-            out["ran"] = True
-            # Also mirror to short key for renderer lookup (matches the crm_enrichment/deal_staleness pattern)
-            short_key = stage.replace("_scraper", "")
-            out[short_key] = s["data"].get("summary", {})
-    # OSINT pipeline (added 2026-07-08 — DRAFT writes + contact resolution)
-    for stage in ("osint_enrich_targets", "osint_resolve_contacts"):
-        s = latest_staging(stage)
-        if s and s.get("data"):
-            out[stage] = s["data"].get("summary", {})
             out["ran"] = True
     return out
 
@@ -97,33 +80,6 @@ def _night_pipeline_line():
         f_ = ns["feed_targets"]
         parts.append(
             f"targets: fed {f_.get('written',0)} to research queue"
-        )
-    # Idle lead-gen signal scrapers (added 2026-07-08)
-    if ns.get("trade_news"):
-        e = ns["trade_news"]
-        parts.append(
-            f"news: {e.get('new_buyer_count',0)} new-buyer signals, {e.get('total_results',0)} articles"
-        )
-    if ns.get("hiring_signal"):
-        e = ns["hiring_signal"]
-        parts.append(
-            f"hiring: {e.get('new_count',0)} new procurement hires, {e.get('expansion_count',0)} expansions"
-        )
-    if ns.get("equipment_monitor"):
-        e = ns["equipment_monitor"]
-        parts.append(
-            f"equipment: {e.get('classified',0)} orders, {e.get('buyers',0)} new buyers flagged"
-        )
-    # OSINT pipeline (added 2026-07-08)
-    if ns.get("osint_enrich_targets"):
-        e = ns["osint_enrich_targets"]
-        parts.append(
-            f"osint-enrich: {e.get('auto_written',0)} auto-drafts, {e.get('review_only',0)} need-RZH"
-        )
-    if ns.get("osint_resolve_contacts"):
-        e = ns["osint_resolve_contacts"]
-        parts.append(
-            f"osint-resolve: {e.get('contacts_enriched',0)} contacts patched, {e.get('gaps_filled',0)} gaps filled"
         )
     return "NIGHT PIPELINE: " + " | ".join(parts) if parts else "NIGHT PIPELINE: silent"
 

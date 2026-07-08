@@ -1,0 +1,193 @@
+
+
+ADMIN REQUEST — Vendor Accreditation Documents
+
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 920px; margin: 30px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.55; }
+  h1 { color: #1F3864; border-bottom: 3px solid #1F3864; padding-bottom: 8px; }
+  h2 { color: #1F3864; background: #D9E1F2; padding: 8px 14px; border-left: 5px solid #1F3864; margin-top: 32px; }
+  h3 { color: #2E5599; margin-top: 20px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 0.92em; }
+  th { background: #1F3864; color: white; padding: 9px 12px; text-align: left; }
+  td { padding: 8px 12px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr:nth-child(even) td { background: #F2F2F2; }
+  .done { color: #2E7D32; font-weight: bold; }
+  .todo { color: #C62828; font-weight: bold; }
+  .warn { background: #FFF3CD; padding: 12px 14px; border-left: 4px solid #FFC107; margin: 14px 0; }
+  .urgent { background: #F8D7DA; padding: 12px 14px; border-left: 4px solid #C62828; margin: 14px 0; }
+  .info { background: #D1ECF1; padding: 12px 14px; border-left: 4px solid #0C7CD5; margin: 14px 0; }
+  .ready { background: #D4EDDA; padding: 12px 14px; border-left: 4px solid #2E7D32; margin: 14px 0; }
+  .footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid #ccc; font-size: 0.85em; color: #666; }
+  ul { margin: 6px 0 12px 22px; }
+  li { margin-bottom: 4px; }
+  pre { background: #f5f5f5; padding: 14px; border-radius: 4px; font-size: 0.88em; overflow-x: auto; }
+
+ADMIN REQUEST — VENDOR ACCREDITATION DOCUMENTS
+
+From: Reymarr Z. Hijara (RZH), Sales &amp; Marketing Officer
+To: ECONARES Admin Team (MOB / ASB / JC / MND)
+Date: 08 July 2026
+Subject: Action Required — Vendor Accreditation Document Compilation for 22 Buyer Targets
+
+PURPOSE: Secure all required documents so the Sales Division can submit ECONARES as an accredited vendor to active and prospective buyers (Holcim, Aboitiz group, and 20 other cement/power targets). Holcim submission is urgent — their Coal Procurement lead (Cynthia B. Cabrera) has explicitly listed required documents and flagged that our prior COA was rejected due to high ash content.
+
+1. CONTEXT — WHY THIS MATTERS NOW
+
+  Holcim Philippines is in IN_PROGRESS status in our HubSpot pipeline. Their procurement lead has given us a 7-item requirement list. We are blocked on submission until the Admin compiles the missing items below.
+  Aboitiz Group Vendor Portal registration is 80% complete — 8 of 9 baseline documents have been pulled by ASB (May 26). We need 3 policy manuals + a Supplier Profile Form from ACI.
+  22 total buyer targets across cement (8) and power (14) sectors need vendor accreditation for FOB coal/nickel/diesel supply deals to close.
+
+⚠️ QUALITY SPEC ALERT (Holcim): Cynthia Cabrera explicitly stated on June 9 that our submitted coal COA was REJECTED — ash content must be ≤10% MAX. We need either a different coal source or a compliant COA before any further Holcim submission.
+
+2. CRITICAL ITEMS — HOLCIM PHILIPPINES (BLOCK ACTIVE DEAL)
+
+Holcim's Coal Procurement lead (Cynthia B. Cabrera, cynthia.cabrera@holcim.com) provided this 7-item list on Jun 9, 2026:
+
+#RequirementDetailStatus
+
+1Certificate of Quality (5 recent shipments)Must show ash ≤10%. Coordinate with coal supplier for compliant COAs.TODO — Admin
+2Monthly/Annual production volumeCapacity figures for ECONARES supply chain.TODO — Admin
+3Supply chain — mine to portDocumentation/flowchart from mine origin to loading port.TODO — Admin
+4Port detailsDraft, LOA (Length Overall), loading rates, restrictions.TODO — Admin
+5Updated permitsDOE PERMITS ARE EXPIRED — must renew. Also MGB/DENR if applicable.URGENT — Admin
+6FOB price proposalWill be drafted by RZH once supplier base is confirmed.RZH
+7Top 5 customers in the PhilippinesReference list (can be anonymized if needed).RZH + Admin
+
+Drive destination: 1_Projects/107_Holcim_VendorReg/ (already created with subfolders A_ through E_)
+
+3. CRITICAL ITEMS — ABOITIZ GROUP (80% COMPLETE)
+
+Most baseline documents already compiled by ASB on May 26, 2026 (the "SECTION 3 Requirements" pack — 9 PDFs). Remaining gaps:
+
+#RequirementStatusAction Needed
+
+1Supplier Profile Form / Accreditation FormTODORZH to email aci.scmd@aboitiz.com requesting fillable form (no public Google Form exists). Once received, fill and attach.
+2Letter of IntentREADY— (in 106_Aboitiz_VendorReg/A_Required_Forms/)
+3Company Profile (Aboitiz version)READY— (in 106_Aboitiz_VendorReg/A_Required_Forms/)
+4SEC RegistrationREADY— (in 106_Aboitiz_VendorReg/B_Company_Documents/)
+5Articles of IncorporationREADY— (in 106_Aboitiz_VendorReg/B_Company_Documents/)
+6BIR Form 2303READY— (in 106_Aboitiz_VendorReg/B_Company_Documents/)
+7Latest ITR (2 years)VERIFYConfirm if 2 years ITR available; pull if yes.
+8Audited Financial Statements (2 yrs)READY— (AFS 2024 + AFS 2025 in 106_Aboitiz_VendorReg/E_Financial/)
+9BIR receipts/invoices sampleREADY— (Collection, Delivery, Sales invoices in E_Financial/)
+10Latest Mayor's / Business PermitVERIFYOpen "Renewal of Permits.pdf" and confirm validity date is current.
+11UnionBank Account ProofVERIFYConfirm ECONARES has a UnionBank account; if yes, pull bank cert or statement header.
+12Product Brochures / CatalogsREADY— (Aboitiz Product Spec Sheet in C_Product_Materials/)
+13QC ManualCREATEAdmin to compile or commission. Can be 2-3 pages for coal/diesel supply.
+14Safety ManualCREATEAdmin to compile or commission. Standard warehouse + transport safety.
+15Environmental Management ManualCREATEAdmin to compile. Must reference DENR compliance + waste handling.
+16Cover Note / EmailREADY— (in A_Required_Forms/)
+
+Drive destination: 1_Projects/106_Aboitiz_VendorReg/ (already organized into 6 subfolders A-F)
+
+4. STANDARD ITEMS — APPLIES TO ALL 22 TARGETS
+
+Once compiled for Aboitiz, the standard pack replicates to:
+
+Cement (8 targets)
+
+  Apo Cement Corporation — HubSpot 321897429737 (CONNECTED)
+  Century Peak Cement — 322958059202 (NEW)
+  Eagle Cement Corporation — 331682263760
+  Goodfound Cement — 322503647935 (NEW)
+  Holcim Philippines — 322503657180 (IN_PROGRESS) ⭐
+  Northern Cement Corporation — 331711753956
+  Republic Cement — 319761962702 (NEW)
+  Taiheiyo Cement Philippines — 315966974677 (NEW)
+
+Power / Coal (14 targets)
+
+  AboitizPower (group-wide) — 320650095346 (CONNECTED) ⭐
+  AboitizPower Therma Visayas — 319338076898 (NEW)
+  SPC Power Corporation — 325115776729 (CONNECTED)
+  KEPCO SPC — 324641517300 (CONNECTED)
+  Cebu Energy Dev Corp (CEDC) — 324209064695 (CONNECTED)
+  Palm Concepcion Power Corp (PCPC) — 322716960491 (NEW)
+  Toledo Power Corporation — 321761471205 (NEW)
+  San Miguel Global Power — 320729061083 (CONNECTED)
+  GNPower Kauswagan — 328345657071 (CONNECTED)
+  Pagbilao Energy — 320527614681 (CONNECTED)
+  Panay Energy Dev Corp — 320692808438 (CONNECTED)
+  TeaM Energy — 319034577647 (NEW)
+  Panasia Energy Inc. — 318908928760 (IN_PROGRESS)
+  Limay Coal Power Plant — 320729112283 (CONNECTED)
+
+5. PRIORITY ORDER FOR ADMIN ACTION
+
+PriorityItemOwnerDeadline
+
+P0Renew DOE permits (expired — blocks Holcim submission)Admin / MGB-DENR compliance officerThis week
+P0Secure coal COAs with ash ≤10% (5 recent shipments)Admin + coal supplier coordinationThis week
+P1Compile QC Manual, Safety Manual, Environmental Management ManualAdmin (commission if needed)Within 2 weeks
+P1Verify Mayor's Permit validity dateAdminThis week
+P1Confirm UnionBank account proof availabilityAdminThis week
+P1Verify 2-year ITR availabilityAdmin / AccountingThis week
+P2Compile mine-to-port supply chain documentationAdmin + LogisticsWithin 2 weeks
+P2Compile port specifications (draft, LOA, loading rates)Admin + LogisticsWithin 2 weeks
+P2Compile Monthly/Annual production volumeAdmin + OperationsWithin 2 weeks
+P3Top 5 PH customers reference list (can be anonymized)RZH + CEO approvalWithin 3 weeks
+
+6. WHAT I'M HANDLING ON MY SIDE
+
+  FOB price proposal — for each buyer once their spec is known
+  Emailing aci.scmd@aboitiz.com for the Supplier Profile Form (Aboitiz)
+  Outreach to remaining 20 targets to collect their specific vendor requirements
+  Holcim reply email — Items 1-7 in progress note sent Jun 11
+  HubSpot updates — deal stage and notes per submission progress
+
+7. DRIVE STRUCTURE — WHERE EVERYTHING LIVES
+
+Already created and populated:
+
+1_Projects/
+├── 106_Aboitiz_VendorReg/    ✅ ACTIVE — 6 subfolders, 14 docs organized
+│   ├── A_Required_Forms/        LOI, Cover Note, Company Profile (3 docs)
+│   ├── B_Company_Documents/     SEC, AOI, BIR 2303, Renewal of Permits (4 docs)
+│   ├── C_Product_Materials/     Aboitiz Product Spec Sheet (1 doc)
+│   ├── D_Policies/              [EMPTY — awaits QC/Safety/Env manuals]
+│   ├── E_Financial/             AFS 2024, AFS 2025, 3 invoice types (5 docs)
+│   └── F_Correspondence/        project-notes.md
+├── 107_Holcim_VendorReg/     ✅ FOLDER READY — needs content (5 subfolders empty)
+├── 108_Philcement_VendorReg/  ✅ FOLDER READY
+├── 109_RepublicCement_VendorReg/ ✅ FOLDER READY
+├── 110_ApoCement_VendorReg/   ✅ FOLDER READY
+├── 111_TaiheiyoCement_VendorReg/ ✅ FOLDER READY
+├── 112_CEDC_VendorReg/        ✅ FOLDER READY
+├── 113_SPCPower_VendorReg/    ✅ FOLDER READY
+└── 114_PCPC_VendorReg/        ✅ FOLDER READY
+
+2_Areas/
+└── Vendor_Accreditation/      ✅ FOLDER READY (process notes, contact list)
+
+3_Resources/
+└── Vendor_Accreditation_Templates/ ✅ FOLDER READY (2 company profile PDFs)
+
+Master checklist note (Obsidian): ~/Documents/Obsidian Vault/1_Projects/Vendor_Accreditation_Master/Master_Accreditation_Checklist.md
+
+8. CONTACT REFERENCE
+
+Buyer / ContactEmailRole
+
+Cynthia B. Cabrera (Holcim)cynthia.cabrera@holcim.comCoal Procurement Lead
+Rainier A. Elepano (Holcim)rainier.elepano@holcim.comProcurement (CC'd)
+Aboitiz Vendor Registrationaci.scmd@aboitiz.comVendor onboarding
+Aboitiz Existing Supplier Updatesrachelle.vinas@aboitiz.comSupplier records
+Aboitiz Payment Follow-upricaela.torres@aboitiz.comPayment status
+Stephanie Ting (AboitizPower)sting@aboitizpower.com (probable)Fuel Mgmt Strategic Sourcing Sr Mgr
+
+Please confirm receipt and expected turnaround for the P0/P1 items by reply. I'll handle all RZH-side deliverables in parallel and update the master checklist note as items are completed.
+
+Thank you,
+
+Reymarr Z. Hijara (RZH)
+Sales &amp; Marketing Officer
+ECONARES (ECE Construction and Resources OPC)
+G/F BT&amp;T Bldg., Hollowblock Rd., Tabunok, Talisay City, Cebu
+📧 rzh24.econares@gmail.com &nbsp;|&nbsp; 📱 +63 927 872 5194
+WhatsApp · Telegram · WeChat · Viber
+
+DOCUMENT METADATA
+Generated: 2026-07-08 · Author: RZH via Hermes Agent
+Source: Gmail sweep (17 vendor-related emails) + Drive inventory (190 files) + HubSpot (119 companies)
+Master checklist: ~/Documents/Obsidian Vault/1_Projects/Vendor_Accreditation_Master/Master_Accreditation_Checklist.md
+Drive root: 1_Projects/10X_*_VendorReg/
+
